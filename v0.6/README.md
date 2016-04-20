@@ -222,8 +222,8 @@ Donations are **greatly appreciated!**
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif "AdminLTE Presentation")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=629XCUSXBHCBC "Donate")
 
 
-Desenvolvimento de um software
+Desenvolvimento
 ============
 
-A partir da utilização desse framework, será possivel a criação do **Sistema de Acompanhamento de Fluxo de Demandas** que irá realizar a verificação do fluxo de determinadas demandas, do plano de ações de uma instituição de ensino.
+A partir da utilização desse framework será possivel criar o **Sistema de Acompanhamento de Fluxo de Demandas**, onde ele irá realizar a verificação do fluxo das demandas, do plano de ação de uma instituição de ensino.
 
