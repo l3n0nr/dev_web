@@ -44,6 +44,23 @@
           <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
             <ul class="nav navbar-nav">
               <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modificar usuários <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Trocar Login/Senha</a></li>
+                    <li><a href="#">Trocar função</a></li>
+                    <li><a href="#">Excluir usuário</a></li>
+                </ul>
+              </li>
+              
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Alterar Demandas <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Alterar Prazos</a></li>
+                    <li><a href="#">Alterar Etapas</a></li>
+                </ul>
+              </li>
+              
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plano de Ação <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="#">Ações Atendidas</a></li>
@@ -64,12 +81,6 @@
               </li>
             </ul>
             </div>
-
-          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Digite algo">
-            </div>
-          </form>
 
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
@@ -211,7 +222,7 @@
         <label> Desenvolvimento do Sistema </label>
         <br>
         <div class="pull-right hidden-xs">
-          <b>Version Alpha</b> 0.6
+          <b>Version Alpha</b>
         </div>
         <strong>Copyright &copy; 2016 <a href="http://github.com/lenonr">Lenon Ricardo</a>.</strong>
       </footer>
@@ -221,10 +232,7 @@
       <!-- Control Sidebar -->
       <aside class="control-sidebar control-sidebar-dark">
         <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-          <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-        </ul>
-
+    
         <!-- Tab panes -->
         <div class="tab-content">
           <!-- Home tab content -->
