@@ -1,0 +1,22 @@
+|system
+|->bootstrap
+|->dist
+|->pages
+|	->areas	
+|		->dg.php	
+|		->dad.php
+|		->de.php
+|		->dpdi.php
+|		->dpep.php
+|	->base
+|		->footer.php
+|		->header.php
+|		->menulat.php
+|		->userlog.php
+|	->solic
+|		->bens.php
+|		->empenho.php
+|	->usr
+|		->ajuda.php
+|		->config.php
+|		->login.php
