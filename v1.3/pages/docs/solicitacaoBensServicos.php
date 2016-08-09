@@ -51,7 +51,7 @@
                     <li><a href="#">Excluir usuário</a></li>
                 </ul>
               </li>
-              
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Alterar Demandas <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
@@ -59,7 +59,7 @@
                     <li><a href="#">Alterar Etapas</a></li>
                 </ul>
               </li>
-              
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plano de Ação <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
@@ -178,7 +178,7 @@
 
       <!-- =============================================== -->
 
-      <!-- Content Wrapper. Contains page content -->
+      <!--FORMULARIO DE BENS-->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -193,10 +193,10 @@
           <!--PROTOCOLO-->
           <div class="col-xs-8">
             <br>
-            <label>N* de Protocolo: </label>
+            <label>Número do Protocolo: </label>
             <input class="form-control" data-inputmask="&quot;mask&quot;: &quot;99.999.000999/2099-99&quot;" data-mask="" type="text">
           </div>
-          
+
           <!--DATA-->
           <div class="input-group">
             <div class="col-xs-4">
@@ -205,14 +205,14 @@
               <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text">
             </div>
           </div>
-          
+
           <!--IFF-->
           <div class="col-xs-8">
             <br>
             <label>Campus/Unidade</label>
             <input class="form-control" placeholder="Reitoria" disabled="" type="text">
           </div>
-          
+
           <!--SETORES-->
           <div class="col-xs-4">
             <br><label>Selecione o setor, que você trabalha</label>
@@ -222,9 +222,9 @@
               <option>setor c</option>
             </select>
           </div>
-          
+
+
         </section>
-              
       </div><!-- /.content-wrapper -->
 
       <footer class="main-footer">
@@ -249,7 +249,7 @@
       <!-- Control Sidebar -->
       <aside class="control-sidebar control-sidebar-dark">
         <!-- Create the tabs -->
-    
+
         <!-- Tab panes -->
         <div class="tab-content">
           <!-- Home tab content -->
