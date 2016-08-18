@@ -1,0 +1,33 @@
+|system
+|->bootstrap
+|->dist
+|->pages
+|	->areas	
+|		->dg.php	
+|		->dad.php
+|		->de.php
+|		->dpdi.php
+|		->dpep.php
+|
+|	->base
+|		->footer.php
+|		->header.php
+|		->menulat.php
+|		->userlog.php
+|
+|	->menu
+|		->acomp_fluxo.php
+|		->def_status.php
+|		->def_observacoes.php
+|		->dem_pendentes.php
+|		->hist_demandas.php
+|
+|	->solic
+|		->bens.php
+|		->empenho.php
+|
+|	->usr
+|		->ajuda.php
+|		->esquece_senha.php
+|		->config.php
+|		->login.php
