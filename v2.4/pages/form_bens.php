@@ -54,7 +54,11 @@
             </h4>
             bla bla bla
         </div>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 45ab39303de56bf2a117dde795a177e0d6536521
         <section class="content-header">
           <h4>
             REQUISIÇÃO DE COMPRA - BENS
@@ -98,20 +102,29 @@
             <option>Direção de Pesquisa, Extensão e Produção</option>
           </select>
         </div>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 45ab39303de56bf2a117dde795a177e0d6536521
         <!--REQUISITANTE-->
         <div class="col-xs-8">
           <br>
           <label>Nome do requisitante </label>
           <input class="form-control" type="text">
         </div>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 45ab39303de56bf2a117dde795a177e0d6536521
         <!--SIAPE-->
         <div class="col-xs-4">
           <br>
           <label>Número do SIAPE </label>
           <input class="form-control" type="text">
         </div>
+<<<<<<< HEAD
 
         <label> Tabela dos itens </label>
 
@@ -138,6 +151,27 @@
 
       </div>
 
+=======
+        
+        <!--SIAPE-->
+        <div class="col-xs-12">
+          <br>
+          <label>Objeto </label>
+          <input class="form-control" type="text">
+        </div>	
+        
+        
+        <!--SIAPE-->
+        <div class="col-xs-1">
+         <br>
+        	<button>
+        	 <label> Enviar para a próxima etapa</label>           
+        	</button>          
+        </div>	
+
+      </div>
+      
+>>>>>>> 45ab39303de56bf2a117dde795a177e0d6536521
 
       <footer class="main-footer">
         <?php
