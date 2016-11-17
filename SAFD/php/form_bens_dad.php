@@ -45,7 +45,7 @@
         <div class="content-wrapper">
           <!-- Content Header (Page header) -->
 
-          <div class="alert alert-warning alert-dismissable">
+<!--          <div class="alert alert-warning alert-dismissable">
             <button type="button" class="close" data-dismiss="alert"  aria-hidden="true">
               ×
             </button>
@@ -55,7 +55,7 @@
               Informações importantes
               </h4>
               bla bla bla
-          </div>
+          </div>-->
 
           <section class="content-header">
             <h4>
@@ -95,7 +95,7 @@
               </div>
               <div class="radio">
                 <label>
-                  <input name="optionsRadios" id="optionsRadios3" value="option3" disabled="" type="radio">
+                  <input name="optionsRadios" id="optionsRadios3" value="option3" type="radio">
                   Procedimento pelo Sistema de Registro de Preços.
                 </label>
               </div>

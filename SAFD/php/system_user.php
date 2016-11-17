@@ -48,27 +48,11 @@
             <li><a href=""><i class="fa fa-dashboard"></i> Inicio</a></li>
           </ol>
         </br>
-          <div class="col-xs-12">
-                <ul class="nav nav-tabs">
-                  <li class="active"><a aria-expanded="true" href="#geral" data-toggle="tab">GERAL</a></li>
-                  <li class=""><a aria-expanded="false" href="#dg" data-toggle="tab">DG</a></li>
-                  <li class=""><a aria-expanded="false" href="#dad" data-toggle="tab">DAD</a></li>
-                  <li class=""><a aria-expanded="false" href="#de" data-toggle="tab">DE</a></li>
-                  <li class=""><a aria-expanded="false" href="#dpdi" data-toggle="tab">DPDI</a>
-                  <li class=""><a aria-expanded="false" href="#dpep" data-toggle="tab">DPEP</a></li>
-          </div>
+          <?php
+            include './visualizar_dem_pendentes.php'
+          ?>
       </div><!-- /.content-wrapper -->
-
-      <div class="tab-content no-padding">
-        <div class="tab-pane" id="#dg">
-          <label>direcao geral</label>
-        </div>
-
-        <div class="tab-pane" id="dad">
-          <label>direcao administrativo</label>
-        </div>
-      </div>
-
+      
       <footer class="main-footer">
         <?php
           include 'footer.php';
