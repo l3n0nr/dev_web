@@ -29,16 +29,11 @@
     while ($row = mysql_fetch_assoc($result)) {
         $visualizar = 
             "<tr>
-            <td>".$row['id_setor']."</td>"."            
+            <td>".$row['id_setor']."</td>"."                       
             <td>".$row['login_usuario']."</td>"."
             <td>".$row['siape_funcionario']."</td>"."
                 
             </tr>";
-
-        /*
-          $usuarios = consulta_todos_usuarios();
-          echo $usuarios;
-         */
 
         echo $visualizar;
     }
