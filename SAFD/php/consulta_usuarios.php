@@ -22,7 +22,7 @@
           exit;
       }
 
-      $sql    = 'SELECT * FROM usuarios';
+      $sql    = 'SELECT * FROM usuario';
       $result = mysql_query($sql, $link);
 
       if (!$result)
@@ -36,15 +36,21 @@
       {
           $visualizar =
             "<tr>
-            <td>".$row['id']."</td>"."
-            <td>".$row['nome_completo']."</td>"."
-            <td>".$row['email']."</td>"."
-            <td>".$row['setor']."</td>"."
-            <td>".$row['funcao']."</td>"."
-            <td>
-              <ul > Excluir </ul>
-            </td>"."
+                <td>".$row['id_funcionario']."</td>"."
+                <td>".$row['siape_funcionario']."</td>"."
+                </td>"."
             </tr>";
+          
+//            "<tr>
+//            <td>".$row['id_setor']."</td>"."
+//            <td>".$row['estado_usuario']."</td>"."
+//            <td>".$row['login_usuario']."</td>"."
+//            <td>".$row['senha_usuario']."</td>"."
+//            <td>".$row['siape_funcionario']."</td>"."
+//            <td>
+//              <ul > Excluir </ul>
+//            </td>"."
+//            </tr>";
 
           /*
             $usuarios = consulta_todos_usuarios();
