@@ -8,7 +8,6 @@
   }
   else
   {
-//    session_destroy();
-//    echo "mensagem valida sessao ".$_SESSION["usuario"];
+// echo "mensagem valida sessao ".$_SESSION["usuario"];
   }
 ?>

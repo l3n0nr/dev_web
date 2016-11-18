@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
   </head>
     <!--<body class="hold-transition skin-green fixed sidebar-mini">-->
-    <body class="hold-transition skin-green layout-boxed sidebar-mini">
+    <body class="hold-transition skin-green layout-fixed sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
       <header class="main-header" >
@@ -48,7 +48,7 @@
             <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Usuário> Configurações</a></li>
           </ol>
         </br>
-
+        <label> Configurações do Sistema </label>
         </section>
       </div><!-- /.content-wrapper -->
 

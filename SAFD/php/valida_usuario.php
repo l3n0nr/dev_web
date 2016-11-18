@@ -6,6 +6,7 @@
   {
     //echo "Usuário cadastro, agora você pode acessar o sistema";
     session_start();
+    session_cache_expire(10);
     $_SESSION["usuario"]=$login;
     $_SESSION["senha"]=$senha;
     header("location:system_admin.php");
@@ -15,6 +16,7 @@
   {
     //echo "Usuário cadastro, agora você pode acessar o sistema";
     session_start();
+    session_cache_expire(10);
     $_SESSION["usuario"]=$login;
     $_SESSION["senha"]=$senha;
     header("location:system_user.php");
