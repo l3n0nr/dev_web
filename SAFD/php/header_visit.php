@@ -1,3 +1,7 @@
+<?php
+  include 'valida_sessao.php';
+?>
+
 <a href="system_visit.php" class="logo">
     <!-- logo for regular state and mobile devices -->
     <span class="logo-mini">AFD</span>
