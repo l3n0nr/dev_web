@@ -14,7 +14,6 @@
         <group>
             <file>file:/opt/lampp/htdocs/dev_bootstrap/SAFD/php/cadastra_usuarios.php</file>
             <file>file:/opt/lampp/htdocs/dev_bootstrap/SAFD/php/register.php</file>
-            <file>file:/opt/lampp/htdocs/dev_bootstrap/SAFD/php/sql_tabelas.sql</file>
         </group>
     </open-files>
 </project-private>
