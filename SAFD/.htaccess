@@ -39,3 +39,9 @@ ExpiresDefault "access 2 days"
 #evitando acesso direto aos arquivos
 RewriteCond %{REQUEST_FILENAME} !-f [OR]
 RewriteCond %{REQUEST_FILENAME} \.php$
+
+#configurando paginas de erro
+ErrorDocument 401 /pages_erros/falha_autorizacao.html
+ErrorDocument 404 /pages_erros/nao_encontrado.html
+ErrorDocument 403 /pages_erros/acesso_negado.html
+ErrorDocument 500 /pages_erros/erro_interno.html
