@@ -11,10 +11,10 @@ $banco    = 'safd';
 $nome   = $_POST ["nome"];
 $email  = $_POST["email"];
 $siape  = $_POST["siape"];
-$setor  = $_POST["setor"];
-$funcao = $_POST["funcao"];
-$login  = $_POST["login"];
-$senha  = $_POST["senha"];
+//$setor  = $_POST["setor"];
+//$funcao = $_POST["funcao"];
+//$login  = $_POST["login"];
+//$senha  = $_POST["senha"];
 
 //conectando com o localhost - mysql
 $conexao = mysql_connect($servidor, $usuario, $senha, $banco);
@@ -23,24 +23,19 @@ $conexao = mysql_connect($servidor, $usuario, $senha, $banco);
        die ("Erro de conexão com localhost, o seguinte erro ocorreu -> ".mysql_error());
     }
 	
-    //conectando com a tabela do banco de dados
-    $banco = mysql_select_db($bd,$conexao);
-    if (!$banco)
+    if (!mysql_select_db($banco, $link)) 
     {
-        die ("Erro de conexão com banco de dados, o seguinte erro ocorreu -> ".mysql_error());
-    }	 
+        echo 'Não foi possível selecionar o banco de dados';
+        exit;
+    }
 
-$query = 
-        "INSERT INTO `clientes` ( `nome` , `email` , `sexo` , `ddd` , `telefone` , 
-            `endereço` , `cidade` , `estado` , `bairro` , `país` , `login` , `senha` , 
-            `news` , `id` ) 
-            VALUES ('$nome', '$email', '$sexo', '$ddd', '$tel', '$endereco',"
-                    . " '$cidade', '$estado', '$bairro', '$pais', '$login', "
-                    . "'$senha', '$news', '')";
+    $query = 
+            "INSERT INTO `funcionario` ( 'nome_funcionario', 'email_funcionario', 'siape_funcionario'
+                VALUES ('$nome', '$email', '$siape')";
+
+    mysql_query($query,$conexao);
  
-mysql_query($query,$conexao);
- 
-echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenção.";
+    echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenção.";
 //
 //
 //if (!$link = mysql_connect($servidor, $usuario, $senha)) {
