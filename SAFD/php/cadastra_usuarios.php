@@ -22,11 +22,19 @@ $conexao = mysql_connect($servidor, $usuario, $senha, $banco);
     {
        die ("Erro de conexão com localhost, o seguinte erro ocorreu -> ".mysql_error());
     }
+    else
+    {        
+        echo "conectou localhost";
+    }
 	
     if (!mysql_select_db($banco, $link)) 
     {
         echo 'Não foi possível selecionar o banco de dados';
         exit;
+    }
+    else
+    {        
+        echo "conectou banco de dados";
     }
 
     $query = 
