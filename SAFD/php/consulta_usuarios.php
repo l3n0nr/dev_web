@@ -1,6 +1,5 @@
 <?php
 
-function consulta() {
     $servidor = 'localhost';
     $usuario = 'root';
     $senha = '';
@@ -18,9 +17,8 @@ function consulta() {
         exit;
     }
 
-//      $sql    = 'SELECT * FROM usuario';
-    $sql = 'SELECT * FROM funcionario';
-    $result = mysql_query($sql, $link);
+    $sql_usuario    = 'SELECT * FROM usuario';
+    $result = mysql_query($sql_usuario, $link);
 
     if (!$result) {
         echo "Erro do banco de dados, não foi possível consultar o banco d dados\n";
@@ -29,22 +27,13 @@ function consulta() {
     }
 
     while ($row = mysql_fetch_assoc($result)) {
-        $visualizar = "<tr>
-                <td>" . $row['id_funcionario'] . "</td>" . "
-                <td>" . $row['siape_funcionario'] . "</td>" . "
-                </td>" . "
+        $visualizar = 
+            "<tr>
+            <td>".$row['id_setor']."</td>"."            
+            <td>".$row['login_usuario']."</td>"."
+            <td>".$row['siape_funcionario']."</td>"."
+                
             </tr>";
-
-//            "<tr>
-//            <td>".$row['id_setor']."</td>"."
-//            <td>".$row['estado_usuario']."</td>"."
-//            <td>".$row['login_usuario']."</td>"."
-//            <td>".$row['senha_usuario']."</td>"."
-//            <td>".$row['siape_funcionario']."</td>"."
-//            <td>
-//              <ul > Excluir </ul>
-//            </td>"."
-//            </tr>";
 
         /*
           $usuarios = consulta_todos_usuarios();
@@ -55,6 +44,5 @@ function consulta() {
     }
 
     mysql_free_result($result);
-}
 
 ?>
