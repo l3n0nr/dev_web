@@ -1,42 +1,49 @@
-|system
-|->bootstrap
-|->dist
-|->pages
-|		AREA ESPECIFICAS
-|		->dg.php	
-|		->dad.php
-|		->de.php
-|		->dpdi.php
-|		->dpep.php
+|->php
+|	->OUTROS
+|		index.php
+|		valida_sessao.php
+|		valida_usuario.php
+|		sql_tabelas.sql
+|		register.php
+|		senha.php
+|		setores.php
+|		funcao.php
+|		footer.php
 |
-|		REGIOES DA PAGINA
-|		->footer.php
-|		->header.php
-|		->menulat.php
-|		->userlog.php
+|	->USUARIO
+|		busca.php
+|		acomp_fluxo.php
+|		def_observacoes.php
+|		def_status.php
+|		form_bens_coord.php
+|		form_bens_dad.php/dad.php
+|		form_bens_dg.php
+|		form_bens_dpdi.php
+|		form_bens.php
+|		hist_demandas.php
+|		system_user.php
+|		header_user.php
+|		menulat_user.php
+|		visualizar_dem_pendentes.php
+|		dem_pendentes.php
+|		form_emp.php
 |
-|		MENU LATERAL
-|		->acomp_fluxo.php
-|		->def_status.php
-|		->def_observacoes.php
-|		->dem_pendentes.php
-|		->hist_demandas.php
-|		
-|		FORMULARIOS		
-|		->form_bens.php
-|		->form_emp.php
-|		
-|		OUTROS
-|		->ajuda.php
-|		->esquece_senha.php
-|		->config.php
-|		->login.php
-|		
-|		VISITANTES		
-|		system_visit.php
-|		header_visit.php
-|		menulat_visit.php
+|	->ADMINISTRADOR
+|		cadastra_usuarios.php
+|		config.php
+|		consulta_usuarios.php
+|		visualizar_usuarios.php
+|		modificar_usuarios.php
+|		system_admin.php
+|		header_admin.php
+|		menulat_admin.php
+|		excluir_usuarios.php
+|
+|	->VISITANTE
+|		acomp_fluxo_visit.php
 |		dem_pendentes_visit.php
-|		acom_fluxo_visit.php
+|		header_visit.php
 |		hist_demandas_visit.php
-|		---
+|		menulat_visit.php
+|		system_visit.php
+|---------------------------------------------------------------
