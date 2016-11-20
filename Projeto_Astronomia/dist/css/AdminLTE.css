@@ -4726,4 +4726,37 @@ table.text-center th {
   .table-responsive > .table tr td {
     white-space: normal!important;
   }
+  
+  .login-page
+  {
+      background-image: url('../img/wallhaven-305552.jpg');
+      background-repeat: no-repeat;
+      background-size:100%;
+      bottom: 0;
+      color: black;
+      left: 0;
+      overflow: auto;
+      padding: 3em;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+
+  }
+  .login-page h1
+  {
+      font-weight: 300;
+  }
+  .login-page h1 small
+  {
+      color: gray;
+  }
+  .login-page .form-group
+  {
+      padding: 8px 0;
+  }
+  .login-page .form-content
+  {
+      padding: 40px 0;
+  }
 }
