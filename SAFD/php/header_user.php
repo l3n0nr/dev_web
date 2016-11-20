@@ -33,5 +33,5 @@ include 'valida_sessao.php';
                 </ul>
             </li>
         </ul>
-    </div>
+    </div>    
 </nav>
