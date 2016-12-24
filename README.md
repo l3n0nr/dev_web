@@ -1,1 +1,1 @@
-Repositório para desenvolvimento de páginas web utilizando o framework Bootstrap.
+Repositório para desenvolvimento de páginas web.
