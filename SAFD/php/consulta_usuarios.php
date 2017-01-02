@@ -17,7 +17,7 @@
         exit;
     }
 
-    $sql_usuario    = 'SELECT * FROM usuario';
+    $sql_usuario    = 'SELECT * FROM funcionario';
     $result = mysql_query($sql_usuario, $link);
 
     if (!$result) {
@@ -29,9 +29,9 @@
     while ($row = mysql_fetch_assoc($result)) {
         $visualizar = 
             "<tr>
-            <td>".$row['id_setor']."</td>"."                       
-            <td>".$row['login_usuario']."</td>"."
-            <td>".$row['siape_funcionario']."</td>"."
+            <td>".$row['siape_funcionario']."</td>"."                       
+            <td>".$row['nome_funcionario']."</td>"."
+            <td>".$row['email_funcionario']."</td>"."
                 
             </tr>";
 
