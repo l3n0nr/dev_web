@@ -1,5 +1,5 @@
 <?php
-include 'valida_sessao.php';
+    include 'valida_sessao.php';
 ?>
 <a href="system_user.php" class="logo">
     <!-- logo for regular state and mobile devices -->
