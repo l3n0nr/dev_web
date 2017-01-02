@@ -1,7 +1,4 @@
 <?php
-
-include 'register.php';
-
 $servidor = 'localhost';
 $usuario  = 'root';
 $senha    = '';
@@ -24,7 +21,7 @@ $conexao = mysql_connect($servidor, $usuario, $senha, $banco);
     }
     else
     {        
-        echo "conectou localhost";
+        //echo "Conectou no Servidor! \n";
     }
 	
     if (!mysql_select_db($banco, $link)) 
@@ -34,16 +31,16 @@ $conexao = mysql_connect($servidor, $usuario, $senha, $banco);
     }
     else
     {        
-        echo "conectou banco de dados";
-    }
-
-    $query = 
+        //echo "Conectou no banco de dados! \n";
+        $query = 
             "INSERT INTO `funcionario` ( 'nome_funcionario', 'email_funcionario', 'siape_funcionario'
                 VALUES ('$nome', '$email', '$siape')";
 
-    mysql_query($query,$conexao);
+        mysql_query($query,$conexao);
  
-    echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenção.";
-    
+        echo "Seu cadastro foi realizado com sucesso! Agradecemos a atenção. <br>";
+        echo "<hr>";
+        echo "Aguarde um email de confirmação em "."$email";
+    }    
 ?>
 
