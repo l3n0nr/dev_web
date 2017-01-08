@@ -59,7 +59,7 @@
         <br>
         <br>
 
-        <a href="register.php" class="text-center">Ainda não tenho cadastro</a>
+        <a href="registrar.php" class="text-center">Ainda não tenho cadastro</a>
 
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
