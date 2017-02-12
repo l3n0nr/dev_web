@@ -1,11 +1,4 @@
-<a href="system.php" class="logo">
-    <!-- logo for regular state and mobile devices -->
-    <span class="logo-mini">P_A</span>
-    <span class="logo-lg">Projeto_Astronomia</span>
-</a>
-
-<!-- Header Navbar: style can be found in header.less -->
-<nav class="navbar navbar-static-top" role="navigation">
+<nav class="">
     <div class="">
         <ul class="nav navbar-nav">
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -13,6 +6,16 @@
             </a>         
         </ul>
     </div>
+</nav>
+
+<a href="system.php" class="logo">
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-mini">P_A</span>
+    <span class="logo-lg">Projeto_Astronomia</span>
+</a>
+
+<!-- Header Navbar: style can be found in header.less -->
+<nav class="navbar navbar-static-top" role="navigation">    
     <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
             <input class="form-control" id="navbar-search-input" placeholder="Digite algum termo aqui" type="text">

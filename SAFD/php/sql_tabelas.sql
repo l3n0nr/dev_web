@@ -34,6 +34,9 @@ CREATE TABLE usuario(
 	INSERT INTO usuario(id_setor, estado_usuario, login_usuario, senha_usuario, siape_funcionario)
 		VALUES("00", 1, "lenonr", "lenonr", "666");
 		
+	INSERT INTO usuario(id_setor, estado_usuario, login_usuario, senha_usuario, siape_funcionario)		
+		VALUES(1, "joao", "1234", "554");
+		
 ########################################################################################
 
 CREATE TABLE funcao(
