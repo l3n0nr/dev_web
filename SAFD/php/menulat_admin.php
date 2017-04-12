@@ -9,8 +9,9 @@
               </div>
             </form>-->
         <li class="header">USUÁRIOS</li>
-        <li><a href="visualizar_usuarios.php"><i class="glyphicon glyphicon-sunglasses"></i> <span>Visualizar Usuários</span></a></li>
-        <li><a href="modificar_usuarios.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Modificar Usuários</span></a></li>
-        <li><a href="excluir_usuarios.php"><i class="glyphicon glyphicon-trash"></i> <span>Excluir Usuários</span></a></li>
+        <li><a href="inserir_usuarios.php"><i class="glyphicon glyphicon-plus"></i> <span>Inserir</span></a></li>
+        <li><a href="visualizar_usuarios.php"><i class="glyphicon glyphicon-sunglasses"></i> <span>Visualizar</span></a></li>
+        <li><a href="modificar_usuarios.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Alterar</span></a></li>
+        <li><a href="excluir_usuarios.php"><i class="glyphicon glyphicon-trash"></i> <span>Excluir</span></a></li>
     </ul>
 </section>
