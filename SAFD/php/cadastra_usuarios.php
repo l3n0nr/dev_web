@@ -1,11 +1,11 @@
 <?php
 $servidor = 'localhost';
 $usuario  = 'root';
-$senha    = ' ';
+$senha    = '';
 $banco    = 'safd';
 
 //  <!--RECEBENDO DADOS DO FORMULARIO-->
-$nome   = $_POST ["nome"];
+$nome   = $_POST["nome"];
 $email  = $_POST["email"];
 $siape  = $_POST["siape"];
 $setor  = $_POST["setor"];
