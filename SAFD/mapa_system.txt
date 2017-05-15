@@ -1,5 +1,15 @@
+|->database
+|	->base.sql
+|	->include.sql
+|
+|->pages_erros
+|	acesso_negado.html
+|	erro_interno.html
+|	falha_autorizacao.html
+|	nao_encontrado.html
+|
 |->php
-|	->OUTROS
+|	#OUTROS
 |		index.php
 |		valida_sessao.php
 |		valida_usuario.php
@@ -10,7 +20,7 @@
 |		funcao.php
 |		footer.php
 |
-|	->USUARIO
+|	#USUARIO
 |		busca.php
 |		acomp_fluxo.php
 |		def_observacoes.php
@@ -28,7 +38,7 @@
 |		dem_pendentes.php
 |		form_emp.php
 |
-|	->ADMINISTRADOR
+|	#ADMINISTRADOR
 |		cadastra_usuarios.php
 |		config.php
 |		consulta_usuarios.php
@@ -39,7 +49,7 @@
 |		menulat_admin.php
 |		excluir_usuarios.php
 |
-|	->VISITANTE
+|	#VISITANTE
 |		acomp_fluxo_visit.php
 |		dem_pendentes_visit.php
 |		header_visit.php
