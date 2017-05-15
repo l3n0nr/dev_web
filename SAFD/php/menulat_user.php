@@ -20,7 +20,6 @@
 
         <li class="header">DOCUMENTOS</li>
         <li><a href="form_bens.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Bens</span></a></li>
-    <!--    <li><a href="form_emp.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Empenho</span></a></li>-->
 
         <li class="header">AVALIAÇÕES</li>
         <li><a href="form_bens_coord.php"><i class="glyphicon glyphicon-font"></i>
