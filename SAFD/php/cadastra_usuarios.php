@@ -1,7 +1,7 @@
 <?php
 $servidor = 'localhost';
-$usuario  = 'root';
-$senha    = '';
+$usuario  = 'lenonr';
+$senha    = ' ';
 $banco    = 'safd';
 
 //  <!--RECEBENDO DADOS DO FORMULARIO-->

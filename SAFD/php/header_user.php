@@ -29,8 +29,13 @@
                 <ul class="dropdown-menu" role="menu">
                     <!--                    <li><a href="config.php">Configurações</a></li>-->
                     <!--                    <li class="divider"></li>-->
-                    <li><a href="../index.php">Sair</a></li>
+                    <li><a href="../index.php">Sair</a></li>                                        
                 </ul>
+                
+                <!-- Control Sidebar Toggle Button -->
+                <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                </li>
             </li>
         </ul>
     </div>    
