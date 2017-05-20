@@ -71,7 +71,7 @@
                         <input type="text" class="form-control" placeholder="Siape" name="siape" required="" autocomplete="off">
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
-                    <div class="form-group has-feedback">
+                    <!--<div class="form-group has-feedback">
                         <select id="setor" class="form-control" name="setor" required="" autocomplete="off">
                             <?php
                             include 'setores.php';
@@ -97,7 +97,7 @@
                     <div class="form-group has-feedback">
                         <input type="password" class="form-control" placeholder="Confirme a senha" required="" autocomplete="off">
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    </div>
+                    </div>-->
                     <div class="row">          
                         <div class="col-xs-12">
                             <button type="submit" class="btn btn-success btn-block btn-flat">Registrar</button>
