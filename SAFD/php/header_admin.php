@@ -12,7 +12,6 @@
     <ul class="nav navbar-nav">
       <li class="dropdown notifications-menu">
         <ul class="dropdown-menu" href="../pages/dem_pendentes.php">
-          <!--<li class=""><a href="../pages/dem_pendentes.php"></a></li>-->
         </ul>
       </li>
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">

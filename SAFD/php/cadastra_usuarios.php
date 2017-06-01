@@ -1,5 +1,46 @@
 <?php
+//conectando servidor
+    define( 'MYSQL_HOST', 'localhost' );
+    define( 'MYSQL_USER', 'lenonr' );
+    define( 'MYSQL_PASSWORD', ' ' );
+    define( 'MYSQL_DB_NAME', 'safd' );
 
+//tentando realizar conexao
+    try
+    {
+        //realizando conexao atraves do objeto    
+        $PDO = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
+//         echo "conectou!";
+    }
+    catch ( PDOException $e )
+    {
+        //mostrando mensagem de erro
+        echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
+    }
+    
+//recebendo dados do formulario
+    $nome   = $_POST["nome_funcionario"];
+    $email  = $_POST["email_funcionario"];
+    $siape  = $_POST["siape_funcionario"];
+    
+    echo $nome, $email, $siape;
+     
+//inserindo dados nas tabelas        
+    $query = 
+        "INSERT INTO funcionario (nome_funcionario, email_funcionario, siape_funcionario)
+            VALUES ('$nome', '$email', '$siape')"
+//                 INSERT INTO setor (nome_setor)
+//                     VALUES('$setor')
+//                 INSERT INTO funcao (descricao_funcao)   
+//                     VALUES('$funcao')"
+
+    mysql_query($query,$con);
+        
+    include 'inserir_usuarios.php';
+    } 
+
+    
+    
 
 
 //     //servidor

@@ -1,4 +1,5 @@
 <?php
+
 //conectando servidor
     define( 'MYSQL_HOST', 'localhost' );
     define( 'MYSQL_USER', 'lenonr' );
@@ -30,9 +31,20 @@
                         <td>".$linha['siape_funcionario']."</td>"."                                   
                         <td>".$linha['nome_funcionario']."</td>"."            
                         <td>".$linha['email_funcionario']."</td>"."
+                        <td>".""."</td>
+                        <td>".""."</td>
+                        <td>"."</td>
                     </tr>";
                 
         #mostrando colunas/linhas
             echo $visualizar;
     }
 ?>
+
+<!--
+    <html>
+        <li>
+            <i class="glyphicon glyphicon-minus"></i>
+        </li>
+    </html>
+-->
