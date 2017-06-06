@@ -55,7 +55,7 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Usuários Cadastrados</h3>
+                  <h3 class="box-title">Visualizando usuários</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">

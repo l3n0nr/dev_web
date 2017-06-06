@@ -58,7 +58,7 @@
                   <h3 class="box-title">Adicionando Usuários</h3>
                 </div><!-- /.box-header -->
                 
-                <form action="cadastra_usuarios.php" method="post" >
+                <form action="cadastra_usuarios.php" method="POST">
                     <div class="form-group has-feedback">
                         <input type="text" class="form-control" placeholder="Siape" name="siape" required="" autocomplete="off">
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>

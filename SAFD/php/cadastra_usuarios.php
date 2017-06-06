@@ -1,42 +1,53 @@
 <?php
-
-echo "teste";
-
-// include "inserir_usuarios.php";
-
+    echo "teste";
+    
 //recebendo dados do formulario
-    $nome   = $_POST["nome_funcionario"];
-    $email  = $_POST["email_funcionario"];
-    $siape  = $_POST["siape_funcionario"];
+//     $siape  = $_POST["siape_funcionario"];
+//     $nome   = $_POST["nome_funcionario"];
+//     $email  = $_POST["email_funcionario"];
 
-    echo $nome, $email, $siape;
+    echo $POST["siape_funcionario"];
 
-//conectando servidor
-    define( 'MYSQL_HOST', 'localhost' );
-    define( 'MYSQL_USER', 'lenonr' );
-    define( 'MYSQL_PASSWORD', ' ' );
-    define( 'MYSQL_DB_NAME', 'safd' );
-
-//tentando realizar conexao
-    try
-    {
-        //realizando conexao atraves do objeto    
-        $PDO = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
-        echo "conectou!";
-    }
-    catch ( PDOException $e )
-    {
-        //mostrando mensagem de erro
-        echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
-    }
+//     echo $nome, $email, $siape;
     
-    
-//realizando inserçao no banco de dados
-    $sql = "INSERT INTO funcionario (nome_funcionario, email_funcionario, siape_funcionario) VALUES ('$nome', '$email', '$siape')";
-    $result = $PDO->query( $sql );
-     
-//inserindo dados     
-    $linha = $result->fetch(PDO::FETCH_ASSOC);
+?>
+<!--// echo "teste"; 
+
+// // include "inserir_usuarios.php";
+// 
+// //recebendo dados do formulario
+//     $nome   = $_POST["nome_funcionario"];
+//     $email  = $_POST["email_funcionario"];
+//     $siape  = $_POST["siape_funcionario"];
+// 
+//     echo $nome, $email, $siape;
+// 
+// //conectando servidor
+//     define( 'MYSQL_HOST', 'localhost' );
+//     define( 'MYSQL_USER', 'lenonr' );
+//     define( 'MYSQL_PASSWORD', ' ' );
+//     define( 'MYSQL_DB_NAME', 'safd' );
+// 
+// //tentando realizar conexao
+//     try
+//     {
+//         //realizando conexao atraves do objeto    
+//         $PDO = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
+//         echo "conectou!";
+//     }
+//     catch ( PDOException $e )
+//     {
+//         //mostrando mensagem de erro
+//         echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
+//     }
+//     
+//     
+// //realizando inserçao no banco de dados
+//     $sql = "INSERT INTO funcionario (nome_funcionario, email_funcionario, siape_funcionario) VALUES ('$nome', '$email', '$siape')";
+//     $result = $PDO->query( $sql );
+//      
+// //inserindo dados     
+//     $linha = $result->fetch(PDO::FETCH_ASSOC);
     
     
 // //inserindo dados nas tabelas        
@@ -156,6 +167,6 @@ echo "teste";
 //             echo "Seu cadastro foi realizado com sucesso! Agradecemos a atenção. <br>";
 //             echo "<hr>";
 //             echo "Aguarde um email de confirmação em "."$email";
-//       }    
-?>
+//       }    -->
+
 
