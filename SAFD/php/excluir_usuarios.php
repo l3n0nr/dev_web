@@ -45,7 +45,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <ol class="breadcrumb">
-            <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Usuários do sistema </a></li>
+            <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Excluindo usuários do sistema </a></li>
           </ol>
         </br>
         </section>
@@ -67,7 +67,7 @@
                       <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                     <thead>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                        ID
+                        SIAPE
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                         Solicitante

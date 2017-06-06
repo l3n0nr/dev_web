@@ -1,5 +1,4 @@
 <?php
-
 //conectando servidor
     define( 'MYSQL_HOST', 'localhost' );
     define( 'MYSQL_USER', 'lenonr' );

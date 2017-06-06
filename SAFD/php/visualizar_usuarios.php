@@ -45,7 +45,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <ol class="breadcrumb">
-            <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Usuários do sistema </a></li>
+            <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Visualizando usuários do sistema </a></li>
           </ol>
         </br>
         </section>
@@ -74,6 +74,15 @@
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                         Email
+                      </th>
+                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                        Setor
+                      </th>
+                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                        Função
+                      </th>
+                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                        Opções
                       </th>
                     </thead>
                       <tbody>

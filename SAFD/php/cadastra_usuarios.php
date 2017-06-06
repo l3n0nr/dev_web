@@ -1,4 +1,16 @@
 <?php
+
+echo "teste";
+
+// include "inserir_usuarios.php";
+
+//recebendo dados do formulario
+    $nome   = $_POST["nome_funcionario"];
+    $email  = $_POST["email_funcionario"];
+    $siape  = $_POST["siape_funcionario"];
+
+    echo $nome, $email, $siape;
+
 //conectando servidor
     define( 'MYSQL_HOST', 'localhost' );
     define( 'MYSQL_USER', 'lenonr' );
@@ -10,7 +22,7 @@
     {
         //realizando conexao atraves do objeto    
         $PDO = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
-//         echo "conectou!";
+        echo "conectou!";
     }
     catch ( PDOException $e )
     {
@@ -18,25 +30,27 @@
         echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
     }
     
-//recebendo dados do formulario
-    $nome   = $_POST["nome_funcionario"];
-    $email  = $_POST["email_funcionario"];
-    $siape  = $_POST["siape_funcionario"];
     
-    echo $nome, $email, $siape;
+//realizando inserçao no banco de dados
+    $sql = "INSERT INTO funcionario (nome_funcionario, email_funcionario, siape_funcionario) VALUES ('$nome', '$email', '$siape')";
+    $result = $PDO->query( $sql );
      
-//inserindo dados nas tabelas        
-    $query = 
-        "INSERT INTO funcionario (nome_funcionario, email_funcionario, siape_funcionario)
-            VALUES ('$nome', '$email', '$siape')"
-//                 INSERT INTO setor (nome_setor)
-//                     VALUES('$setor')
-//                 INSERT INTO funcao (descricao_funcao)   
-//                     VALUES('$funcao')"
-
-    mysql_query($query,$con);
-        
-    include 'inserir_usuarios.php';
+//inserindo dados     
+    $linha = $result->fetch(PDO::FETCH_ASSOC);
+    
+    
+// //inserindo dados nas tabelas        
+//     $query = 
+//         "INSERT INTO funcionario (nome_funcionario, email_funcionario, siape_funcionario)
+//             VALUES ('$nome', '$email', '$siape')"
+// //                 INSERT INTO setor (nome_setor)
+// //                     VALUES('$setor')
+// //                 INSERT INTO funcao (descricao_funcao)   
+// //                     VALUES('$funcao')"
+// 
+//     mysql_query($query,$con);
+//         
+//     include 'inserir_usuarios.php';
     } 
 
     

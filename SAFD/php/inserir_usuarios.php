@@ -45,7 +45,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <ol class="breadcrumb">
-            <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Inserindo Usuários </a></li>
+            <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Inserindo usuários no sistema</a></li>
           </ol>
         </br>
         </section>
@@ -60,17 +60,17 @@
                 
                 <form action="cadastra_usuarios.php" method="post" >
                     <div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="Siape" name="siape" required="" autocomplete="off">
+                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                    </div>
+                    <div class="form-group has-feedback">
                         <input type="text" class="form-control" placeholder="Nome Completo" name="nome" required="" autocomplete="off">
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
                         <input type="email" class="form-control" placeholder="E-mail" name="email" required="" autocomplete="off">
                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="Siape" name="siape" required="" autocomplete="off">
-                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                    </div>
+                    </div>                    
                     <!--<div class="form-group has-feedback">
                         <select id="setor" class="form-control" name="setor" required="" autocomplete="off">
                             <?php
