@@ -5,17 +5,8 @@
     define( 'MYSQL_PASSWORD', ' ' );
     define( 'MYSQL_DB_NAME', 'safd' );
 
-//tentando realizar conexao
-    try
-    {
-        //realizando conexao atraves do objeto    
-        $PDO = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
-    }
-    catch ( PDOException $e )
-    {
-        //mostrando mensagem de erro
-        echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
-    }
+//incluindo arquivo conexao
+    include_once 'conexao.php';
     
 //realizando consulta no banco de dados
     $sql = "SELECT * FROM funcionario";

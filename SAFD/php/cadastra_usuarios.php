@@ -1,14 +1,30 @@
 <?php
+
+//conectando servidor
+    define( 'MYSQL_HOST', 'localhost' );
+    define( 'MYSQL_USER', 'lenonr' );
+    define( 'MYSQL_PASSWORD', ' ' );
+    define( 'MYSQL_DB_NAME', 'safd' );
+    
+//incluindo arquivo conexao
+    include_once 'conexao.php';
+    
+// recebendo dados do formulario
+    $siape  = $_POST["siape_funcionario"];
+    $email  = $_POST["email_funcionario"];
+    $nome   = $_POST["nome_funcionario"];
+
+     echo $nome, $email, $siape;
+    
+//inserindo dados
     echo "teste";
     
-//recebendo dados do formulario
-//     $siape  = $_POST["siape_funcionario"];
-//     $nome   = $_POST["nome_funcionario"];
-//     $email  = $_POST["email_funcionario"];
-
-    echo $POST["siape_funcionario"];
-
-//     echo $nome, $email, $siape;
+    $ins = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) 
+            VALUES ('$nome', '$email', '$siape')";
+    
+    echo "teste2";
+    $exec = $pdo->exec($ins);            
+    
     
 ?>
 <!--// echo "teste"; 
