@@ -7,27 +7,65 @@
     define( 'MYSQL_DB_NAME', 'safd' );
     
 //incluindo arquivo conexao
-    include_once 'conexao.php';
+    include_once "conexao.php";
     
 // recebendo dados do formulario
-    $siape  = $_POST["siape_funcionario"];
-    $email  = $_POST["email_funcionario"];
-    $nome   = $_POST["nome_funcionario"];
+    $siape  = $_POST['siape_funcionario'];
+    $nome   = $_POST['nome_funcionario'];
+    $email  = $_POST['email_funcionario'];    
+    
+//tentando realizar insercao dos dados     
+    try
+    {    
+    //inserindo dados
+        $ins = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES ($siape, $nome, $email)";
 
-     echo $nome, $email, $siape;
+        $stmte->bindParam(1,$siape, PDO::PARAM_STR);
+        $stmte->bindParam(2,$nome, PDO::PARAM_STR);
+        $stmte->bindParam(3,$email, PDO::PARAM_STR);
+
+        if($ins)
+        {
+            echo 'Dados inseridos com sucesso';
+        }
+        else
+        {
+            echo 'Erro ao inserir os dados';
+        }
+    }
+//mostrando mensangem erro
+    catch(PDOException $e)
+    {
+        echo $e->getMessage();
+    }
     
-//inserindo dados
-    echo "teste";
-    
-    $ins = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) 
-            VALUES ('$nome', '$email', '$siape')";
-    
-    echo "teste2";
-    $exec = $pdo->exec($ins);            
-    
+//executando insercao
+//     $exec = $pdo->exec($ins);            
     
 ?>
-<!--// echo "teste"; 
+
+<!--
+
+try
+//     {
+//         $stmte = $pdo->prepare(" INSERT INTO usuarios (nome,senha) VALUES (?,?)");
+//         $stmte->bindParam(1,$nome, PDO::PARAM_STR);
+//         $stmte->bindParam(2,$senha, PDO::PARAM_STR);
+//         $executa = $stmte->execute();
+// 
+//         if($executa){
+//             echo 'Dados inseridos com sucesso';
+//         }
+//         else{
+//         echo 'Erro ao inserir os dados';
+//         }
+//     }
+//     catch(PDOException $e)
+//     {
+//         echo $e->getMessage();
+//     }
+
+// echo "teste"; 
 
 // // include "inserir_usuarios.php";
 // 

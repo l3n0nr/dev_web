@@ -58,17 +58,17 @@
                   <h3 class="box-title">Adicionando Usuários</h3>
                 </div><!-- /.box-header -->
                 
-                <form action="cadastra_usuarios.php" method="POST">
+                <form action="cadastra_usuarios.php" method="post">
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="Siape" name="siape" required="" autocomplete="off">
+                        <input type="text" class="form-control" placeholder="Siape" name="siape_funcionario" required="" autocomplete="off">
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="Nome Completo" name="nome" required="" autocomplete="off">
+                        <input type="text" class="form-control" placeholder="Nome Completo" name="nome_funcionario" required="" autocomplete="off">
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="email" class="form-control" placeholder="E-mail" name="email" required="" autocomplete="off">
+                        <input type="email" class="form-control" placeholder="E-mail" name="email_funcionario" required="" autocomplete="off">
                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     </div>                    
                     <!--<div class="form-group has-feedback">
