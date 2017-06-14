@@ -1,4 +1,11 @@
 <?php
+
+//conectando no servidor
+    define( 'MYSQL_HOST', 'localhost' );
+    define( 'MYSQL_DB_NAME', 'safd' );
+    define( 'MYSQL_USER', 'lenonr' );
+    define( 'MYSQL_PASSWORD', ' ' );
+
 //tentando realizar conexao
     try
     {

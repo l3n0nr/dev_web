@@ -1,47 +1,114 @@
 <?php
 
-//conectando servidor
-    define( 'MYSQL_HOST', 'localhost' );
-    define( 'MYSQL_USER', 'lenonr' );
-    define( 'MYSQL_PASSWORD', ' ' );
-    define( 'MYSQL_DB_NAME', 'safd' );
-    
 //incluindo arquivo conexao
     include_once "conexao.php";
-    
-// recebendo dados do formulario
+
+//recebendo dados do formulario
     $siape  = $_POST['siape_funcionario'];
     $nome   = $_POST['nome_funcionario'];
-    $email  = $_POST['email_funcionario'];    
-    
-//tentando realizar insercao dos dados     
-    try
-    {    
-    //inserindo dados
-        $ins = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES ($siape, $nome, $email)";
+    $email  = $_POST['email_funcionario'];
 
-        $stmte->bindParam(1,$siape, PDO::PARAM_STR);
-        $stmte->bindParam(2,$nome, PDO::PARAM_STR);
-        $stmte->bindParam(3,$email, PDO::PARAM_STR);
+echo "\n ".$siape. " | ". $nome . " | " . $email;
 
-        if($ins)
-        {
-            echo 'Dados inseridos com sucesso';
-        }
-        else
-        {
-            echo 'Erro ao inserir os dados';
-        }
-    }
-//mostrando mensangem erro
-    catch(PDOException $e)
-    {
-        echo $e->getMessage();
-    }
-    
-//executando insercao
-//     $exec = $pdo->exec($ins);            
-    
+echo "<script>alert('Registro inserido com sucesso')</script>";
+
+// public function insert($siape, $nome, $email)
+// {
+//     try
+//     {
+// 	  $sql = "
+//                 INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
+//                 VALUES (?, ?, ?)";
+// 
+// 	$stm = $this->pdo->prepare($sql);
+// 	$stm->bindValue(1, $siape);
+//     	$stm->bindValue(2, $nome);
+// 	$stm->bindValue(3, $email);
+// 	$stm->execute();
+// 
+// 	echo "<script>alert('Registro inserido com sucesso')</script>";
+//     }    
+//     catch(PDOException $erro)
+//     {
+//         echo "<script>alert('Erro na linha: {$erro->getLine()}')</script>";
+//     }
+//     endif;
+// }
+
+//echo "teste";
+//conectando servidor
+//     define( 'MYSQL_HOST', 'localhost' );
+//     define( 'MYSQL_DB_NAME', 'safd' );
+//   define( 'MYSQL_USER', 'lenonr' );
+//    define( 'MYSQL_PASSWORD', ' ' );
+
+//tentando conectar
+//try
+//{
+//  $pdo = new PDO('mysql:host=localhost; dbname=safd; MYSQL_USER, MYSQL_PASSWORD' );
+//   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+//   $stmt = $pdo->prepare('INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES (:siape, :nome, :email)');
+//   $stmt->execute(array(
+//     ':siape' => '$_POST[siape_funcionario]'
+//     ':nome' => '$_POST[nome_funcionario]'
+//     ':email' => '$_POST[email_funcionario]'
+//echo "teste1";
+//  ));
+
+//   echo $stmt->rowCount();
+//}
+//catch(PDOException $e)
+//{
+//  echo 'Error: ' . $e->getMessage();
+//  echo "teste2";
+//}
+//echo "test3";
+
+// //conectando servidor
+//     define( 'MYSQL_HOST', 'localhost' );
+//     define( 'MYSQL_USER', 'lenonr' );
+//     define( 'MYSQL_PASSWORD', ' ' );
+//     define( 'MYSQL_DB_NAME', 'safd' );
+//
+// //incluindo arquivo conexao
+//     include_once "conexao.php";
+//
+// // recebendo dados do formulario
+//     $siape  = $_POST['siape_funcionario'];
+//     $nome   = $_POST['nome_funcionario'];
+//     $email  = $_POST['email_funcionario'];    
+//     
+// //tentando realizar insercao dos dados     
+//     try
+//     {    
+//     //inserindo dados
+//         $sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES ($siape, $nome, $email)";
+// 
+//         $stmte = $this->pdo->prepare($sql);
+//         $stmte->bindParam(1,$siape, PDO::PARAM_STR);
+//         $stmte->bindParam(2,$nome, PDO::PARAM_STR);
+//         $stmte->bindParam(3,$email, PDO::PARAM_STR);
+//         $stmte->execute();
+// 
+//         if($ins)
+//         {
+//             echo 'Dados inseridos com sucesso';
+//         }
+//         else
+//         {
+//             echo 'Erro ao inserir os dados';
+//         }
+//     }
+// //mostrando mensangem erro
+//     catch(PDOException $e)
+//     {
+//         echo $e->getMessage();
+//     }
+//     
+// //executando insercao
+// //     $exec = $pdo->exec($ins);            
+//     
 ?>
 
 <!--
