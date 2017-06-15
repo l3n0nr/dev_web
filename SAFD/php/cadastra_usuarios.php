@@ -10,7 +10,61 @@
 
 echo "\n ".$siape. " | ". $nome . " | " . $email;
 
-echo "<script>alert('Registro inserido com sucesso')</script>";
+// if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "save" && $nome != "") {
+// if ($nome_funcionario != "") 
+// {
+    try 
+    {
+        $stmt = $conexao->prepare("INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES (?, ?, ?)");
+        $stmt->bindParam(1, $siape);
+        $stmt->bindParam(2, $nome);
+        $stmt->bindParam(3, $email);
+        
+        if ($stmt->execute()) 
+        {
+            if ($stmt->rowCount() > 0) 
+            {
+                echo "Dados cadastrados com sucesso!";
+                $siape = null;
+                $nome = null;
+                $email = null;
+            } 
+            else 
+            {
+                echo "Erro ao tentar efetivar cadastro";
+            }
+        } 
+        else 
+        {
+               throw new PDOException("Erro: Não foi possível executar a declaração sql");
+        }
+    } 
+    catch (PDOException $erro) 
+    {
+        echo "Erro: " . $erro->getMessage();
+    }
+// }
+
+//     try 
+//     {
+//         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//   
+//         $stmt = $pdo->prepare('INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)');
+//         $stmt->execute(array
+//         (   
+//             ':siape'    => '000'
+//             ':nome'     => 'lenonr'
+//             ':email'    => 'lenon@gmail.com'
+//         ));
+//         
+//         echo "dados inseridos!";
+//   
+//     echo $stmt->rowCount(); 
+//     } 
+//     catch(PDOException $e) 
+//     {
+//         echo 'Error: ' . $e->getMessage();
+//     }
 
 // public function insert($siape, $nome, $email)
 // {
