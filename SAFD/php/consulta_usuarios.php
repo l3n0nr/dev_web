@@ -1,9 +1,4 @@
 <?php
-//conectando servidor
-    define( 'MYSQL_HOST', 'localhost' );
-    define( 'MYSQL_USER', 'lenonr' );
-    define( 'MYSQL_PASSWORD', ' ' );
-    define( 'MYSQL_DB_NAME', 'safd' );
 
 //incluindo arquivo conexao
     include_once 'conexao.php';
@@ -31,10 +26,3 @@
     }
 ?>
 
-<!--
-    <html>
-        <li>
-            <i class="glyphicon glyphicon-minus"></i>
-        </li>
-    </html>
--->
