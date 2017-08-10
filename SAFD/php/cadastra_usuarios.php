@@ -1,18 +1,16 @@
 <?php
-
-//incluindo arquivo conexao
+    //incluindo arquivo conexao
     include_once "conexao.php";
 
-//recebendo dados do formulario
+    //recebendo dados do formulario
     $siape  = $_POST['siape_funcionario'];
     $nome   = $_POST['nome_funcionario'];
     $email  = $_POST['email_funcionario'];
 
-echo "\n ".$siape. " | ". $nome . " | " . $email;
+    //mostrando dados do formulario
+    echo "Siape: ".$siape. ", Nome: ". $nome . ", Email: " . $email . ".";
 
-// if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "save" && $nome != "") {
-// if ($nome_funcionario != "") 
-// {
+    //tentando realizar insercao    
     try 
     {
         $stmt = $conexao->prepare("INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES (?, ?, ?)");
@@ -43,6 +41,7 @@ echo "\n ".$siape. " | ". $nome . " | " . $email;
     {
         echo "Erro: " . $erro->getMessage();
     }
+    
 // }
 
 //     try 
