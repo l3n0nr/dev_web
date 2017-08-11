@@ -13,6 +13,7 @@
     //tentando realizar insercao    
     try 
     {
+        echo "Entrou no try";
         $stmt = $conexao->prepare("INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES (?, ?, ?)");
         $stmt->bindParam(1, $siape);
         $stmt->bindParam(2, $nome);
@@ -20,6 +21,7 @@
         
         if ($stmt->execute()) 
         {
+            echo "Entrou no if";
             if ($stmt->rowCount() > 0) 
             {
                 echo "Dados cadastrados com sucesso!";
@@ -95,27 +97,27 @@
 //   define( 'MYSQL_USER', 'lenonr' );
 //    define( 'MYSQL_PASSWORD', ' ' );
 
-//tentando conectar
-//try
-//{
-//  $pdo = new PDO('mysql:host=localhost; dbname=safd; MYSQL_USER, MYSQL_PASSWORD' );
-//   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-//   $stmt = $pdo->prepare('INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES (:siape, :nome, :email)');
-//   $stmt->execute(array(
-//     ':siape' => '$_POST[siape_funcionario]'
-//     ':nome' => '$_POST[nome_funcionario]'
-//     ':email' => '$_POST[email_funcionario]'
-//echo "teste1";
-//  ));
-
-//   echo $stmt->rowCount();
-//}
-//catch(PDOException $e)
-//{
-//  echo 'Error: ' . $e->getMessage();
-//  echo "teste2";
-//}
+// //tentando conectar
+//     try
+//     {
+//         $pdo = new PDO('mysql:host=localhost; dbname=safd; MYSQL_USER, MYSQL_PASSWORD' );
+//         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// 
+//         $stmt = $pdo->prepare('INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES (:siape, :nome, :email)');
+//         $stmt->execute(array(
+//             ':siape' => '$_POST[siape_funcionario]'
+//             ':nome' => '$_POST[nome_funcionario]'
+//             ':email' => '$_POST[email_funcionario]'
+//         echo "teste1";
+//         ));
+// 
+//         echo $stmt->rowCount();
+//     }
+//     catch(PDOException $e)
+//     {
+//         echo 'Error: ' . $e->getMessage();
+//         echo "teste2";
+//     }
 //echo "test3";
 
 // //conectando servidor

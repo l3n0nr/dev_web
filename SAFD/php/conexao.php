@@ -11,7 +11,7 @@
     {
         //realizando conexao atraves do objeto    
         $PDO = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
-        echo "[+] Conectou no banco. ";
+//         echo "[+] Conectou no banco. ";
     }
     //mostrando erro
     catch ( PDOException $e )
