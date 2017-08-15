@@ -6,14 +6,37 @@
     $siape  = $_POST['siape_funcionario'];
     $nome   = $_POST['nome_funcionario'];
     $email  = $_POST['email_funcionario'];
+    
+    //mostrando dados inseridos
+    echo "Dados - Siape:" . $siape . " ,Nome:" . $nome . " ,Email:" . $email. "</br></br>";
+    
+        // Create connection
+    $PDO = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) 
+    {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-    //mostrando dados do formulario
-    echo "Siape: ".$siape. ", Nome: ". $nome . ", Email: " . $email . ".";
+    $sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES ("$siape", "$nome", "$email")";
 
-    //tentando realizar insercao    
+    if ($conn->query($sql) === TRUE) 
+    {
+        echo "New record created successfully";
+    } else 
+    {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+    
+// ====================================================================================
+/*
+    //tentando realizar insercao        
     try 
     {
         echo "Entrou no try";
+        
         $stmt = $conexao->prepare("INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES (?, ?, ?)");
         $stmt->bindParam(1, $siape);
         $stmt->bindParam(2, $nome);
@@ -42,8 +65,9 @@
     catch (PDOException $erro) 
     {
         echo "Erro: " . $erro->getMessage();
-    }
-    
+    }*/
+
+// ====================================================================================
     
 // }
 
