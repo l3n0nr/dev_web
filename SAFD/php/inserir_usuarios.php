@@ -55,14 +55,14 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Adicionando Usuários</h3>
+                  <h3 class="box-title">Adicionando Funcionários</h3>
                 </div><!-- /.box-header -->
                 
                 <form action="cadastra_usuarios.php" method="post">
-                    <div class="form-group has-feedback">
+                    <!--<div class="form-group has-feedback">
                         <input type="text" class="form-control" placeholder="Siape" name="siape_funcionario" required="" autocomplete="off">
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                    </div>
+                    </div>-->
                     <div class="form-group has-feedback">
                         <input type="text" class="form-control" placeholder="Nome Completo" name="nome_funcionario" required="" autocomplete="off">
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
