@@ -48,7 +48,8 @@
             <li><a href=""><i class="fa fa-dashboard"></i> Inicio</a></li>
           </ol>
         </br>
-        <h1> TELA DO ADMINISTRADOR </h1>
+        <h1> Tela do Administrador do Sistema </h1><hr>
+        <h4> - Aqui você poderá modificar os usuários cadastrados, além de fazer algumas alterações no sistema; </h4>
       </div>
       <div class="tab-content no-padding">
         <div class="tab-pane" id="#dg">
