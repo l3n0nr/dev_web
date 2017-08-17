@@ -28,18 +28,18 @@
   <body class="hold-transition register-page">
     <div class="register-box">
       <div class="register-logo">
-        <a href=""> Sistema de Acompanhamento do Fluxo de Demandas<br>(SAFD)</a>
+        <a href="index.php"> Sistema de Acompanhamento do Fluxo de Demandas<br>(SAFD)</a>
       </div>
 
-      <label> Meus robôs estão programando isso, por favor espere... </label>
+      <label> Meus robôs estão programando isso, por favor aguarde. Como alternativa você pode voltar para à página anterior.</label>
 
-      <div class="overlay">
+      <!--<div class="overlay">        
         <i  class="fa fa-refresh fa-spin"></i>
-      </div>
+      </div>-->
 
       <br>
       <li>
-          <a href="index.php"><i class="glyphicon glyphicon-arrow-left"></i> <span> Voltar </span></a>
+          <a href="index.php"><i class="glyphicon glyphicon-arrow-left"></i> <span> Voltar para a página anterior </span></a>
       </li>
 
 

@@ -58,8 +58,10 @@
         <a href="senha.php">Esqueci minha senha</a>
         <br>
         <br>
-
         <a href="registrar.php" class="text-center">Ainda não tenho cadastro</a>
+        <br>
+        <br>
+        <a href="../index.php" class="text-center">Volta para a página anterior</a>
 
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
