@@ -8,67 +8,72 @@
     $email  = $_POST['email_funcionario'];
     
     //mostrando dados inseridos
-    echo "Dados - Siape:" . $siape . " ,Nome:" . $nome . " ,Email:" . $email. "</br></br>";
+    echo "Dados - Siape:" . $siape . ", Nome:" . $nome . ", Email:" . $email. ".<hr>";    
+   
+// INSERÇÃO
+    $sql  = 'INSERT INTO funcionario(siape, nome, email) ';
+    $sql .= 'VALUES(:siape_funcionario, :nome_funcionario, :email_funcionario)';
+
+    /*
+    diferença entre query e prepare 
+    prepare é com passagem de parametros,já o query não possibilita
+    */
     
-        // Create connection
-    $PDO = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) 
+    $create = $db->prepare($sql);
+    /*
+    bindValue() pode receber referências e valores como argumento.
+    bindParam() não pode ser um tipo primitivo como uma string ou número solto, retorno de função/método 
+    */
+    
+    $create->bindValue(':siape',$siape, PDO::PARAM_STR);
+    $create->bindValue(':nome',$nome, PDO::PARAM_STR);
+    $create->bindValue(':email',$email, PDO::PARAM_STR);
+            
+    if($create->execute())
     {
-        die("Connection failed: " . $conn->connect_error);
+        echo "[+] Registro efetuado com sucesso!";
     }
-
-    $sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES ("$siape", "$nome", "$email")";
-
-    if ($conn->query($sql) === TRUE) 
+    else
     {
-        echo "New record created successfully";
-    } else 
-    {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "[-] Erro ao cadastrar dados";
     }
+      
+// ================================================================================================
+//     //tentando realizar insercao        
+//     try 
+//     {
+//         echo "Entrou no try";
+//         
+//         $stmt = $conexao->prepare("INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES (?, ?, ?)");
+//         $stmt->bindParam(1, $siape);
+//         $stmt->bindParam(2, $nome);
+//         $stmt->bindParam(3, $email);
+//         
+//         if ($stmt->execute()) 
+//         {
+//             echo "Entrou no if";
+//             if ($stmt->rowCount() > 0) 
+//             {
+//                 echo "Dados cadastrados com sucesso!";
+//                 $siape = null;
+//                 $nome = null;
+//                 $email = null;
+//             } 
+//             else 
+//             {
+//                 echo "Erro ao tentar efetivar cadastro";
+//             }
+//         } 
+//         else 
+//         {
+//                throw new PDOException("Erro: Não foi possível executar a declaração sql");
+//         }
+//     } 
+//     catch (PDOException $erro) 
+//     {
+//         echo "Erro: " . $erro->getMessage();
+//     }
 
-    $conn->close();
-    
-// ====================================================================================
-/*
-    //tentando realizar insercao        
-    try 
-    {
-        echo "Entrou no try";
-        
-        $stmt = $conexao->prepare("INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES (?, ?, ?)");
-        $stmt->bindParam(1, $siape);
-        $stmt->bindParam(2, $nome);
-        $stmt->bindParam(3, $email);
-        
-        if ($stmt->execute()) 
-        {
-            echo "Entrou no if";
-            if ($stmt->rowCount() > 0) 
-            {
-                echo "Dados cadastrados com sucesso!";
-                $siape = null;
-                $nome = null;
-                $email = null;
-            } 
-            else 
-            {
-                echo "Erro ao tentar efetivar cadastro";
-            }
-        } 
-        else 
-        {
-               throw new PDOException("Erro: Não foi possível executar a declaração sql");
-        }
-    } 
-    catch (PDOException $erro) 
-    {
-        echo "Erro: " . $erro->getMessage();
-    }*/
-
-// ====================================================================================
-    
 // }
 
 //     try 

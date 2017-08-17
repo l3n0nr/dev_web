@@ -5,7 +5,7 @@
     
 //realizando consulta no banco de dados
     $sql = "SELECT * FROM funcionario";
-    $result = $PDO->query( $sql );
+    $result = $db->query( $sql );
 
 //criando repeticao para percorrer a tabela
     while ($linha = $result->fetch(PDO::FETCH_ASSOC)) 
