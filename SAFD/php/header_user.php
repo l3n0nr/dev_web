@@ -8,6 +8,9 @@
 </a>
 <!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top" role="navigation">
+    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only"></span>
+    </a>
     <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
             <li class="dropdown notifications-menu">
@@ -16,13 +19,10 @@
                     <span class="label label-warning">?</span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="header">Mensagens</li>
+                    <li class="header"><a href=""> **Mensagens indisponíveis** </a></li>
                     <li class="footer"><a href="dem_pendentes.php">Ver todas demadas</a></li>
                 </ul>
-            </li>
-            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                <span class="sr-only"></span>
-            </a>
+            </li>            
             <li class="dropdown">
                 <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $_SESSION["usuario"] ?>
                     <span class="caret"></span></a>
@@ -31,11 +31,6 @@
                     <!--                    <li class="divider"></li>-->
                     <li><a href="../index.php">Sair</a></li>                                        
                 </ul>
-                
-                <!-- Control Sidebar Toggle Button -->
-                <li>
-                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                </li>
             </li>
         </ul>
     </div>    
