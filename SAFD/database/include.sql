@@ -38,9 +38,9 @@ INSERT INTO usuario(id_setor, estado_usuario, login_usuario, senha_usuario, siap
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 	
 	
 INSERT INTO administrador(nome_administrador, senha_administrador, habilitado_administrador)
-        VALUES("admin", "lenonr", "0");
+        VALUES("admin", "admin", "0");
         
 INSERT INTO administrador(nome_administrador, senha_administrador, habilitado_administrador)
-        VALUES("lenonr", " ", "1");        
+        VALUES("lenonr", "lenonr", "1");        
         
         
