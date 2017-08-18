@@ -12,12 +12,7 @@
    
 // INSERÇÃO - campo siape_funcionario irá ser usado futuramente como campo de preenchimento manual
     $sql  = 'INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) ';
-    $sql .= 'VALUES(:siape, :nome, :email)';
-    
-    /*
-    diferença entre query e prepare 
-    prepare é com passagem de parametros,já o query não possibilita
-    */
+    $sql .= 'VALUES(:siape, :nome, :email)';    
     
     $create = $db->prepare($sql);
     /*
