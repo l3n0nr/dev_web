@@ -38,6 +38,13 @@
                     </button>
                 </div>
             </form>
+            <form action="php/sobre.php" method="post">
+                <div class="login-box-body">
+                    <button
+                        type="submit" class="btn btn-block btn-success btn-lm"> Sobre
+                    </button>
+                </div>
+            </form>
         </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
 
