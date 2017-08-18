@@ -1,8 +1,6 @@
-Para criar o banco de dados utilizado pela aplicação, é necessário seguir os seguintes passos:
-1 - Criar a base de dados, chamada "safd".
-2 - Depois, executar o arquivo "base.sql" na base safd.
-3 - Para adicionar os campos da tabelas, utilizar o arquivo "dados.sql".
+Aqui você poderá encontrar algumas informações referentes a como o sistema está estruturado.
 
-Observações
-- A pasta "esquema_banco", possui imagens referentes à estruturação do banco de dados. 
-- O arquivo "outros.sql", será utilizado para armazenar códigos sql que poderão ser utilizados posteriormente. Basicamente esse arquivo será para testes.
+- Na pasta "esquema_banco" vocẽ poderá visualizar a modelagem do sistema.
+- Na pasta "fluxo", você encontrará informações sobre o fluxo de funcionamento do sistema.
+- Na pasta "funcoes_usuario", você poderá visualizar as funcões de cada usuário do sistema.
+- Na pasta "sql", você encotrará códigos sql utilizados no sistema.
