@@ -1,4 +1,5 @@
--- -- -- TABELAS DOS USUARIOS
+-- CRIANDOS TABELAS NO BANCO DE DADOS
+-- -- TABELAS DOS USUARIOS
 
 CREATE TABLE IF NOT EXISTS usuario(
     id_setor int(10) NOT NULL AUTO_INCREMENT,
@@ -19,7 +20,7 @@ CREATE TABLE IF NOT EXISTS setor(
     id_setor int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nome_setor VARCHAR(40) NOT NULL);	
 	
--- -- -- TABELAS VOLTADAS PARA SOLICITACAO DOS DOCUMENTOS
+-- -- TABELAS VOLTADAS PARA SOLICITACAO DOS DOCUMENTOS
 
 CREATE TABLE IF NOT EXISTS solicitacao(
     id_solicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -65,8 +66,8 @@ CREATE TABLE IF NOT EXISTS objeto(
 	prazoexecucao_objeto VARCHAR(40) NOT NULL,
 	estrategiafornecimento_objeto VARCHAR(40) NOT NULL,
 	nome_objeto VARCHAR(40) NOT NULL);
-	
--- -- -- OUTRAS [VERIFICAR NECESSIDADE]
+		
+-- -- OUTRAS [VERIFICAR NECESSIDADE]
 
 CREATE TABLE IF NOT EXISTS usuario_cadastrado(
     numero_portaria int(5) NOT NULL ,
@@ -88,4 +89,15 @@ CREATE TABLE IF NOT EXISTS administrador(
         senha_administrador VARCHAR(40) NOT NULL,
         habilitado_administrador BINARY NOT NULL);
 
+-- CRIANDO LIGAÇÕES ENTRE CHAVES DAS TABELAS
+ALTER TABLE `usuario` 
+    ADD CONSTRAINT `siape_funcionario` 
+    FOREIGN KEY (`siape_funcionario`) 
+    REFERENCES `funcionario` (`siape_funcionario`);
+
+ALTER TABLE `usuario` 
+    ADD CONSTRAINT `id_setor` 
+    FOREIGN KEY (`id_setor`) 
+    REFERENCES `setor` (`id_setor`);	
+        
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
