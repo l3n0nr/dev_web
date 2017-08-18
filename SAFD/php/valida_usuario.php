@@ -1,4 +1,8 @@
 <?php
+/*
+    ERRO: Usuário quando não está cadastrado, ele não é tratato pelo sistema.
+*/
+
   $login = $_POST["login"];
   $senha = $_POST["senha"];
 
@@ -9,47 +13,47 @@
     include_once 'conexao.php';
     
 //realizando consulta no banco de dados
-    $consulta = "SELECT nome_administrador, senha_administrador FROM administrador WHERE nome_administrador='$login' AND senha_administrador='$senha' AND habilitado_administrador != '0' ";
+    //caso o usuario exista no banco(login/senha) e seu status nao seja 0(desativado) entra no sistema.
+    $consulta = "SELECT nome_administrador, senha_administrador FROM administrador WHERE nome_administrador='$login' AND senha_administrador='$senha' AND habilitado_administrador != '0' ";    
     
     $result = $db->query($consulta);
     
-//     $result = mysqli_query($db, $consulta);
-    
-//     //criando repeticao para percorrer a tabela
-        while ($linha = $result->fetch(PDO::FETCH_ASSOC)) 
-        {                               
-            #criando variavel para mostra colunas/linhas
-                $visualizar = 
-                        "<tr>
-                            <td>".$linha['nome_administrador']."</td>"."                                   
-                            <td>".$linha['senha_administrador']."</td>"."            
-                            <td>".$linha['habilitado_administrador']."</td>"."
-                            <td>".""."</td>
-                            <td>".""."</td>
-                            <td>"."</td>
-                        </tr>";
-                        
-            #mostrando colunas/linhas
-//                 echo "<hr>".$visualizar;                                               
-                
-            if(mysqli_num_rows($result)!=0)	 
-            {   
-                echo "<p class=\"erro\">Dados incorretos! Favor verificar seu e-mail e senha e tentar novamente!</p>";                
-                session_start();
-                session_destroy();
-                header("location:index.php");
-            }
-            else
-            {
-                echo "Usuário cadastro, agora você pode acessar o sistema";
-                session_start();
-                session_cache_expire(10);
-                $_SESSION["usuario"]=$login;
-                $_SESSION["senha"]=$senha;
-                header("location:system_admin.php");                
-            }                
+    //criando repeticao para percorrer a tabela
+    while ($linha = $result->fetch(PDO::FETCH_ASSOC)) 
+    {                               
+        #criando variavel para mostra colunas/linhas
+            $visualizar = 
+                    "<tr>
+                        <td>".$linha['nome_administrador']."</td>"."                                   
+                        <td>".$linha['senha_administrador']."</td>"."            
+                        <td>".$linha['habilitado_administrador']."</td>"."
+                        <td>".""."</td>
+                        <td>".""."</td>
+                        <td>"."</td>
+                    </tr>";
                     
+        #mostrando colunas/linhas
+        echo "<hr>".$visualizar;                                               
+            
+        if(mysqli_num_rows($result)!=0)	 
+        {   
+            echo "<p class=\"erro\">Dados incorretos! Favor verificar seu e-mail e senha e tentar novamente!</p>";                
+            session_start();
+            session_destroy();
+            header("location:index.php");
+            break;
         }
+        else
+        {
+            echo "Usuário cadastro, agora você pode acessar o sistema";
+            session_start();
+            session_cache_expire(10);
+            $_SESSION["usuario"]=$login;
+            $_SESSION["senha"]=$senha;
+            header("location:system_admin.php");                
+        }                
+                
+    }
   
 //   if ($login =="admin" && $senha =="admin")
 //   {
