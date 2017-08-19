@@ -34,17 +34,9 @@
       <div class="box box-widget widget-user">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-aqua-active">
-              <h3 class="widget-user-username">Lenon Ricardo Machado de Souza</h3>
-              <h5 class="widget-user-desc">Análista de Sistemas</h5>
-            </div>
-            <div class="widget-user-image">
-               <img class="img-circle" src="../others/img/perfil.png" alt="Foto de Perfil do Usuário">
+              <h2 class="widget-user-username">Sistema de Acompanhamento do Fluxo de Demandas</h2>
             </div>
             <div class="box-footer">
-              <div class="row">                              
-                <!-- /.col -->                                
-              </div>
-              <br>              
               <label> Este sistema corresponde ao Trabalho de Conclusão do aluno Lenon Ricardo Machado de Souza, no curso de Análise e Desenvolvimento de Sistemas, do Instituto Federal Farroupilha Campus Alegrete.</label>
               <label> Caso você tenha críticas, sugestões ou comentários, favor entrar em contato, pelos seguintes meios.</label>          
               <br><br>
