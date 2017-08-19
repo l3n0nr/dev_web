@@ -1,6 +1,11 @@
 <?php
 /*
-    ERRO: Usuário quando não está cadastrado, ele não é tratato pelo sistema.
+    AÇÕES PENDENTES:
+        -Criar um verificação para analisar o tipo do usuario cadastrado. Se "administrador" entra na parte de administrador do sistema, se usuario "padrao" entra na parte normal de sistema.
+        -Criar posteriormente os niveis de Diretor, Coordenador, Chefe e Outros.
+    
+    ERROS: 
+        -Usuário quando não está cadastrado, ele não é tratato pelo sistema.
 */
 
   $login = $_POST["login"];
@@ -33,8 +38,8 @@
                     </tr>";
                     
         #mostrando colunas/linhas
-        echo "<hr>".$visualizar;                                               
-            
+        echo "<hr>".$visualizar;                  
+        
         if(mysqli_num_rows($result)!=0)	 
         {   
             echo "<p class=\"erro\">Dados incorretos! Favor verificar seu e-mail e senha e tentar novamente!</p>";                
