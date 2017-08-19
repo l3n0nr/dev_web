@@ -38,11 +38,11 @@
       </div>-->
 
       <br>
-      <li>
-          <a href="index.php"><i class="glyphicon glyphicon-arrow-left"></i> <span> Voltar para a página anterior </span></a>
-      </li>
-
-
+    <center>
+    <br>    
+        <a href="index.php"><i class="glyphicon glyphicon-arrow-left"></i> <span> Voltar para a página anterior </span></a>
+    <br>
+    </center>
 
     <!-- jQuery 2.1.4 -->
     <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
