@@ -4,7 +4,19 @@
     include_once 'conexao.php';
     
 //realizando consulta no banco de dados
-    $sql = "SELECT * FROM funcionario";
+//     $sql = "SELECT * FROM funcionario";
+//     $result = $db->query( $sql );
+    
+    /*
+    Select Nome,uf_descricao as uf,uf_descricao as Localidade 
+        From Servidor s inner join UF uf On (s."campo Localidade_codigo" = uf.codigo)
+    */
+    
+//     $sql = "SELECT login_usuario, estado_usuario as usuario, nome_setor as setor 
+//                 FROM usuario INNER JOIN setor ON (usuario.id_setor = setor.id_setor)";
+
+//     $sql = "SELECT login_usuario, estado_usuario FROM usuario";
+    $sql = "SELECT * FROM usuario";
     $result = $db->query( $sql );
 
 //criando repeticao para percorrer a tabela
@@ -13,11 +25,12 @@
         #criando variavel para mostra colunas/linhas
             $visualizar = 
                     "<tr>
-                        <td>".$linha['siape_funcionario']."</td>"."                                   
-                        <td>".$linha['nome_funcionario']."</td>"."            
-                        <td>".$linha['email_funcionario']."</td>"."
                         <td>".""."</td>
+                        <td>".$linha['login_usuario']."</td>"."                                   
                         <td>".""."</td>
+                        <td>"."$linha['nome_setor']"."</td>
+                        <td>".""."</td>
+                        <td>".$linha['estado_usuario']."</td>"."            
                         <td>"."</td>
                     </tr>";
                 
