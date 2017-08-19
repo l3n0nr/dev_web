@@ -70,7 +70,7 @@
                         SIAPE
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                        Nome
+                        Login
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                         Email
@@ -80,6 +80,9 @@
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                         Função
+                      </th>
+                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                        Habilitado? (0 - Não)
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                         Opções
