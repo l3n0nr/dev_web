@@ -16,7 +16,7 @@
 //                 FROM usuario INNER JOIN setor ON (usuario.id_setor = setor.id_setor)";
 
 //     $sql = "SELECT login_usuario, estado_usuario FROM usuario";
-    $sql = "SELECT * FROM usuario";
+    $sql = "SELECT login_usuario, estado_usuario, nome_setor FROM usuario, setor WHERE usuario.id_setor = setor.id_setor";
     $result = $db->query( $sql );
 
 //criando repeticao para percorrer a tabela
@@ -28,7 +28,7 @@
                         <td>".""."</td>
                         <td>".$linha['login_usuario']."</td>"."                                   
                         <td>".""."</td>
-                        <td>"."$linha['nome_setor']"."</td>
+                        <td>".$linha['nome_setor']."</td>"."                                   
                         <td>".""."</td>
                         <td>".$linha['estado_usuario']."</td>"."            
                         <td>"."</td>
