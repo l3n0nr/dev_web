@@ -2,7 +2,7 @@
 -- -- TABELAS DOS USUARIOS
 
 CREATE TABLE IF NOT EXISTS usuario(
-    id_setor int(10) NOT NULL AUTO_INCREMENT,
+    id_setor int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	estado_usuario binary NOT NULL, 
 	login_usuario VARCHAR(50) NOT NULL,
 	senha_usuario VARCHAR(50) NOT NULL);	
