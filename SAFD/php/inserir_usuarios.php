@@ -60,7 +60,7 @@
                 
                 <form action="cadastra_usuarios.php" method="post">
                     <?php
-                    include 'form_cad.php';
+                        include 'form_cad.php';
                     ?>
                 </form>
                 

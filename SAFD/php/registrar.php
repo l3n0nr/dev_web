@@ -34,7 +34,7 @@
                 <p class="login-box-msg">Cadastra-se para acessar o sistema</p>
                 <form action="cadastra_usuarios.php" method="post" >
                    <?php
-                    include 'form_cad.php';
+                        include 'form_cad.php';
                     ?>
                 </form>
                 <br>        
