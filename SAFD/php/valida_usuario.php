@@ -19,13 +19,17 @@
     
 //realizando consulta no banco de dados
     //caso o usuario exista no banco(login/senha) e seu status nao seja 0(desativado) entra no sistema.
-    $consulta = "SELECT nome_administrador, senha_administrador FROM administrador WHERE nome_administrador='$login' AND senha_administrador='$senha' AND habilitado_administrador != '0' ";    
+//     $consulta = "SELECT nome_administrador, senha_administrador FROM administrador WHERE nome_administrador='$login' AND senha_administrador='$senha' AND habilitado_administrador != '0' ";    
+
+    $consulta = "SELECT login_usuario, senha_usuario FROM usuario WHERE login_usuario='$login' AND senha_usuario='$senha' AND estado_usuario != '0' ";    
+
+//     $consulta = "SELECT login_usuario FROM usuario WHERE login_usuario='$login' AND estado_usuario != '0' ";    
     
     $result = $db->query($consulta);
     
     //criando repeticao para percorrer a tabela
     while ($linha = $result->fetch(PDO::FETCH_ASSOC)) 
-    {                               
+    {                  
         #criando variavel para mostra colunas/linhas
             $visualizar = 
                     "<tr>
@@ -38,26 +42,25 @@
                     </tr>";
                     
         #mostrando colunas/linhas
-        echo "<hr>".$visualizar;                  
-        
-        if(mysqli_num_rows($result)!=0)	 
+        echo "<hr>".$visualizar;                          
+
+
+        if(mysqli_num_rows($result) != 0)	 
         {   
-            echo "<p class=\"erro\">Dados incorretos! Favor verificar seu e-mail e senha e tentar novamente!</p>";                
-            session_start();
-            session_destroy();
-            header("location:index.php");
-            break;
+            echo "Nao Entrou!";
+//             session_start();
+//             session_destroy();
+//             header("location:index.php");
         }
         else
         {
-            echo "Usuário cadastro, agora você pode acessar o sistema";
-            session_start();
-            session_cache_expire(10);
-            $_SESSION["usuario"]=$login;
-            $_SESSION["senha"]=$senha;
-            header("location:system_admin.php");                
-        }                
-                
+            echo "Entrou!";
+//             session_start();
+//             session_cache_expire(10);
+//             $_SESSION["usuario"]=$login;
+// //             $_SESSION["senha"]=$senha;
+//             header("location:system_admin.php");                                                 
+        }    
     }
   
 //   if ($login =="admin" && $senha =="admin")
