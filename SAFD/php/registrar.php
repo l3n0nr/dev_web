@@ -37,7 +37,7 @@
                         include 'form_cad.php';
                     ?>
                 </form>
-                <br>        
+                <br>
                 <a href="../php/index.php" class="text-center">Acho que já tenho cadastro, quero voltar a página de login.</a>
             </div><!-- /.form-box -->
         </div><!-- /.register-box -->
