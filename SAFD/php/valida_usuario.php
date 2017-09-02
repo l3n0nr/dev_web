@@ -47,19 +47,19 @@
 
         if(mysqli_num_rows($result) != 0)	 
         {   
-            echo "Nao Entrou!";
-//             session_start();
-//             session_destroy();
-//             header("location:index.php");
+//             echo "Nao Entrou!";
+            session_start();
+            session_destroy();
+            header("location:index.php");
         }
         else
         {
-            echo "Entrou!";
-//             session_start();
-//             session_cache_expire(10);
-//             $_SESSION["usuario"]=$login;
-// //             $_SESSION["senha"]=$senha;
-//             header("location:system_admin.php");                                                 
+//             echo "Entrou!";
+            session_start();
+            session_cache_expire(10);
+            $_SESSION["usuario"]=$login;
+//             $_SESSION["senha"]=$senha;
+            header("location:system_admin.php");                                                 
         }    
     }
   
