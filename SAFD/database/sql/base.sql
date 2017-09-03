@@ -99,5 +99,9 @@ ALTER TABLE `usuario`
     ADD CONSTRAINT `id_setor` 
     FOREIGN KEY (`id_setor`) 
     REFERENCES `setor` (`id_setor`);	
-        
+
+ALTER TABLE usuario 
+    ADD CONSTRAINT id_funcao     
+    FOREIGN KEY (id_funcao) 
+    REFERENCES funcao (id_funcao);
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
