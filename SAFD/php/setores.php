@@ -1,23 +1,71 @@
-    <option value=""> Setor </option>
-    <option value="dg"> DG </option>
-    <option value="gabinente"> Gabinete </option>
+    <option value=""> Escolha o seu setor </option>
     
-    <option value=""> -- </option>
-    <option value="direcao de administracao"> DAD </option>
-    <option value="almoxarifado"> Almoxarifado </option>
-    <option value="infraestrutura"> Infraestrutura </option>
-    <option value="orcamento e finacas"> Orçamento e Finanças </option>
-    <option value="licitacoes e contratos"> Licitações e Contratos </option>
-    <option value="patrimonio"> Patrimonio </option>
+        <option value=""> --- </option>
+        <option value="dg"> (D.G) - Direção Geral </option>
+        <option value="gabinete"> (SET. GABIN.) - Setor de Gabinete </option>    
+        <option value="assesorias"> (SET. ASSES.) - Assesorias </option>    
+       
+        <option value=""> -- </option>
+        <option value="dpdi"> (D.P.D.I) - Diretoria de Planejamento e Desenvolvimento Institucional </option>
+            <option value="coordenacao_gestao_pessoas"> (C.G.P) - Coordenação de Gestão de Pessoas </option>
+        
+            <option value="coordenacao_tecnologia_informacao"> (C.T.I) - Coordenação de Tecnologia da Informação </option>
+        
+            <option value="unidade_gestao_documentos"> (UNID. DOCUMENT.) - Unidade de Gestão de Documentos </option>
+       
+        <option value=""> --- </option>
+        <option value="dad"> (D.A.D) - Diretoria  de Administração </option>    
+            <option value="coordenacao_almoxarifado_patrimonio"> (C.A.P) - Coordenação de Almoxarifado e Patrimônio </option>
+                <option value="setor almoxarifado"> (SET. ALMOX.) - Setor de Almoxarifado </option>
+                <option value="setor patrimonio"> (SET. PATRIM.) - Setor de Patrimônio </option>
+        
+            <option value="coordenacao_infraestrutura"> (C.I) - Coordenação de Infraestrutura </option>
+                <option value="setor infraestrutura"> (SET. INFRA.) - Setor de Infraestrutura </option>
+            
+            <option value="coordenacao_licitacoes_contratos"> (C.L.C) - Coordenação de Licitações e Contratos </option>
+                <option value="setor licitacoes e contratos"> (SET. LIC. CONTRAT.) - Setor de Licitações e Contratos </option>        
+        
+            <option value="coordenacao_orcamentos_financas"> (C.O.F) - Coordenação de Orçamento e Finanças </option>    
+                <option value="setor orcamento e financas"> (SET. ORC. FINAN.) -  Setor de Orçamento e Finanças </option>    
+        
+        
+        <option value=""> --- </option>
+        <option value="de"> (D.E) - Diretoria  de Ensino </option>
+            <option value="setor biblioteca"> (BIBLI.) - Biblioteca </option>     
+        
+            <option value="coordenacao_acoes_inclusivas"> (CAI) - Coordenação de Ações Inclusivas </option>
+        
+            <option value="coordenacao_assistencia estudantil"> (C.A.E) - Coordenação de Assistência Estudantil </option>
+                <option value="setor assistencia estudantil"> (Assis. Estudant.) - Setor de Assistência Estudantil </option>
+        
+            <option value="coordenacao_geral_ensino"> (C.G.E) - Coordenação Geral de Ensino </option> 
+        
+            <option value="coordenacao_cursos_superiores"> (C.C.S) - Coordenação dos Cursos Superiores </option> 
+            
+            <option value="coordenacao_educacao_distancia"> (C.E.D) - Coordenação de Educação à Distância </option> 
+        
+            <option value="coordenacao_eixos_tecnologicos"> (C.E.T) - Coordenação de Eixos Tecnológicos </option> 
+        
+            <option value="coordenacao_proeja"> (C.P) - Coordenação do Proeja </option> 
+            
+            <option value="setor_assesoria_pedagogica"> (SET. ASSES. PEDAGOG.) - Setor de Assesoria Pedagógica </option> 
+        
+            <option value="coordenacao_registros_academicos"> (C.R.A) - Coordenação de Registros Acadêmicos </option> 
+        
+        
+        <option value=""> --- </option>
+        <option value="dpep"> (D.P.E.P) - Diretoria  de Pesquisa, Extensão e Produção </option>
+        
+            <option value="coordenacao extensao"> (C.E) - Coordenação de Extensão </option>
+                <option value="setor estagios"> (SET. ESTAG.) - Setor de Estágios </option>
+        
+            <option value="coordenacao pesquisa"> (C.P.P.I) - Coordenação de Pesquisa, Pós-Graduação e Inovação </option>
+        
+            <option value="coordenacao producao"> (C.P) - Coordenação de Produção </option>
+                <option value="setor producao"> (SET. PROD) - Setor de Produção </option>
+                
     
-    <option value=""> -- </option>
-    <option value="direcao de ensino"> DE </option>
-    <option value="assistencia estudantil"> Assistência Estudantil </option>
-    <option value="apoio pedagogico"> Apoio Pedagógico </option>
-    <option value="centro de sauda"> Centro de Saude </option>
-    <option value="secretaria"> Secretaria </option>
-    
-    <option value=""> -- </option>
+    <!--<option value=""> -- </option>
     <option value="coordenacao informatica"> Coordenação de Informática </option>
     <option value="coordenacao analise e desenvolvimento de sistemas"> Coordenação de Análise de Sistemas </option>
     
@@ -32,16 +80,7 @@
     <option value="coordenacao de matematica"> Coordenação de Matemática </option>
     <option value="coordenacao de biologia"> Coordenação de Biologia </option>
     <option value="coordenacao de quimica"> Coordenação de Química </option>
+        
     
-    <option value=""> -- </option>
-    <option value="diretoria de planejamento e desenvolvimento instituicional"> DPDI </option>
-    <option value="coordenacao tecnologia da informacao"> Coordenação de Tecnologia da Informação </option>
-    <option value="coordenacao gestao de pessoas"> Coordenação de Gestão de Pessoas </option>
-    <option value="setor protocolo"> Setor do Protocolo </option>
+    <option value=""> -- </option>-->
     
-    <option value=""> -- </option>
-    <option value="direcao de pesquisa, extensao e producao"> DPEP </option>
-    <option value="coordenacao de extensao"> Coordenação de Extensão </option>
-    <option value="setor estagios"> Setor de Estágios </option>
-    <option value="coordenacao de pesquisa"> Coordenação de Pesquisa </option>
-    <option value="coordenacao de producao"> Coordenação de Produção </option>
