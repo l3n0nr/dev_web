@@ -55,7 +55,7 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Adicionando Funcionários</h3>
+                  <h3 class="box-title">Adicionando Usuários</h3>
                 </div><!-- /.box-header -->
                 
                 <form action="cadastra_usuarios.php" method="post">

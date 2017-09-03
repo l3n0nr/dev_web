@@ -11,7 +11,7 @@
     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 </div>                    
 <div class="form-group has-feedback">
-    <select id="setor" class="form-control" name="setor" required="" autocomplete="off">
+    <select id="setor" class="form-control" name="nome_setor" required="" autocomplete="off">
         <?php
         include 'setores.php';
         ?>
@@ -19,24 +19,32 @@
 </div>
 
 <div class="form-group has-feedback">
-    <select id="nivel" class="form-control" name="funcao" required="" autocomplete="off">
+    <select id="nivel" class="form-control" name="descricao_funcao" required="" autocomplete="off">
         <?php
         include 'funcao.php';
         ?>
     </select>
 </div>
 <div class="form-group has-feedback">
-    <input type="text" class="form-control" placeholder="Login" name="login" required="" autocomplete="off">
+    <input type="text" class="form-control" placeholder="Login" name="login_usuario" required="" autocomplete="off">
     <span class="glyphicon glyphicon-user form-control-feedback"></span>
 </div>
 <div class="form-group has-feedback">
-    <input type="password" class="form-control" placeholder="Senha" name="senha" required="" autocomplete="off">
+    <input type="password" class="form-control" placeholder="Senha" name="senha_usuario" required="" autocomplete="off">
     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 </div>
 <div class="form-group has-feedback">
-    <input type="password" class="form-control" placeholder="Confirme a senha" required="" autocomplete="off">
+    <input type="password" class="form-control" placeholder="Confirme a senha" name="confirma_senha" required="" autocomplete="off">
     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 </div>
+
+<!--<javascript>
+    if($('#txtSenha').val() != $('#txtSenhaConfirme').val()){
+        alert('Senhas diferentes');
+        return false;
+    }
+</javascript>-->
+
 <div class="row">          
     <div class="col-xs-12">
         <button type="submit" class="btn btn-success btn-block btn-flat">Registrar</button>

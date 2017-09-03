@@ -15,7 +15,10 @@
     $senha  = $_POST['senha_usuario'];        
         
     //mostrando dados inseridos
-//     echo "Dados - Siape:" . $siape . ", Nome:" . $nome . ", Email:" . $email. ".<hr>";    
+    echo "Tabela Funcionario - Siape: " .$siape. ", Nome:" . $nome. ", Email:" .$email. ".<hr>";    
+    echo "Tabela Setor - Setor: " .$setor. ".<hr>";
+    echo "Tabela Função - Função: " .$funcao. ".<hr>";
+    echo "Tabela Usuario - Usuario: " .$login. " Senha: " .$senha. ".<hr>";
    
 // INSERÇÃO - campo siape_funcionario irá ser usado futuramente como campo de preenchimento manual
     $sql  = 'INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) ';
@@ -32,14 +35,14 @@
     $create->bindValue(':nome',$nome, PDO::PARAM_STR);
     $create->bindValue(':email',$email, PDO::PARAM_STR);
             
-    if($create->execute())
-    {
-        echo "[+] Registro efetuado com sucesso!";
-    }
-    else
-    {
-        echo "[-] Erro ao cadastrar dados";
-    }
+//     if($create->execute())
+//     {
+//         echo "[+] Registro efetuado com sucesso!";
+//     }
+//     else
+//     {
+//         echo "[-] Erro ao cadastrar dados";
+//     }
       
 ?>
 
