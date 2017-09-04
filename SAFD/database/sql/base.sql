@@ -91,9 +91,12 @@ CREATE TABLE IF NOT EXISTS administrador(
 
 -- CRIANDO LIGAÇÕES ENTRE CHAVES DAS TABELAS
 ALTER TABLE `usuario` 
-    ADD CONSTRAINT `siape_funcionario` 
+    ADD CONSTRAINT `fk_siape_funcionario` 
     FOREIGN KEY (`siape_funcionario`) 
     REFERENCES `funcionario` (`siape_funcionario`);
+    
+-- ALTER TABLE `usuario`
+--     ADD siape_funcionario int(10) NOT NULL;
 
 ALTER TABLE `usuario` 
     ADD CONSTRAINT `id_setor` 
