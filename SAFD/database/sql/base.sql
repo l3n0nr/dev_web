@@ -90,33 +90,31 @@ CREATE TABLE IF NOT EXISTS administrador(
         habilitado_administrador BINARY NOT NULL);
 
 -- CRIANDO LIGAÇÕES ENTRE CHAVES DAS TABELAS
-<<<<<<< HEAD
     ALTER TABLE `usuario` 
         ADD CONSTRAINT `siape_funcionario` 
         FOREIGN KEY (`siape_funcionario`) 
         REFERENCES `siape_funcionario` (`funcionario`);
-=======
-ALTER TABLE `usuario` 
-    ADD CONSTRAINT `fk_siape_funcionario` 
-    FOREIGN KEY (`siape_funcionario`) 
-    REFERENCES `funcionario` (`siape_funcionario`);
+    
+    ALTER TABLE `usuario` 
+        ADD CONSTRAINT `fk_siape_funcionario` 
+        FOREIGN KEY (`siape_funcionario`) 
+        REFERENCES `funcionario` (`siape_funcionario`);
     
 -- ALTER TABLE `usuario`
 --     ADD siape_funcionario int(10) NOT NULL;
->>>>>>> 545eeb0cb881c253eacb97f30a282a7ada37836b
 
 -- ALTER TABLE `usuario` 
 --     ADD CONSTRAINT `siape_funcionario` 
 --     FOREIGN KEY ( `siape_funcionario` ) 
 --     REFERENCES `funcionario` ( `siape_funcionario` ) ;
     
-ALTER TABLE `usuario` 
-    ADD CONSTRAINT `id_setor` 
-    FOREIGN KEY (`id_setor`) 
-    REFERENCES `setor` (`id_setor`);	
+    ALTER TABLE `usuario` 
+        ADD CONSTRAINT `id_setor` 
+        FOREIGN KEY (`id_setor`) 
+        REFERENCES `setor` (`id_setor`);	
 
-ALTER TABLE usuario 
-    ADD CONSTRAINT id_funcao     
-    FOREIGN KEY (id_funcao) 
-    REFERENCES funcao (id_funcao);
+    ALTER TABLE `usuario` 
+        ADD CONSTRAINT `id_funcao`     
+        FOREIGN KEY (`id_funcao`) 
+        REFERENCES `funcao` (`id_funcao`);
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
