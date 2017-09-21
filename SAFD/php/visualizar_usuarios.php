@@ -84,9 +84,6 @@
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                         Ativo (0 - Não)
                       </th>
-                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                        Opções
-                      </th>
                     </thead>
                       <tbody>
                         <?php
