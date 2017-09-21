@@ -2,11 +2,15 @@
 -- -- TABELAS DOS USUARIOS
 
 CREATE TABLE IF NOT EXISTS usuario(
-    id_setor int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	estado_usuario binary NOT NULL, 
-	login_usuario VARCHAR(50) NOT NULL,
-	senha_usuario VARCHAR(50) NOT NULL);	
-	
+        id_usuario int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+            estado_usuario binary NOT NULL, 
+            login_usuario VARCHAR(50) NOT NULL,
+            senha_usuario VARCHAR(50) NOT NULL,	
+                id_funcao int(10) NOT NULL,
+                id_setor int(10) NOT NULL);                        
+    
+-- FOREIGN KEY (siape_funcionario) REFERENCES funcionario(siape_funcionario)) ENGINE=INNODB;
+		
 CREATE TABLE IF NOT EXISTS funcionario(
 	siape_funcionario int(10) NOT NULL PRIMARY KEY,
 	nome_funcionario VARCHAR(40) NOT NULL,
@@ -19,6 +23,18 @@ CREATE TABLE IF NOT EXISTS funcao(
 CREATE TABLE IF NOT EXISTS setor(
     id_setor int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nome_setor VARCHAR(40) NOT NULL);	
+	
+-- -- 	CRIANDO LIGAÇÕES ENTRE AS TABELAS
+	
+	ALTER TABLE `usuario` 
+            ADD CONSTRAINT `id_setor` 
+            FOREIGN KEY (`id_setor`) 
+            REFERENCES `setor` (`id_setor`);	
+
+        ALTER TABLE usuario 
+            ADD CONSTRAINT id_funcao     
+            FOREIGN KEY (id_funcao) 
+            REFERENCES funcao (id_funcao);    
 	
 -- -- TABELAS VOLTADAS PARA SOLICITACAO DOS DOCUMENTOS
 
@@ -88,33 +104,4 @@ CREATE TABLE IF NOT EXISTS administrador(
         nome_administrador VARCHAR(40) NOT NULL,
         senha_administrador VARCHAR(40) NOT NULL,
         habilitado_administrador BINARY NOT NULL);
-
--- CRIANDO LIGAÇÕES ENTRE CHAVES DAS TABELAS
-    ALTER TABLE `usuario` 
-        ADD CONSTRAINT `siape_funcionario` 
-        FOREIGN KEY (`siape_funcionario`) 
-        REFERENCES `siape_funcionario` (`funcionario`);
-    
-    ALTER TABLE `usuario` 
-        ADD CONSTRAINT `fk_siape_funcionario` 
-        FOREIGN KEY (`siape_funcionario`) 
-        REFERENCES `funcionario` (`siape_funcionario`);
-    
--- ALTER TABLE `usuario`
---     ADD siape_funcionario int(10) NOT NULL;
-
--- ALTER TABLE `usuario` 
---     ADD CONSTRAINT `siape_funcionario` 
---     FOREIGN KEY ( `siape_funcionario` ) 
---     REFERENCES `funcionario` ( `siape_funcionario` ) ;
-    
-    ALTER TABLE `usuario` 
-        ADD CONSTRAINT `id_setor` 
-        FOREIGN KEY (`id_setor`) 
-        REFERENCES `setor` (`id_setor`);	
-
-    ALTER TABLE `usuario` 
-        ADD CONSTRAINT `id_funcao`     
-        FOREIGN KEY (`id_funcao`) 
-        REFERENCES `funcao` (`id_funcao`);
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
