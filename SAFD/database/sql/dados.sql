@@ -13,17 +13,17 @@ INSERT INTO setor(nome_setor)
 -- INSERT INTO setor(nome_setor)
 --     VALUES("padrao");
     
-INSERT INTO usuario(id_setor, estado_usuario, login_usuario, senha_usuario)
-    VALUES(1, 1, "admin", "admin");
+INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao)
+    VALUES(1, 1, "admin", "admin", 1, 4);
     
-INSERT INTO usuario(id_setor, estado_usuario, login_usuario, senha_usuario)
-    VALUES(2, 1, "lenonr", "lenonr");
+INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario)
+    VALUES(2, 1, "lenonr", "lenonr", 7, 1);
     
-INSERT INTO usuario(id_setor, estado_usuario, login_usuario, senha_usuario)
-    VALUES(1, 0, "teste", "teste");
+INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario)
+    VALUES(1, 0, "teste", "teste", 1, 1);
     
-INSERT INTO usuario(id_setor, estado_usuario, login_usuario, senha_usuario)
-    VALUES(2, 0, "teste1", "teste1");
+INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario)
+    VALUES(2, 0, "teste1", "teste1", 1, 1);
         
 INSERT INTO funcao(descricao_funcao)        
     VALUES("Administrador");
