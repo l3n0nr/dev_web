@@ -72,9 +72,9 @@
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                         Login
                       </th>
-                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                      <!--<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                         Email
-                      </th>
+                      </th>-->
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                         Setor
                       </th>
