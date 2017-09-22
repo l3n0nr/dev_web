@@ -44,8 +44,8 @@
                 <div class="text-center">
                     <a class="btn btn-social-icon btn-github" href="http://www.github.com/lenonr" target="_blank"><i class="fa fa-github"></i></a>
                     <a class="btn btn-social-icon btn-google" href="mailto:lenonrmsouza@gmail.com"><i class="fa fa-google-plus"></i></a>
-                    <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/lenon-ricardo-2b1639130/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                    <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/lenonrmsouza" target="_blank"><i class="fa fa-facebook"></i></a>                            
+                    <a class="btn btn-social-icon btn-linkedin" href="https://twitter.com/lenonr1" target="_blank"><i class="fa fa-twitter"></i></a>
+<!--                     <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/lenonrmsouza" target="_blank"><i class="fa fa-facebook"></i></a>                             -->
                 </div>                
                 <br>  
                 <a href="../index.php"><i class="glyphicon glyphicon-arrow-left"></i> <span> Voltar para a página anterior </span></a>
