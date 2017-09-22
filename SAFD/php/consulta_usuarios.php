@@ -17,8 +17,8 @@
 
 //     $sql = "SELECT login_usuario, estado_usuario FROM usuario";
 //     $sql = "SELECT login_usuario, estado_usuario, nome_setor FROM usuario, setor WHERE usuario.id_setor = setor.id_setor";
-    $sql = "SELECT login_usuario, estado_usuario, nome_setor, descricao_funcao FROM usuario, setor, funcao WHERE usuario.id_setor = setor.id_setor AND usuario.id_funcao = funcao.id_funcao";
-    $result = $db->query( $sql );
+    $sql = "SELECT siape_funcionario, login_usuario, estado_usuario, nome_setor, descricao_funcao FROM usuario, setor, funcao WHERE usuario.id_setor = setor.id_setor AND usuario.id_funcao = funcao.id_funcao";
+    $result = $db->query($sql);
 
 //criando repeticao para percorrer a tabela
     while ($linha = $result->fetch(PDO::FETCH_ASSOC)) 
@@ -26,13 +26,11 @@
         #criando variavel para mostra colunas/linhas
             $visualizar = 
                     "<tr>
-                        <td>".""."</td>
+                        <td>".$linha['siape_funcionario']."</td>"."                                   
                         <td>".$linha['login_usuario']."</td>"."                                   
-                        <td>".""."</td>
                         <td>".$linha['nome_setor']."</td>"."                                   
                         <td>".$linha['descricao_funcao']."</td>"."                                   
                         <td>".$linha['estado_usuario']."</td>"."            
-                        <td>"."</td>
                     </tr>";
                 
         #mostrando colunas/linhas

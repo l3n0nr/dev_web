@@ -21,9 +21,21 @@
     echo "Tabela Usuario - Usuario: " .$login. " Senha: " .$senha. ".<hr>";
    
 // INSERÇÃO - campo siape_funcionario irá ser usado futuramente como campo de preenchimento manual
-    $sql  = 'INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) ';
-    $sql .= 'VALUES(:siape, :nome, :email)';        
+//     $sql  = 'INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) ';
+//     $sql .= 'VALUES(:siape, :nome, :email)';        
     
+    $sql  = 'INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) ';
+    $sql .= 'VALUES(:siape, :nome, :email)';
+    
+    $sql .= 'INSERT INTO setor(nome_setor)';
+    $sql .= 'VALUES(:nome_setor)';        
+    
+    $sql .= 'INSERT INTO funcao(descricao_funcao)';
+    $sql .= 'VALUES(:descricao_funcao)';        
+    
+    $sql .= 'INSERT INTO usuario(login_usuario, senha_usuario) ';
+    $sql .= 'VALUES(:login_usuario, :senha_usuario)';        
+        
     $create = $db->prepare($sql);
     
     /*
@@ -34,15 +46,27 @@
     $create->bindValue(':siape',$siape, PDO::PARAM_STR);
     $create->bindValue(':nome',$nome, PDO::PARAM_STR);
     $create->bindValue(':email',$email, PDO::PARAM_STR);
-            
-//     if($create->execute())
+    $create->bindValue(':nome_setor',$setor, PDO::PARAM_STR);
+    $create->bindValue(':descricao_funcao',$funcao, PDO::PARAM_STR);
+    $create->bindValue(':login_usuario',$login, PDO::PARAM_STR);
+    $create->bindValue(':senha_usuario',$senha, PDO::PARAM_STR);
+        
+//     try()
 //     {
-//         echo "[+] Registro efetuado com sucesso!";
+        if($create->execute())
+        {
+            echo "[+] Registro efetuado com sucesso!";
+        }
+        else
+        {
+            echo "[-] Erro ao cadastrar dados";
+        }
 //     }
-//     else
+//     //mostrando erro
+//     catch ( PDOException $e )
 //     {
-//         echo "[-] Erro ao cadastrar dados";
+//          //mostrando mensagem de erro
+//          echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
 //     }
-      
 ?>
 
