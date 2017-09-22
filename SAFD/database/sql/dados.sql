@@ -1,11 +1,3 @@
--- -- NÃO É NECESSÁRIO, REMOVER!
-INSERT INTO administrador(nome_administrador, senha_administrador, habilitado_administrador)
-        VALUES("admin", "admin", "0");
-        
--- -- NÃO É NECESSÁRIO, REMOVER!        
-INSERT INTO administrador(nome_administrador, senha_administrador, habilitado_administrador)
-        VALUES("lenonr", "lenonr", "1"); 
-
 -- -- ADICIONANDO USUARIO        
 INSERT INTO setor(nome_setor)
     VALUES("administrador");
@@ -13,18 +5,6 @@ INSERT INTO setor(nome_setor)
 -- INSERT INTO setor(nome_setor)
 --     VALUES("padrao");
     
-INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao)
-    VALUES(1, 1, "admin", "admin", 1, 4);
-    
-INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario)
-    VALUES(2, 1, "lenonr", "lenonr", 7, 1);
-    
-INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario)
-    VALUES(1, 0, "teste", "teste", 1, 1);
-    
-INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario)
-    VALUES(2, 0, "teste1", "teste1", 1, 1);
-        
 INSERT INTO funcao(descricao_funcao)        
     VALUES("Administrador");
     
@@ -152,4 +132,29 @@ INSERT INTO setor(nome_setor)
             
 -- INSERT INTO setor(nome_setor)    
 -- VALUES("");
+
+    INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario)
+        VALUES(1, 1, "admin", "admin", 1, 4, 0000);
+        
+    INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario)
+        VALUES(2, 1, "lenon", "lenon", 7, 2, 0001);
+        
+    INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario)
+        VALUES(3, 1, "ricardo", "ricardo", 9, 1, 0002);
+        
+    INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario)
+        VALUES(4, 0, "teste", "teste", 1, 3, 0003);
+        
+    INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
+        VALUES(0000, "administrador", "administrador@gmail.com");
+        
+    INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
+        VALUES(0001, "lenon", "lenon@gmail.com");
+        
+    INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
+        VALUES(0002, "ricardo", "ricardo@gmail.com");
+        
+    INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
+        VALUES(0003, "teste", "teste@gmail.com");
+
 -- -- -- -- -- -- -- --     

@@ -6,8 +6,11 @@ CREATE TABLE IF NOT EXISTS usuario(
             estado_usuario binary NOT NULL, 
             login_usuario VARCHAR(50) NOT NULL,
             senha_usuario VARCHAR(50) NOT NULL,	
+
+            --CHAVES ESTRANGEIRAS 
                 id_funcao int(10) NOT NULL,
-                id_setor int(10) NOT NULL);                        
+                id_setor int(10) NOT NULL,
+                siape_funcionario int(10) NOT NULL);
     
 -- FOREIGN KEY (siape_funcionario) REFERENCES funcionario(siape_funcionario)) ENGINE=INNODB;
 		
@@ -24,17 +27,21 @@ CREATE TABLE IF NOT EXISTS setor(
     id_setor int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nome_setor VARCHAR(40) NOT NULL);	
 	
--- -- 	CRIANDO LIGAÇÕES ENTRE AS TABELAS
-	
-	ALTER TABLE `usuario` 
-            ADD CONSTRAINT `id_setor` 
-            FOREIGN KEY (`id_setor`) 
-            REFERENCES `setor` (`id_setor`);	
+-- -- 	CRIANDO LIGAÇÕES ENTRE AS TABELAS	
+	ALTER TABLE usuario
+            ADD CONSTRAINT id_setor 
+            FOREIGN KEY (id_setor) 
+            REFERENCES setor (id_setor);	
 
         ALTER TABLE usuario 
             ADD CONSTRAINT id_funcao     
             FOREIGN KEY (id_funcao) 
             REFERENCES funcao (id_funcao);    
+            
+        ALTER TABLE usuario
+            ADD CONSTRAINT siape_funcionario
+            FOREIGN KEY (siape_funcionario)
+            REFERENCES funcionario(siape_funcionario);
 	
 -- -- TABELAS VOLTADAS PARA SOLICITACAO DOS DOCUMENTOS
 
