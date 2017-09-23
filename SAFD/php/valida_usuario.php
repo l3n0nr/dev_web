@@ -45,27 +45,24 @@
         echo "<hr>".$visualizar;                          
 
 // // VERIFICANDO USUARIO
-        if(mysqli_num_rows($result) != 1)	 
+        if(mysqli_num_rows($result) > 0)	 
         {   
-            if($descricao_funcao = 'Admin')
-            {
+//             if($descricao_funcao = 'Admin')
+//             {
                 session_start();
                 session_cache_expire(10);
                 $_SESSION["usuario"]=$login;
     //             $_SESSION["senha"]=$senha;
                 header("location:system_admin.php");                                                 
-            }
-            else
-//             if ($descricao_funcao = "Diretor")
+//             }
+            /*else
             {
-//             echo "Entrou!";
                 session_start();
                 session_cache_expire(10);
                 $_SESSION["usuario"]=$login;
-//             $_SESSION["senha"]=$senha;
                 header("location:system_user.php");                                                 
-//             }
-            }    
+                break;
+            }  */  
         }
         else
         {        
