@@ -1,18 +1,13 @@
--- CRIANDOS TABELAS NO BANCO DE DADOS
--- -- TABELAS DOS USUARIOS
-
 CREATE TABLE IF NOT EXISTS usuario(
         id_usuario int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
             estado_usuario binary NOT NULL, 
             login_usuario VARCHAR(50) NOT NULL,
             senha_usuario VARCHAR(50) NOT NULL,	
 
-            --CHAVES ESTRANGEIRAS 
+-- -- CHAVES ESTRANGEIRAS 
                 id_funcao int(10) NOT NULL,
                 id_setor int(10) NOT NULL,
-                siape_funcionario int(10) NOT NULL);
-    
--- FOREIGN KEY (siape_funcionario) REFERENCES funcionario(siape_funcionario)) ENGINE=INNODB;
+                siape_funcionario int(10) NOT NULL);    
 		
 CREATE TABLE IF NOT EXISTS funcionario(
 	siape_funcionario int(10) NOT NULL PRIMARY KEY,
@@ -44,7 +39,6 @@ CREATE TABLE IF NOT EXISTS setor(
             REFERENCES funcionario(siape_funcionario);
 	
 -- -- TABELAS VOLTADAS PARA SOLICITACAO DOS DOCUMENTOS
-
 CREATE TABLE IF NOT EXISTS solicitacao(
     id_solicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	justificativa_solicitacao VARCHAR(40) NOT NULL,
@@ -100,7 +94,6 @@ CREATE TABLE IF NOT EXISTS usuario_cadastrado(
 CREATE TABLE IF NOT EXISTS funcao_funcionario(
     nportaria_funcaofuncionario int(10) NOT NULL PRIMARY KEY,
 	data_funcaofuncionario DATE);
-
 
 CREATE TABLE IF NOT EXISTS unidade(
     id_unidade int(10) NOT NULL PRIMARY KEY,
