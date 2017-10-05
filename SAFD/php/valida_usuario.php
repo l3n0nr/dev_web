@@ -23,7 +23,7 @@
 
 //     $consulta = "SELECT login_usuario, senha_usuario, descricao_funcao FROM usuario, funcao WHERE login_usuario='$login' AND senha_usuario='$senha' AND estado_usuario != '0' ";    
 
-    $consulta = "SELECT login_usuario FROM usuario ";    
+    $consulta = "SELECT login_usuario FROM usuario";    
     
     $result = $db->query($consulta);
     
@@ -44,9 +44,8 @@
         #mostrando colunas/linhas
         echo "<hr>".$visualizar;                          
         
-        if(mysqli_num_rows($result) != 0)	 
+        if(mysqli_num_rows($result) != 1)	 
         {            
-            if
             //echo "Usuário cadastro, agora você pode acessar o sistema";
             session_start();
             session_cache_expire(10);
@@ -57,9 +56,7 @@
         {
             echo "erro";
         }
-    }
-    
-    
+    }  
 
 //     {   
 //         echo "<p class=\"erro\">Dados incorretos! Favor verificar seu e-mail e senha e tentar novamente!</p>";                
