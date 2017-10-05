@@ -23,7 +23,9 @@
 
 //     $consulta = "SELECT login_usuario, senha_usuario, descricao_funcao FROM usuario, funcao WHERE login_usuario='$login' AND senha_usuario='$senha' AND estado_usuario != '0' ";    
 
-    $consulta = "SELECT login_usuario FROM usuario";    
+    $consulta = "SELECT login_usuario, descricao_funcao FROM usuario";  
+    
+    $sql = "SELECT siape_funcionario, login_usuario, estado_usuario, nome_setor, descricao_funcao FROM usuario, setor, funcao WHERE usuario.id_setor = setor.id_setor AND usuario.id_funcao = funcao.id_funcao";
     
     $result = $db->query($consulta);
     
@@ -44,17 +46,28 @@
         #mostrando colunas/linhas
         echo "<hr>".$visualizar;                          
         
-        if(mysqli_num_rows($result) != 1)	 
+        if(mysqli_num_rows($result) != 0) 
         {            
-            //echo "Usuário cadastro, agora você pode acessar o sistema";
-            session_start();
-            session_cache_expire(10);
-            $_SESSION["usuario"]=$login;
-            header("location:system_admin.php");
+            echo "erro";
+            header("location:index.php");
         }
         else
         {
-            echo "erro";
+            //echo "Usuário cadastro, agora você pode acessar o sistema";
+            session_start();
+            session_cache_expire(10);            
+            $_SESSION["usuario"]=$login;
+            header("location:system_admin.php");            
+            
+//             # verificando tipo de usuario
+//             if ($descricao_funcao == "Administrador") 
+//             {                
+//                 header("location:system_admin.php");            
+//             }
+//             else
+//             {
+//                 echo "Erro!"
+//             }
         }
     }  
 
