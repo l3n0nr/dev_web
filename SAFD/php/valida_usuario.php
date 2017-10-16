@@ -33,23 +33,23 @@
                     </tr>";
                     
         # mostrando colunas/linhas
-        echo "<hr>".$visualizar;                          
-
-        if (mysql_num_rows($query) != 1) 
+        echo "<hr>".$visualizar;
+        
+        if(mysqli_num_rows($result) != 0) 
+        {                        
+            //echo "Usuário cadastro, agora você pode acessar o sistema";
+            session_start();
+            session_cache_expire(10);            
+            $_SESSION["usuario"]=$login;
+            header("location:system_admin.php");                        
+        }
+        else
         {
-            # mostrando mensagem - erro
-            echo "ERRO!";
-        } 
-        else 
-        {
-            # mostrando mensagem - sucesso
-            echo "Funcionou!";
-        }        
+            echo "erro";
+            header("location:index.php");            
+        }   
     }
-
-
-
-
+        
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
 //   $login = $_POST["login"];
 //   $senha = $_POST["senha"];
