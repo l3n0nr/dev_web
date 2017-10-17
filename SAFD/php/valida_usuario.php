@@ -16,23 +16,19 @@
     # arquivo conexao
     include_once 'conexao.php';
     
-    # comando sql
-    $consulta = "SELECT login_usuario FROM usuario";    
+    # consulta sql
+    $consulta = "SELECT * FROM usuario";    
 
     # realiza consulta
     $res = mysqli_query($consulta);
     
-    # verifica se usuario e senha foram digitados
-    if (isset($login)) 
+    ## NAO ESTA FUNCIONANDO
+    # verifica se usuario foi digitado
+    if (isset($login))
     {
         # verifica usuario
-        if(mysqli_num_rows($res) <= 0)	// usuário ok, conclui pedido
+        if(mysqli_num_rows($res) != 1)	// usuário ok, conclui pedido
         {      
-            # redireciona pagina
-            header("location:index.php");    
-        }
-        else
-        {                
             # inicia sessao
             session_start();
             session_cache_expire(10);
@@ -42,11 +38,17 @@
             
             # redireciona pagina
             header("location:system_admin.php");                    
+        }
+        else
+        {   
+            # redireciona pagina
+//             header("location:index.php");                     
+            echo "Erro Linha"; 
         }    
     }
-    else
-    {
-        # redireciona pagina
-        header("location:index.php");
-    }
+//     else
+//     {
+//         # redireciona pagina
+//         header("location:index.php");
+//     }
  ?>

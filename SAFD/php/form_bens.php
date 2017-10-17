@@ -66,7 +66,6 @@
 
                     <!--PROTOCOLO-->
                     <div class="col-xs-8">
-                        <br>
                         <label>Número do Protocolo: </label>
                         <input class="form-control" data-inputmask="&quot;mask&quot;: &quot;99.999.000999/2099-99&quot;" data-mask="" type="text" disabled="">
                     </div>
@@ -74,7 +73,7 @@
                     <!--DATA-->
                     <div class="input-group">
                         <div class="col-xs-4">
-                            <br>
+                            <!--                         <br> -->
                             <label> Data </label>
                             <!--<i class="fa fa-calendar"></i>-->
                             <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="">
@@ -83,14 +82,14 @@
 
                     <!--IFF-->
                     <div class="col-xs-8">
-                        <br>
+                        <!--                         <br> -->
                         <label>Campus/Unidade</label>
                         <input class="form-control" placeholder="Reitoria/Campus Alegrete" disabled="" type="text">
                     </div>
 
                     <!--SETORES-->
                     <div class="col-xs-4">
-                        <br><label>Selecione o setor, que você trabalha</label>
+                        <!--                         <br> --><label>Selecione o setor, que você trabalha</label>
                         <select id="nivel" class="form-control" name="funcao">
                             <?php
                             include 'setores.php';
@@ -100,24 +99,24 @@
 
                     <!--REQUISITANTE-->
                     <div class="col-xs-8">
-                        <br>
+                        <!--                         <br> -->
                         <label>Nome do requisitante </label>
                         <input class="form-control" type="text">
                     </div>
 
                     <!--SIAPE-->
                     <div class="col-xs-4">
-                        <br>
+                        <!--                         <br> -->
                         <label>Número do SIAPE </label>
                         <input class="form-control" type="text">
                     </div>
 
                     <div class="col-xs-12">
-                        <br>
+                        <!--                         <br> -->
                         <textarea class="form-control" rows="2">Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos.</textarea>
                     </div>
 
-                    <br>
+                    <!--                         <br> -->
                     <div class="col-xs-1">
                         <label>Grupo</label>
                         <input class="form-control" type="number">
@@ -126,7 +125,7 @@
                         <label>Item </label>
                         <input class="form-control" type="number">
                     </div>
-                    <br>
+                    <!--                         <br> -->
                     <div class="col-xs-7">
                         <label>Especificações </label>
                         <input class="form-control" type="text">
