@@ -16,37 +16,23 @@
     # arquivo conexao
     include_once 'conexao.php';
     
-    # realizando consulta no banco de dados
+    # comando sql
     $consulta = "SELECT login_usuario FROM usuario";    
-      
-    # variavel para realizar pesquisa
-    $result = $db->query($consulta);
+
+    # realiza consulta
+    $res = mysqli_query($consulta);
     
-    # criando repeticao para percorrer a tabela
-    while ($linha = $result->fetch(PDO::FETCH_ASSOC)) 
-    {                  
-        #criando variavel para mostra colunas/linhas
-//             $visualizar = 
-//                     "<tr>
-//                         <td>".$linha['nome_administrador']."</td>"."                                   
-//                         <td>".$linha['senha_administrador']."</td>"."            
-//                         <td>".$linha['habilitado_administrador']."</td>"."
-//                         <td>".""."</td>
-//                         <td>".""."</td>
-//                         <td>"."</td>
-//                     </tr>";
-                    
-        #mostrando colunas/linhas
-//         echo "<hr>".$visualizar;                          
-        
-        # verificando se existe usuario
-        if(mysqli_num_rows($result) != 0)   # usuario nao existe
-        {            
+    # verifica se usuario e senha foram digitados
+    if (isset($login)) 
+    {
+        # verifica usuario
+        if(mysqli_num_rows($res) <= 0)	// usuário ok, conclui pedido
+        {      
             # redireciona pagina
-            header("location:index.php");            
+            header("location:index.php");    
         }
-        else    # usuario cadastrado
-        {
+        else
+        {                
             # inicia sessao
             session_start();
             session_cache_expire(10);
@@ -55,7 +41,12 @@
             $_SESSION["usuario"]=$login;
             
             # redireciona pagina
-            header("location:system_admin.php");            
-        }
-    }  
+            header("location:system_admin.php");                    
+        }    
+    }
+    else
+    {
+        # redireciona pagina
+        header("location:index.php");
+    }
  ?>
