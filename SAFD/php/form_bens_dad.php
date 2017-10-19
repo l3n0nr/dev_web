@@ -104,7 +104,7 @@
           <div class="checkbox">
             <label>
               <input type="checkbox">
-                Eu <b><?php echo $_SESSION["usuario"]?></b> autorizo o proceguimento desta solicitação
+                Eu <b><?php echo $_SESSION["usuario"]?></b> autorizo o prosseguimento desta solicitação
             </label>
           </div>
           <button type="submit" class="btn btn-warning pull-right">Enviar para a próxima etapa</button>
