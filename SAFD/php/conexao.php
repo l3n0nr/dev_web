@@ -10,7 +10,7 @@
     try
     {
         //realizando conexao atraves do objeto    
-        $db = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
+        $conexao = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
 //         echo "[+] Conectou no banco. ";
     }
     //mostrando erro
