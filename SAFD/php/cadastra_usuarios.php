@@ -1,6 +1,6 @@
 <?php
     # incluindo arquivo conexao
-    include_once "conexao.php";
+    require_once "conexao.php";
 
     # recebendo dados do formulario
     $siape  = $_POST['siape_funcionario'];
@@ -53,17 +53,17 @@
     $create->bindValue(':login_usuario',$login, PDO::PARAM_STR);
     $create->bindValue(':senha_usuario',$senha, PDO::PARAM_STR);
         
-    
+    # tentando executar instrução    
     try()
     {
-//         if($create->execute())
-//         {
+        if($create->execute())
+        }
             echo "[+] Registro efetuado com sucesso!";
-//         }
-//         else
-//         {
-//             echo "[-] Erro ao cadastrar dados";
-//         }
+        {
+        else
+        {
+            echo "[-] Erro ao cadastrar dados";
+        }
     }
     //mostrando erro
     catch ( PDOException $e )
