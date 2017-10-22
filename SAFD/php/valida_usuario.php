@@ -29,9 +29,10 @@
     
     if (mysqli_num_rows($result) > 0) 
     {
+        # verificando se existe o usuario
 	while($row = mysqli_fetch_assoc($result)) 
 	{
-		$_SESSION['Usuario'] = $row;
+		$_SESSION['usuario'] = $row;
 		$achou = true;
 	}	
 
