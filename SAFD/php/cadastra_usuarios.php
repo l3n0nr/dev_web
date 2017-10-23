@@ -1,6 +1,6 @@
 <?php
     # incluindo arquivo conexao
-    include_once "conexao.php";
+    include "conexao.php";
     
     echo "teste";
 

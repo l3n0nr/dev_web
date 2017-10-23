@@ -14,47 +14,77 @@
     # capturando variavel
     $login = $_POST["login"];
     $senha = $_POST["senha"];
-  
-    # arquivo conexao
-    require_once 'conexao.php';    
-    
-    # Verifica se usuário digitado está cadastrado
-//     $consulta = "SELECT * FROM usuario";    
-    $consulta = "SELECT * FROM usuario WHERE login = '".$login."' and senha = '". $senha."'";
 
-    # realiza consulta
-    $res = mysqli_query($conexao, $consulta);
-//     $result = mysqli_query($conexao, $consulta);        
-    
-    #### NAO ESTA FUNCIONANDO   -   LOGICA ERRADA   
-    # verifica se usuario foi digitado
-    if (isset($login))
+    if(isset($_POST["login"]) && isset($_POST["senha"])) 
     {
-        # verifica usuario
-        if(mysqli_num_rows($res) != 1)	// usuário ok, conclui pedido
-        {      
-            # inicia sessao
-            session_start();
-            session_cache_expire(10);
-            
-            # salva usuario para ser mostrado no menu da pagina
-            $_SESSION["usuario"]=$login;
-            
-            # redireciona pagina
+        include "conecta.php";
+        
+        $email = $_POST["email"];
+        $senha = $_POST["senha"];
+        
+        $res = mysqli_query($con, "SELECT email FROM usuario WHERE email='$email' AND senha='$senha'");
+        
+        if(mysqli_num_rows($res) > 0 )	// usuário ok, conclui pedido
             header("location:system_admin.php");                    
-        }
         else
-        {   
-            # redireciona pagina
-//             header("location:index.php");                     
-            echo "Erro Linha"; 
-        }    
+//             header("location:index.html");                    
+            echo "erro dentro!";
     }
     else
     {
-        # redireciona pagina
-        header("location:index.php");
+        echo "erro fora";
     }
+/*
+    # capturando variavel
+    $login = $_POST["login"];
+    $senha = $_POST["senha"];
+  
+    # arquivo conexao
+    include 'conexao.php';    
+    
+    # definindo comando para consulta 
+    $consulta = "SELECT * FROM usuario WHERE login = '".$login."' and senha = '". $senha."'";    */
+    
+    # Verifica se usuário digitado está cadastrado
+//     $consulta = "SELECT * FROM usuario";    
+    
+    
+    # realiza consulta
+//     $res = mysqli_query($conexao, $consulta);
+//     $result = mysqli_query($conexao, $consulta);        
+    
+    # realizando consulta
+//     $res = mysqli_query($con, $consulta)
+    
+    #### NAO ESTA FUNCIONANDO   -   LOGICA ERRADA   
+    # verifica se usuario foi digitado
+//     if (isset($login))
+//     {
+//         # verifica usuario
+//         if(mysqli_num_rows($res) > 0)	// usuário ok, conclui pedido
+//         {      
+//             # inicia sessao
+//             session_start();
+//             session_cache_expire(10);
+//             
+//             # salva usuario para ser mostrado no menu da pagina
+//             $_SESSION["usuario"]=$login;
+//             
+//             # redireciona pagina
+//             header("location:system_admin.php");                    
+//         }
+//         else
+//         {   
+//             # redireciona pagina
+// //             header("location:index.php");                     
+//             echo "Erro Linha"; 
+//         }    
+//     }
+//     else
+//     {
+//         # redireciona pagina
+//         header("location:index.php");
+//     }
     
 //     # Verifica se usuário digitado está cadastrado
 //     $consulta = "SELECT * FROM usuario";    
