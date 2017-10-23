@@ -1,0 +1,13 @@
+DESENVOLVIMENTO DO SISTEMA
+
+Usuários
+[=]	Cadastro;
+[+]	Leitura;
+[=]	Alteração;
+[=]	Remoção;	
+
+Formulario
+[=]	Cadastro;
+[=]	Leitura;
+[=]	Alteração;
+[=]	Remoção;	
