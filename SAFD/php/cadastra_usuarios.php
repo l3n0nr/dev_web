@@ -1,6 +1,8 @@
 <?php
     # incluindo arquivo conexao
-    require_once "conexao.php";
+    include_once "conexao.php";
+    
+    echo "teste";
 
     # recebendo dados do formulario
     $siape  = $_POST['siape_funcionario'];

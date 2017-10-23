@@ -38,13 +38,6 @@
     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 </div>
 
-<!--<javascript>
-    if($('#txtSenha').val() != $('#txtSenhaConfirme').val()){
-        alert('Senhas diferentes');
-        return false;
-    }
-</javascript>-->
-
 <div class="row">          
     <div class="col-xs-12">
         <button type="submit" class="btn btn-success btn-block btn-flat">Registrar</button>
