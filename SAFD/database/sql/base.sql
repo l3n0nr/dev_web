@@ -7,10 +7,11 @@ CREATE TABLE IF NOT EXISTS usuario(
 -- -- CHAVES ESTRANGEIRAS 
                 id_funcao int(10) NOT NULL,
                 id_setor int(10) NOT NULL,
-                siape_funcionario int(10) NOT NULL);    
+                id_funcionario int(10) NOT NULL);    
 		
 CREATE TABLE IF NOT EXISTS funcionario(
-	siape_funcionario int(10) NOT NULL PRIMARY KEY,
+        id_funcionario int (10) NOT NULL PRIMARY KEY,
+        siape_funcionario int(10) NOT NULL,
 	nome_funcionario VARCHAR(40) NOT NULL,
         email_funcionario VARCHAR(40) NOT NULL);  
 
