@@ -8,7 +8,6 @@
     
     # montando conexao
     $con        = mysqli_connect($servidor, $usuario, $senha, $banco);
-
     
 //     $servidor = "localhost";
 // $usuario = "usuario";
