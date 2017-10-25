@@ -1,4 +1,7 @@
 <?php
+
+    echo "teste";
+    
     # incluindo arquivo conexao
     include "conexao.php";
     
@@ -14,25 +17,52 @@
     $login  = $_POST['login_usuario'];
     $senha  = $_POST['senha_usuario'];    
     
-    INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) 
-    VALUES(1, "lenon", "lenonr"); 
-
-    INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario) 
-    VALUES(1, "lenon", "lenon", 1, 1, 5);
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
+    # mostrando dados inseridos
+    echo "Tabela Functor - Setor: " .$setor. ".<hr>";
+    echo "Tabela Funcionario - Siape: " .$siape. ", Nome:" . $nome. ", Email:" .$email. ".<hr>";    
+    echo "Tabela Senção - Função: " .$funcao. ".<hr>";
+    echo "Tabela Usuario - Usuario: " .$login. " Senha: " .$senha. ".<hr>";
+    
+//     # mostando instrução SQL
+//     $sql  = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)" 
+//     $sql .= "VALUES($siape_funcionario, "$nome_funcionario", "$email_funcionario")"; 
+// 
+//     $sql .= "INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario)" 
+//     $sql .= "VALUES(1, "$login_usuario", "$senha_usuario", $nome_setor, $descricao_funcao, $siape_funcionario);"
+//      
+//     # preparando variavel para commit 
+//     $create = $db->prepare($sql);
+//     
+//     # criando referencias para inserção dos dados
+//     $create->bindValue(':siape',$siape, PDO::PARAM_STR);
+//     $create->bindValue(':nome',$nome, PDO::PARAM_STR);
+//     $create->bindValue(':email',$email, PDO::PARAM_STR);
+//     $create->bindValue(':nome_setor',$setor, PDO::PARAM_STR);
+//     $create->bindValue(':descricao_funcao',$funcao, PDO::PARAM_STR);
+//     $create->bindValue(':login_usuario',$login, PDO::PARAM_STR);
+//     $create->bindValue(':senha_usuario',$senha, PDO::PARAM_STR);
+    
+    # tentando executar instrução    
+    try()
+    {
+        if($create->execute())
+        }
+            echo "[+] Registro efetuado com sucesso!";
+        {
+        else
+        {
+            echo "[-] Erro ao cadastrar dados";
+        }
+    }
+    //mostrando erro
+    catch ( PDOException $e )
+    {
+        //mostrando mensagem de erro
+        echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
+    }
+    
+    
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //      
      
      //     echo "teste";
      
@@ -44,7 +74,7 @@
 //     $senha  = $_POST['senha_usuario'];        
          
     # mostrando dados inseridos
-    echo "Tabela Functor - Setor: " .$setor. ".<hr>";
+//     echo "Tabela Functor - Setor: " .$setor. ".<hr>";
 //     echo "Tabela Fuionario - Siape: " .$siape. ", Nome:" . $nome. ", Email:" .$email. ".<hr>";    
 //     echo "Tabela Senção - Função: " .$funcao. ".<hr>";
 //     echo "Tabela Usuario - Usuario: " .$login. " Senha: " .$senha. ".<hr>";
@@ -67,18 +97,18 @@
     
 // // // // // // // // // // // // // // FUNCIONANDO 
     
-    INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) 
-        VALUES(1, "lenon", "lenonr"); 
-    
-    INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario) 
-        VALUES(1, "lenon", "lenon", 1, 1, 5);
+//     INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) 
+//         VALUES(1, "lenon", "lenonr"); 
+//     
+//     INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario) 
+//         VALUES(1, "lenon", "lenon", 1, 1, 5);
     
 // // // // // // // // // // // // // //     
     
-    $sql .= "VALUES($login_usuario, $senha_usuario)";        
+//     $sql .= "VALUES($login_usuario, $senha_usuario)";        
     
     # preparando variavel para commit 
-    $create = $db->prepare($sql);
+//     $create = $db->prepare($sql);
 //     
 //     /*
 //         bindValue() pode receber referências e valores como argumento.
@@ -93,23 +123,23 @@
 //     $create->bindValue(':login_usuario',$login, PDO::PARAM_STR);
 //     $create->bindValue(':senha_usuario',$senha, PDO::PARAM_STR);
          
-    # tentando executar instrução    
-    try()
-    {
-        if($create->execute())
-        }
-            echo "[+] Registro efetuado com sucesso!";
-        {
-        else
-        {
-            echo "[-] Erro ao cadastrar dados";
-        }
-    }
-    //mostrando erro
-    catch ( PDOException $e )
-    {
-        //mostrando mensagem de erro
-        echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
-    }
+//     # tentando executar instrução    
+//     try()
+//     {
+//         if($create->execute())
+//         }
+//             echo "[+] Registro efetuado com sucesso!";
+//         {
+//         else
+//         {
+//             echo "[-] Erro ao cadastrar dados";
+//         }
+//     }
+//     //mostrando erro
+//     catch ( PDOException $e )
+//     {
+//         //mostrando mensagem de erro
+//         echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
+//     }
 ?>
 
