@@ -49,7 +49,7 @@
           </ol>
         </br>
         <h1> Tela do Administrador do Sistema </h1><hr>
-        <h4> - Aqui você poderá modificar os usuários cadastrados, além de fazer algumas alterações no sistema; </h4>
+        <h4> - Aqui você poderá realizar o CRUD nos usuários, abrangendo a tabela funcionario, setor. </h4>
       </div>
       <div class="tab-content no-padding">
         <div class="tab-pane" id="#dg">
