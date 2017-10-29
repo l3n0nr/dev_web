@@ -1,6 +1,6 @@
 <?php
     # incluindo arquivo conexao
-    include "conexao.php";
+    include_once "conexao.php";
 
     # recebendo dados do formulario
     $siape  = $_POST['siape_funcionario'];
@@ -14,33 +14,44 @@
 
     # mostrando dados inseridos
     //     echo "Tabela Funcao - Setor: " .$setor. ".<hr>";
-    echo "Tabela Funcionario - Siape: " .$siape. ", Nome:" . $nome. ", Email:" .$email. ".<hr>";    
+//     echo "Tabela Funcionario - Siape: " .$siape. ", Nome:" . $nome. ", Email:" .$email;    
     //     echo "Tabela Senção - Função: " .$funcao. ".<hr>";
     //     echo "Tabela Usuario - Usuario: " .$login. " Senha: " .$senha. ".<hr>";  
+    
+//     echo "<hr>";
 
     # mostando instrução SQL
-    $sql  = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES($siape, $nome, $email)" . "<hr>" ;
+    $sql  = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES";   
+    $sql .= "($siape, '$nome', '$email');" ;
     //     $sql .= "INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario)" 
-    //     $sql .= "VALUES(1, "$login_usuario", "$senha_usuario", $nome_setor, $descricao_funcao, $siape_funcionario);"
+    //     $sql .= "VALUES(1, "$login_usuario", "$senha_usuario", $nome_setor, $descricao_funcao, $siape_funcionario);"       
     
     # preparando variavel para commit 
-//     $create = $db->prepare($sql);    
+    $create = $db->prepare($sql);    
     
     # mostrando instrução
     echo $sql;
     
-//     # mostrando mensagem
-//     echo $inserindo;        
+    echo "<hr>";
 
-    # tentando executar inserção
-    if(mysql_query($sql))
-    {
-        echo "Records inserted successfully.";
-    } 
-    else
-    {
-        echo "ERROR: Could not able to execute $sql. " . mysqli_error($db);
-    }
+//     try()
+//     {
+        # tentando executar inserção
+        if($db->mysql_query($sql) === TRUE)
+        {
+            echo "Records inserted successfully.";
+        } 
+        else
+        {
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($db);
+        }
+//     }
+//     catch ( PDOException $e )
+//     {
+//         echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
+//     }
+//     
+//     echo "teste"
     
 // // // // // // // // // // // // // // // // //     
 

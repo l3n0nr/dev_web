@@ -18,10 +18,12 @@
 //     $sql = "SELECT login_usuario, estado_usuario FROM usuario";
 //     $sql = "SELECT login_usuario, estado_usuario, nome_setor FROM usuario, setor WHERE usuario.id_setor = setor.id_setor";
     $sql = "SELECT siape_funcionario, login_usuario, estado_usuario, nome_setor, descricao_funcao FROM usuario, setor, funcao WHERE usuario.id_setor = setor.id_setor AND usuario.id_funcao = funcao.id_funcao";
-    $result = $db->query($sql);
+    
+    $result = mysqli_query($sql);
 
 //criando repeticao para percorrer a tabela
-    while ($linha = $result->fetch(PDO::FETCH_ASSOC)) 
+//     while ($linha = $result->fetch(PDO::FETCH_ASSOC)) 
+    while($linha= mysql_fetch_array($result))
     {
         #criando variavel para mostra colunas/linhas
             $visualizar = 
