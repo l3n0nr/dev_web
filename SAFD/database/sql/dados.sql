@@ -137,16 +137,16 @@ INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
     
 
 -- -- ADICIONANDO USUARIOS
-INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario)
-    VALUES(1, 1, "admin", "admin", 1, 1, 0000);
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "admin", "admin", 1, 1, 1);
 
-INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario)
-    VALUES(2, 1, "lenon", "lenon", 7, 3, 0001);
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "lenon", "lenon", 7, 3, 2);
 
-INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario)
-    VALUES(3, 1, "ricardo", "ricardo", 9, 2, 0002);
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "ricardo", "ricardo", 9, 2, 3);
 
-INSERT INTO usuario(id_usuario, estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, siape_funcionario)
-    VALUES(4, 0, "teste", "teste", 1, 4, 0003);    
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(0, "teste", "teste", 1, 4, 4);    
 
 -- -- -- -- -- -- -- --     

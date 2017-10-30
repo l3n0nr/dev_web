@@ -7,13 +7,13 @@ CREATE TABLE IF NOT EXISTS usuario(
 -- -- CHAVES ESTRANGEIRAS 
                 id_funcao int(10) NOT NULL,
                 id_setor int(10) NOT NULL,
-                id_funcionario int(10) NOT NULL);    
+                id_funcionario int(10) NOT NULL);  
 		
 CREATE TABLE IF NOT EXISTS funcionario(
-        id_funcionario int (10) NOT NULL PRIMARY KEY,
-        siape_funcionario int(10) NOT NULL,
-	nome_funcionario VARCHAR(40) NOT NULL,
-        email_funcionario VARCHAR(40) NOT NULL);  
+        id_funcionario int (10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+		siape_funcionario int(10) NOT NULL,
+		nome_funcionario VARCHAR(40) NOT NULL,
+		email_funcionario VARCHAR(40) NOT NULL);  
 
 CREATE TABLE IF NOT EXISTS funcao(
     id_funcao int(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -35,9 +35,9 @@ CREATE TABLE IF NOT EXISTS setor(
             REFERENCES funcao (id_funcao);    
             
         ALTER TABLE usuario
-            ADD CONSTRAINT siape_funcionario
-            FOREIGN KEY (siape_funcionario)
-            REFERENCES funcionario(siape_funcionario);
+            ADD CONSTRAINT id_funcionario
+            FOREIGN KEY (id_funcionario)
+            REFERENCES funcionario(id_funcionario);
 	
 -- -- TABELAS VOLTADAS PARA SOLICITACAO DOS DOCUMENTOS
 CREATE TABLE IF NOT EXISTS solicitacao(
