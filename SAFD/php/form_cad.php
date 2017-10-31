@@ -10,10 +10,11 @@
     <input type="email" class="form-control" placeholder="E-mail" name="email_funcionario" required="" autocomplete="off">
     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 </div>                    
+
 <!--<div class="form-group has-feedback">
     <select id="setor" class="form-control" name="nome_setor" required="" autocomplete="off">
         <?php
-//         include 'setores.php';
+         include 'setores.php';
         ?>
     </select>
 </div>
@@ -21,7 +22,7 @@
 <div class="form-group has-feedback">
     <select id="nivel" class="form-control" name="descricao_funcao" required="" autocomplete="off">
         <?php
-//         include 'funcao.php';
+         include 'funcao.php';
         ?>
     </select>
 </div>
@@ -36,7 +37,7 @@
 <div class="form-group has-feedback">
     <input type="password" class="form-control" placeholder="Confirme a senha" name="confirma_senha" required="" autocomplete="off">
     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-</div>-->
+</div>
 
 <div class="row">          
     <div class="col-xs-12">
