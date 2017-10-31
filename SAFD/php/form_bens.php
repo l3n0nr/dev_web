@@ -126,16 +126,26 @@
                     <div class="col-xs-1">
                         <br>
                         <label>Grupo</label>
-                        <input class="form-control" type="number">
+                        <input class="form-control" type="number" placeholder="0">
                     </div>
                     
-                    <div class="col-xs-1">
+                    <div class="col-xs-2">
                         <br>
                         <label>Item </label>
-                        <input class="form-control" type="number">
+                        <!--<input class="form-control" type="number">-->
+                        <select id="nivel" class="form-control" name="funcao">                            
+                            <option value="canetas"> Canetas </option>
+                            <option value="lapis"> Lapis </option>
+                        </select>
+                        
+                        
+                        <!--<input class="select2-search__field" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Select a State" style="width: 519px;" type="search"></li></ul></span>-->
+                        
+                        <!--<span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-k5k9-container"><span class="select2-selection__rendered" id="select2-k5k9-container" title="Alabama">Alabama</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>-->
+                        
                     </div>
                     
-                    <div class="col-xs-7">
+                    <div class="col-xs-6">
                         <br>
                         <label>Especificações </label>
                         <input class="form-control" type="text">
@@ -144,10 +154,10 @@
                     <div class="col-xs-1">
                         <br>
                         <label>Quantidade</label>
-                        <input class="form-control" type="number">
+                        <input class="form-control" type="number" placeholder="0">
                     </div>
                     
-                    <div class="col-xs-1">
+                    <!--<div class="col-xs-1">
                         <br>
                         <label>Média(R$) </label>
                         <input class="form-control" type="text">
@@ -157,7 +167,7 @@
                         <br>
                         <label>Total(R$)</label>
                         <input class="form-control" type="text">
-                    </div>
+                    </div>-->
 
 <!--                    teste
                     <div id="item" class="item">
@@ -166,6 +176,18 @@
                     <input type="hidden" id="itemCont" value="1"/>
                     <input type="button" id="novoProd" value="Novo produto"/>-->
 
+                    <div class="col-xs-2">
+                        <br>
+                        <br>    
+                        <button type="submit" class="btn btn-sucess pull-right"> Salvar na Tabela </button>
+                    </div>
+                    
+                    <div class="col-xs-12">
+                        <br>
+                        <br>
+                        <label> TABELA DE ADIÇÃO DOS MATERIAIS AQUI </label>
+                    </div>
+                    
                     <div class="col-xs-12">
                         <br>
                         <label> Justificativa </label>
@@ -175,7 +197,7 @@
                     <div class="col-xs-12">                    
                         <br>
                         <label> Especificações técnicas do objeto e local de entrega/necessidade e justificativa pra agrupamento de itens </label>
-                        <textarea class="col-xs-12" rows="5" placeholder="Indicar todos os requisitos desejados para o bem permanente ou material ed consumo que pretende adquirir. com descrições detalhadas, precisas e convincentes, incluindo as caracteristicas especificas. Indicar o(s) local(is) de entrega dos bens. Deverá ser indicado o endereço completo, bairro, CEP, inclusive número da sala ou prédio."></textarea>
+                        <textarea class="form-control" rows="5" placeholder="Indicar todos os requisitos desejados para o bem permanente ou material ed consumo que pretende adquirir. com descrições detalhadas, precisas e convincentes, incluindo as caracteristicas especificas. Indicar o(s) local(is) de entrega dos bens. Deverá ser indicado o endereço completo, bairro, CEP, inclusive número da sala ou prédio."></textarea>
                     </div>
 
                     <div class="col-xs-12">                    
