@@ -1,8 +1,8 @@
 <?php
 
     # criando variaveis
-    $servidor   = '127.0.0.1';    
-//     $servidor   = 'localhost';    
+//     $servidor   = '127.0.0.1';    
+    $servidor   = 'localhost';    
     $usuario    = 'root';
     $senha      = 'lenonr';
     $banco      = 'safd';
@@ -18,7 +18,7 @@
 //tentando realizar conexao
     try
     {
-//         echo "[+] Conectou no banco. ";
+        echo "[+] Conectou no banco. ";
         
         # criando variavel para conexao
         $con = mysqli_connect($servidor, $usuario, $senha, $banco);

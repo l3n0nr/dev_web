@@ -27,23 +27,23 @@
     //     $sql .= "VALUES(1, "$login_usuario", "$senha_usuario", $nome_setor, $descricao_funcao, $siape_funcionario);"       
     
     # preparando variavel para commit 
-    $create = $db->prepare($sql);    
+    $create = $con->prepare($sql);    
     
     # mostrando instrução
-    echo $sql;
+    echo "<br>".$sql;
     
     echo "<hr>";
 
 //     try()
 //     {
         # tentando executar inserção
-        if($db->mysql_query($sql) === TRUE)
+        if($con->mysql_query($sql) === TRUE)
         {
             echo "Records inserted successfully.";
         } 
         else
         {
-            echo "ERROR: Could not able to execute $sql. " . mysqli_error($db);
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
         }
 //     }
 //     catch ( PDOException $e )
