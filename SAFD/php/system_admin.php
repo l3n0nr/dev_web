@@ -49,7 +49,8 @@
           </ol>
         </br>
         <h1> Tela do Administrador do Sistema </h1><hr>
-        <h4> - Aqui você poderá realizar o CRUD nos usuários, abrangendo a tabela funcionario, setor. </h4>
+        <h4> - Aqui você poderá realizar o CRUD nos usuários, abrangendo a tabela funcionario, setor. </h4>        
+        <h4> - Link para o formulário de cadastro de Demandas: <a target="blank" href="form_bens.php"> form_bens.php </a></h4>
       </div>
       <div class="tab-content no-padding">
         <div class="tab-pane" id="#dg">

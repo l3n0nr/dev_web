@@ -42,24 +42,26 @@
             <!--FORMULARIO DE BENS-->
 <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
             <form action="system_user.php">
-                <div class="content-wrapper">
-                    <!-- Content Header (Page header) -->
-
-                    <!--          <div class="alert alert-warning alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert"  aria-hidden="true">
-                                  ×
-                                </button>
-                                <h4>
-                                  <i class="icon fa fa-warning">
-                                  </i>
-                                  Informações importantes
-                                  </h4>
-                              </div>-->
+                <div class="content-wrapper">                    
+<!-- MENSAGEM INICIAL -->
+                    <div class="alert alert-warning alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert"  aria-hidden="true">
+                            ×
+                        </button>
+                            <h4>
+                                <i class="icon fa fa-warning"> </i>
+                                Informações importantes                                
+                            </h4>
+                            <label> - Alguns campos serão preenchidos automaticamente pelo sistema. </label>
+                            <br>
+                            <label> - É necessário que todos os outros campos, sejam preenchidos! </label>
+                    </div>
 
                     <section class="content-header">
                         <h4>
                             REQUISIÇÃO DE COMPRA - SOLICITAÇÃO DE BENS
                         </h4>
+                        
                         <ol class="breadcrumb">
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
                         </ol>
@@ -67,31 +69,33 @@
 
                     <!--PROTOCOLO-->
                     <div class="col-xs-8">
+<!--                         <br> -->
                         <label>Número do Protocolo: </label>
-                        <input class="form-control" data-inputmask="&quot;mask&quot;: &quot;99.999.000999/2099-99&quot;" data-mask="" type="text" disabled="">
+                        <input class="form-control" data-inputmask="&quot;mask&quot;: &quot;99.999.000999/2099-99&quot;" data-mask="" type="text" disabled="" placeholder="***GERADO AUTOMATICAMENTE***">
                     </div>
 
                     <!--DATA-->
                     <div class="input-group">
-                        <div class="col-xs-4">
-                            <!--                         <br> -->
+<!--                         <br> -->
+                        <div class="col-xs-4">                            
                             <label> Data </label>
                             <!--<i class="fa fa-calendar"></i>-->
-                            <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="">
+                            <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***">
                         </div>
                     </div>
 
                     <!--IFF-->
                     <div class="col-xs-8">
-                        <!--                         <br> -->
+                        <br>
                         <label>Campus/Unidade</label>
                         <input class="form-control" placeholder="Reitoria/Campus Alegrete" disabled="" type="text">
                     </div>
 
                     <!--SETORES-->
                     <div class="col-xs-4">
-                        <!--                         <br> --><label>Selecione o setor, que você trabalha</label>
-                        <select id="nivel" class="form-control" name="funcao">
+                        <br>                    
+                        <label>Selecione o setor, que você trabalha</label>
+                        <select id="nivel" class="form-control" name="funcao" disabled="">
                             <?php
                             include 'setores.php';
                             ?>
@@ -100,46 +104,57 @@
 
                     <!--REQUISITANTE-->
                     <div class="col-xs-8">
-                        <!--                         <br> -->
+                        <br>
                         <label>Nome do requisitante </label>
-                        <input class="form-control" type="text">
+                        <input class="form-control" placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" disabled="" type="text">
                     </div>
 
                     <!--SIAPE-->
                     <div class="col-xs-4">
-                        <!--                         <br> -->
+                        <br>
                         <label>Número do SIAPE </label>
-                        <input class="form-control" type="text">
+                        <input class="form-control" placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" disabled="" type="text">
                     </div>
 
                     <div class="col-xs-12">
-                        <!--                         <br> -->
-                        <textarea class="form-control" rows="2">Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos.</textarea>
+                        <br>
+                        <label>Observações</label>
+                        <textarea class="form-control" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
                     </div>
 
-                    <!--                         <br> -->
+                    <hr> 
                     <div class="col-xs-1">
+                        <br>
                         <label>Grupo</label>
                         <input class="form-control" type="number">
                     </div>
+                    
                     <div class="col-xs-1">
+                        <br>
                         <label>Item </label>
                         <input class="form-control" type="number">
                     </div>
-                    <!--                         <br> -->
+                    
                     <div class="col-xs-7">
+                        <br>
                         <label>Especificações </label>
                         <input class="form-control" type="text">
                     </div>
+                    
                     <div class="col-xs-1">
+                        <br>
                         <label>Quantidade</label>
                         <input class="form-control" type="number">
                     </div>
+                    
                     <div class="col-xs-1">
+                        <br>
                         <label>Média(R$) </label>
                         <input class="form-control" type="text">
                     </div>
+                    
                     <div class="col-xs-1">
+                        <br>
                         <label>Total(R$)</label>
                         <input class="form-control" type="text">
                     </div>
@@ -152,33 +167,39 @@
                     <input type="button" id="novoProd" value="Novo produto"/>-->
 
                     <div class="col-xs-12">
+                        <br>
                         <label> Justificativa </label>
-                        <textarea class="form-control" rows="3">Fundamentação bem elaborada da necessidade de compra, incluindo os motivos e os benefícios que se pretende alcançar com a aquisição.</textarea>
+                        <textarea class="form-control" rows="3" placeholder="Fundamentação bem elaborada da necessidade de compra, incluindo os motivos e os benefícios que se pretende alcançar com a aquisição." ></textarea>
                     </div>
 
-                    <div class="col-xs-12">
+                    <div class="col-xs-12">                    
+                        <br>
                         <label> Especificações técnicas do objeto e local de entrega/necessidade e justificativa pra agrupamento de itens </label>
-                        <textarea class="col-xs-12" rows="5">Indicar todos os requisitos desejados para o bem permanente ou material ed consumo que pretende adquirir. com descrições detalhadas, precisas e convincentes, incluindo as caracteristicas especificas. Indicar o(s) local(is) de entrega dos bens. Deverá ser indicado o endereço completo, bairro, CEP, inclusive número da sala ou prédio.</textarea>
+                        <textarea class="col-xs-12" rows="5" placeholder="Indicar todos os requisitos desejados para o bem permanente ou material ed consumo que pretende adquirir. com descrições detalhadas, precisas e convincentes, incluindo as caracteristicas especificas. Indicar o(s) local(is) de entrega dos bens. Deverá ser indicado o endereço completo, bairro, CEP, inclusive número da sala ou prédio."></textarea>
                     </div>
 
-                    <div class="col-xs-12">
+                    <div class="col-xs-12">                    
+                        <br>
                         <label>Estratégias de fornecimento, prazo de entrega ou prazo de execução.</label>
-                        <textarea class="form-control" rows="5">Indicar o prazo da execução dos serviços e/ou prazo máximo de entrega dos materiais permanente/de consumo. Os materiais deverão ser entregues nos quantitativos e nas localidades indicadas acima no prazo máximo de 30 dias após a emissão do empenho. Os materiais deverão ter prazo de validade mínima de doze meses, contados a partir da data de entrega. Caso algum produto apresente defeito de fabricação quando em uso no decorrer do prazo de validade, o fornecedor deverá efetuar a troca do mesmo em cinco dias úteis, a contar da notificação, sem ônus adicional para o Instituto Federal Farroupilha.</textarea>
+                        <textarea class="form-control" rows="5" placeholder="Indicar o prazo da execução dos serviços e/ou prazo máximo de entrega dos materiais permanente/de consumo. Os materiais deverão ser entregues nos quantitativos e nas localidades indicadas acima no prazo máximo de 30 dias após a emissão do empenho. Os materiais deverão ter prazo de validade mínima de doze meses, contados a partir da data de entrega. Caso algum produto apresente defeito de fabricação quando em uso no decorrer do prazo de validade, o fornecedor deverá efetuar a troca do mesmo em cinco dias úteis, a contar da notificação, sem ônus adicional para o Instituto Federal Farroupilha."></textarea>
                     </div>
 
-                    <div class="col-xs-12">
+                    <div class="col-xs-12">                    
+                        <br>
                         <label>Critérios de Aceitabilidade.</label>
-                        <textarea class="form-control" rows="8">Neste campo deverá ser informado de que maneira será realixado o recebimento provisório e o recebimento definitivo com o respectivo prazo. Exemplo 01: na aquisição de um eletroeletrônico o recebimento provisório poderá ser com a simples conferência física do aparelho e o recebimento definitivo, no prazo de XX dias a contar do recebimento provisório, com o teste a fim de verificar se o mesmo está funcionando corretamente. Exemplo 02: na aquisição de material ed consumo o recebimento provisório poderia ser com a conferência da quantidade solicitada e o recebimento definitivo, n no prazo de XX dias a contar do recebimento provisório, com a análise se todos os materiais estão em perfeitas condições de utilização.</textarea>
+                        <textarea class="form-control" rows="8" placeholder="Neste campo deverá ser informado de que maneira será realixado o recebimento provisório e o recebimento definitivo com o respectivo prazo. Exemplo 01: na aquisição de um eletroeletrônico o recebimento provisório poderá ser com a simples conferência física do aparelho e o recebimento definitivo, no prazo de XX dias a contar do recebimento provisório, com o teste a fim de verificar se o mesmo está funcionando corretamente. Exemplo 02: na aquisição de material ed consumo o recebimento provisório poderia ser com a conferência da quantidade solicitada e o recebimento definitivo, n no prazo de XX dias a contar do recebimento provisório, com a análise se todos os materiais estão em perfeitas condições de utilização."></textarea>
                     </div>
 
-                    <div class="col-xs-12">
+                    <div class="col-xs-12">                    
+                        <br>
                         <label>Declaração de consulta ao saldo/estoque - Confirmação de Solicitação.</label>
-                        <textarea class="form-control" rows="3">Declaro para fins de instauração licitatório, que consultei as áreas pertinentes a estoque e controle de saldo de materiais e serviços e obtive confirmação que os itens pretendidos não encontram-se disponíveis para retirada ou emissão de empenho.</textarea>
+                        <textarea class="form-control" rows="3" placeholder="Declaro para fins de instauração licitatório, que consultei as áreas pertinentes a estoque e controle de saldo de materiais e serviços e obtive confirmação que os itens pretendidos não encontram-se disponíveis para retirada ou emissão de empenho."> </textarea>
                     </div>
 
-                    <div class="col-xs-12">
+                    <div class="col-xs-12">                        
+                        <br>
                         <label>Da veracidade dos orçamentos</label>
-                        <textarea class="form-control" rows="3">Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros.</textarea>
+                        <textarea class="form-control" rows="3" placeholder="Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros."></textarea>
                     </div>
 
                     <!--SIAPE-->
