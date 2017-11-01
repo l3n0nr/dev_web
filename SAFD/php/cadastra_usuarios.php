@@ -37,22 +37,25 @@
 ////////////////////////////////
 
 	$sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)";
-	$sql .= "VALUES($siape_funcionario, $nome_funcionario, $email_funcionario) WHERE funcionario.id_funcionario = usuario.id_funcionario;"
+	$sql .= "VALUES($siape_funcionario, $nome_funcionario, $email_funcionario);"
 
+// 	WHERE funcionario.id_funcionario = usuario.id_funcionario
+	
+	echo $sql;
 //INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
 //    VALUES(1, $login_usuario, $senha_usuario, 1, 1, 1);
 
 //    try()
 //    {
-        # tentando executar inserção
-	if(mysqli_query($con, $sql))
-        {
-            echo "Dados inseridos com sucesso!";
-//		header("location:p_insere_usuarios.php");                    
-        } 
-        else
-        {
-            echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
-        }
+//         # tentando executar inserção
+// 	if(mysqli_query($con, $sql))
+//         {
+//             echo "Dados inseridos com sucesso!";
+// //		header("location:p_insere_usuarios.php");                    
+//         } 
+//         else
+//         {
+//             echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
+//         }
 ?>
 
