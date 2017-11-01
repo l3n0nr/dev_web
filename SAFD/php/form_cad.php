@@ -11,7 +11,7 @@
     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 </div>                    
 
-<!--<div class="form-group has-feedback">
+<div class="form-group has-feedback">
     <select id="setor" class="form-control" name="nome_setor" required="" autocomplete="off">
         <?php
          include 'setores.php';
