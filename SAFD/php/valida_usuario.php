@@ -30,37 +30,38 @@
             session_cache_expire(10);
 
             # salva usuario para ser mostrado no menu da pagina
-            $_SESSION["usuario"]=$login;
-         
-            $consulta_tipo = "SELECT id_funcao FROM usuario WHERE login_usuario = '$login'";
-            $res_tipo= mysqli_query($con,$consulta_tipo);
-         
-//             echo $res_tipo;
+            $_SESSION["usuario"]=$login;                     
+
+            # redireciona pagina
+            header("location:system_admin.php");
             
-            if (mysql_num_rows($res_tipo) == "1")
-            {                                
-//                 # redireciona pagina
-//                 header("location:system_admin.php");
-                echo "administrador";
-            }
-            elseif (mysql_num_rows($res_tipo) == "2")
-            {
-//                 # redireciona pagina
-//                 header("location:system_admin.php");            
-                echo "diretor";
-            }
-            elseif (mysql_num_rows($res_tipo) == "3")
-            {
-                echo "coordenador";
-            }
-            elseif (mysql_num_rows($res_tipo) == "4")
-            {
-                echo "chefe";
-            }            
-            else
-            {            
-                echo "outro";
-            }
+//             $consulta_tipo = "SELECT id_funcao FROM usuario WHERE login_usuario = '$login'";
+//             $res_tipo= mysqli_query($con,$consulta_tipo);
+            
+//             if (mysql_num_rows($res_tipo) == "1")
+//             {                                
+// //                 # redireciona pagina
+// //                 header("location:system_admin.php");
+//                 echo "administrador";
+//             }
+//             elseif (mysql_num_rows($res_tipo) == "2")
+//             {
+// //                 # redireciona pagina
+// //                 header("location:system_admin.php");            
+//                 echo "diretor";
+//             }
+//             elseif (mysql_num_rows($res_tipo) == "3")
+//             {
+//                 echo "coordenador";
+//             }
+//             elseif (mysql_num_rows($res_tipo) == "4")
+//             {
+//                 echo "chefe";
+//             }            
+//             else
+//             {            
+//                 echo "outro";
+//             }
          }
          else
          {   
