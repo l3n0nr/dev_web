@@ -32,26 +32,28 @@
             # salva usuario para ser mostrado no menu da pagina
             $_SESSION["usuario"]=$login;
          
-            if ($id_funcao = "1")
-            {                
+            $consulta_tipo = "SELECT id_funcao FROM usuario WHERE login_usuario = '$login'";
+            $res_tipo= mysqli_query($con,$consulta_tipo);
+         
+//             echo $res_tipo;
+            
+            if (mysql_num_rows($res_tipo) == "1")
+            {                                
 //                 # redireciona pagina
 //                 header("location:system_admin.php");
                 echo "administrador";
             }
-            else
-            if ($id_funcao = "2")
+            elseif (mysql_num_rows($res_tipo) == "2")
             {
 //                 # redireciona pagina
 //                 header("location:system_admin.php");            
                 echo "diretor";
             }
-            else
-            if ($id_funcao = "3")
+            elseif (mysql_num_rows($res_tipo) == "3")
             {
                 echo "coordenador";
             }
-            else
-            if ($id_funcao = "4")
+            elseif (mysql_num_rows($res_tipo) == "4")
             {
                 echo "chefe";
             }            
