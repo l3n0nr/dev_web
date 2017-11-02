@@ -54,7 +54,7 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="box">
-                <div class="box-header">
+                <!--<div class="box-header">
                   <h3 class="box-title">Excluindo usuarios</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
@@ -70,19 +70,22 @@
                         ID
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                        Login
+                        SIAPE
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                        Setor
+                        NOME
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                        Função
+                        SETOR
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                        Ativo
+                        FUNCAO
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                        Opções
+                        ATIVO(O - NAO)
+                      </th>
+                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                        OPÇÕES
                       </th>
                     </thead>
                       <tbody>

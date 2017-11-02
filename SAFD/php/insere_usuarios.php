@@ -13,8 +13,8 @@
 	$senha  = $_POST['senha_usuario'];    
 
     # mostrando dados inseridos
+    	echo "Tabela Funcionario - Siape: " .$siape. ", Nome:" . $nome. ", Email:" .$email."<hr>";
 	echo "Tabela Funcao - Setor: " .$setor. ".<hr>";
-	echo "Tabela Funcionario - Siape: " .$siape. ", Nome:" . $nome. ", Email:" .$email."<hr>";
  	echo "Tabela Seção - Função: " .$funcao. ".<hr>";
 	echo "Tabela Usuario - Usuario: " .$login. " Senha: " .$senha. ".<hr>";  
     
@@ -38,10 +38,12 @@
 
 	$sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)";
 	$sql .= "VALUES($siape_funcionario, $nome_funcionario, $email_funcionario);"
+	
+	$sql .= "INSERT INTO usuario()"
 
 // 	WHERE funcionario.id_funcionario = usuario.id_funcionario
 	
-	echo $sql;
+ 	echo $sql;
 //INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
 //    VALUES(1, $login_usuario, $senha_usuario, 1, 1, 1);
 

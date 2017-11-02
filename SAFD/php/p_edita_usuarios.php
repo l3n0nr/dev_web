@@ -85,7 +85,7 @@
                         ATIVO(0 = NÃO)
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                        OPÇÃO
+                        OPÇÕES
                       </th>
                     </thead>
                       <tbody>
