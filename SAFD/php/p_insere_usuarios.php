@@ -58,7 +58,7 @@
                   <h3 class="box-title">Adicionando Usuários</h3>
                 </div><!-- /.box-header -->
                 
-                <form action="cadastra_usuarios.php" method="post">
+                <form action="insere_usuarios.php" method="post">
                     <?php
                         include 'form_cad.php';
                     ?>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SAFD | Visual. User </title>
+    <title>SAFD | Modif. User. </title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -45,7 +45,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <ol class="breadcrumb">
-            <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Visualizando usuários do sistema </a></li>
+            <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Alterando usuários do sistema </a></li>
           </ol>
         </br>
         </section>
@@ -54,8 +54,8 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="box">
-                <div class="box-header">
-                  <h3 class="box-title">Visualizando usuários</h3>                  
+                <!--<div class="box-header">
+                  <h3 class="box-title">Alterando usuarios</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
@@ -82,17 +82,18 @@
                         FUNÇÃO
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                        ATIVO (0 - Não)
+                        ATIVO(0 = NÃO)
+                      </th>
+                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                        OPÇÃO
                       </th>
                     </thead>
                       <tbody>
                         <?php
-                          include 'visualiza_usuarios.php';
+                          include 'edita_usuarios.php';
                         ?>
                       </tbody>
                     </table>
-                    <td>
-                  </td>
                   </div>
                   </div>
                 </div>
@@ -127,3 +128,4 @@
     <script src="../dist/js/demo.js"></script>
   </body>
 </html>
+;
