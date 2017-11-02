@@ -8,6 +8,6 @@
   }
   else
   {
-    //echo "Sessao validada como ".$_SESSION["usuario"];
+//     echo "Sessao validada como ".$_SESSION["usuario"];
   }
 ?>

@@ -40,7 +40,7 @@
     $senha = $_POST["senha"];
   
     # arquivo conexao
-    include 'conexao.php';    
+    include_once 'conexao.php';    
     
     # definindo comando para consulta 
     $consulta = "SELECT * FROM usuario WHERE login = '".$login."' and senha = '". $senha."'";    
@@ -49,7 +49,7 @@
 //      $consulta = "SELECT * FROM usuario";    
     
     # realiza consulta
-     $res = mysqli_query($conexao, $consulta);
+     $res = mysqli_query($con, $consulta);
 //     $result = mysqli_query($conexao, $consulta);        
     
     # realizando consulta
@@ -62,24 +62,58 @@
          # verifica usuario
          if(mysqli_num_rows($res) != 1)	// usuário ok, conclui pedido
          {      
-             # inicia sessao
-             session_start();
-             session_cache_expire(10);
-             
-             # salva usuario para ser mostrado no menu da pagina
-             $_SESSION["usuario"]=$login;
-             
-             # redireciona pagina
-             header("location:system_admin.php");                    
+            echo "entrou"."<hr>";
+            echo "consulta". $consulta."<hr>";
+//             echo "conexao".$con."<hr>";
+            echo "resultado:".$res."<hr>"; 
+            echo "login:".$login."<hr>";
+            echo "senha:".$senha."<hr>";            
+            
+//              # inicia sessao
+//              session_start();
+//              session_cache_expire(10);
+//              
+//              # salva usuario para ser mostrado no menu da pagina
+//              $_SESSION["usuario"]=$login;
+//              
+//              # redireciona pagina
+//              header("location:system_admin.php");                    
          }
          else
          {   
-             # redireciona pagina
-             header("location:index.php");                     
-             echo "Erro Linha"; 
+            echo "nao entrou";
+            echo $res;
+//              # redireciona pagina
+//              header("location:index.php");                     
+//              echo "Erro Linha"; 
          }    
      }
 
+//      #### NAO ESTA FUNCIONANDO   -   LOGICA ERRADA   
+//     # verifica se usuario foi digitado
+//      if (isset($login))
+//      {
+//          # verifica usuario
+//          if(mysqli_num_rows($res) != 1)	// usuário ok, conclui pedido
+//          {      
+//              # inicia sessao
+//              session_start();
+//              session_cache_expire(10);
+//              
+//              # salva usuario para ser mostrado no menu da pagina
+//              $_SESSION["usuario"]=$login;
+//              
+//              # redireciona pagina
+//              header("location:system_admin.php");                    
+//          }
+//          else
+//          {   
+//              # redireciona pagina
+//              header("location:index.php");                     
+//              echo "Erro Linha"; 
+//          }    
+//      }
+     
 //     else
 //     {
 //         # redireciona pagina

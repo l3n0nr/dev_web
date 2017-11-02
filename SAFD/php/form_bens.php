@@ -37,7 +37,6 @@
                 ?>
             </aside>
 
-
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
 <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
@@ -46,7 +45,7 @@
 <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert"  aria-hidden="true">
-                            ×
+                            Fechar
                         </button>
                             <h4>
                                 <i class="icon fa fa-warning"> </i>
@@ -157,7 +156,8 @@
                         <input class="form-control" type="number" placeholder="0">
                     </div>
                     
-                    <!--<div class="col-xs-1">
+                    <!--
+                    <div class="col-xs-1">
                         <br>
                         <label>Média(R$) </label>
                         <input class="form-control" type="text">
@@ -167,9 +167,8 @@
                         <br>
                         <label>Total(R$)</label>
                         <input class="form-control" type="text">
-                    </div>-->
+                    </div>
 
-<!--                    teste
                     <div id="item" class="item">
                         <input type="number" id="quant" name="quant"/>
                     </div>
