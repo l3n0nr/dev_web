@@ -178,13 +178,49 @@
                     <div class="col-xs-2">
                         <br>
                         <br>    
-                        <button type="submit" class="btn btn-sucess pull-right"> Salvar na Tabela </button>
+                        <button type="submit" class="btn btn-sucess pull-right"> Adicionar na lista </button>
                     </div>
                     
                     <div class="col-xs-12">
+                        <div class="box-body">
+                            <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                                <div class="row">
+                                    <div class="col-sm-6"></div>
+                                    <div class="col-sm-3"></div>
+                                    </div><div class="row">
+                                    <div class="col-sm-12">
+                                    <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                                    <thead>
+                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                        Grupo
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                        Item
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                        Especificações
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                        Quantidade
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>".."</td>"."                                   
+                                            <td>".."</td>"."            
+                                            <td>".."</td>"."                                   
+                                            <td>".."</td>"."                                   
+                                        </tr>    
+                                    </tbody>
+                                    </table>
+                                    <td> </td>
+                                </div>
+                            </div>       
+                        </div>
+                    </div>
+                        <!--<br>
                         <br>
-                        <br>
-                        <label> TABELA DE ADIÇÃO DOS MATERIAIS AQUI </label>
+                        <label> TABELA DE ADIÇÃO DOS MATERIAIS AQUI </label>-->
                     </div>
                     
                     <div class="col-xs-12">
