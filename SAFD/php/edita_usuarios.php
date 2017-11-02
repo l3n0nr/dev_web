@@ -19,6 +19,7 @@
                         <td>".$linha['nome_setor']."</td>"."                                   
                         <td>".$linha['descricao_funcao']."</td>"."                                   
                         <td>".$linha['estado_usuario']."</td>"."            
+                        <td> Editar </td>"."            
                     </tr>";        
     
         #mostrando colunas/linhas
