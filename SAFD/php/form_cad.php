@@ -14,7 +14,7 @@
 <div class="form-group has-feedback">
     <select id="setor" class="form-control" name="nome_setor" required="" autocomplete="off">
         <?php
-         include 'setores.php';
+        include 'setores.php';
         ?>
     </select>
 </div>
@@ -22,7 +22,7 @@
 <div class="form-group has-feedback">
     <select id="nivel" class="form-control" name="descricao_funcao" required="" autocomplete="off">
         <?php
-         include 'funcao.php';
+        include 'funcao.php';
         ?>
     </select>
 </div>

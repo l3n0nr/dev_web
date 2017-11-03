@@ -188,22 +188,22 @@
                             </label>
                             <label> Data:__</label>
                         </div>
-<!--                    <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>-->
-                    <button type="submit"class="btn btn-success pull-right">Enviar para a próxima etapa</button>
-                    <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>
+                        <!--                    <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>-->
+                        <button type="submit"class="btn btn-success pull-right">Enviar para a próxima etapa</button>
+                        <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>
                     </div>
-                </form>  
-                </div>                                      
+            </form>  
+        </div>                                      
 
-            <footer class="main-footer">
-                <?php
-                include 'footer.php';
-                ?>
-            </footer>
+        <footer class="main-footer">
+            <?php
+            include 'footer.php';
+            ?>
+        </footer>
 
-            <!-- Stats tab content -->
-        </form>
-    </div><!-- /.tab-pane -->
+        <!-- Stats tab content -->
+    </form>
+</div><!-- /.tab-pane -->
 </div>
 </aside><!-- /.control-sidebar -->
 
