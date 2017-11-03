@@ -57,8 +57,9 @@
                 <!--<div class="box-header">
                   <h3 class="box-title">Visualizando usuários</h3>                  
                 </div><!-- /.box-header -->
-                <div class="box-body">
-                  <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                <div class="box-body">                    
+                    </div>
+                  <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">                        
                     <div class="row">
                       <div class="col-sm-6"></div>
                       <div class="col-sm-3"></div>
@@ -91,13 +92,21 @@
                         ?>
                       </tbody>
                     </table>
-                    <div class="col-xs-6">
+                        <div class="col-sm-4">
+                        <div class="dataTables_length" id="example1_length">
+                            <label> Filtrar por <select name="example1_length" aria-controls="example1" class="form-control input-sm">
+                            <option value="2"> Todos </option>
+                            <option value="1"> Ativos </option>
+                            <option value="0"> Desativados </option>
+                            </select></label>                        
+                    <div class="col-sm-6">
                         <form action="p_visualiza_usuarios.php">
                             <br>
                             <br>    
                             <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
                         </form>
-                    </div>                        
+                    </div>                   
+                    </div>
                   </div>              
                     <td>                    
                   </td>                  
