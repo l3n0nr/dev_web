@@ -91,11 +91,18 @@
                         ?>
                       </tbody>
                     </table>
-                    <td>
-                  </td>
-                  </div>
-                  </div>
-                </div>
+                    <div class="col-xs-6">
+                        <form action="p_visualiza_usuarios.php">
+                            <br>
+                            <br>    
+                            <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
+                        </form>
+                    </div>                        
+                  </div>              
+                    <td>                    
+                  </td>                  
+                  </div>                                            
+                </div>                
           </section>
       </div><!-- /.content-wrapper -->
 

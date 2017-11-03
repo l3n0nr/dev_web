@@ -23,6 +23,6 @@
     
         #mostrando colunas/linhas
             echo $visualizar;
-	}
+	}		
 ?>
 
