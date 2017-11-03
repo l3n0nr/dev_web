@@ -29,7 +29,7 @@ include 'valida_sessao.php';
                 <ul class="dropdown-menu" role="menu">
                     <!--                    <li><a href="config.php">Configurações</a></li>-->
                     <!--                    <li class="divider"></li>-->
-                    <li><a href="../index.php">Sair</a></li>                                        
+                    <li><a href="../index.html">Sair</a></li>                                        
                 </ul>
             </li>
         </ul>

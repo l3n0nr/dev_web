@@ -55,7 +55,7 @@
 
                     <section class="content-header">
                         <h4>
-                            REQUISIÇÃO DE COMPRA DA DEMANDA X - AVALIAÇÃO DO COORDENADOR DE Y
+                            Requisição de compra numero "X" - Avaliação do usuário <?php echo $_SESSION["usuario"] ?>. 
                         </h4>
                         <ol class="breadcrumb">
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>

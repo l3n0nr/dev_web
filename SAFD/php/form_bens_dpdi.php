@@ -43,37 +43,35 @@
             <!--<form onsubmit="alert('Solicitação enviada para avaliação para o DAD!')">-->
             <form>
                 <div class="content-wrapper">
-                    <!-- Content Header (Page header) -->
-
-                    <div class="alert alert-warning alert-dismissable">
-                        <button type="button" class="close" data-dismiss="alert"  aria-hidden="true">
-                            ×
-                        </button>
-                        <h4>
-                            <i class="icon fa fa-warning">
-                            </i>
-                            Informações importantes
-                        </h4>              
-                    </div>
-
                     <section class="content-header">
                         <h4>
-                            REQUISIÇÃO DE COMPRA - BENS
+                            REQUISIÇÃO DE COMPRA - DIREÇÃO DE PLANEJAMENTO E DESENVOLVIMENTO INSTITUCIONAL
                         </h4>
                         <ol class="breadcrumb">
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens>Avaliação DPDI</i> </a></li>
                         </ol>
                     </section>
 
-                    <label>Radio groups</label>
-
-                    <!--SIAPE-->
                     <div class="box-footer">
+                        <div class="form-group">
+                            <label>Seleção de Tipos de Despeja</label>
+                            <select multiple="" class="form-control">
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="checkbox">
                         <label>
                             <input type="checkbox">
-                            Eu <b><?php echo $_SESSION["usuario"] ?></b> autorizo o prosseguimento desta solicitação
+                            Eu 
+                            <b>
+                                <?php echo $_SESSION["usuario"] ?>
+                            </b> 
+                            autorizo o prosseguimento desta solicitação
                         </label>
                     </div>
                     <button type="submit" class="btn btn-warning pull-right">Enviar para a próxima etapa</button>

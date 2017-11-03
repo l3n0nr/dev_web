@@ -44,6 +44,15 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
+                    <div class="dataTables_length" id="example1_length">
+                        <label> Filtrar por
+                        <select name="example1_length" aria-controls="example1" class="form-control input-sm">
+                            <option value="2"> Todos </option>
+                            <option value="1"> Ativos </option>
+                            <option value="0"> Desativados </option>
+                        </select>                                                                                               
+                        </label>
+                    </div>
                     <ol class="breadcrumb">
                         <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Visualizando usuários do sistema </a></li>
                     </ol>
@@ -92,20 +101,13 @@
                                                     ?>
                                                 </tbody>
                                             </table>
-                                            <div class="col-sm-4">
-                                                <div class="dataTables_length" id="example1_length">
-                                                    <label> Filtrar por <select name="example1_length" aria-controls="example1" class="form-control input-sm">
-                                                            <option value="2"> Todos </option>
-                                                            <option value="1"> Ativos </option>
-                                                            <option value="0"> Desativados </option>
-                                                        </select></label>                        
-                                                    <div class="col-sm-6">
-                                                        <form action="p_visualiza_usuarios.php">
-                                                            <br>
-                                                            <br>    
-                                                            <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
-                                                        </form>
-                                                    </div>                   
+                                            <div class="col-sm-4">                                                
+                                                <div class="col-sm-6">
+                                                    <form action="p_visualiza_usuarios.php">
+                                                        <br>
+                                                        <br>    
+                                                        <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
+                                                    </form>
                                                 </div>
                                             </div>              
                                             <td>                    
