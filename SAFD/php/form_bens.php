@@ -40,7 +40,7 @@
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
 <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="system_user.php">
+            <!--<form action="system_user.php">-->
                 <div class="content-wrapper">                    
 <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
