@@ -64,8 +64,8 @@ if (isset($login))
     }
     else
     {
-        # redireciona pagina
-        header("location:index.html");
+        # mostra mensagem e redireciona pagina
+        echo ("<script>alert('Usuário ou Senha incorretos!'); location.href='index.html';</script>");
     }
 }
 ?>
