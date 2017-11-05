@@ -51,8 +51,8 @@
                         <i class="icon fa fa-warning"> </i>
                         Informações importantes                                
                     </h4>
-                    <label> - Alguns campos serão preenchidos automaticamente pelo sistema. </label>
-                    <br>
+                    <!--<label> - Alguns campos serão preenchidos automaticamente pelo sistema. </label>-->
+                    <!--<br>-->
                     <label> - É necessário que todos os outros campos, sejam preenchidos! </label>
                 </div>
 
@@ -187,7 +187,8 @@
                             <div class="row">
                                 <div class="col-sm-6"></div>
                                 <div class="col-sm-3"></div>
-                            </div><div class="row">
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-12">
                                     <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                                         <thead>
@@ -213,7 +214,7 @@
                                             </tr>    
                                         </tbody>
                                     </table>
-                                    <td> </td>
+                                    <!--<td> </td>-->
                                 </div>
                             </div>       
                         </div>

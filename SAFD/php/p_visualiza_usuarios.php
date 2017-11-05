@@ -45,18 +45,18 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <div class="dataTables_length" id="example1_length">
-                        <label> Filtrar por
-                        <select name="example1_length" aria-controls="example1" class="form-control input-sm">
-                            <option value="2"> Todos </option>
-                            <option value="1"> Ativos </option>
-                            <option value="0"> Desativados </option>
-                        </select>                                                                                               
+                        <label> 
+                            <select name="example1_length" aria-controls="example1" class="form-control input-sm">
+                                <option value="2"> Listando Todos Usuários </option>
+                                <option value="1"> Listando apenas Usuários Ativos </option>
+                                <option value="0"> Listando apenas Usuários Desativados </option>
+                            </select>                                                                                               
                         </label>
                     </div>
                     <ol class="breadcrumb">
                         <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Visualizando usuários do sistema </a></li>
                     </ol>
-                    </br>
+                    <!--</br>-->
                 </section>
                 <section class="content">
 
