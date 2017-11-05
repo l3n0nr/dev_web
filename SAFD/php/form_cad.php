@@ -34,10 +34,10 @@
     <input type="password" class="form-control" placeholder="Senha" name="senha_usuario" required="" autocomplete="off">
     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 </div>
-<div class="form-group has-feedback">
+<!--<div class="form-group has-feedback">
     <input type="password" class="form-control" placeholder="Confirme a senha" name="confirma_senha" required="" autocomplete="off">
     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-</div>
+</div>-->
 
 <div class="row">          
     <div class="col-xs-12">
