@@ -32,28 +32,34 @@ if (isset($login))
         # salva usuario para ser mostrado no menu da pagina
         $_SESSION["usuario"] = $login;
 
+//        echo $login;
+        
         # redireciona pagina
         header("location:system_admin.php");
 
-//             $consulta_tipo = "SELECT id_funcao FROM usuario WHERE login_usuario = '$login'";
-//             $res_tipo= mysqli_query($con,$consulta_tipo);
-//             if (mysql_num_rows($res_tipo) == "1")
+//             $consulta_tipo = "SELECT id_funcao FROM usuario WHERE login_usuario = '$login' ";
+//             
+////             echo $consulta_tipo;
+//             
+//             $res_tipo= mysqli_query($con, $consulta_tipo);
+//                          
+//             if (mysqli_num_rows($res_tipo) == 1)
 //             {                                
 // //                 # redireciona pagina
 // //                 header("location:system_admin.php");
 //                 echo "administrador";
 //             }
-//             elseif (mysql_num_rows($res_tipo) == "2")
+//             elseif (mysqli_num_rows($res_tipo) == 2)
 //             {
 // //                 # redireciona pagina
 // //                 header("location:system_admin.php");            
 //                 echo "diretor";
 //             }
-//             elseif (mysql_num_rows($res_tipo) == "3")
+//             elseif (mysqli_num_rows($res_tipo) == 3)
 //             {
 //                 echo "coordenador";
 //             }
-//             elseif (mysql_num_rows($res_tipo) == "4")
+//             elseif (mysqli_num_rows($res_tipo) == 4)
 //             {
 //                 echo "chefe";
 //             }            
@@ -64,6 +70,14 @@ if (isset($login))
     }
     else
     {
+//      destruindo sessao
+//	session_destroy();
+        
+        //ideal para utilizar depois do sistema estiver funcionar com os usuarios separados - funcoes
+//        limpando sessao
+//	unset ($_SESSION['login']);
+//	unset ($_SESSION['senha']);
+
         # mostra mensagem e redireciona pagina
         echo ("<script>alert('Usuário ou Senha incorretos!'); location.href='index.html';</script>");
     }
