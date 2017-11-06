@@ -84,25 +84,4 @@ CREATE TABLE IF NOT EXISTS objeto(
 	prazoexecucao_objeto VARCHAR(40) NOT NULL,
 	estrategiafornecimento_objeto VARCHAR(40) NOT NULL,
 	nome_objeto VARCHAR(40) NOT NULL);
-		
--- -- OUTRAS [VERIFICAR NECESSIDADE]
-
-CREATE TABLE IF NOT EXISTS usuario_cadastrado(
-    numero_portaria int(5) NOT NULL ,
-	datainicio date NOT NULL,
-	datafim date NOT NULL);	                
-		
-CREATE TABLE IF NOT EXISTS funcao_funcionario(
-    nportaria_funcaofuncionario int(10) NOT NULL PRIMARY KEY,
-	data_funcaofuncionario DATE);
-
-CREATE TABLE IF NOT EXISTS unidade(
-    id_unidade int(10) NOT NULL PRIMARY KEY,
-	nome_unidade VARCHAR(40) NOT NULL);
-	
-CREATE TABLE IF NOT EXISTS administrador(
-    id_administrador int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        nome_administrador VARCHAR(40) NOT NULL,
-        senha_administrador VARCHAR(40) NOT NULL,
-        habilitado_administrador BINARY NOT NULL);
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
