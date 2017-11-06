@@ -1,5 +1,4 @@
 <?php
-
 /*
   AÇÕES PENDENTES:
   -Criar um verificação para analisar o tipo do usuario cadastrado. Se "administrador" entra na parte de administrador do sistema, se usuario "padrao" entra na parte normal de sistema.
@@ -13,7 +12,7 @@ include_once 'conexao.php';
 $login = $_POST["login"];
 $senha = $_POST["senha"];
 
-# definindo comando para consulta 
+# definindo comando para consulta
 $consulta = "SELECT login_usuario, senha_usuario, estado_usuario, id_funcao FROM usuario WHERE login_usuario = '$login' AND senha_usuario = '$senha' AND estado_usuario=1";
 
 # realiza consulta
@@ -33,18 +32,18 @@ if (isset($login))
         $_SESSION["usuario"] = $login;
 
 //        echo $login;
-        
+
         # redireciona pagina
         header("location:system_admin.php");
 
 //             $consulta_tipo = "SELECT id_funcao FROM usuario WHERE login_usuario = '$login' ";
-//             
+//
 ////             echo $consulta_tipo;
-//             
+//
 //             $res_tipo= mysqli_query($con, $consulta_tipo);
-//                          
+//
 //             if (mysqli_num_rows($res_tipo) == 1)
-//             {                                
+//             {
 // //                 # redireciona pagina
 // //                 header("location:system_admin.php");
 //                 echo "administrador";
@@ -52,7 +51,7 @@ if (isset($login))
 //             elseif (mysqli_num_rows($res_tipo) == 2)
 //             {
 // //                 # redireciona pagina
-// //                 header("location:system_admin.php");            
+// //                 header("location:system_admin.php");
 //                 echo "diretor";
 //             }
 //             elseif (mysqli_num_rows($res_tipo) == 3)
@@ -62,9 +61,9 @@ if (isset($login))
 //             elseif (mysqli_num_rows($res_tipo) == 4)
 //             {
 //                 echo "chefe";
-//             }            
+//             }
 //             else
-//             {            
+//             {
 //                 echo "outro";
 //             }
     }
@@ -72,7 +71,7 @@ if (isset($login))
     {
 //      destruindo sessao
 //	session_destroy();
-        
+
         //ideal para utilizar depois do sistema estiver funcionar com os usuarios separados - funcoes
 //        limpando sessao
 //	unset ($_SESSION['login']);

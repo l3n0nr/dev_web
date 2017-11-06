@@ -47,14 +47,43 @@ $senha = $_POST['senha_usuario'];
 //$sql .= "($siape, '$nome', '$email', '$login', '$senha', 1, $setor, $funcao);" ;
 
 // TESTE 2
-$sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES";
-$sql.= "($siape, '$nome', '$email');";
+// $sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES";
+// $sql.= "($siape, '$nome', '$email');";
 
-$sql.= "INSERT INTO usuario(id_usuario, id_setor, id_funcao, login_usuario, senha_usuario, estado_usuario) VALUES";
-$sql.= "($setor, $funcao, '$login', '$senha', 1);";
+// realizando busca pelo ultimo usuario cadastrado
+$funcionario = 'SELECT id_funcionario FROM funcionario ORDER BY id_funcionario DESC limit 1';
+// $funcionario = "SELECT id_funcionario FROM funcionario;";
+
+if(mysqli_query($con, $funcionario))
+{
+    echo "teste";
+    // return mysqli_query($funcionario)
+}
+
+while ($row = mysql_fetch_assoc($funcionario))
+{
+    echo $row['id_funcionario'];
+}
+
+
+// 	if(mysqli_fetch_assoc($con, $funcionario))
+//   {
+//     echo $funcionario;
+//       // echo "teste ";
+//       echo "<br>";
+//       echo $row;
+// //		header("location:p_insere_usuarios.php");
+//   }
+
+$sql.= "INSERT INTO usuario(id_usuario, id_setor, id_funcao, id_funcionario, login_usuario, senha_usuario, estado_usuario) VALUES";
+$sql.= "($setor, $funcao, $funcionario, '$login', '$senha', 1);";
 
 // VERIFICAR LIGACAO TABELAS
-echo $sql;
+// selecionando ultimo valor cadastrado
+// SELECT id_funcionario FROM funcionario ORDER BY id_funcionario DESC limit 1
+
+// echo $sql;
+// echo $funcionario;
 
 //echo $sql;
 //INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
