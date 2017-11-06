@@ -15,7 +15,7 @@
             <file>file:/var/www/html/dev_web/SAFD/php/p_insere_usuarios.php</file>
             <file>file:/var/www/html/dev_web/SAFD/php/header_user.php</file>
             <file>file:/var/www/html/dev_web/SAFD/php/form_cad.php</file>
-            <file>file:/var/www/html/dev_web/SAFD/php/valida_usuario.php</file>
+            <file>file:/var/www/html/dev_web/SAFD/php/insere_usuarios.php</file>
             <file>file:/var/www/html/dev_web/SAFD/php/form_bens.php</file>
         </group>
     </open-files>

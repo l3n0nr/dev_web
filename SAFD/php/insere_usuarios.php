@@ -31,11 +31,31 @@ echo "Tabela Usuario - Usuario: " . $login . " Senha: " . $senha . ".<hr>";
 //VALUES(1, "lenon", "lenonr", 1, 1, 1) WHERE funcionario.id_funcionario = usuario.id_funcionario;
 ////////////////////////////////
 
-$sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)";
-$sql .= "VALUES($siape_funcionario, $nome_funcionario, $email_funcionario);"
-
+//$sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)";
+//$sql .= "VALUES($siape_funcionario, $nome_funcionario, $email_funcionario)"
+//
 //$sql .= "INSERT INTO usuario()"
-// 	WHERE funcionario.id_funcionario = usuario.id_funcionario
+//$sql .= "WHERE funcionario.id_funcionario = usuario.id_funcionario;"
+
+//$sql  = "INSERT INTO funcionario, usuario(siape_funcionario, nome_funcionario, email_funcionario, nome_usuario, senha_usuario, estado_usuario) VALUES"
+//$sql .= "($siape, '$nome', '$email', '$login', '$senha');" ;        
+
+// TESTE 1
+//$sql  = "INSERT INTO funcionario, usuario(siape_funcionario, nome_funcionario, email_funcionario, "
+//                                        . "nome_usuario, senha_usuario, estado_usuario"
+//                                        . "id_setor, id_funcao) VALUES";   
+//$sql .= "($siape, '$nome', '$email', '$login', '$senha', 1, $setor, $funcao);" ;        
+
+// TESTE 2
+$sql = "INSERT INTO funcionario(id_funcionario, siape_funcionario, nome_funcionario, email_funcionario) VALUES";
+$sql.= "($siape, '$nome', '$email');";
+
+$sql.= "INSERT INTO usuario(id_usuario, id_setor, id_funcao, login_usuario, senha_usuario, estado_usuario) VALUES";
+$sql.= "($setor, $funcao, '$login', '$senha', 1);";
+
+// VERIFICAR LIGACAO TABELAS
+
+echo $sql;
 
 //echo $sql;
 //INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
