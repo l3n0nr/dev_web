@@ -14,14 +14,14 @@ $login = $_POST['login_usuario'];
 $senha = $_POST['senha_usuario'];
 
 # mostrando dados inseridos
-echo "Tabela Funcionario - Siape: " . $siape . ", Nome:" . $nome . ", Email:" . $email . "<hr>";
-echo "Tabela Funcao - Setor: " . $setor . ".<hr>";
-echo "Tabela Seção - Função: " . $funcao . ".<hr>";
-echo "Tabela Usuario - Usuario: " . $login . " Senha: " . $senha . ".<hr>";
+// echo "Tabela Funcionario - Siape: " . $siape . ", Nome:" . $nome . ", Email:" . $email . "<hr>";
+// echo "Tabela Funcao - Setor: " . $setor . ".<hr>";
+// echo "Tabela Seção - Função: " . $funcao . ".<hr>";
+// echo "Tabela Usuario - Usuario: " . $login . " Senha: " . $senha . ".<hr>";
 
 //     echo "<hr>";
 # mostando instrução SQL
-//    $sql  = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES";   
+//    $sql  = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES";
 //    $sql .= "($siape, '$nome', '$email');" ;
 ///////////////////VERIFICAR
 //INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
@@ -38,23 +38,22 @@ echo "Tabela Usuario - Usuario: " . $login . " Senha: " . $senha . ".<hr>";
 //$sql .= "WHERE funcionario.id_funcionario = usuario.id_funcionario;"
 
 //$sql  = "INSERT INTO funcionario, usuario(siape_funcionario, nome_funcionario, email_funcionario, nome_usuario, senha_usuario, estado_usuario) VALUES"
-//$sql .= "($siape, '$nome', '$email', '$login', '$senha');" ;        
+//$sql .= "($siape, '$nome', '$email', '$login', '$senha');" ;
 
 // TESTE 1
 //$sql  = "INSERT INTO funcionario, usuario(siape_funcionario, nome_funcionario, email_funcionario, "
 //                                        . "nome_usuario, senha_usuario, estado_usuario"
-//                                        . "id_setor, id_funcao) VALUES";   
-//$sql .= "($siape, '$nome', '$email', '$login', '$senha', 1, $setor, $funcao);" ;        
+//                                        . "id_setor, id_funcao) VALUES";
+//$sql .= "($siape, '$nome', '$email', '$login', '$senha', 1, $setor, $funcao);" ;
 
 // TESTE 2
-$sql = "INSERT INTO funcionario(id_funcionario, siape_funcionario, nome_funcionario, email_funcionario) VALUES";
+$sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES";
 $sql.= "($siape, '$nome', '$email');";
 
 $sql.= "INSERT INTO usuario(id_usuario, id_setor, id_funcao, login_usuario, senha_usuario, estado_usuario) VALUES";
 $sql.= "($setor, $funcao, '$login', '$senha', 1);";
 
 // VERIFICAR LIGACAO TABELAS
-
 echo $sql;
 
 //echo $sql;
@@ -66,11 +65,10 @@ echo $sql;
 // 	if(mysqli_query($con, $sql))
 //         {
 //             echo "Dados inseridos com sucesso!";
-// //		header("location:p_insere_usuarios.php");                    
-//         } 
+// //		header("location:p_insere_usuarios.php");
+//         }
 //         else
 //         {
 //             echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
 //         }
 ?>
-
