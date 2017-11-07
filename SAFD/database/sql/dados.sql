@@ -120,7 +120,10 @@ INSERT INTO setor(nome_setor)
     VALUES("coordenacao producao");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor producao");      
+    VALUES("setor producao");    
+    
+INSERT INTO setor(nome_setor)    
+    VALUES("sistema");    
     
 -- -- ADICIONANDO FUNCIONARIOS
 INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
