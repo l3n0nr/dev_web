@@ -45,12 +45,12 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <div class="dataTables_length" id="example1_length">
-                        <label> 
+                        <label>
                             <select name="example1_length" aria-controls="example1" class="form-control input-sm">
                                 <option value="2"> Listando Todos Usuários </option>
                                 <option value="1"> Listando apenas Usuários Ativos </option>
                                 <option value="0"> Listando apenas Usuários Desativados </option>
-                            </select>                                                                                               
+                            </select>
                         </label>
                     </div>
                     <ol class="breadcrumb">
@@ -64,11 +64,11 @@
                         <div class="col-xs-12">
                             <div class="box">
                                 <!--<div class="box-header">
-                                  <h3 class="box-title">Visualizando usuários</h3>                  
+                                  <h3 class="box-title">Visualizando usuários</h3>
                                 </div><!-- /.box-header -->
-                                <div class="box-body">                    
+                                <div class="box-body">
                                 </div>
-                                <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">                        
+                                <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                                     <div class="row">
                                         <div class="col-sm-6"></div>
                                         <div class="col-sm-3"></div>
@@ -76,9 +76,6 @@
                                         <div class="col-sm-12">
                                             <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                                                 <thead>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                    ID
-                                                </th>
                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                                                     SIAPE
                                                 </th>
@@ -101,19 +98,19 @@
                                                     ?>
                                                 </tbody>
                                             </table>
-                                            <div class="col-sm-4">                                                
+                                            <div class="col-sm-4">
                                                 <div class="col-sm-6">
                                                     <form action="p_visualiza_usuarios.php">
                                                         <br>
-                                                        <br>    
+                                                        <br>
                                                         <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
                                                     </form>
                                                 </div>
-                                            </div>              
-                                            <td>                    
-                                            </td>                  
-                                        </div>                                            
-                                    </div>                
+                                            </div>
+                                            <td>
+                                            </td>
+                                        </div>
+                                    </div>
                                     </section>
                                 </div><!-- /.content-wrapper -->
 
