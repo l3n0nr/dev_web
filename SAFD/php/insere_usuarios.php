@@ -43,15 +43,15 @@ if(mysqli_query($con, $sql))
         // echo ("<script>alert('Usuário cadastrado com sucesso!'); location.href='p_insere_usuarios.php';</script>");
     	// header("location:p_insere_usuarios.php");
 
-        // verificando se usuario esta logado no sistema
-        if(isset($_SESSION['login']) == TRUE)
-        {
-            echo ("<script>alert('Usuário cadastrado com sucesso!'); location.href='p_insere_usuarios.php';</script>");
-        }
-        else
-        {
-            echo ("<script>alert('Usuário cadastrado com sucesso!'); location.href='index.html';</script>");
-        }
+        // // verificando se usuario esta logado no sistema
+        // if(isset($_SESSION['login']) == TRUE)
+        // {
+        //     echo ("<script>alert('Usuário cadastrado com sucesso!'); location.href='p_insere_usuarios.php';</script>");
+        // }
+        // else
+        // {
+        // }
+        echo ("<script>alert('Usuário cadastrado com sucesso!'); location.href='index.html';</script>");
     }
     else
     {

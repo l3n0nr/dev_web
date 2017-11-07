@@ -58,12 +58,11 @@
                                     <h3 class="box-title">Adicionando Usuários</h3>
                                 </div><!-- /.box-header -->
 
-                                <form action="insere_usuarios.php" method="post">
+                                <form action="insere_usuarios_admin.php" method="post">
                                     <?php
-                                    include 'form_cad.php';
+                                    include 'form_cad_admin.php';
                                     ?>
                                 </form>
-
                                 </section>
                             </div><!-- /.content-wrapper -->
 
