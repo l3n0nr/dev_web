@@ -43,8 +43,8 @@ if(mysqli_query($con, $sql))
         // echo ("<script>alert('Usuário cadastrado com sucesso!'); location.href='p_insere_usuarios.php';</script>");
     	// header("location:p_insere_usuarios.php");
 
-        // verificando se usuario esta cadastrado
-        if(isset($_SESSION['login']))
+        // verificando se usuario esta logado no sistema
+        if(isset($_SESSION['login']) == TRUE)
         {
             echo ("<script>alert('Usuário cadastrado com sucesso!'); location.href='p_insere_usuarios.php';</script>");
         }
