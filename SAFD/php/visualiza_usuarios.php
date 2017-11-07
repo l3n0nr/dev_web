@@ -17,7 +17,7 @@ while ($linha = mysqli_fetch_assoc($result))
                         <td>" . $linha['id_funcionario'] . "</td>" . "
                         <td>" . $linha['siape_funcionario'] . "</td>" . "
                         <td>" . $linha['login_usuario'] . "</td>" . "
-                        <td>" . $linha['nome_setor'] . "</td>" . "
+                        <td>" . $linha['nome_setor'] . "</td>" . "                                   
                         <td>" . $linha['descricao_funcao'] . "</td>" . "
                         <td>" . $linha['estado_usuario'] . "</td>" . "
                     </tr>";
