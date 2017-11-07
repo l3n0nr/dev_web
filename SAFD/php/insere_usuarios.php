@@ -1,7 +1,7 @@
 <?php
 
 # incluindo arquivo conexao
-include_once "conexao.php";
+include "conexao.php";
 
 # recebendo dados do formulario
 $siape = $_POST['siape_funcionario'];
@@ -18,6 +18,41 @@ $senha = $_POST['senha_usuario'];
 // echo "Tabela Funcao - Setor: " . $setor . ".<hr>";
 // echo "Tabela Seção - Função: " . $funcao . ".<hr>";
 // echo "Tabela Usuario - Usuario: " . $login . " Senha: " . $senha . ".<hr>";
+
+// montando SQL - PRIMEIRA PARTE
+$sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES";
+$sql.= "($siape, '$nome', '$email');";
+
+// realizando busca pelo ultimo usuario cadastrado
+$funcionario = "SELECT id_funcionario FROM funcionario ORDER BY id_funcionario DESC limit 1";
+
+// preparando variavel
+$result = mysqli_query($con, $funcionario);
+
+// pesquisando na lista - ultimo valor cadastrado
+while($res = mysqli_fetch_assoc($result))
+{
+    $ultimo_funcionario = $res['id_funcionario'];
+    // echo "Ultimo funcionario cadastrado: " .$ultimo_funcionario;
+}
+
+// SEGUNDA PARTE DA INSERÇÃO
+$sql.= "INSERT INTO usuario(id_setor, id_funcao, id_funcionario, login_usuario, senha_usuario, estado_usuario) VALUES";
+$sql.= "($setor, $funcao, $ultimo_funcionario, '$login', '$senha', 1);";
+
+// realizando ligação e inserção
+if(mysqli_query($con, $sql))
+{
+    echo "<br><br> Dados inseridos com sucesso!";
+	// header("location:p_insere_usuarios.php");
+}
+else
+{
+    echo $sql;
+
+    // echo "<br><br> Erro";
+    echo "<br><br> ERROR: Could not able to execute $sql. " . mysqli_error($con);
+}
 
 //     echo "<hr>";
 # mostando instrução SQL
@@ -40,31 +75,19 @@ $senha = $_POST['senha_usuario'];
 //$sql  = "INSERT INTO funcionario, usuario(siape_funcionario, nome_funcionario, email_funcionario, nome_usuario, senha_usuario, estado_usuario) VALUES"
 //$sql .= "($siape, '$nome', '$email', '$login', '$senha');" ;
 
-// TESTE 1
-//$sql  = "INSERT INTO funcionario, usuario(siape_funcionario, nome_funcionario, email_funcionario, "
-//                                        . "nome_usuario, senha_usuario, estado_usuario"
-//                                        . "id_setor, id_funcao) VALUES";
-//$sql .= "($siape, '$nome', '$email', '$login', '$senha', 1, $setor, $funcao);" ;
+// $sql.= "INSERT INTO usuario(id_usuario, id_setor, id_funcao, id_funcionario, login_usuario, senha_usuario, estado_usuario) VALUES";
+// $sql.= "($setor, $funcao, $funcionario, '$login', '$senha', 1);";
+//
 
-// TESTE 2
+// TESTE 1
+// $sql  = "INSERT INTO funcionario, usuario(siape_funcionario, nome_funcionario, email_funcionario, "
+//                                        . "nome_usuario, senha_usuario, estado_usuario"
+//                                        . "id_setor, id_funcao, id_funcionario) VALUES";
+// $sql .= "($siape, '$nome', '$email', '$login', '$senha', 1, $setor, $funcao, $ultimo_funcionario);" ;
+
+// // TESTE 2
 // $sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES";
 // $sql.= "($siape, '$nome', '$email');";
-
-// realizando busca pelo ultimo usuario cadastrado
-$funcionario = 'SELECT id_funcionario FROM funcionario ORDER BY id_funcionario DESC limit 1';
-// $funcionario = "SELECT id_funcionario FROM funcionario;";
-
-if(mysqli_query($con, $funcionario))
-{
-    echo "teste";
-    // return mysqli_query($funcionario)
-}
-
-while ($row = mysql_fetch_assoc($funcionario))
-{
-    echo $row['id_funcionario'];
-}
-
 
 // 	if(mysqli_fetch_assoc($con, $funcionario))
 //   {
@@ -74,9 +97,6 @@ while ($row = mysql_fetch_assoc($funcionario))
 //       echo $row;
 // //		header("location:p_insere_usuarios.php");
 //   }
-
-$sql.= "INSERT INTO usuario(id_usuario, id_setor, id_funcao, id_funcionario, login_usuario, senha_usuario, estado_usuario) VALUES";
-$sql.= "($setor, $funcao, $funcionario, '$login', '$senha', 1);";
 
 // VERIFICAR LIGACAO TABELAS
 // selecionando ultimo valor cadastrado
