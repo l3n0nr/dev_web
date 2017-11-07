@@ -6,7 +6,7 @@
  */
 
 # arquivo conexao
-include_once 'conexao.php';
+include 'conexao.php';
 
 # capturando variavel
 $login = $_POST["login"];
@@ -33,39 +33,47 @@ if (isset($login))
 
 //        echo $login;
 
-        # redireciona pagina
-        header("location:system_admin.php");
+        // realizando busca pelo ultimo usuario cadastrado
+        $funcionario = "SELECT id_funcao FROM usuario WHERE login_usuario = '$login'";
 
+        // preparando variavel
+        $result = mysqli_query($con, $funcionario);
+
+        // pesquisando na lista - ultimo valor cadastrado
+        while($res = mysqli_fetch_assoc($result))
+        {
+            $funcao = $res['id_funcao'];
+        }
 //             $consulta_tipo = "SELECT id_funcao FROM usuario WHERE login_usuario = '$login' ";
 //
 ////             echo $consulta_tipo;
 //
 //             $res_tipo= mysqli_query($con, $consulta_tipo);
 //
-//             if (mysqli_num_rows($res_tipo) == 1)
-//             {
-// //                 # redireciona pagina
-// //                 header("location:system_admin.php");
-//                 echo "administrador";
-//             }
-//             elseif (mysqli_num_rows($res_tipo) == 2)
-//             {
-// //                 # redireciona pagina
-// //                 header("location:system_admin.php");
-//                 echo "diretor";
-//             }
-//             elseif (mysqli_num_rows($res_tipo) == 3)
-//             {
-//                 echo "coordenador";
-//             }
-//             elseif (mysqli_num_rows($res_tipo) == 4)
-//             {
-//                 echo "chefe";
-//             }
-//             else
-//             {
-//                 echo "outro";
-//             }
+            if ($funcao == 1)
+            {
+                # redireciona pagina
+                header("location:system_admin.php");
+                // echo "administrador";
+            }
+            elseif ($funcao == 2)
+            {
+                # redireciona pagina
+                header("location:system_user.php");
+                // echo "diretor";
+            }
+            elseif ($funcao == 3)
+            {
+                echo "coordenador";
+            }
+            elseif ($funcao == 4)
+            {
+                echo "chefe";
+            }
+            else
+            {
+                echo "outro";
+            }
     }
     else
     {

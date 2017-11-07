@@ -18,16 +18,15 @@ $sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funci
 $sql.= "($siape, '$nome', '$email');";
 
 // realizando busca pelo ultimo usuario cadastrado
-$funcionario = "SELECT id_funcionario FROM funcionario ORDER BY id_funcionario DESC limit 1";
+$usuario = "SELECT id_funcionario FROM funcionario ORDER BY id_funcionario DESC limit 1";
 
 // preparando variavel
-$result = mysqli_query($con, $funcionario);
+$result = mysqli_query($con, $usuario);
 
-// pesquisando na lista - ultimo valor cadastrado
+// capturando valor funcao usuario
 while($res = mysqli_fetch_assoc($result))
 {
     $ultimo_funcionario = $res['id_funcionario'];
-    // echo "Ultimo funcionario cadastrado: " .$ultimo_funcionario;
 }
 
 // realizando inserção do funcionario
