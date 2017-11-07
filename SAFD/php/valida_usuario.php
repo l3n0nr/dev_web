@@ -64,10 +64,16 @@ if (isset($login))
             }
 
             // controle de acesso dos usuarios
-            if ($funcao == 1)
+            if ($funcao == 0)
             {
                 # redireciona pagina
                 header("location:system_admin.php");
+                // echo "administrador";
+            }
+            elseif ($funcao == 1)
+            {
+                # redireciona pagina
+                header("location:system_user.php");
                 // echo "administrador";
             }
             elseif ($funcao == 2)
@@ -78,7 +84,8 @@ if (isset($login))
             }
             elseif ($funcao == 3)
             {
-                echo "coordenador";
+                // echo "coordenador";
+                header("location:form_bens_coord.php");
             }
             elseif ($funcao == 4)
             {
