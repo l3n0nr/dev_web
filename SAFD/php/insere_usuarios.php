@@ -41,7 +41,8 @@ if(mysqli_query($con, $sql))
     if(mysqli_query($con, $sql))
     {
         // echo "<br><br> Dados inseridos com sucesso!";
-        echo ("<script>alert('Usuário cadastrado com sucesso!'); location.href='p_insere_usuarios.php';</script>");
+        // echo ("<script>alert('Usuário cadastrado com sucesso!'); location.href='p_insere_usuarios.php';</script>");
+        echo ("<script>alert('Usuário cadastrado com sucesso!');</script>");
     	// header("location:p_insere_usuarios.php");
     }
     else
