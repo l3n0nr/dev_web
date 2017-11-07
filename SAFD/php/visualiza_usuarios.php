@@ -10,7 +10,6 @@ $sql = "SELECT login_usuario, estado_usuario, nome_setor, descricao_funcao, siap
         AND usuario.id_funcao = funcao.id_funcao
         AND funcionario.id_funcionario = usuario.id_funcionario";
 
-// 	$sql = "SELECT id_funcionario, login_usuario, estado_usuario, nome_setor, descricao_funcao, siape_funcionario FROM usuario, setor, funcao, funcionario WHERE usuario.id_setor = setor.id_setor AND usuario.id_funcao = funcao.id_funcao AND funcionario.id_funcionario = usuario.id_funcionario";
 $result = mysqli_query($con, $sql);
 
 //criando repeticao para percorrer a tabela
