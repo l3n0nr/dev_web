@@ -98,7 +98,8 @@
                                                     ?>
                                                 </tbody>
                                             </table>
-                                            <div class="col-sm-4">
+                                            <td>
+                                            <!-- <div class="col-sm-4"> -->
                                                 <div class="col-sm-6">
                                                     <form action="p_visualiza_usuarios.php">
                                                         <br>
@@ -106,8 +107,7 @@
                                                         <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
                                                     </form>
                                                 </div>
-                                            </div>
-                                            <td>
+                                            <!-- </div> -->
                                             </td>
                                         </div>
                                     </div>
