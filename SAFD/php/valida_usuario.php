@@ -89,7 +89,7 @@ if (isset($login))
             }
             else
             {
-                header("location:system_visit.php");
+                header("location:system_outros.php");
                 // echo "outro";
             }
         }
