@@ -70,7 +70,7 @@
                     <div class="col-xs-8">
                         <!--                         <br> -->
                         <label>Número do Protocolo: </label>
-                        <input class="form-control" data-inputmask="&quot;mask&quot;: &quot;99.999.000999/2099-99&quot;" data-mask="" type="text" disabled="" placeholder="***GERADO AUTOMATICAMENTE***">
+                        <input class="form-control" min="1" max="10" data-inputmask="&quot;mask&quot;: &quot;99.999.000999/2099-99&quot;" data-mask="" type="text" disabled="" placeholder="***GERADO AUTOMATICAMENTE***">
                     </div>
 
                     <!--DATA-->
@@ -96,7 +96,7 @@
                         <label>Selecione o setor, que você trabalha</label>
                         <select id="nivel" class="form-control" name="funcao" disabled="">
                             <?php
-                            include 'setores.php';
+                                include 'setores.php';
                             ?>
                         </select>
                     </div>
@@ -106,21 +106,9 @@
                         <br>
                         <label>Nome do requisitante </label>
                         <input  class="form-control"
-                                value="
-                                <?php
-                                    // salva usuario para ser mostrado no menu da pagina
-                                    $_SESSION["usuario"] = $login;
-
-                                    // realizando busca pelo ultimo usuario cadastrado
-                                    $nome = "SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = $lenon";
-
-                                    // preparando variavel
-                                    $resultado = mysqli_query($con, $funcionario);
-                                    
-                                    echo $resultado;
-                                ?>
-                                "
+                                value="<?php echo $_SESSION["usuario"] ?>"
                                 placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" disabled="" type="text">
+                                <!-- verificar forma de capturar nome_funcionario, siape  -->
                                 <!-- SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon"; -->
                     </div>
 
