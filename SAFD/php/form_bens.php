@@ -41,7 +41,7 @@
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
             <form action="system_user.php">
-                <div class="content-wrapper">                    
+                <div class="content-wrapper">
                     <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert"  aria-hidden="true">
@@ -49,7 +49,7 @@
                         </button>
                         <h4>
                             <i class="icon fa fa-warning"> </i>
-                            Informações importantes                                
+                            Informações importantes
                         </h4>
                         <!--<label> - Alguns campos serão preenchidos automaticamente pelo sistema. </label>-->
                         <!--<br>-->
@@ -76,7 +76,7 @@
                     <!--DATA-->
                     <div class="input-group">
                         <!--                         <br> -->
-                        <div class="col-xs-4">                            
+                        <div class="col-xs-4">
                             <label> Data </label>
                             <!--<i class="fa fa-calendar"></i>-->
                             <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***">
@@ -92,7 +92,7 @@
 
                     <!--SETORES-->
                     <div class="col-xs-4">
-                        <br>                    
+                        <br>
                         <label>Selecione o setor, que você trabalha</label>
                         <select id="nivel" class="form-control" name="funcao" disabled="">
                             <?php
@@ -105,7 +105,23 @@
                     <div class="col-xs-8">
                         <br>
                         <label>Nome do requisitante </label>
-                        <input class="form-control" placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" disabled="" type="text">
+                        <input  class="form-control"
+                                value="
+                                <?php
+                                    // salva usuario para ser mostrado no menu da pagina
+                                    $_SESSION["usuario"] = $login;
+
+                                    // realizando busca pelo ultimo usuario cadastrado
+                                    $nome = "SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = $lenon";
+
+                                    // preparando variavel
+                                    $resultado = mysqli_query($con, $funcionario);
+                                    
+                                    echo $resultado;
+                                ?>
+                                "
+                                placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" disabled="" type="text">
+                                <!-- SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon"; -->
                     </div>
 
                     <!--SIAPE-->
@@ -121,7 +137,7 @@
                         <textarea class="form-control" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
                     </div>
 
-                    <hr> 
+                    <hr>
                     <div class="col-xs-1">
                         <br>
                         <label>Grupo</label>
@@ -132,7 +148,7 @@
                         <br>
                         <label>Item </label>
                         <!--<input class="form-control" type="number">-->
-                        <select id="nivel" class="form-control" name="funcao">                            
+                        <select id="nivel" class="form-control" name="funcao">
                             <option value="canetas"> Canetas </option>
                             <option value="lapis"> Lapis </option>
                         </select>
@@ -162,13 +178,13 @@
                         <label>Média(R$) </label>
                         <input class="form-control" type="text">
                     </div>
-                    
+
                     <div class="col-xs-1">
                         <br>
                         <label>Total(R$)</label>
                         <input class="form-control" type="text">
                     </div>
-    
+
                     <div id="item" class="item">
                         <input type="number" id="quant" name="quant"/>
                     </div>
@@ -177,7 +193,7 @@
 
                     <div class="col-xs-2">
                         <br>
-                        <br>    
+                        <br>
                         <button type="submit" class="btn btn-sucess pull-right"> Adicionar na lista </button>
                     </div>
 
@@ -207,16 +223,16 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>".."</td>                                  
-                                                    <td>".."</td>            
-                                                    <td>".."</td>                                   
-                                                    <td>".."</td>                                   
-                                                </tr>    
+                                                    <td>".."</td>
+                                                    <td>".."</td>
+                                                    <td>".."</td>
+                                                    <td>".."</td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                         <!--<td> </td>-->
                                     </div>
-                                </div>       
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -227,31 +243,31 @@
                         <textarea class="form-control" rows="3" placeholder="Fundamentação bem elaborada da necessidade de compra, incluindo os motivos e os benefícios que se pretende alcançar com a aquisição." ></textarea>
                     </div>
 
-                    <div class="col-xs-12">                    
+                    <div class="col-xs-12">
                         <br>
                         <label> Especificações técnicas do objeto e local de entrega/necessidade e justificativa pra agrupamento de itens </label>
                         <textarea class="form-control" rows="5" placeholder="Indicar todos os requisitos desejados para o bem permanente ou material ed consumo que pretende adquirir. com descrições detalhadas, precisas e convincentes, incluindo as caracteristicas especificas. Indicar o(s) local(is) de entrega dos bens. Deverá ser indicado o endereço completo, bairro, CEP, inclusive número da sala ou prédio."></textarea>
                     </div>
 
-                    <div class="col-xs-12">                    
+                    <div class="col-xs-12">
                         <br>
                         <label>Estratégias de fornecimento, prazo de entrega ou prazo de execução.</label>
                         <textarea class="form-control" rows="5" placeholder="Indicar o prazo da execução dos serviços e/ou prazo máximo de entrega dos materiais permanente/de consumo. Os materiais deverão ser entregues nos quantitativos e nas localidades indicadas acima no prazo máximo de 30 dias após a emissão do empenho. Os materiais deverão ter prazo de validade mínima de doze meses, contados a partir da data de entrega. Caso algum produto apresente defeito de fabricação quando em uso no decorrer do prazo de validade, o fornecedor deverá efetuar a troca do mesmo em cinco dias úteis, a contar da notificação, sem ônus adicional para o Instituto Federal Farroupilha."></textarea>
                     </div>
 
-                    <div class="col-xs-12">                    
+                    <div class="col-xs-12">
                         <br>
                         <label>Critérios de Aceitabilidade.</label>
                         <textarea class="form-control" rows="8" placeholder="Neste campo deverá ser informado de que maneira será realixado o recebimento provisório e o recebimento definitivo com o respectivo prazo. Exemplo 01: na aquisição de um eletroeletrônico o recebimento provisório poderá ser com a simples conferência física do aparelho e o recebimento definitivo, no prazo de XX dias a contar do recebimento provisório, com o teste a fim de verificar se o mesmo está funcionando corretamente. Exemplo 02: na aquisição de material ed consumo o recebimento provisório poderia ser com a conferência da quantidade solicitada e o recebimento definitivo, n no prazo de XX dias a contar do recebimento provisório, com a análise se todos os materiais estão em perfeitas condições de utilização."></textarea>
                     </div>
 
-                    <div class="col-xs-12">                    
+                    <div class="col-xs-12">
                         <br>
                         <label>Declaração de consulta ao saldo/estoque - Confirmação de Solicitação.</label>
                         <textarea class="form-control" rows="3" placeholder="Declaro para fins de instauração licitatório, que consultei as áreas pertinentes a estoque e controle de saldo de materiais e serviços e obtive confirmação que os itens pretendidos não encontram-se disponíveis para retirada ou emissão de empenho."> </textarea>
                     </div>
 
-                    <div class="col-xs-12">                        
+                    <div class="col-xs-12">
                         <br>
                         <label>Da veracidade dos orçamentos</label>
                         <textarea class="form-control" rows="3" placeholder="Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros."></textarea>
