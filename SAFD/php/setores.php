@@ -3,7 +3,7 @@
 <!-- <option value="0"> --- </option> -->
 <option value="1"> (D.G) - Direção Geral </option>
 <option value="2"> (SET. GABIN.) - Setor de Gabinete </option>
-<option value="3"> (SET. ASSES.) - Assesorias </option>
+<option value="3"> (SET. ASSES.) - Assessorias </option>
 
 <!-- <option value="0"> -- </option> -->
 <option value="4"> (D.P.D.I) - Diretoria de Planejamento e Desenvolvimento Institucional </option>
