@@ -98,8 +98,12 @@
                                                     ?>
                                                 </tbody>
                                             </table>
+<<<<<<< HEAD
                                             <td>
                                             <!-- <div class="col-sm-4"> -->
+=======
+                                            <!-- <div class="col-sm-4">
+>>>>>>> ff0da378a0b671f01036ca609f178ae1be197d1e
                                                 <div class="col-sm-6">
                                                     <form action="p_visualiza_usuarios.php">
                                                         <br>
@@ -107,7 +111,12 @@
                                                         <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
                                                     </form>
                                                 </div>
+<<<<<<< HEAD
                                             <!-- </div> -->
+=======
+                                            </div> -->
+                                            <td>
+>>>>>>> ff0da378a0b671f01036ca609f178ae1be197d1e
                                             </td>
                                         </div>
                                     </div>
