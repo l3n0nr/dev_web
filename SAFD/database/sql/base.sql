@@ -12,8 +12,9 @@ CREATE TABLE IF NOT EXISTS usuario(
 CREATE TABLE IF NOT EXISTS funcionario(
         id_funcionario int (10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 		siape_funcionario int(10) NOT NULL,
-		nome_funcionario VARCHAR(40) NOT NULL,
-		email_funcionario VARCHAR(40) NOT NULL);  
+		nome_funcionario VARCHAR(40) NOT NULL,		
+		email_funcionario VARCHAR(40) NOT NULL,
+		data_cadastro_funcionario TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP);  
 
 CREATE TABLE IF NOT EXISTS funcao(
     id_funcao int(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
