@@ -46,16 +46,20 @@
                 <section class="content-header">
                     <div class="dataTables_length" id="example1_length">
                         <label>
-                            <select name="example1_length" aria-controls="example1" class="form-control input-sm">
-                                <option value="2"> Listando Todos Usuários </option>
-                                <option value="1"> Listando apenas Usuários Ativos </option>
+                            <select name="example1_length"
+                            aria-controls="example1" class="form-control input-sm">
+                                <option value="2"
+                                  selected="todos()"> Listando Todos Usuários </option>
+                                <option value="1"
+                                  selected="ativos()"> Listando apenas Usuários Ativos
+                                </option>
                                 <option value="0"> Listando apenas Usuários Desativados </option>
                             </select>
                         </label>
                     </div>
                     <ol class="breadcrumb">
                         <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Alterando usuários do sistema </a></li>
-                    </ol> 
+                    </ol>
                 </section>
                 <section class="content">
 
@@ -133,4 +137,25 @@
                     <script src="../dist/js/demo.js"></script>
                     </body>
                     </html>
-                    ;
+
+<!-- Criando funcoes javascript -->
+<script language="javascript">
+  // mostrando todos usuarios
+  function todos()
+  {
+    alert("teste");
+    // document.getElementById("Todos").select();
+  }
+
+  // mostrando usuarios ativos
+  function ativos()
+  {
+    document.getElementById("Ativos").select();
+  }
+
+  // mostrando usuarios desativados
+  function desativados()
+  {
+    document.getElementById("Desativados").select();
+  }
+</script>

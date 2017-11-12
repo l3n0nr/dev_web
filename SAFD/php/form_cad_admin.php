@@ -1,5 +1,5 @@
 <div class="form-group has-feedback">
-    <input type="text" class="form-control" placeholder="Siape" name="siape_funcionario" required="" autocomplete="off">
+    <input type="text" class="form-control" placeholder="Siape" autofocus name="siape_funcionario" required="" autocomplete="off">
     <span class="glyphicon glyphicon-user form-control-feedback"></span>
 </div>
 <div class="form-group has-feedback">

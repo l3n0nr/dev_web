@@ -24,7 +24,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_user.php';
+                  include 'header_user.php';
                 ?>
             </header>
 
@@ -33,7 +33,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_user.php';
+                  include 'menulat_user.php';
                 ?>
             </aside>
 
@@ -78,16 +78,16 @@
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                                                                     Solicitante
-                                                                </th>                                
+                                                                </th>
                                                         </thead>
-                                                        <tbody>                            
+                                                        <tbody>
                                                     </table>
                                                 </div></div>
                                         </div><!-- /.box-body -->
                                     </div><!-- /.box -->
                                     </section>
 
-                                </div><!-- /.content-wrapper -->   
+                                </div><!-- /.content-wrapper -->
 
                                 <footer class="main-footer">
                                     <?php

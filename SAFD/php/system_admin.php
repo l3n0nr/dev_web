@@ -11,7 +11,7 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="../bootstrap/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        
+
         <!-- Ionicons -->
         <link rel="stylesheet" href="../bootstrap/css/ionicons.min.css">
         <!-- Theme style -->
@@ -26,7 +26,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_admin.php';
+                  include 'header_admin.php';
                 ?>
             </header>
 
@@ -35,7 +35,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_admin.php';
+                  include 'menulat_admin.php';
                 ?>
             </aside>
 
@@ -51,8 +51,8 @@
                     </ol>
                     </br>
                     <h1> Tela do Administrador do Sistema </h1><hr>
-                    <h4> - Aqui você poderá realizar o CRUD nos usuários, abrangendo a tabela funcionario, setor. </h4>
-                    <h4> - Link para o formulário de cadastro de Demandas: <a target="blank" href="form_bens.php"> form_bens.php </a></h4>
+                    <h4> - Aqui você poderá realizar o CRUD nos usuários, abrangendo a tabela função, funcionario e setor. </h4>
+                    <!-- <h4> - Link para o formulário de cadastro de Demandas: <a target="blank" href="form_bens.php"> form_bens.php </a></h4> -->
             </div>
             <div class="tab-content no-padding">
                 <div class="tab-pane" id="#dg">
@@ -66,7 +66,7 @@
 
             <footer class="main-footer">
                 <?php
-                include 'footer.php';
+                  include 'footer.php';
                 ?>
             </footer>
 

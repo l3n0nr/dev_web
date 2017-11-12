@@ -1,5 +1,5 @@
 <div class="form-group has-feedback">
-    <input type="text" class="form-control" placeholder="Siape" name="siape_funcionario" required="" autocomplete="off">
+    <input type="text" class="form-control" placeholder="Siape" autofocus name="siape_funcionario" required="" autocomplete="off">
     <span class="glyphicon glyphicon-user form-control-feedback"></span>
 </div>
 <div class="form-group has-feedback">
@@ -9,7 +9,7 @@
 <div class="form-group has-feedback">
     <input type="email" class="form-control" placeholder="E-mail" name="email_funcionario" required="" autocomplete="off">
     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-</div>                    
+</div>
 
 <div class="form-group has-feedback">
     <select id="setor" class="form-control" name="nome_setor" required="" autocomplete="off">
@@ -39,8 +39,8 @@
     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 </div>-->
 
-<div class="row">          
+<div class="row">
     <div class="col-xs-12">
         <button type="submit" class="btn btn-success btn-block btn-flat">Registrar</button>
-    </div>            
+    </div>
 </div>
