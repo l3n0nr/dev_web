@@ -1,9 +1,6 @@
 <div class="form-group has-feedback">
 <<<<<<< HEAD
-    <input type="number" min="000001" max="999999" class="form-control" placeholder="Siape" name="siape_funcionario" required="" autocomplete="off">
-=======
-    <input type="text" class="form-control" placeholder="Siape" autofocus name="siape_funcionario" required="" autocomplete="off">
->>>>>>> ff0da378a0b671f01036ca609f178ae1be197d1e
+    <input type="number" min="000001" max="999999" class="form-control" placeholder="Siape" name="siape_funcionario" required="" autofocus autocomplete="off">
     <span class="glyphicon glyphicon-user form-control-feedback"></span>
     <label> * Numero máximo permitido, 6 digitos numéricos. </label>
 </div>

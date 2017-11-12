@@ -98,10 +98,8 @@
                                                     ?>
                                                 </tbody>
                                             </table>
-<<<<<<< HEAD
                                             <td>
                                             <!-- <div class="col-sm-4"> -->
-=======
                                             <!-- <div class="col-sm-4">
 >>>>>>> ff0da378a0b671f01036ca609f178ae1be197d1e
                                                 <div class="col-sm-6">
@@ -113,10 +111,8 @@
                                                 </div>
 <<<<<<< HEAD
                                             <!-- </div> -->
-=======
-                                            </div> -->
+                                            </div> 
                                             <td>
->>>>>>> ff0da378a0b671f01036ca609f178ae1be197d1e
                                             </td>
                                         </div>
                                     </div>
