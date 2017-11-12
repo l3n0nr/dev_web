@@ -3,13 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SAFD | Configurações </title>
+        <title>SAFD | Inicio </title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.5 -->
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
         <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bootstrap/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bootstrap/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
         <!-- Ionicons -->
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <!-- Theme style -->
@@ -24,7 +30,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_admin.php';
+                include 'header_outros.php';
                 ?>
             </header>
 
@@ -33,7 +39,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_admin.php';
+                include 'menulat_outros.php';
                 ?>
             </aside>
 
@@ -45,22 +51,27 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <ol class="breadcrumb">
-                        <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Usuário> Configurações</a></li>
+                        <li><a href=""><i class="fa fa-dashboard"></i> Inicio</a></li>
                     </ol>
                     </br>
-                    <label> Configurações do Sistema </label>
-                </section>
-            </div><!-- /.content-wrapper -->
+                    <?php
+                        include './visualizar_dem_pendentes.php'
+                    ?>
 
-            <footer class="main-footer">
-                <?php
-                include 'footer.php';
-                ?>
-            </footer>
+            </div>
+        </section>
+    </div><!-- /.content-wrapper -->
 
-            <!-- Stats tab content -->
-        </form>
-    </div><!-- /.tab-pane -->
+
+    <footer class="main-footer">
+        <?php
+        include 'footer.php';
+        ?>
+    </footer>
+
+    <!-- Stats tab content -->
+</form>
+</div><!-- /.tab-pane -->
 </div>
 </aside><!-- /.control-sidebar -->
 
@@ -70,7 +81,8 @@
 <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
 <!-- Bootstrap 3.3.5 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
-<!-- SlimScroll -->scroll.min.js"></script>
+<!-- SlimScroll -->
+<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="../plugins/fastclick/fastclick.min.js"></script>
 <!-- AdminLTE App -->

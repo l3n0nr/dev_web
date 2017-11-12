@@ -24,7 +24,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_user.php';
+                include 'header_outros.php';
                 ?>
             </header>
 
@@ -33,7 +33,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_user.php';
+                include 'menulat_outros.php';
                 ?>
             </aside>
 
@@ -52,7 +52,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="box">
-                                    <!-- <div class="box-header">
+                                    <div class="box-header">
                                         <h3 class="box-title">Demandas já finalizadas</h3>
                                     </div><!-- /.box-header -->
                                     <div class="box-body">

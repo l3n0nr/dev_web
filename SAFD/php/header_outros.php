@@ -1,7 +1,7 @@
 <?php
     include 'valida_sessao.php';
 ?>
-<a href="system_admin.php" class="logo">
+<a href="system_outros.php" class="logo">
     <!-- logo for regular state and mobile devices -->
     <span class="logo-mini">SAFD</span>
     <span class="logo-lg">SAFD</span>
@@ -9,21 +9,14 @@
 <!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top" role="navigation">
     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only"></span>
     </a>
     <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-            <li class="dropdown notifications-menu">
-                <ul class="dropdown-menu" href="../pages/dem_pendentes.php">
-                </ul>
-            </li>
             <li class="dropdown">
-                <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <?php echo $_SESSION["usuario"] ?>
-                    <span class="caret"></span></a>
+                <!-- <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">Visitante<span class="caret"></span></a> -->
+                <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $_SESSION["usuario"] ?>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="config.php">Configurações</a></li>
-                    <li class="divider"></li>
                     <li><a href="../index.html">Sair</a></li>
                 </ul>
             </li>

@@ -89,7 +89,8 @@ if (isset($login))
             }
             else
             {
-                echo "outro";
+                header("location:system_outros.php");
+                // echo "outro";
             }
         }
         else

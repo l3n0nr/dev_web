@@ -1,0 +1,14 @@
+
+// busca nome funcionario - arquivo form_bens
+<?php
+    // salva usuario para ser mostrado no menu da pagina
+    $_SESSION["usuario"] = $login;
+
+    // realizando busca pelo ultimo usuario cadastrado
+    $nome = "SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = $lenon";
+
+    // preparando variavel
+    $resultado = mysqli_query($con, $funcionario);
+
+    echo $resultado;
+?>
