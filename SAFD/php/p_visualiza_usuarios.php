@@ -59,7 +59,6 @@
                     <!--</br>-->
                 </section>
                 <section class="content">
-
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="box">
@@ -67,58 +66,57 @@
                                   <h3 class="box-title">Visualizando usuários</h3>
                                 </div><!-- /.box-header -->
                                 <div class="box-body">
-                                </div>
-                                <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-                                    <div class="row">
-                                        <div class="col-sm-6"></div>
-                                        <div class="col-sm-3"></div>
-                                    </div><div class="row">
-                                        <div class="col-sm-12">
-                                            <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
-                                                <thead>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                    SIAPE
-                                                </th>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                    NOME
-                                                </th>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                    SETOR
-                                                </th>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                    FUNÇÃO
-                                                </th>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                    ATIVO (0 - Não)
-                                                </th>
-                                                </thead>
-                                                <tbody>
-                                                    <?php
-                                                    include 'visualiza_usuarios.php';
-                                                    ?>
-                                                </tbody>
-                                            </table>
-                                            <td>
-                                            <!-- <div class="col-sm-4"> -->
-                                            <!-- <div class="col-sm-4">
->>>>>>> ff0da378a0b671f01036ca609f178ae1be197d1e
-                                                <div class="col-sm-6">
-                                                    <form action="p_visualiza_usuarios.php">
-                                                        <br>
-                                                        <br>
-                                                        <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
-                                                    </form>
+                                    <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                                        <div class="row">
+                                            <div class="col-sm-6"></div>
+                                            <div class="col-sm-3"></div>
+                                        </div><div class="row">
+                                            <div class="col-sm-12">
+                                                <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                                                    <thead>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                        SIAPE
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                        NOME
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                        SETOR
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                        FUNÇÃO
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                        DATA/HORA CADASTRO
+                                                    </th>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php
+                                                        include 'visualiza_usuarios.php';
+                                                        ?>
+                                                    </tbody>
+                                                </table>
+                                                <td>
+                                                <!-- <div class="col-sm-4"> -->
+                                                <!-- <div class="col-sm-4">
+    >>>>>>> ff0da378a0b671f01036ca609f178ae1be197d1e
+                                                    <div class="col-sm-6">
+                                                        <form action="p_visualiza_usuarios.php">
+                                                            <br>
+                                                            <br>
+                                                            <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
+                                                        </form>
+                                                    </div>
+    <<<<<<< HEAD
+                                                <!-- </div> -->
                                                 </div>
-<<<<<<< HEAD
-                                            <!-- </div> -->
-                                            </div> 
-                                            <td>
-                                            </td>
+                                                <td>
+                                                </td>
+                                            </div>
                                         </div>
-                                    </div>
-                                    </section>
-                                </div><!-- /.content-wrapper -->
-
+                                        </section>
+                                    </div><!-- /.content-wrapper -->
+                                </div>
                                 <footer class="main-footer">
                                     <?php
                                     include 'footer.php';

@@ -62,7 +62,6 @@
                     </ol>
                 </section>
                 <section class="content">
-
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="box">
@@ -91,7 +90,7 @@
                                                         FUNÇÃO
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                        ATIVO(0 = NÃO)
+                                                        DATA/HORA CADASTRO
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                                                         OPÇÕES
