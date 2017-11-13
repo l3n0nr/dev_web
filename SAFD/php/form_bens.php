@@ -1,9 +1,3 @@
-<!-- arquivo de conexao -->
-<?php
-    //incluindo arquivo conexao
-    include 'conexao.php';
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,7 +24,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_user.php';
+                    include 'header_user.php';
                 ?>
             </header>
 
@@ -39,14 +33,14 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_user.php';
+                    include 'menulat_user.php';
                 ?>
             </aside>
 
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="system_user.php">
+            <form action="gera_documento.php" method="post">
                 <div class="content-wrapper">
                     <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
@@ -142,14 +136,14 @@
                     <div class="col-xs-12">
                         <br>
                         <label>Observações</label>
-                        <textarea class="form-control" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
+                        <textarea id="observacoes" class="form-control" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
                     </div>
 
                     <hr>
                     <div class="col-xs-1">
                         <br>
                         <label>Grupo</label>
-                        <input class="form-control" type="number" placeholder="0">
+                        <input id="grupo" class="form-control" type="number" placeholder="0">
                     </div>
 
                     <div class="col-xs-2">

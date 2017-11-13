@@ -31,7 +31,7 @@
 
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_admin.php';
+                    include 'menulat_admin.php';
                 ?>
             </aside>
 
@@ -92,7 +92,7 @@
                                                     </thead>
                                                     <tbody>
                                                         <?php
-                                                        include 'edita_usuarios.php';
+                                                            include 'edita_usuarios.php';
                                                         ?>
                                                     </tbody>
                                                 </table>
@@ -104,7 +104,7 @@
 
                                 <footer class="main-footer">
                                     <?php
-                                    include 'footer.php';
+                                        include 'footer.php';
                                     ?>
                                 </footer>
 
