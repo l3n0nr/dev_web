@@ -1,3 +1,9 @@
+<!-- arquivo de conexao -->
+<?php
+    //incluindo arquivo conexao
+    include 'conexao.php';
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -106,7 +112,21 @@
                         <br>
                         <label>Nome do requisitante </label>
                         <input  class="form-control"
-                                value="<?php echo $_SESSION["usuario"] ?>"
+                                value="
+                                <?php
+                                    echo $_SESSION["usuario"]
+                                    // $funcionario = "SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon";"
+                                    // $result = mysqli_query($con, $sql);
+                                    //
+                                    // // capturando valor funcao usuario
+                                    // while($res = mysqli_fetch_assoc($result))
+                                    // {
+                                    //     $ultimo_funcionario = $res['nome_funcionario'];
+                                    // }
+                                    //
+                                    // echo $nome_funcionario;
+                                ?>
+                                "
                                 placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" disabled="" type="text">
                                 <!-- verificar forma de capturar nome_funcionario, siape  -->
                                 <!-- SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon"; -->
