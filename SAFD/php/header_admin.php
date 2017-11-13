@@ -8,15 +8,20 @@
 </a>
 <!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top" role="navigation">
-    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
-    </a>
     <div class="navbar-custom-menu">
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
         <ul class="nav navbar-nav">
             <li class="dropdown notifications-menu">
                 <ul class="dropdown-menu" href="../pages/dem_pendentes.php">
                 </ul>
             </li>
+            <!-- <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input class="form-control" id="navbar-search-input" placeholder="Pesquisar" type="text">
+                </div>
+            </form> -->
             <li class="dropdown">
                 <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <?php echo $_SESSION["usuario"] ?>

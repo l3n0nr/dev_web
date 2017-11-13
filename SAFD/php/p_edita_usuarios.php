@@ -25,23 +25,16 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_admin.php';
+                    include 'header_admin.php';
                 ?>
             </header>
 
-            <!-- =============================================== -->
-
-            <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
                 include 'menulat_admin.php';
                 ?>
             </aside>
 
-
-            <!-- =============================================== -->
-
-            <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">

@@ -31,17 +31,12 @@
                 ?>
             </header>
 
-            <!-- =============================================== -->
-
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
                   include 'menulat_admin.php';
                 ?>
             </aside>
-
-
-            <!-- =============================================== -->
 
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
