@@ -144,5 +144,5 @@
                     <script src="../dist/js/app.min.js"></script>
                     <!-- AdminLTE for demo purposes -->
                     <script src="../dist/js/demo.js"></script>
-                    </body>
-                    </html>
+            </body>
+</html>
