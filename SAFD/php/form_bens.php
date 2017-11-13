@@ -67,33 +67,16 @@
                     </section>
 
                     <!--PROTOCOLO-->
-                    <div class="col-xs-8">
+                    <div class="col-xs-3">
                         <!--                         <br> -->
                         <label>Número do Protocolo: </label>
                         <input class="form-control" min="1" max="10" data-inputmask="&quot;mask&quot;: &quot;99.999.000999/2099-99&quot;" data-mask="" type="text" disabled="" placeholder="***GERADO AUTOMATICAMENTE***">
                     </div>
 
-                    <!--DATA-->
-                    <div class="input-group">
-                        <!--                         <br> -->
-                        <div class="col-xs-4">
-                            <label> Data </label>
-                            <!--<i class="fa fa-calendar"></i>-->
-                            <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***">
-                        </div>
-                    </div>
-
-                    <!--IFF-->
-                    <div class="col-xs-8">
-                        <br>
-                        <label>Campus/Unidade</label>
-                        <input class="form-control" placeholder="Reitoria/Campus Alegrete" disabled="" type="text">
-                    </div>
-
                     <!--SETORES-->
-                    <div class="col-xs-4">
+                    <div class="col-xs-3">
                         <br>
-                        <label>Selecione o setor, que você trabalha</label>
+                        <label>Setor de solicitação</label>
                         <select id="nivel" class="form-control" name="funcao" disabled="">
                             <?php
                                 include 'setores.php';
@@ -101,8 +84,25 @@
                         </select>
                     </div>
 
+                    <!--DATA-->
+                    <div class="input-group">
+                        <!--                         <br> -->
+                        <div class="col-xs-6">
+                            <label> Data </label>
+                            <!--<i class="fa fa-calendar"></i>-->
+                            <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***">
+                        </div>
+                    </div>
+
+                    <!--SIAPE-->
+                    <div class="col-xs-3">
+                        <br>
+                        <label>Número do SIAPE </label>
+                        <input class="form-control" placeholder="9999999" disabled="" type="text">
+                    </div>
+
                     <!--REQUISITANTE-->
-                    <div class="col-xs-8">
+                    <div class="col-xs-7">
                         <br>
                         <label>Nome do requisitante </label>
                         <input  class="form-control"
@@ -126,11 +126,11 @@
                                 <!-- SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon"; -->
                     </div>
 
-                    <!--SIAPE-->
-                    <div class="col-xs-4">
+                    <!--IFF-->
+                    <div class="col-xs-3">
                         <br>
-                        <label>Número do SIAPE </label>
-                        <input class="form-control" placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" disabled="" type="text">
+                        <label>Campus/Unidade</label>
+                        <input class="form-control" placeholder="IFFar Campus Alegrete" disabled="" type="text">
                     </div>
 
                     <div class="col-xs-12">
