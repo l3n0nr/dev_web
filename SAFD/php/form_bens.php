@@ -40,7 +40,7 @@
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="gera_documento.php" method="get">
+            <form action="gera_documento.php" method="post">
                 <div class="content-wrapper">
                     <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
@@ -70,14 +70,14 @@
                     <div class="col-xs-3">
                         <!--                         <br> -->
                         <label>Número do Protocolo: </label>
-                        <input class="form-control" min="1" max="10" data-inputmask="&quot;mask&quot;: &quot;99.999.000999/2099-99&quot;" data-mask="" type="text" disabled="" placeholder="***GERADO AUTOMATICAMENTE***">
+                        <input name="protoloco" class="form-control" min="1" max="10" type="text" placeholder="***GERADO AUTOMATICAMENTE***" value="">
                     </div>
 
                     <!--SETORES-->
                     <div class="col-xs-6">
                         <!-- <br> -->
                         <label>Setor de solicitação</label>
-                        <select id="setor" class="form-control" name="funcao" disabled="">
+                        <select name="setor" class="form-control" name="funcao">
                             <?php
                                 include 'setores.php';
                             ?>
@@ -89,7 +89,8 @@
                         <div class="col-xs-3">
                             <label> Data </label>
                             <!--<i class="fa fa-calendar"></i>-->
-                            <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" value="<?php echo date('d/m/Y') ?>" >
+                            <!--<input name="data" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" value="" >-->
+                            <input name="data" class="form-control" type="calendar" value="<?php echo date('d/m/Y') ?>" >
                         </div>
                     <!-- </div> -->
 
@@ -97,15 +98,16 @@
                     <div class="col-xs-3">
                         <br>
                         <label>Número do SIAPE </label>
-                        <input id="siape" class="form-control" placeholder="9999999" disabled="" type="text">
+                        <input name="siape" class="form-control" placeholder="9999999" type="text">
                     </div>
 
                     <!--REQUISITANTE-->
                     <div class="col-xs-6">
                         <br>
                         <label>Nome do requisitante </label>
-                        <input id="usuario" class="form-control"
-                                value="
+                        <input name="usuario" class="form-control"
+                                value=
+                                "
                                 <?php
                                     echo $_SESSION["usuario"]
                                     // $funcionario = "SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon";"
@@ -120,7 +122,7 @@
                                     // echo $nome_funcionario;
                                 ?>
                                 "
-                                placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" disabled="" type="text">
+                                placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" type="text">
                                 <!-- verificar forma de capturar nome_funcionario, siape  -->
                                 <!-- SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon"; -->
                     </div>
@@ -129,16 +131,16 @@
                     <div class="col-xs-3">
                         <br>
                         <label>Campus/Unidade</label>
-                        <input class="form-control" placeholder="IFFar Campus Alegrete" disabled="" type="text">
+                        <input name="campus" class="form-control" placeholder="IFFar Campus Alegrete" type="text" value="IFFar Campus Alegrete">
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label>Observações</label>
-                        <textarea id="observacoes" class="form-control" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
+                        <textarea name="observacoes" class="form-control" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
                     </div>
 
-                    <hr>
+                    <!--<hr>
                     <div class="col-xs-1">
                         <br>
                         <label>Grupo</label>
@@ -148,8 +150,7 @@
                     <div class="col-xs-2">
                         <br>
                         <label>Item </label>
-                        <!--<input class="form-control" type="number">-->
-                        <select id="nivel" class="form-control" name="funcao">
+                        <select id="nivel" class="form-control" name="item">
                             <option value="canetas"> Canetas </option>
                             <option value="lapis"> Lapis </option>
                         </select>
@@ -171,9 +172,9 @@
                         <br>
                         <br>
                         <button type="submit" class="btn btn-sucess pull-right"> Adicionar na lista </button>
-                    </div>
+                    </div>-->
 
-                    <div class="col-xs-12">
+                   <!-- <div class="col-xs-12">
                         <div class="box-body">
                             <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                                 <div class="row">
@@ -206,14 +207,13 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <!--<td> </td>-->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="col-xs-12">
+                    <!--<div class="col-xs-12">
                         <br>
                         <label> Justificativa </label>
                         <textarea class="form-control" rows="3" placeholder="Fundamentação bem elaborada da necessidade de compra, incluindo os motivos e os benefícios que se pretende alcançar com a aquisição." ></textarea>
@@ -247,11 +247,10 @@
                         <br>
                         <label>Da veracidade dos orçamentos</label>
                         <textarea class="form-control" rows="3" placeholder="Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros."></textarea>
-                    </div>
+                    </div>-->
 
-                    <!--SIAPE-->
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-warning pull-right">Enviar para Avaliação</button>
+                        <button type="submit" class="btn btn-success pull-right">Enviar para Avaliação</button>
                     </div>
                 </div>
             </form>

@@ -1,7 +1,7 @@
 <?php
 
 # incluindo arquivo conexao
-include "conexao.php";
+include 'conexao.php';
 
 # recebendo dados do formulario
 $siape = $_POST['siape_funcionario'];
