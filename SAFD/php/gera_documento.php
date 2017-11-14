@@ -26,8 +26,13 @@
     <body>
         <?php
             $observacoes = $POST['observacoes']
+            $data = $POST['data']
+            $siape = $POST['siape']
 
             echo $observacoes
+            echo $data
+            echo $siape
+
          ?>
 
         <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
