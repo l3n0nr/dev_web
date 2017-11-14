@@ -40,7 +40,7 @@
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="gera_documento.php" method="post">
+            <form action="gera_documento.php" method="get">
                 <div class="content-wrapper">
                     <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
@@ -74,10 +74,10 @@
                     </div>
 
                     <!--SETORES-->
-                    <div class="col-xs-3">
-                        <br>
+                    <div class="col-xs-6">
+                        <!-- <br> -->
                         <label>Setor de solicitação</label>
-                        <select id="nivel" class="form-control" name="funcao" disabled="">
+                        <select id="setor" class="form-control" name="funcao" disabled="">
                             <?php
                                 include 'setores.php';
                             ?>
@@ -85,27 +85,26 @@
                     </div>
 
                     <!--DATA-->
-                    <div class="input-group">
-                        <!--                         <br> -->
-                        <div class="col-xs-6">
+                    <!-- <div class="input-group"> -->
+                        <div class="col-xs-3">
                             <label> Data </label>
                             <!--<i class="fa fa-calendar"></i>-->
-                            <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***">
+                            <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" value="<?php echo date('d/m/Y') ?>" >
                         </div>
-                    </div>
+                    <!-- </div> -->
 
                     <!--SIAPE-->
                     <div class="col-xs-3">
                         <br>
                         <label>Número do SIAPE </label>
-                        <input class="form-control" placeholder="9999999" disabled="" type="text">
+                        <input id="siape" class="form-control" placeholder="9999999" disabled="" type="text">
                     </div>
 
                     <!--REQUISITANTE-->
-                    <div class="col-xs-7">
+                    <div class="col-xs-6">
                         <br>
                         <label>Nome do requisitante </label>
-                        <input  class="form-control"
+                        <input id="usuario" class="form-control"
                                 value="
                                 <?php
                                     echo $_SESSION["usuario"]
@@ -154,12 +153,6 @@
                             <option value="canetas"> Canetas </option>
                             <option value="lapis"> Lapis </option>
                         </select>
-
-
-<!--<input class="select2-search__field" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Select a State" style="width: 519px;" type="search"></li></ul></span>-->
-
-<!--<span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-k5k9-container"><span class="select2-selection__rendered" id="select2-k5k9-container" title="Alabama">Alabama</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>-->
-
                     </div>
 
                     <div class="col-xs-6">
@@ -173,25 +166,6 @@
                         <label>Quantidade</label>
                         <input class="form-control" type="number" placeholder="0">
                     </div>
-
-                    <!--
-                    <div class="col-xs-1">
-                        <br>
-                        <label>Média(R$) </label>
-                        <input class="form-control" type="text">
-                    </div>
-
-                    <div class="col-xs-1">
-                        <br>
-                        <label>Total(R$)</label>
-                        <input class="form-control" type="text">
-                    </div>
-
-                    <div id="item" class="item">
-                        <input type="number" id="quant" name="quant"/>
-                    </div>
-                    <input type="hidden" id="itemCont" value="1"/>
-                    <input type="button" id="novoProd" value="Novo produto"/>-->
 
                     <div class="col-xs-2">
                         <br>
