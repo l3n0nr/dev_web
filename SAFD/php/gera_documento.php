@@ -1,8 +1,5 @@
 <?php
 
-    # incluindo arquivo conexao
-//     include "conexao.php";
-
     # capturando valores
     $observacoes = $_POST['observacoes'];
     $data = $_POST['data'];
