@@ -90,7 +90,8 @@
                             <label> Data </label>
                             <!--<i class="fa fa-calendar"></i>-->
                             <!--<input name="data" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" value="" >-->
-                            <input name="data" class="form-control" type="calendar" value="<?php echo date('d/m/Y') ?>" >
+                            <input  name="data" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" 
+                                    value="<?php echo date('d/m/Y') ?>" >
                         </div>
                     <!-- </div> -->
 
@@ -101,27 +102,30 @@
                         <input name="siape" class="form-control" placeholder="9999999" type="text">
                     </div>
 
+                    
+                <!-- 
+                    VERIFICANDO USUARIO
+                    <?php
+//                         $usuario = "echo $_SESSION["usuario"]";
+                        // $funcionario = "SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon";"
+                        // $result = mysqli_query($con, $sql);
+                        //
+                        // // capturando valor funcao usuario
+                        // while($res = mysqli_fetch_assoc($result))
+                        // {
+                        //     $ultimo_funcionario = $res['nome_funcionario'];
+                        // }
+                        //
+                        // echo $nome_funcionario;
+                    ?>
+                -->
+                    
                     <!--REQUISITANTE-->
                     <div class="col-xs-6">
                         <br>
                         <label>Nome do requisitante </label>
-                        <input name="usuario" class="form-control"
-                                value=
-                                "
-                                <?php
-                                    echo $_SESSION["usuario"]
-                                    // $funcionario = "SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon";"
-                                    // $result = mysqli_query($con, $sql);
-                                    //
-                                    // // capturando valor funcao usuario
-                                    // while($res = mysqli_fetch_assoc($result))
-                                    // {
-                                    //     $ultimo_funcionario = $res['nome_funcionario'];
-                                    // }
-                                    //
-                                    // echo $nome_funcionario;
-                                ?>
-                                "
+                        <input name="solicitante" class="form-control"
+                                value="usuario"
                                 placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" type="text">
                                 <!-- verificar forma de capturar nome_funcionario, siape  -->
                                 <!-- SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon"; -->
@@ -140,41 +144,43 @@
                         <textarea name="observacoes" class="form-control" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
                     </div>
 
-                    <!--<hr>
-                    <div class="col-xs-1">
-                        <br>
-                        <label>Grupo</label>
-                        <input id="grupo" class="form-control" type="number" placeholder="0">
-                    </div>
+                    <form action="form_bens.php" method="post">
+                        <hr>
+                        <div class="col-xs-1">
+                            <br>
+                            <label>Grupo</label>
+                            <input name="grupo" class="form-control" type="number" placeholder="0">
+                        </div>
 
-                    <div class="col-xs-2">
-                        <br>
-                        <label>Item </label>
-                        <select id="nivel" class="form-control" name="item">
-                            <option value="canetas"> Canetas </option>
-                            <option value="lapis"> Lapis </option>
-                        </select>
-                    </div>
+                        <div class="col-xs-2">
+                            <br>
+                            <label>Item </label>
+                            <select class="form-control" name="item">
+                                <option value="canetas"> Canetas </option>
+                                <option value="lapis"> Lapis </option>
+                            </select>
+                        </div>
 
-                    <div class="col-xs-6">
-                        <br>
-                        <label>Especificações </label>
-                        <input class="form-control" type="text">
-                    </div>
+                        <div class="col-xs-6">
+                            <br>
+                            <label>Especificações </label>
+                            <input name="especificacoes" class="form-control" type="text">
+                        </div>
 
-                    <div class="col-xs-1">
-                        <br>
-                        <label>Quantidade</label>
-                        <input class="form-control" type="number" placeholder="0">
-                    </div>
+                        <div class="col-xs-1">
+                            <br>
+                            <label>Quantidade</label>
+                            <input name="quantidade" class="form-control" type="number" placeholder="0">
+                        </div>
 
-                    <div class="col-xs-2">
-                        <br>
-                        <br>
-                        <button type="submit" class="btn btn-sucess pull-right"> Adicionar na lista </button>
-                    </div>-->
-
-                   <!-- <div class="col-xs-12">
+                        <div class="col-xs-2">
+                            <br>
+                            <br>
+                            <button type="submit" class="btn btn-sucess pull-right"> Adicionar na lista </button>
+                        </div>
+                    </form>
+                    
+                   <div class="col-xs-12">
                         <div class="box-body">
                             <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                                 <div class="row">
@@ -211,12 +217,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>-->
+                    </div>
 
-                    <!--<div class="col-xs-12">
+                    <div class="col-xs-12">
                         <br>
                         <label> Justificativa </label>
-                        <textarea class="form-control" rows="3" placeholder="Fundamentação bem elaborada da necessidade de compra, incluindo os motivos e os benefícios que se pretende alcançar com a aquisição." ></textarea>
+                        <textarea name="justificativa" class="form-control" rows="3" placeholder="Fundamentação bem elaborada da necessidade de compra, incluindo os motivos e os benefícios que se pretende alcançar com a aquisição." ></textarea>
                     </div>
 
                     <div class="col-xs-12">
@@ -247,7 +253,7 @@
                         <br>
                         <label>Da veracidade dos orçamentos</label>
                         <textarea class="form-control" rows="3" placeholder="Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros."></textarea>
-                    </div>-->
+                    </div>
 
                     <div class="box-footer">
                         <button type="submit" class="btn btn-success pull-right">Enviar para Avaliação</button>
