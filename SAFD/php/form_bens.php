@@ -70,7 +70,7 @@
                     <div class="col-xs-3">
                         <!--                         <br> -->
                         <label>Número do Protocolo: </label>
-                        <input name="protoloco" class="form-control" min="1" max="10" type="text" placeholder="***GERADO AUTOMATICAMENTE***" value="">
+                        <input name="protoloco" class="form-control" type="number" placeholder="***GERADO AUTOMATICAMENTE***">
                     </div>
 
                     <!--SETORES-->
@@ -90,7 +90,7 @@
                             <label> Data </label>
                             <!--<i class="fa fa-calendar"></i>-->
                             <!--<input name="data" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" value="" >-->
-                            <input  name="data" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" 
+                            <input  name="data" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar"
                                     value="<?php echo date('d/m/Y') ?>" >
                         </div>
                     <!-- </div> -->
@@ -99,11 +99,11 @@
                     <div class="col-xs-3">
                         <br>
                         <label>Número do SIAPE </label>
-                        <input name="siape" class="form-control" placeholder="9999999" type="text">
+                        <input name="siape" class="form-control" placeholder="9999999" type="number">
                     </div>
 
-                    
-                <!-- 
+
+                <!--
                     VERIFICANDO USUARIO
                     <?php
 //                         $usuario = "echo $_SESSION["usuario"]";
@@ -119,7 +119,7 @@
                         // echo $nome_funcionario;
                     ?>
                 -->
-                    
+
                     <!--REQUISITANTE-->
                     <div class="col-xs-6">
                         <br>
@@ -179,7 +179,7 @@
                             <button type="submit" class="btn btn-sucess pull-right"> Adicionar na lista </button>
                         </div>
                     </form>
-                    
+
                    <div class="col-xs-12">
                         <div class="box-body">
                             <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
@@ -228,31 +228,31 @@
                     <div class="col-xs-12">
                         <br>
                         <label> Especificações técnicas do objeto e local de entrega/necessidade e justificativa pra agrupamento de itens </label>
-                        <textarea class="form-control" rows="5" placeholder="Indicar todos os requisitos desejados para o bem permanente ou material ed consumo que pretende adquirir. com descrições detalhadas, precisas e convincentes, incluindo as caracteristicas especificas. Indicar o(s) local(is) de entrega dos bens. Deverá ser indicado o endereço completo, bairro, CEP, inclusive número da sala ou prédio."></textarea>
+                        <textarea name="especificacoes" class="form-control" rows="5" placeholder="Indicar todos os requisitos desejados para o bem permanente ou material ed consumo que pretende adquirir. com descrições detalhadas, precisas e convincentes, incluindo as caracteristicas especificas. Indicar o(s) local(is) de entrega dos bens. Deverá ser indicado o endereço completo, bairro, CEP, inclusive número da sala ou prédio."></textarea>
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label>Estratégias de fornecimento, prazo de entrega ou prazo de execução.</label>
-                        <textarea class="form-control" rows="5" placeholder="Indicar o prazo da execução dos serviços e/ou prazo máximo de entrega dos materiais permanente/de consumo. Os materiais deverão ser entregues nos quantitativos e nas localidades indicadas acima no prazo máximo de 30 dias após a emissão do empenho. Os materiais deverão ter prazo de validade mínima de doze meses, contados a partir da data de entrega. Caso algum produto apresente defeito de fabricação quando em uso no decorrer do prazo de validade, o fornecedor deverá efetuar a troca do mesmo em cinco dias úteis, a contar da notificação, sem ônus adicional para o Instituto Federal Farroupilha."></textarea>
+                        <textarea name="estrategia" class="form-control" rows="5" placeholder="Indicar o prazo da execução dos serviços e/ou prazo máximo de entrega dos materiais permanente/de consumo. Os materiais deverão ser entregues nos quantitativos e nas localidades indicadas acima no prazo máximo de 30 dias após a emissão do empenho. Os materiais deverão ter prazo de validade mínima de doze meses, contados a partir da data de entrega. Caso algum produto apresente defeito de fabricação quando em uso no decorrer do prazo de validade, o fornecedor deverá efetuar a troca do mesmo em cinco dias úteis, a contar da notificação, sem ônus adicional para o Instituto Federal Farroupilha."></textarea>
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label>Critérios de Aceitabilidade.</label>
-                        <textarea class="form-control" rows="8" placeholder="Neste campo deverá ser informado de que maneira será realixado o recebimento provisório e o recebimento definitivo com o respectivo prazo. Exemplo 01: na aquisição de um eletroeletrônico o recebimento provisório poderá ser com a simples conferência física do aparelho e o recebimento definitivo, no prazo de XX dias a contar do recebimento provisório, com o teste a fim de verificar se o mesmo está funcionando corretamente. Exemplo 02: na aquisição de material ed consumo o recebimento provisório poderia ser com a conferência da quantidade solicitada e o recebimento definitivo, n no prazo de XX dias a contar do recebimento provisório, com a análise se todos os materiais estão em perfeitas condições de utilização."></textarea>
+                        <textarea name="criterio" class="form-control" rows="8" placeholder="Neste campo deverá ser informado de que maneira será realixado o recebimento provisório e o recebimento definitivo com o respectivo prazo. Exemplo 01: na aquisição de um eletroeletrônico o recebimento provisório poderá ser com a simples conferência física do aparelho e o recebimento definitivo, no prazo de XX dias a contar do recebimento provisório, com o teste a fim de verificar se o mesmo está funcionando corretamente. Exemplo 02: na aquisição de material ed consumo o recebimento provisório poderia ser com a conferência da quantidade solicitada e o recebimento definitivo, n no prazo de XX dias a contar do recebimento provisório, com a análise se todos os materiais estão em perfeitas condições de utilização."></textarea>
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label>Declaração de consulta ao saldo/estoque - Confirmação de Solicitação.</label>
-                        <textarea class="form-control" rows="3" placeholder="Declaro para fins de instauração licitatório, que consultei as áreas pertinentes a estoque e controle de saldo de materiais e serviços e obtive confirmação que os itens pretendidos não encontram-se disponíveis para retirada ou emissão de empenho."> </textarea>
+                        <textarea name="declaracao" class="form-control" rows="3" placeholder="Declaro para fins de instauração licitatório, que consultei as áreas pertinentes a estoque e controle de saldo de materiais e serviços e obtive confirmação que os itens pretendidos não encontram-se disponíveis para retirada ou emissão de empenho."> </textarea>
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label>Da veracidade dos orçamentos</label>
-                        <textarea class="form-control" rows="3" placeholder="Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros."></textarea>
+                        <textarea name="veracidade" class="form-control" rows="3" placeholder="Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros."></textarea>
                     </div>
 
                     <div class="box-footer">
