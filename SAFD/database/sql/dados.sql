@@ -125,17 +125,20 @@ INSERT INTO setor(nome_setor)
     VALUES("sistema");    
     
 -- -- ADICIONANDO FUNCIONARIOS
-INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
-    VALUES(0000, "administrador", "administrador@gmail.com");
+INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
+    VALUES(0000, "administrador", "administrador@gmail.com", 000000);
 
-INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
-    VALUES(0001, "lenon", "lenon@gmail.com");
+INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
+    VALUES(0001, "lenon", "lenon@gmail.com", 000001);
 
-INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
-    VALUES(0002, "ricardo", "ricardo@gmail.com");
+INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
+    VALUES(0002, "ricardo", "ricardo@gmail.com", 000002);
 
-INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario)
-    VALUES(0003, "teste", "teste@gmail.com");
+INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
+    VALUES(0003, "teste", "teste@gmail.com", 000003);
+    
+    
+    
 
 -- -- ADICIONANDO USUARIOS
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)

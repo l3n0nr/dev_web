@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS funcionario(
     id_funcionario int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
         siape_funcionario int(10) NOT NULL,
         nome_funcionario VARCHAR(40) NOT NULL,		
+        n_portaria_funcionario int(10) NOT NULL,
         email_funcionario VARCHAR(40) NOT NULL);                     
 
 CREATE TABLE IF NOT EXISTS funcao(    
@@ -10,31 +11,18 @@ CREATE TABLE IF NOT EXISTS funcao(
         
 CREATE TABLE IF NOT EXISTS setor(
     id_setor int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	nome_setor VARCHAR(40) NOT NULL);	        
-        
-CREATE TABLE IF NOT EXISTS usuario_funcao(
-    id_usuario_funcao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,                
-        numero_portaria int(10) NOT NULL,
-        
-        id_funcionario int(10) NOT NULL,
-        id_usuario int(10) NOT NULL);        
-        
-CREATE TABLE IF NOT EXISTS usuario_setor(
-    id_usuario_setor int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,        
-        data_cadastro TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,       
-        
-        id_setor int(10) NOT NULL,
-        id_usuario int(10) NOT NULL);        
+	nome_setor VARCHAR(40) NOT NULL);	                
         
 CREATE TABLE IF NOT EXISTS usuario(        
     id_usuario int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,                               
         estado_usuario binary NOT NULL, 
         login_usuario VARCHAR(50) NOT NULL,
         senha_usuario VARCHAR(50) NOT NULL,
+        data_cadastro TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,       
         
-        id_usuario_setor int(10) NOT NULL,  
-        id_usuario_funcao int(10) NOT NULL,  
-        id_funcao int(10) NOT NULL);      
+        id_funcionario int(10) NOT NULL,  
+        id_funcao int(10) NOT NULL,  
+        id_setor int(10) NOT NULL);      	
 	
 -- -- TABELAS VOLTADAS PARA SOLICITACAO DOS DOCUMENTOS	
 CREATE TABLE IF NOT EXISTS status_licitacao(
@@ -102,43 +90,22 @@ CREATE TABLE IF NOT EXISTS solicitacao(
 	id_avaliacaodpdi int(10) NOT NULL,
 	id_avaliacaodad int(10) NOT NULL,
 	id_statussolicitacao int(10) NOT NULL,
-	id_licitacao int(10) NOT NULL);
-	
--- -- 	CRIANDO LIGAÇÕES ENTRE AS TABELAS	
-    ALTER TABLE usuario_setor
-        ADD CONSTRAINT id_setor 
-        FOREIGN KEY (id_setor) 
-        REFERENCES setor(id_setor);	
-        
-    ALTER TABLE usuario_setor
-        ADD CONSTRAINT id_usuario 
-        FOREIGN KEY (id_usuario) 
-        REFERENCES usuario(id_usuario);	
-    
-    ALTER TABLE usuario_funcao
-        ADD CONSTRAINT id_funcionario 
-        FOREIGN KEY (id_funcionario) 
-        REFERENCES funcionario(id_funcionario);	
-        
-    ALTER TABLE usuario_funcao
-        ADD CONSTRAINT id_usuario 
-        FOREIGN KEY (id_usuario) 
-        REFERENCES usuario(id_usuario);	
+	id_licitacao int(10) NOT NULL);	
        
     ALTER TABLE usuario
-        ADD CONSTRAINT id_usuario_setor
-        FOREIGN KEY (id_usuario_setor)
-        REFERENCES usuario_setor(id_usuario_setor);
+        ADD CONSTRAINT id_funcionario
+        FOREIGN KEY (id_funcionario)
+        REFERENCES funcionario(id_funcionario);
         
     ALTER TABLE usuario
-        ADD CONSTRAINT id_usuario_funcao
-        FOREIGN KEY (id_usuario_funcao)
-        REFERENCES usuario_funcao(id_usuario_funcao);
+        ADD CONSTRAINT id_setor
+        FOREIGN KEY (id_setor)
+        REFERENCES setor(id_setor);
     
     ALTER TABLE usuario 
         ADD CONSTRAINT id_funcao     
         FOREIGN KEY (id_funcao) 
-        REFERENCES funcao (id_funcao);                           
+        REFERENCES funcao(id_funcao);                           
          
     ALTER TABLE solicitacao_itens
         ADD CONSTRAINT id_solicitacao
@@ -153,12 +120,7 @@ CREATE TABLE IF NOT EXISTS solicitacao(
     ALTER TABLE solicitacao
         ADD CONSTRAINT id_usuario
         FOREIGN KEY (id_usuario)
-        REFERENCES usuario(id_usuario);
-        
-    ALTER TABLE solicitacao
-        ADD CONSTRAINT id_statuslicitacao
-        FOREIGN KEY (id_statuslicitacao)
-        REFERENCES licitacao(id_statuslicitacao);
+        REFERENCES usuario(id_usuario);            
         
     ALTER TABLE solicitacao
         ADD CONSTRAINT id_avaliacaodpdi
@@ -173,12 +135,7 @@ CREATE TABLE IF NOT EXISTS solicitacao(
     ALTER TABLE solicitacao
         ADD CONSTRAINT id_licitacao
         FOREIGN KEY (id_licitacao)
-        REFERENCES licitacao(id_licitacao);
-        
-    ALTER TABLE solicitacao
-        ADD CONSTRAINT id_statussolicitacao
-        FOREIGN KEY (id_statussolicitacao)
-        REFERENCES statuslicitacao(id_statussolicitacao);      
+        REFERENCES licitacao(id_licitacao);            
         
     ALTER TABLE licitacao
         ADD CONSTRAINT id_statuslicitacao
@@ -194,4 +151,16 @@ CREATE TABLE IF NOT EXISTS solicitacao(
         ADD CONSTRAINT id_tipodespesa
         FOREIGN KEY (id_tipodespesa)
         REFERENCES tipo_despesa(id_tipodespesa);	
+        
+        
+-- -- VERIFICAR
+ALTER TABLE solicitacao
+ADD CONSTRAINT id_statuslicitacao
+FOREIGN KEY (id_statuslicitacao)
+REFERENCES licitacao(id_statuslicitacao);
+
+ALTER TABLE solicitacao
+ADD CONSTRAINT id_statussolicitacao
+FOREIGN KEY (id_statussolicitacao)
+REFERENCES statuslicitacao(id_statussolicitacao);      
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
