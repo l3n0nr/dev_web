@@ -118,12 +118,12 @@ CREATE TABLE IF NOT EXISTS solicitacao(
     ALTER TABLE usuario_funcao
         ADD CONSTRAINT id_funcionario 
         FOREIGN KEY (id_funcionario) 
-        REFERENCES funcionario (id_funcionario);	
+        REFERENCES funcionario(id_funcionario);	
         
     ALTER TABLE usuario_funcao
         ADD CONSTRAINT id_usuario 
         FOREIGN KEY (id_usuario) 
-        REFERENCES usuario (id_usuario);	
+        REFERENCES usuario(id_usuario);	
        
     ALTER TABLE usuario
         ADD CONSTRAINT id_usuario_setor
