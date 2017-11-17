@@ -70,7 +70,7 @@
                     <div class="col-xs-3">
                         <!--                         <br> -->
                         <label>Número do Protocolo: </label>
-                        <input name="protoloco" class="form-control" type="number" placeholder="***GERADO AUTOMATICAMENTE***">
+                        <input name="protocolo" class="form-control" type="number" placeholder="***GERADO AUTOMATICAMENTE***">
                     </div>
 
                     <!--SETORES-->
