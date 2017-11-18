@@ -65,9 +65,11 @@ CREATE TABLE IF NOT EXISTS licitacao(
 
 CREATE TABLE IF NOT EXISTS objeto(
     id_objeto int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        nome_objeto VARCHAR(40) NOT NULL,
+        grupo_objeto VARCHAR(40) NOT NULL,	
 	especificacoestecnicas_objeto VARCHAR(40) NOT NULL,
-	estrategiafornecimento_objeto VARCHAR(40) NOT NULL,
-	nome_objeto VARCHAR(40) NOT NULL);
+	estrategiafornecimen   to_objeto VARCHAR(40) NOT NULL,
+	preco_objeto int(10));
 	
 CREATE TABLE IF NOT EXISTS solicitacao_itens(	
     id_solicitacao_itens int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
