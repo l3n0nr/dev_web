@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS status_licitacao(
 	
 CREATE TABLE IF NOT EXISTS status_solicitacao(
     id_statussolicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        nome_statussolicitacao VARCHAR(40) NOT NULL);		
+        descricao_statussolicitacao VARCHAR(40) NOT NULL);		
 	
 CREATE TABLE IF NOT EXISTS tipo_despesa(
     id_tipodespesa int(10) NOT NULL PRIMARY KEY,

@@ -147,6 +147,22 @@ INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_f
     VALUES(1, "ricardo", "ricardo", 9, 2, 3);
 
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(0, "teste", "teste", 1, 4, 4);    
+    VALUES(0, "teste", "teste", 1, 4, 4);  
+    
+-- -- ADICIONANDO STATUS_LICITACAO
+INSERT INTO status_solicitacao(descricao_statussolicitacao)
+    VALUES("pendente");
+    
+INSERT INTO status_solicitacao(descricao_statussolicitacao)
+    VALUES("analise");
+    
+INSERT INTO status_solicitacao(descricao_statussolicitacao)
+    VALUES("revisão");
+    
+INSERT INTO status_solicitacao(descricao_statussolicitacao)
+    VALUES("aprovado");
+    
+INSERT INTO status_solicitacao(descricao_statussolicitacao)
+    VALUES("reprovado");
 
 -- -- -- -- -- -- -- --     
