@@ -41,6 +41,7 @@ DELETE FROM `setor` WHERE `setor`.`id_setor` = 32;
 DELETE FROM `setor` WHERE `setor`.`id_setor` = 33;
 DELETE FROM `setor` WHERE `setor`.`id_setor` = 34;
 DELETE FROM `setor` WHERE `setor`.`id_setor` = 35;
+DELETE FROM `setor` WHERE `setor`.`id_setor` = 36;
 
 DELETE FROM `funcao` WHERE `funcao`.`id_funcao` = 1;
 DELETE FROM `funcao` WHERE `funcao`.`id_funcao` = 2;
@@ -54,6 +55,8 @@ DELETE FROM `funcionario` WHERE `funcionario`.`id_funcionario` = 3;
 DELETE FROM `funcionario` WHERE `funcionario`.`id_funcionario` = 4;
 
 -- -- EXCLUINDO TABELAS
+DROP TABLE IF EXISTS licitacao;
+DROP TABLE IF EXISTS usuario;
 DROP TABLE IF EXISTS objeto;
 DROP TABLE IF EXISTS tipo_despesa;
 DROP TABLE IF EXISTS avaliacao_dad;
@@ -61,9 +64,7 @@ DROP TABLE IF EXISTS unidade_gestora;
 DROP TABLE IF EXISTS avaliacao_dpdi;
 DROP TABLE IF EXISTS status_solicitacao;
 DROP TABLE IF EXISTS status_licitacao;
-DROP TABLE IF EXISTS licitacao;
 DROP TABLE IF EXISTS solicitacao;
-DROP TABLE IF EXISTS usuario;
 DROP TABLE IF EXISTS setor;
 DROP TABLE IF EXISTS funcao;
 DROP TABLE IF EXISTS funcionario;

@@ -14,7 +14,6 @@ INSERT INTO funcao(descricao_funcao)
 INSERT INTO funcao(descricao_funcao)    
     VALUES("Outro");
     
-
 -- -- ADICIONANDO SETORES
 INSERT INTO setor(nome_setor)    
     VALUES("dg");
@@ -136,9 +135,6 @@ INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, 
 
 INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
     VALUES(0003, "teste", "teste@gmail.com", 000003);
-    
-    
-    
 
 -- -- ADICIONANDO USUARIOS
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
