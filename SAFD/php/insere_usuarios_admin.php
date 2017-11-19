@@ -5,6 +5,7 @@ include "conexao.php";
 
 # recebendo dados do formulario
 $siape = $_POST['siape_funcionario'];
+$portaria = $_POST['n_portaria_funcionario'];
 $nome = $_POST['nome_funcionario'];
 $email = $_POST['email_funcionario'];
 
@@ -14,8 +15,8 @@ $login = $_POST['login_usuario'];
 $senha = $_POST['senha_usuario'];
 
 // montando SQL - PRIMEIRA PARTE
-$sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario) VALUES";
-$sql.= "($siape, '$nome', '$email');";
+$sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario) VALUES";
+$sql.= "($siape, '$nome', '$email', '$portaria');";
 
 // realizando busca pelo ultimo usuario cadastrado
 $usuario = "SELECT id_funcionario FROM funcionario ORDER BY id_funcionario DESC limit 1";
