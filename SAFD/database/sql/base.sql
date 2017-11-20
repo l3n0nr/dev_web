@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS usuario(
 -- -- TABELAS VOLTADAS PARA SOLICITACAO DOS DOCUMENTOS	
 CREATE TABLE IF NOT EXISTS status_licitacao(
     id_statuslicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	nome_statuslicitacao VARCHAR(40) NOT NULL);	
+	descricao_statuslicitacao VARCHAR(40) NOT NULL);	
 	
 CREATE TABLE IF NOT EXISTS status_solicitacao(
     id_statussolicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,

@@ -165,7 +165,23 @@ INSERT INTO status_solicitacao(descricao_statussolicitacao)
 INSERT INTO status_solicitacao(descricao_statussolicitacao)
     VALUES("reprovado");
 
+-- -- ADICIONANDO STATUS_SOLICITACAO
+INSERT INTO status_licitacao(descricao_statuslicitacao)
+    VALUES("pendente");
+    
+INSERT INTO status_licitacao(descricao_statuslicitacao)
+    VALUES("analise");
+    
+INSERT INTO status_licitacao(descricao_statuslicitacao)
+    VALUES("revisão");
+    
+INSERT INTO status_licitacao(descricao_statuslicitacao)
+    VALUES("aprovado");
+    
+INSERT INTO status_licitacao(descricao_statuslicitacao)
+    VALUES("reprovado");
+
 -- -- ADICIONANDO DADOS TABELA OBJETOS
-INSERT INTO objeto(especificacoestecnicas_objeto, estrategiafornecimento_objeto, nome_objeto)
-    VALUES("canetas");
+INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto)
+    VALUES("caneta", "canetas esferografica", "licitaçao");
 -- -- -- -- -- -- -- --     
