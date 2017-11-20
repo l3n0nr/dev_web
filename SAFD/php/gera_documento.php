@@ -1,5 +1,8 @@
 <?php
 
+    # incluindo arquivo conexao
+    include 'conexao.php';
+
     # capturando valores
     $protocolo = $_POST['protocolo'];
     $setor = $_POST['setor'];

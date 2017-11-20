@@ -167,5 +167,5 @@ INSERT INTO status_solicitacao(descricao_statussolicitacao)
 
 -- -- ADICIONANDO DADOS TABELA OBJETOS
 INSERT INTO objeto(especificacoestecnicas_objeto, estrategiafornecimento_objeto, nome_objeto)
-    VALUES("cane");
+    VALUES("canetas");
 -- -- -- -- -- -- -- --     
