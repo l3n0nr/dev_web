@@ -92,15 +92,21 @@
                                     <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
                                     Não há recurso orçamentário e financeiro para a realização da despesa proposta
                                 </label>
-                            </div>
+                            </div>                            
                             <div class="radio">
                                 <label>
                                     <input name="optionsRadios" id="optionsRadios3" value="option3" type="radio">
                                     Procedimento pelo Sistema de Registro de Preços.
                                 </label>
                             </div>
-                        </div>
-                    </div>
+                            <div class="col-xs-12">
+                                <br>
+                                <label>Observações da Avaliação</label>
+                                <textarea name="observacoes" class="form-control" required="" rows="2" placeholder="" ></textarea>
+                                <br>
+                            </div>
+                        </div>                        
+                    </div>                    
                     <div class="checkbox">
                         <label>
                             <input type="checkbox">

@@ -81,13 +81,19 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
                     <div class="checkbox">
                         <label>
                             <input type="checkbox">
                             Eu <b><?php echo $_SESSION["usuario"]?></b> autorizo o prosseguimento desta solicitação
-                        </label>
+                        </label>                        
                     </div>
+                    <div class="col-xs-12">
+                        <br>
+                        <label>Observações da Avaliação</label>
+                        <textarea name="observacoes" class="form-control" required="" rows="2" placeholder="" ></textarea>
+                        <br>
+                    </div>                    
                     <button type="submit" class="btn btn-warning pull-right">Enviar para a próxima etapa</button>
                     <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>
             </form>

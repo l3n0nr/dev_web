@@ -176,22 +176,33 @@
                     <div class="col-xs-12">
                         <label>Da veracidade dos orçamentos</label>
                         <textarea class="form-control" rows="3" disabled="true">Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros.</textarea>
-                    </div>
+                    </div>                   
 
                     <div class="col-xs-12">
                         <label> Superior imediato do Requisitante </label>
-                        <textarea class="form-control" rows="3"> Coordenação/Departamento/Direção/Pró-reitoria. Estou ciente da solicitação e autorizo o prosseguimento da solicitação.</textarea>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox">
-                                Eu <b><?php echo $_SESSION["usuario"] ?></b> autorizo o prosseguimento desta solicitação
-                            </label>
-                            <label> Data:__</label>
-                        </div>
-                        <!--                    <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>-->
-                        <button type="submit"class="btn btn-success pull-right">Enviar para a próxima etapa</button>
-                        <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>
+                        <textarea class="form-control" rows="3"> Coordenação/Departamento/Direção/Pró-reitoria. Estou ciente da solicitação e autorizo o prosseguimento da solicitação.</textarea>                        
                     </div>
+
+                    <div class="col-xs-12">
+                        <br>
+                        <label>Observações da Avaliação</label>
+                        <textarea name="observacoes" class="form-control" required="" rows="2" placeholder="" ></textarea>
+                        <br>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">
+                            Eu <b><?php echo $_SESSION["usuario"] ?></b> autorizo o prosseguimento desta solicitação
+                        </label>
+                        <label> [DATA:<?php echo date('d/m/Y')?>]</label>
+                    </div>  
+
+                    <!--<button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>-->
+
+                    <button type="submit"class="btn btn-success pull-right">Enviar para a próxima etapa</button>
+
+                    <!-- <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>                     -->
             </form>  
         </div>                                      
 
