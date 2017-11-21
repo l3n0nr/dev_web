@@ -101,24 +101,7 @@
                         <label>Número do SIAPE </label>
                         <input name="siape" class="form-control" placeholder="9999999" type="number">
                     </div>
-
-
-                <!--
-                    VERIFICANDO USUARIO
-                    <?php
-//                         $usuario = "echo $_SESSION["usuario"]";
-                        // $funcionario = "SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon";"
-                        // $result = mysqli_query($con, $sql);
-                        //
-                        // // capturando valor funcao usuario
-                        // while($res = mysqli_fetch_assoc($result))
-                        // {
-                        //     $ultimo_funcionario = $res['nome_funcionario'];
-                        // }
-                        //
-                        // echo $nome_funcionario;
-                    ?>
-                -->
+                    
 
                     <!--REQUISITANTE-->
                     <div class="col-xs-6">

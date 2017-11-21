@@ -82,9 +82,11 @@ CREATE TABLE IF NOT EXISTS solicitacao_itens(
             
 CREATE TABLE IF NOT EXISTS solicitacao(
     id_solicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	justificativa_solicitacao VARCHAR(40) NOT NULL,
-	data_solicitacao VARCHAR(40) NOT NULL,
-	numeroprotocolo_solicitacao VARCHAR(40) NOT NULL,
+    numeroprotocolo_solicitacao VARCHAR(40) NOT NULL,
+    data_solicitacao VARCHAR(40) NOT NULL,  
+	justificativa_solicitacao VARCHAR(40) NOT NULL,	
+    criterio_aceitabilidade VARCHAR(40) NOT NULL,
+    consulta_estoque VARCHAR(40) NOT NULL,
 		
 -- -- -- CHAVES ESTRANGEIRAS
 	id_usuario int(10) NOT NULL,
