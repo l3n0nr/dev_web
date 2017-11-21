@@ -57,10 +57,11 @@
                     </div>
 
                     <section class="content-header">
-                        <h4>
+                        <!-- <h4>
                             REQUISIÇÃO DE COMPRA - SOLICITAÇÃO DE BENS
-                        </h4>
-
+                        </h4> -->
+                        <br>
+                        <br>
                         <ol class="breadcrumb">
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
                         </ol>
@@ -70,14 +71,14 @@
                     <div class="col-xs-3">
                         <!--                         <br> -->
                         <label>Número do Protocolo: </label>
-                        <input name="protocolo" class="form-control" type="number" placeholder="***GERADO AUTOMATICAMENTE***">
+                        <input name="protocolo" class="form-control" type="number" placeholder="***GERADO AUTOMATICAMENTE***" required="">
                     </div>
 
                     <!--SETORES-->
                     <div class="col-xs-6">
                         <!-- <br> -->
                         <label>Setor de solicitação</label>
-                        <select name="setor" class="form-control" name="funcao">
+                        <select name="setor" class="form-control" name="funcao" required="">
                             <?php
                                 include 'setores.php';
                             ?>
@@ -90,7 +91,7 @@
                             <label> Data </label>
                             <!--<i class="fa fa-calendar"></i>-->
                             <!--<input name="data" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" value="" >-->
-                            <input  name="data" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar"
+                            <input  name="data" class="form-control" required="" disable="" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar"
                                     value="<?php echo date('d/m/Y') ?>" >
                         </div>
                     <!-- </div> -->
@@ -99,16 +100,15 @@
                     <div class="col-xs-3">
                         <br>
                         <label>Número do SIAPE </label>
-                        <input name="siape" class="form-control" placeholder="9999999" type="number">
-                    </div>
-                    
+                        <input name="siape" class="form-control" required="" placeholder="9999999" type="number">
+                    </div>                            
 
                     <!--REQUISITANTE-->
                     <div class="col-xs-6">
                         <br>
                         <label>Nome do requisitante </label>
                         <input name="solicitante" class="form-control"
-                                value="usuario"
+                                value="usuario" required=""
                                 placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" type="text">
                                 <!-- verificar forma de capturar nome_funcionario, siape  -->
                                 <!-- SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon"; -->
@@ -118,13 +118,13 @@
                     <div class="col-xs-3">
                         <br>
                         <label>Campus/Unidade</label>
-                        <input name="campus" class="form-control" placeholder="IFFar Campus Alegrete" type="text" value="IFFar Campus Alegrete">
+                        <input name="campus" class="form-control" required="" placeholder="IFFar Campus Alegrete" type="text" value="IFFar Campus Alegrete">
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label>Observações</label>
-                        <textarea name="observacoes" class="form-control" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
+                        <textarea name="observacoes" class="form-control" required="" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
                     </div>
 
                     <form action="form_bens.php" method="post">
@@ -132,13 +132,13 @@
                         <div class="col-xs-1">
                             <br>
                             <label>Grupo</label>
-                            <input name="grupo" class="form-control" type="number" placeholder="0">
+                            <input name="grupo" class="form-control" required="" type="number" placeholder="0">
                         </div>
 
                         <div class="col-xs-2">
                             <br>
                             <label>Item </label>
-                            <select class="form-control" name="item">
+                            <select class="form-control" name="item" required="">
                                 <option value="canetas"> Canetas </option>
                                 <option value="lapis"> Lapis </option>
                             </select>
@@ -147,19 +147,19 @@
                         <div class="col-xs-6">
                             <br>
                             <label>Especificações </label>
-                            <input name="especificacoes" class="form-control" type="text">
+                            <input name="especificacoes" class="form-control" type="text" required="">
                         </div>
 
                         <div class="col-xs-1">
                             <br>
                             <label>Quantidade</label>
-                            <input name="quantidade" class="form-control" type="number" placeholder="0">
+                            <input name="quantidade" class="form-control" type="number" required="" placeholder="0">
                         </div>
 
                         <div class="col-xs-2">
                             <br>
                             <br>
-                            <button type="submit" class="btn btn-sucess pull-right"> Adicionar na lista </button>
+                            <button type="submit" class="btn btn-sucess pull-right" required=""> Adicionar na lista </button>
                         </div>
                     </form>
 
@@ -205,37 +205,37 @@
                     <div class="col-xs-12">
                         <br>
                         <label> Justificativa </label>
-                        <textarea name="justificativa" class="form-control" rows="3" placeholder="Fundamentação bem elaborada da necessidade de compra, incluindo os motivos e os benefícios que se pretende alcançar com a aquisição." ></textarea>
+                        <textarea name="justificativa" required="" class="form-control" rows="3" placeholder="Fundamentação bem elaborada da necessidade de compra, incluindo os motivos e os benefícios que se pretende alcançar com a aquisição." ></textarea>
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label> Especificações técnicas do objeto e local de entrega/necessidade e justificativa pra agrupamento de itens </label>
-                        <textarea name="especificacoes" class="form-control" rows="5" placeholder="Indicar todos os requisitos desejados para o bem permanente ou material ed consumo que pretende adquirir. com descrições detalhadas, precisas e convincentes, incluindo as caracteristicas especificas. Indicar o(s) local(is) de entrega dos bens. Deverá ser indicado o endereço completo, bairro, CEP, inclusive número da sala ou prédio."></textarea>
+                        <textarea name="especificacoes" required="" class="form-control" rows="5" placeholder="Indicar todos os requisitos desejados para o bem permanente ou material ed consumo que pretende adquirir. com descrições detalhadas, precisas e convincentes, incluindo as caracteristicas especificas. Indicar o(s) local(is) de entrega dos bens. Deverá ser indicado o endereço completo, bairro, CEP, inclusive número da sala ou prédio."></textarea>
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label>Estratégias de fornecimento, prazo de entrega ou prazo de execução.</label>
-                        <textarea name="estrategia" class="form-control" rows="5" placeholder="Indicar o prazo da execução dos serviços e/ou prazo máximo de entrega dos materiais permanente/de consumo. Os materiais deverão ser entregues nos quantitativos e nas localidades indicadas acima no prazo máximo de 30 dias após a emissão do empenho. Os materiais deverão ter prazo de validade mínima de doze meses, contados a partir da data de entrega. Caso algum produto apresente defeito de fabricação quando em uso no decorrer do prazo de validade, o fornecedor deverá efetuar a troca do mesmo em cinco dias úteis, a contar da notificação, sem ônus adicional para o Instituto Federal Farroupilha."></textarea>
+                        <textarea name="estrategia" class="form-control" rows="5" required="" placeholder="Indicar o prazo da execução dos serviços e/ou prazo máximo de entrega dos materiais permanente/de consumo. Os materiais deverão ser entregues nos quantitativos e nas localidades indicadas acima no prazo máximo de 30 dias após a emissão do empenho. Os materiais deverão ter prazo de validade mínima de doze meses, contados a partir da data de entrega. Caso algum produto apresente defeito de fabricação quando em uso no decorrer do prazo de validade, o fornecedor deverá efetuar a troca do mesmo em cinco dias úteis, a contar da notificação, sem ônus adicional para o Instituto Federal Farroupilha."></textarea>
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label>Critérios de Aceitabilidade.</label>
-                        <textarea name="criterio" class="form-control" rows="8" placeholder="Neste campo deverá ser informado de que maneira será realixado o recebimento provisório e o recebimento definitivo com o respectivo prazo. Exemplo 01: na aquisição de um eletroeletrônico o recebimento provisório poderá ser com a simples conferência física do aparelho e o recebimento definitivo, no prazo de XX dias a contar do recebimento provisório, com o teste a fim de verificar se o mesmo está funcionando corretamente. Exemplo 02: na aquisição de material ed consumo o recebimento provisório poderia ser com a conferência da quantidade solicitada e o recebimento definitivo, n no prazo de XX dias a contar do recebimento provisório, com a análise se todos os materiais estão em perfeitas condições de utilização."></textarea>
+                        <textarea name="criterio" class="form-control" rows="8" required="" placeholder="Neste campo deverá ser informado de que maneira será realixado o recebimento provisório e o recebimento definitivo com o respectivo prazo. Exemplo 01: na aquisição de um eletroeletrônico o recebimento provisório poderá ser com a simples conferência física do aparelho e o recebimento definitivo, no prazo de XX dias a contar do recebimento provisório, com o teste a fim de verificar se o mesmo está funcionando corretamente. Exemplo 02: na aquisição de material ed consumo o recebimento provisório poderia ser com a conferência da quantidade solicitada e o recebimento definitivo, n no prazo de XX dias a contar do recebimento provisório, com a análise se todos os materiais estão em perfeitas condições de utilização."></textarea>
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label>Declaração de consulta ao saldo/estoque - Confirmação de Solicitação.</label>
-                        <textarea name="declaracao" class="form-control" rows="3" placeholder="Declaro para fins de instauração licitatório, que consultei as áreas pertinentes a estoque e controle de saldo de materiais e serviços e obtive confirmação que os itens pretendidos não encontram-se disponíveis para retirada ou emissão de empenho."> </textarea>
+                        <textarea name="declaracao" class="form-control" rows="3" required="" placeholder="Declaro para fins de instauração licitatório, que consultei as áreas pertinentes a estoque e controle de saldo de materiais e serviços e obtive confirmação que os itens pretendidos não encontram-se disponíveis para retirada ou emissão de empenho."></textarea>
                     </div>
 
                     <div class="col-xs-12">
                         <br>
                         <label>Da veracidade dos orçamentos</label>
-                        <textarea name="veracidade" class="form-control" rows="3" placeholder="Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros."></textarea>
+                        <textarea name="veracidade" class="form-control" rows="3" required="" placeholder="Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros."></textarea>
                     </div>
 
                     <div class="box-footer">
