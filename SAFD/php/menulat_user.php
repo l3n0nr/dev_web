@@ -1,13 +1,13 @@
 <section class="sidebar">
     <ul class="sidebar-menu">
-        <form action="busca.php" method="get" class="sidebar-form">
+        <!-- <form action="busca.php" method="get" class="sidebar-form">
             <div class="input-group">
                 <input name="q" class="form-control" placeholder="Pesquise algo aqui.." type="text">
                 <span class="input-group-btn">
                     <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
                 </span>
             </div>
-        </form>
+        </form> -->
         <!--
         <li class="header">FLUXO</li>
         <li><a href="def_status.php"><i class="fa fa-circle text-blue"></i> <span>Definir Status</span></a></li>
