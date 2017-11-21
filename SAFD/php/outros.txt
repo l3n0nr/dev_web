@@ -13,19 +13,24 @@
     echo $resultado;
 ?>
 
-	<?php
-		$usuario = "echo $_SESSION["usuario"]";
-		$funcionario = "SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon";"
-		$result = mysqli_query($con, $sql);
+<?php
+	# adicionando arquivo de conexao
+	include conexao.php;
 
-		// capturando valor funcao usuario
-		while($res = mysqli_fetch_assoc($result))
-		{
-		     $ultimo_funcionario = $res['nome_funcionario'];
-		}
+	$usuario = "echo $_SESSION["usuario"]";
 
-		echo $nome_funcionario;
-	?>             
+	$funcionario = "SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon";"
+	$result = mysqli_query($con, $sql);
+
+	// capturando valor funcao usuario
+	while($res = mysqli_fetch_assoc($result))
+	{
+	$ultimo_funcionario = $res['nome_funcionario'];
+	}
+
+	echo $ultimo_funcionario;
+
+?> 
 
 // consultando nome funcionario
 SELECT nome_funcionario FROM funcionario, usuario WHERE funcionario.id_funcionario = usuario.id_funcionario AND login_usuario = "lenon" 
