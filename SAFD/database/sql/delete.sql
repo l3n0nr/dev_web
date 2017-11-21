@@ -54,6 +54,12 @@ DELETE FROM `funcionario` WHERE `funcionario`.`id_funcionario` = 2;
 DELETE FROM `funcionario` WHERE `funcionario`.`id_funcionario` = 3;
 DELETE FROM `funcionario` WHERE `funcionario`.`id_funcionario` = 4;
 
+DELETE FROM `status_solicitacao` WHERE `status_solicitacao`.`id.status_solicitacao` = 1;
+DELETE FROM `status_solicitacao` WHERE `status_solicitacao`.`id.status_solicitacao` = 2;
+DELETE FROM `status_solicitacao` WHERE `status_solicitacao`.`id.status_solicitacao` = 3;
+DELETE FROM `status_solicitacao` WHERE `status_solicitacao`.`id.status_solicitacao` = 4;
+DELETE FROM `status_solicitacao` WHERE `status_solicitacao`.`id.status_solicitacao` = 5;
+
 -- -- EXCLUINDO TABELAS
 DROP TABLE IF EXISTS licitacao;
 DROP TABLE IF EXISTS usuario;

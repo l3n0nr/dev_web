@@ -65,11 +65,16 @@ CREATE TABLE IF NOT EXISTS licitacao(
 
 CREATE TABLE IF NOT EXISTS objeto(
     id_objeto int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        nome_objeto VARCHAR(40) NOT NULL,
-        grupo_objeto VARCHAR(40) NOT NULL,	
+        nome_objeto VARCHAR(40) NOT NULL,	
 	especificacoestecnicas_objeto VARCHAR(40) NOT NULL,
-	estrategiafornecimen   to_objeto VARCHAR(40) NOT NULL,
-	preco_objeto int(10));
+	estrategiafornecimento_objeto VARCHAR(40) NOT NULL,
+	preco_objeto varchar(40) NOT NULL,
+	
+        id_grupo int(10) NOT NULL);
+	
+CREATE TABLE IF NOT EXISTS grupo(
+    id_grupo int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        nome_grupo VARCHAR(40) NOT NULL);
 	
 CREATE TABLE IF NOT EXISTS solicitacao_itens(	
     id_solicitacao_itens int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -84,7 +89,7 @@ CREATE TABLE IF NOT EXISTS solicitacao(
     id_solicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     numeroprotocolo_solicitacao VARCHAR(40) NOT NULL,
     data_solicitacao VARCHAR(40) NOT NULL,  
-	justificativa_solicitacao VARCHAR(40) NOT NULL,	
+    justificativa_solicitacao VARCHAR(40) NOT NULL,	
     criterio_aceitabilidade VARCHAR(40) NOT NULL,
     consulta_estoque VARCHAR(40) NOT NULL,
 		
@@ -156,6 +161,10 @@ CREATE TABLE IF NOT EXISTS solicitacao(
         FOREIGN KEY (id_tipodespesa)
         REFERENCES tipo_despesa(id_tipodespesa);	
         
+    ALTER TABLE objeto
+        ADD CONSTRAINT id_grupo
+        FOREIGN KEY (id_grupo)
+        REFERENCES grupo(id_grupo);        
         
 -- -- VERIFICAR
 ALTER TABLE solicitacao

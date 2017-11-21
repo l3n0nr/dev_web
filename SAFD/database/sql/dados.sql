@@ -181,7 +181,18 @@ INSERT INTO status_licitacao(descricao_statuslicitacao)
 INSERT INTO status_licitacao(descricao_statuslicitacao)
     VALUES("reprovado");
 
+-- -- ADICIONANDO DADOS TABELA GRUPO
+INSERT INTO grupo(nome_grupo)
+    VALUES("Tipo 1");
+    
+INSERT INTO grupo(nome_grupo)
+    VALUES("Tipo 2");
+    
 -- -- ADICIONANDO DADOS TABELA OBJETOS
-INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto)
-    VALUES("caneta", "canetas esferografica", "licitaçao");
+INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
+    VALUES("caneta", "canetas esferografica", "licitaçao", "0,50", 1);
+    
+-- -- ADICIONANDO DADOS TABELA OBJETOS
+INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
+    VALUES("cadeira", "Cadeira com acento inclinavel", "licitaçao", "100", 2);
 -- -- -- -- -- -- -- --     
