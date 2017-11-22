@@ -1,3 +1,17 @@
+-- INSERINDO SOLICITACAO
+INSERT INTO avaliacao_dpdi(comentarios_avaliacaodpdi, planejamentoexercicio_avaliacaodpdi, id_status, id_unidadegestora)
+VALUES ("comentarios_avaliacaodpdi", "planejamento_avaliacaodpdi", 1, 1);
+
+INSERT INTO avaliacao_dad()
+VALUES ()
+
+INSERT INTO solicitacao(numero_solicitacao, justificativa_solicitacao, consulta_estoque, criterio_aceitabilidade, id_usuario, id_status, id_avaliacaodpdi, id_avaliacaodad)
+VALUES (000, "justificativa_solicitacao", "consulta_estoque", "criterio_aceitabilidade", 1, 1, 1, 1)
+
+$sql = "INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario) VALUES";
+$sql.= "($siape, '$nome', '$email', '$portaria');";
+
+
 CREATE TABLE IF NOT EXISTS funcionario(        
     id_funcionario int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
         siape_funcionario int(10) NOT NULL,
