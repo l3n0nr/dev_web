@@ -56,11 +56,13 @@
                         <div class="form-group">
                             <label>Seleção de Tipos de Despeja</label>
                             <select multiple="" class="form-control">
-                                <option>option 1</option>
-                                <option>option 2</option>
-                                <option>option 3</option>
-                                <option>option 4</option>
-                                <option>option 5</option>
+                                <option> 1- Contemplado no Planejamento do Exercicio </option>
+                                <option> 2- Não Contemplado no Planejamento do Exercicio </option>
+                                <option> 3- Contemplado em Projeto Extraorçamentário </option>
+                                <option> 3.1- Descentralização </option>
+                                <option> 3.2- Convenio </option>
+                                <option> 3.3- Acordo de Cooperação Tecnica </option>
+                                <option> 3.4- Outros, Especificar8 </option>
                             </select>
                         </div>
                     </div>

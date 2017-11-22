@@ -23,21 +23,20 @@
 
     # mostrando variaveis
     echo "protocolo: " . $protocolo . "<br>";
-    // echo "setor: " . $setor . "<br>";
+    echo "setor: " . $setor . "<br>";
     echo "data: " . $data . "<br>";
     echo "siape: " . $siape . "<br>";
-    // echo "solicitante: " . $solicitante . "<br>";
-    // echo "campus: " . $campus . "<br>";
+    echo "solicitante: " . $solicitante . "<br>";
+    echo "campus: " . $campus . "<br>";
 
     echo "observacoes: " . $observacoes . "<br>";
-    // echo "grupo: " . $grupo . "<br>";
-    // echo "item: " . $item . "<br>";
+    echo "grupo: " . $grupo . "<br>";
+    echo "item: " . $item . "<br>";
     echo "especificacoes: " . $especificacoes . "<br>";
 
     echo "justificativa: " . $justificativa . "<br>";
-    // echo "estrategia: " . $estrategia  . "<br>";
-    // echo "criterio: " . $criterio . "<br>";
-    // echo "declaracao: " . $declaracao . "<br>";
-    // echo "veracidade: " . $veracidade . "<br>";
-
+    echo "estrategia: " . $estrategia  . "<br>";
+    echo "criterio: " . $criterio . "<br>";
+    echo "declaracao: " . $declaracao . "<br>";
+    echo "veracidade: " . $veracidade . "<br>";
 ?>

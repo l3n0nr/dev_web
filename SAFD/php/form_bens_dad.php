@@ -66,7 +66,7 @@
                         </ol>
                     </section>
 
-                    <label>Classificação das despexa</label>
+                    <label>Classificação das despesa</label>
 
                     <!--SIAPE-->
                     <div class="box-footer">

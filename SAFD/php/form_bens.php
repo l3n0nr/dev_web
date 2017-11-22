@@ -106,9 +106,9 @@
                     <!--REQUISITANTE-->
                     <div class="col-xs-6">
                         <br>
-                        <label>Nome do requisitante </label>
+                        <label>Nome do usuário requisitante </label>
                         <input name="solicitante" class="form-control"
-                                value="usuario" required=""
+                                value="<?php echo $_SESSION["usuario"] ?>" required=""
                                 placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" type="text">
                                 <!-- verificar forma de capturar nome_funcionario, siape  -->
                                 <!-- SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon"; -->
@@ -129,11 +129,14 @@
 
                     <form action="form_bens.php" method="post">
                         <hr>
-                        <div class="col-xs-1">
+                        <!-- <div class="col-xs-2">
                             <br>
-                            <label>Grupo</label>
-                            <input name="grupo" class="form-control" required="" type="number" placeholder="0">
-                        </div>
+                            <label>Grupo </label>
+                            <select class="form-control" name="grupo" required="">
+                                <option value="1"> Tipo 1 </option>
+                                <option value="2"> Tipo 2 </option>
+                            </select>
+                        </div> -->
 
                         <div class="col-xs-2">
                             <br>
@@ -144,10 +147,10 @@
                             </select>
                         </div>
 
-                        <div class="col-xs-6">
+                        <div class="col-xs-7">
                             <br>
                             <label>Especificações </label>
-                            <input name="especificacoes" class="form-control" type="text" required="">
+                            <input name="especificacoes" class="form-control" type="text" required="" placeholder="autocompletar">
                         </div>
 
                         <div class="col-xs-1">
