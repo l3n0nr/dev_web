@@ -56,3 +56,50 @@ CREATE TABLE IF NOT EXISTS usuario(
         ADD CONSTRAINT id_usuario 
         FOREIGN KEY (id_usuario) 
         REFERENCES usuario(id_usuario);	
+
+        
+-- -- ALTERACAO DIA 22/11
+
+CREATE TABLE IF NOT EXISTS licitacao(
+    id_licitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	comentarios_licitacao VARCHAR(255) NOT NULL,
+	data_licitacao TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+	
+	id_statuslicitacao int(10) NOT NULL);		
+
+ALTER TABLE licitacao
+    ADD CONSTRAINT id_statuslicitacao
+    FOREIGN KEY (id_statuslicitacao)
+    REFERENCES status_licitacao(id_statuslicitacao);
+
+ALTER TABLE solicitacao
+	ADD CONSTRAINT id_licitacao
+	FOREIGN KEY (id_licitacao)
+	REFERENCES licitacao(id_licitacao);   
+
+-- -- VERIFICAR
+ALTER TABLE solicitacao
+	ADD CONSTRAINT id_statuslicitacao
+	FOREIGN KEY (id_statuslicitacao)
+	REFERENCES licitacao(id_statuslicitacao);
+
+ALTER TABLE solicitacao
+	ADD CONSTRAINT id_statussolicitacao
+	FOREIGN KEY (id_statussolicitacao)
+	REFERENCES statuslicitacao(id_statussolicitacao);      
+
+-- -- ADICIONANDO STATUS_LICITACAO
+INSERT INTO status_solicitacao(descricao_statussolicitacao)
+    VALUES("pendente");
+    
+INSERT INTO status_solicitacao(descricao_statussolicitacao)
+    VALUES("analise");
+    
+INSERT INTO status_solicitacao(descricao_statussolicitacao)
+    VALUES("revisão");
+    
+INSERT INTO status_solicitacao(descricao_statussolicitacao)
+    VALUES("aprovado");
+    
+INSERT INTO status_solicitacao(descricao_statussolicitacao)
+    VALUES("reprovado");

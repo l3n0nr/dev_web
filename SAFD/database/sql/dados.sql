@@ -149,36 +149,21 @@ INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_f
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
     VALUES(0, "teste", "teste", 1, 4, 4);  
     
--- -- ADICIONANDO STATUS_LICITACAO
-INSERT INTO status_solicitacao(descricao_statussolicitacao)
-    VALUES("pendente");
-    
-INSERT INTO status_solicitacao(descricao_statussolicitacao)
-    VALUES("analise");
-    
-INSERT INTO status_solicitacao(descricao_statussolicitacao)
-    VALUES("revisão");
-    
-INSERT INTO status_solicitacao(descricao_statussolicitacao)
-    VALUES("aprovado");
-    
-INSERT INTO status_solicitacao(descricao_statussolicitacao)
-    VALUES("reprovado");
 
 -- -- ADICIONANDO STATUS_SOLICITACAO
-INSERT INTO status_licitacao(descricao_statuslicitacao)
+INSERT INTO status(descricao_status)
     VALUES("pendente");
     
-INSERT INTO status_licitacao(descricao_statuslicitacao)
+INSERT INTO status(descricao_status)
     VALUES("analise");
     
-INSERT INTO status_licitacao(descricao_statuslicitacao)
+INSERT INTO status(descricao_status)
     VALUES("revisão");
     
-INSERT INTO status_licitacao(descricao_statuslicitacao)
+INSERT INTO status(descricao_status)
     VALUES("aprovado");
     
-INSERT INTO status_licitacao(descricao_statuslicitacao)
+INSERT INTO status(descricao_status)
     VALUES("reprovado");
 
 -- -- ADICIONANDO DADOS TABELA GRUPO
@@ -190,34 +175,34 @@ INSERT INTO grupo(nome_grupo)
     
 -- -- ADICIONANDO DADOS TABELA UNIDADE GESTORA
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155245. "gabinete");
+    VALUES(155245, "gabinete");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155226. "administração");
+    VALUES(155246, "administração");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155247. "desenvolvimento institucional);
+    VALUES(155247, "desenvolvimento institucional");
 
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155248. "ensino");
+    VALUES(155248, "ensino");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155249. "pesquisa");
+    VALUES(155249, "pesquisa");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155250. "extensao");
+    VALUES(155250, "extensao");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155251. "producao");
+    VALUES(155251, "producao");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155252. "ead");
+    VALUES(155252, "ead");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155253. "assistencia estudantil");
+    VALUES(155253, "assistencia estudantil");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155254. "pronatec");
+    VALUES(155254, "pronatec");
     
 -- -- ADICIONANDO DADOS TABELA OBJETOS
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)

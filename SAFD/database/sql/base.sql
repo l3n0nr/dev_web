@@ -27,46 +27,39 @@ CREATE TABLE IF NOT EXISTS usuario(
 -- -- TABELAS VOLTADAS PARA SOLICITACAO DOS DOCUMENTOS	
 CREATE TABLE IF NOT EXISTS status(
     id_status int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	descricao_status VARCHAR(400) NOT NULL);			
+	descricao_status VARCHAR(255) NOT NULL);			
 	
 CREATE TABLE IF NOT EXISTS tipo_despesa(
     id_tipodespesa int(10) NOT NULL PRIMARY KEY,
-	nome_tipodespesa VARCHAR(400) NOT NULL);
+	nome_tipodespesa VARCHAR(255) NOT NULL);
 	
 CREATE TABLE IF NOT EXISTS unidade_gestora(
-    id_unidadegestora int(10) NOT NULL PRIMARY KEY,
+    id_unidadegestora int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
         codigo_unidadegestora int(10) NOT NULL,
-	nome_unidadegestora VARCHAR(400) NOT NULL);
+	nome_unidadegestora VARCHAR(255) NOT NULL);
 
 CREATE TABLE IF NOT EXISTS avaliacao_dpdi(
     id_avaliacaodpdi int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	comentarios_avaliacaodpdi VARCHAR(400),
-	planejamentoexercicio_avaliacaodpdi VARCHAR(400),
+	comentarios_avaliacaodpdi VARCHAR(255),
+	planejamentoexercicio_avaliacaodpdi VARCHAR(255),
 	
 	id_status int(10) NOT NULL,
 	id_unidadegestora int(10) NOT NULL);		
 
 CREATE TABLE IF NOT EXISTS avaliacao_dad(
     id_avaliacaodad int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	recursos_avaliacaodad VARCHAR(400),
-	comentarios_avaliacaodad VARCHAR(400),
-	valorestimadodespesa_avaliacaodad int(400),
+	recursos_avaliacaodad VARCHAR(255),
+	comentarios_avaliacaodad VARCHAR(255),
+	valorestimadodespesa_avaliacaodad int(255),
 		
         id_status int(10) NOT NULL,
-	id_tipodespesa int(10) NOT NULL);		    
-	
-CREATE TABLE IF NOT EXISTS licitacao(
-    id_licitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	comentarios_licitacao VARCHAR(400) NOT NULL,
-	data_licitacao TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-	
-	id_statuslicitacao int(10) NOT NULL);		
+	id_tipodespesa int(10) NOT NULL);		    	
 
 CREATE TABLE IF NOT EXISTS objeto(
     id_objeto int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        nome_objeto VARCHAR(400) NOT NULL,	
-	especificacoestecnicas_objeto VARCHAR(400) NOT NULL,
-	estrategiafornecimento_objeto VARCHAR(400) NOT NULL,
+        nome_objeto VARCHAR(255) NOT NULL,	
+	especificacoestecnicas_objeto VARCHAR(255) NOT NULL,
+	estrategiafornecimento_objeto VARCHAR(255) NOT NULL,
 	preco_objeto varchar(10) NOT NULL,
 	
         id_grupo int(10) NOT NULL);
@@ -86,11 +79,11 @@ CREATE TABLE IF NOT EXISTS solicitacao_itens(
             
 CREATE TABLE IF NOT EXISTS solicitacao(
     id_solicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    numeroprotocolo_solicitacao VARCHAR(400) NOT NULL,
-    data_solicitacao VARCHAR(400) NOT NULL,  
-    justificativa_solicitacao VARCHAR(400) NOT NULL,	
-    criterio_aceitabilidade VARCHAR(400) NOT NULL,
-    consulta_estoque VARCHAR(400) NOT NULL,
+    numeroprotocolo_solicitacao VARCHAR(255) NOT NULL,
+    data_solicitacao VARCHAR(255) NOT NULL,  
+    justificativa_solicitacao VARCHAR(255) NOT NULL,	
+    criterio_aceitabilidade VARCHAR(255) NOT NULL,
+    consulta_estoque VARCHAR(255) NOT NULL,
 		
 -- -- -- CHAVES ESTRANGEIRAS
 	id_usuario int(10) NOT NULL,
@@ -138,17 +131,7 @@ CREATE TABLE IF NOT EXISTS solicitacao(
     ALTER TABLE solicitacao
         ADD CONSTRAINT id_avaliacaodad
         FOREIGN KEY (id_avaliacaodad)
-        REFERENCES avaliacao_dad(id_avaliacaodad);
-        
-    ALTER TABLE solicitacao
-        ADD CONSTRAINT id_licitacao
-        FOREIGN KEY (id_licitacao)
-        REFERENCES licitacao(id_licitacao);            
-        
-    ALTER TABLE licitacao
-        ADD CONSTRAINT id_statuslicitacao
-        FOREIGN KEY (id_statuslicitacao)
-        REFERENCES status_licitacao(id_statuslicitacao);
+        REFERENCES avaliacao_dad(id_avaliacaodad);                         
         
     ALTER TABLE avaliacao_dpdi
         ADD CONSTRAINT id_unidadegestora
@@ -163,16 +146,5 @@ CREATE TABLE IF NOT EXISTS solicitacao(
     ALTER TABLE objeto
         ADD CONSTRAINT id_grupo
         FOREIGN KEY (id_grupo)
-        REFERENCES grupo(id_grupo);        
-        
--- -- VERIFICAR
-ALTER TABLE solicitacao
-ADD CONSTRAINT id_statuslicitacao
-FOREIGN KEY (id_statuslicitacao)
-REFERENCES licitacao(id_statuslicitacao);
-
-ALTER TABLE solicitacao
-ADD CONSTRAINT id_statussolicitacao
-FOREIGN KEY (id_statussolicitacao)
-REFERENCES statuslicitacao(id_statussolicitacao);      
+        REFERENCES grupo(id_grupo);                
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
