@@ -25,50 +25,49 @@ CREATE TABLE IF NOT EXISTS usuario(
         id_setor int(10) NOT NULL);      	
 	
 -- -- TABELAS VOLTADAS PARA SOLICITACAO DOS DOCUMENTOS	
-CREATE TABLE IF NOT EXISTS status_licitacao(
-    id_statuslicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	descricao_statuslicitacao VARCHAR(40) NOT NULL);	
-	
-CREATE TABLE IF NOT EXISTS status_solicitacao(
-    id_statussolicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        descricao_statussolicitacao VARCHAR(40) NOT NULL);		
+CREATE TABLE IF NOT EXISTS status(
+    id_status int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	descricao_status VARCHAR(400) NOT NULL);			
 	
 CREATE TABLE IF NOT EXISTS tipo_despesa(
     id_tipodespesa int(10) NOT NULL PRIMARY KEY,
-	nome_tipodespesa VARCHAR(40) NOT NULL);
+	nome_tipodespesa VARCHAR(400) NOT NULL);
 	
 CREATE TABLE IF NOT EXISTS unidade_gestora(
     id_unidadegestora int(10) NOT NULL PRIMARY KEY,
-	nome_unidadegestora VARCHAR(40) NOT NULL);
+        codigo_unidadegestora int(10) NOT NULL,
+	nome_unidadegestora VARCHAR(400) NOT NULL);
 
 CREATE TABLE IF NOT EXISTS avaliacao_dpdi(
     id_avaliacaodpdi int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	comentarios_avaliacaodpdi VARCHAR(40) NOT NULL,
-	planejamentoexercicio_avaliacaodpdi VARCHAR(40) NOT NULL,
+	comentarios_avaliacaodpdi VARCHAR(400),
+	planejamentoexercicio_avaliacaodpdi VARCHAR(400),
 	
+	id_status int(10) NOT NULL,
 	id_unidadegestora int(10) NOT NULL);		
 
 CREATE TABLE IF NOT EXISTS avaliacao_dad(
     id_avaliacaodad int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	recursos_avaliacaodad VARCHAR(400) NOT NULL,
-	comentarios_avaliacaodad VARCHAR(400) NOT NULL,
-	valorestimadodespesa_avaliacaodad int(40) NOT NULL,
+	recursos_avaliacaodad VARCHAR(400),
+	comentarios_avaliacaodad VARCHAR(400),
+	valorestimadodespesa_avaliacaodad int(400),
 		
+        id_status int(10) NOT NULL,
 	id_tipodespesa int(10) NOT NULL);		    
 	
 CREATE TABLE IF NOT EXISTS licitacao(
     id_licitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	comentarios_licitacao VARCHAR(40) NOT NULL,
+	comentarios_licitacao VARCHAR(400) NOT NULL,
 	data_licitacao TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
 	
 	id_statuslicitacao int(10) NOT NULL);		
 
 CREATE TABLE IF NOT EXISTS objeto(
     id_objeto int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        nome_objeto VARCHAR(40) NOT NULL,	
-	especificacoestecnicas_objeto VARCHAR(40) NOT NULL,
-	estrategiafornecimento_objeto VARCHAR(40) NOT NULL,
-	preco_objeto varchar(40) NOT NULL,
+        nome_objeto VARCHAR(400) NOT NULL,	
+	especificacoestecnicas_objeto VARCHAR(400) NOT NULL,
+	estrategiafornecimento_objeto VARCHAR(400) NOT NULL,
+	preco_objeto varchar(10) NOT NULL,
 	
         id_grupo int(10) NOT NULL);
 	
@@ -87,11 +86,11 @@ CREATE TABLE IF NOT EXISTS solicitacao_itens(
             
 CREATE TABLE IF NOT EXISTS solicitacao(
     id_solicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    numeroprotocolo_solicitacao VARCHAR(40) NOT NULL,
-    data_solicitacao VARCHAR(40) NOT NULL,  
-    justificativa_solicitacao VARCHAR(40) NOT NULL,	
-    criterio_aceitabilidade VARCHAR(40) NOT NULL,
-    consulta_estoque VARCHAR(40) NOT NULL,
+    numeroprotocolo_solicitacao VARCHAR(400) NOT NULL,
+    data_solicitacao VARCHAR(400) NOT NULL,  
+    justificativa_solicitacao VARCHAR(400) NOT NULL,	
+    criterio_aceitabilidade VARCHAR(400) NOT NULL,
+    consulta_estoque VARCHAR(400) NOT NULL,
 		
 -- -- -- CHAVES ESTRANGEIRAS
 	id_usuario int(10) NOT NULL,

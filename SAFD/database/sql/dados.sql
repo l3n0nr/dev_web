@@ -183,10 +183,41 @@ INSERT INTO status_licitacao(descricao_statuslicitacao)
 
 -- -- ADICIONANDO DADOS TABELA GRUPO
 INSERT INTO grupo(nome_grupo)
-    VALUES("Tipo 1");
+    VALUES("tipo 1");
     
 INSERT INTO grupo(nome_grupo)
-    VALUES("Tipo 2");
+    VALUES("tipo 2");
+    
+-- -- ADICIONANDO DADOS TABELA UNIDADE GESTORA
+INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
+    VALUES(155245. "gabinete");
+    
+INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
+    VALUES(155226. "administração");
+    
+INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
+    VALUES(155247. "desenvolvimento institucional);
+
+INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
+    VALUES(155248. "ensino");
+    
+INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
+    VALUES(155249. "pesquisa");
+    
+INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
+    VALUES(155250. "extensao");
+    
+INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
+    VALUES(155251. "producao");
+    
+INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
+    VALUES(155252. "ead");
+    
+INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
+    VALUES(155253. "assistencia estudantil");
+    
+INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
+    VALUES(155254. "pronatec");
     
 -- -- ADICIONANDO DADOS TABELA OBJETOS
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
@@ -195,4 +226,7 @@ INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiaforneci
 -- -- ADICIONANDO DADOS TABELA OBJETOS
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
     VALUES("cadeira", "Cadeira com acento inclinavel", "licitaçao", "100", 2);
+
+    
+
 -- -- -- -- -- -- -- --     
