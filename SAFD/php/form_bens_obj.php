@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SAFD | Form. Bens </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+             folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+    </head>
+    <!--<body class="hold-transition skin-green fixed sidebar-mini">-->
+    <body class="hold-transition skin-green layout-fixed sidebar-mini">
+        <!-- Site wrapper -->
+        <div class="wrapper">
+            <header class="main-header" >
+                <?php
+                    include 'header_user.php';
+                ?>
+            </header>
+
+            <!-- =============================================== -->
+
+            <!-- Left side column. contains the sidebar -->
+            <aside class="main-sidebar">
+                <?php
+                    include 'menulat_user.php';
+                ?>
+            </aside>
+
+            <!-- =============================================== -->
+            <!--FORMULARIO DE BENS-->
+            <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
+            <form action="gera_documento.php" method="post">
+                <div class="content-wrapper">
+                    <!-- MENSAGEM INICIAL -->
+                    <div class="alert alert-warning alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert"  aria-hidden="true">
+                            Fechar
+                        </button>
+                        <h4>
+                            <i class="icon fa fa-warning"> </i>
+                            Informações importantes
+                        </h4>
+                        <!--<label> - Alguns campos serão preenchidos automaticamente pelo sistema. </label>-->
+                        <!--<br>-->
+                        <label> - É necessário que todos os outros campos, sejam preenchidos! </label>
+                    </div>
+
+                    <section class="content-header">
+                        <h4>
+                            Solicitacao de Bens - Parte 1 - Compra de Objetos;
+                        </h4>
+                        <ol class="breadcrumb">
+                            <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
+                        </ol>
+                    </section>                                                                        
+                    <form action="form_bens.php" method="post">
+                        <div class="col-xs-2">
+                            <br>
+                            <label>Item </label>
+                            <select class="form-control" name="item" required="">
+                                <option value="1"> Canetas </option>
+                                <option value="2"> Lapis </option>
+                            </select>
+                        </div>
+
+                        <div class="col-xs-7">
+                            <br>
+                            <label>Especificações </label>
+                            <input name="especificacoes" class="form-control" type="text" required="" placeholder="autocompletar">
+                        </div>
+
+                        <div class="col-xs-1">
+                            <br>
+                            <label>Quantidade</label>
+                            <input name="quantidade" class="form-control" type="number" required="" placeholder="0">
+                        </div>
+
+                        <div class="col-xs-2">
+                            <br>
+                            <br>
+                            <button type="submit" class="btn btn-sucess pull-right" required=""> Adicionar na lista </button>
+                        </div>
+                    </form>
+
+                   <div class="col-xs-12">
+                        <div class="box-body">
+                            <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                                <div class="row">
+                                    <div class="col-sm-6"></div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                                            <thead>
+                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                Grupo
+                                            </th>
+                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                Item
+                                            </th>
+                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                Especificações
+                                            </th>
+                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                Quantidade
+                                            </th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>".."</td>
+                                                    <td>".."</td>
+                                                    <td>".."</td>
+                                                    <td>".."</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </form>
+        </div>
+
+            <footer class="main-footer">
+                <?php
+                include 'footer.php';
+                ?>
+            </footer>
+
+            <!-- Stats tab content -->
+        </form>
+    </div><!-- /.tab-pane -->
+</div>
+</aside><!-- /.control-sidebar -->
+
+</div><!-- ./wrapper -->
+
+<!-- jQuery 2.1.4 -->
+<script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../plugins/fastclick/fastclick.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+</body>
+</html>
