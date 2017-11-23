@@ -7,7 +7,7 @@
     include 'valida_sessao.php';
 
 # capturando valores
-    echo $_SESSION["usuario"];
+    echo $_SESSION["usuario"];  
     $login = $_SESSION["usuario"];
     $protocolo = $_POST['protocolo'];
     $data = $_POST['data'];
