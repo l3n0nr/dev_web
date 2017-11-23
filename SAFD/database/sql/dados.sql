@@ -12,7 +12,7 @@ INSERT INTO funcao(descricao_funcao)
     VALUES("Chefe");
 
 INSERT INTO funcao(descricao_funcao)    
-    VALUES("Outro");
+    VALUES("Professor");
     
 -- -- ADICIONANDO SETORES
 INSERT INTO setor(nome_setor)    

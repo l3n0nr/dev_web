@@ -57,69 +57,13 @@
                     </div>
 
                     <section class="content-header">
-                        <!-- <h4>
+                        <h4>
                             REQUISIÇÃO DE COMPRA - SOLICITAÇÃO DE BENS
-                        </h4> -->
-                        <br>
-                        <br>
+                        </h4>
                         <ol class="breadcrumb">
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
                         </ol>
-                    </section>
-
-                    <!--PROTOCOLO-->
-                    <div class="col-xs-3">
-                        <!--                         <br> -->
-                        <label>Número do Protocolo: </label>
-                        <input name="protocolo" class="form-control" type="number" placeholder="***GERADO AUTOMATICAMENTE***" required="">
-                    </div>
-
-                    <!--SETORES-->
-                    <div class="col-xs-6">
-                        <!-- <br> -->
-                        <label>Setor de solicitação</label>
-                        <select name="setor" class="form-control" name="funcao" required="">
-                            <?php
-                                include 'setores.php';
-                            ?>
-                        </select>
-                    </div>
-
-                    <!--DATA-->
-                    <!-- <div class="input-group"> -->
-                        <div class="col-xs-3">
-                            <label> Data </label>
-                            <!--<i class="fa fa-calendar"></i>-->
-                            <!--<input name="data" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="" value="" >-->
-                            <input  name="data" class="form-control" required="" disable="" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar"
-                                    value="<?php echo date('d/m/Y') ?>" >
-                        </div>
-                    <!-- </div> -->
-
-                    <!--SIAPE-->
-                    <div class="col-xs-3">
-                        <br>
-                        <label>Número do SIAPE </label>
-                        <input name="siape" class="form-control" required="" placeholder="9999999" type="number">
-                    </div>                            
-
-                    <!--REQUISITANTE-->
-                    <div class="col-xs-6">
-                        <br>
-                        <label>Nome do usuário requisitante </label>
-                        <input name="solicitante" class="form-control"
-                                value="<?php echo $_SESSION["usuario"] ?>" required=""
-                                placeholder="***PEGAR DA TABELA AUTOMATICAMENTE***" type="text">
-                                <!-- verificar forma de capturar nome_funcionario, siape  -->
-                                <!-- SELECT nome_funcionario FROM usuario, funcionario WHERE funcionario.id_funcionario=usuario.id_funcionario AND usuario.login_usuario = "lenon"; -->
-                    </div>
-
-                    <!--IFF-->
-                    <div class="col-xs-3">
-                        <br>
-                        <label>Campus/Unidade</label>
-                        <input name="campus" class="form-control" required="" placeholder="IFFar Campus Alegrete" type="text" value="IFFar Campus Alegrete">
-                    </div>
+                    </section>                                                        
 
                     <div class="col-xs-12">
                         <br>
@@ -142,8 +86,8 @@
                             <br>
                             <label>Item </label>
                             <select class="form-control" name="item" required="">
-                                <option value="canetas"> Canetas </option>
-                                <option value="lapis"> Lapis </option>
+                                <option value="1"> Canetas </option>
+                                <option value="2"> Lapis </option>
                             </select>
                         </div>
 

@@ -30,8 +30,14 @@ include 'valida_sessao.php';
                     <!--                    <li><a href="config.php">Configurações</a></li>-->
                     <!--                    <li class="divider"></li>-->
                     <li>
-                       <a href="../index.html">Sair</a>
+                       <a href="../index.html"
+                            session_destroy();>
+                        Sair</a>
                     </li>
+                    <!-- 
+                        unset ($_SESSION['login'])
+                        unset ($_SESSION['senha'])      
+                    -->
                 </ul>
             </li>
         </ul>
