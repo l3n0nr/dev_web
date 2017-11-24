@@ -70,28 +70,26 @@ CREATE TABLE IF NOT EXISTS grupo(
 	
 CREATE TABLE IF NOT EXISTS solicitacao_itens(	
     id_solicitacao_itens int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        quantidade int(10) NOT NULL,
-	prazoentrega_objeto VARCHAR(40) NOT NULL,
-	prazoexecucao_objeto VARCHAR(40) NOT NULL,
+        quantidade int(10),
+	prazoentrega_objeto VARCHAR(40), 
+	prazoexecucao_objeto VARCHAR(40),
 	
 	id_solicitacao int(10) NOT NULL,
 	id_objeto int(10) NOT NULL);		
             
 CREATE TABLE IF NOT EXISTS solicitacao(
     id_solicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    numeroprotocolo_solicitacao VARCHAR(255) NOT NULL,
-    data_solicitacao VARCHAR(255) NOT NULL,  
-    justificativa_solicitacao VARCHAR(255) NOT NULL,	
-    criterio_aceitabilidade VARCHAR(255) NOT NULL,
-    consulta_estoque VARCHAR(255) NOT NULL,
+    numeroprotocolo_solicitacao VARCHAR(255),
+    data_solicitacao NULL DEFAULT CURRENT_TIMESTAMP,  
+    justificativa_solicitacao VARCHAR(255),	
+    criterio_aceitabilidade VARCHAR(255),
+    consulta_estoque VARCHAR(255),
 		
 -- -- -- CHAVES ESTRANGEIRAS
 	id_usuario int(10) NOT NULL,
-	id_statuslicitacao int(10) NOT NULL,
+	id_status int(10) NOT NULL,
 	id_avaliacaodpdi int(10) NOT NULL,
-	id_avaliacaodad int(10) NOT NULL,
-	id_statussolicitacao int(10) NOT NULL,
-	id_licitacao int(10) NOT NULL);	
+	id_avaliacaodad int(10) NOT NULL);	
        
     ALTER TABLE usuario
         ADD CONSTRAINT id_funcionario

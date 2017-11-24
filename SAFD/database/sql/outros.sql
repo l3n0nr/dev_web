@@ -117,3 +117,21 @@ INSERT INTO status_solicitacao(descricao_statussolicitacao)
     
 INSERT INTO status_solicitacao(descricao_statussolicitacao)
     VALUES("reprovado");
+
+-- VERIFICAR
+INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
+    VALUES("caneta", "canetas esferografica", "licitaçao", "0,50", 1);
+    
+INSERT INTO avaliacao_dad
+
+INSERT INTO avaliacao_dpdi
+
+INSERT INTO avaliacao_coord
+
+INSERT INTO avaliacao_dg
+    
+INSERT INTO solicitacao(numeroprotocolo_solicitacao, justificativa_solicitacao, criterio_aceitabilidade, consulta_estoque, id_usuario, id_status, id_avaliacaodpdi, id_avaliacaodad, id_statussolicitacao, id_licitacao)
+    VALUES(" ", "justificativa", "criterio", "consulta", 1, 1, 1, )
+    
+INSERT INTO solicitacao_itens(quantidade, prazoentrega_objeto, prazoexecucao_objeto, id_solicitacao, id_objeto)
+    VALUES("10", "indefinido", )
