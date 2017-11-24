@@ -1,3 +1,16 @@
+<?php
+    # incluindo arquivo de conexao
+    include 'conexao.php';
+
+    # recebendo dados do formulario
+    $item = $_POST['item'];
+    $especificacoes = $_POST['especificacoes'];
+    $quantidade = $_POST['quantidade'];
+
+    
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -40,7 +53,7 @@
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="gera_documento.php" method="post">
+            <form action="form_bens_obj.php" method="post">
                 <div class="content-wrapper">
                     <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
@@ -65,20 +78,23 @@
                         </ol>
                     </section>                                                                        
                     <form action="form_bens.php" method="post">
-                        <div class="col-xs-2">
+                        <div class="col-xs-5">
                             <br>
                             <label>Item </label>
-                            <select class="form-control" name="item" required="">
-                                <option value="1"> Canetas </option>
-                                <option value="2"> Lapis </option>
-                            </select>
-                        </div>
+                            <input name="item" class="form-control" type="text" required="" placeholder="Item solicitado">
+                        </div>         
 
-                        <div class="col-xs-7">
+                        <div class="col-xs-4">
                             <br>
-                            <label>Especificações </label>
-                            <input name="especificacoes" class="form-control" type="text" required="" placeholder="autocompletar">
-                        </div>
+                            <label>Estrategia de Fornecimento</label>
+                            <input name="fornecimento" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto">
+                        </div>                                
+
+                        <div class="col-xs-2">
+                            <br>
+                            <label>Preco Objeto</label>
+                            <input name="preco" class="form-control" type="value" required="" placeholder="preco do objeto">
+                        </div>                                                                   
 
                         <div class="col-xs-1">
                             <br>
@@ -86,13 +102,18 @@
                             <input name="quantidade" class="form-control" type="number" required="" placeholder="0">
                         </div>
 
+                        <div class="col-xs-12">
+                            <br>
+                            <label>Especificações </label>
+                            <textarea name="especificacoes" class="form-control" type="text" required="" placeholder="teste" rows="5"> </textarea>
+                        </div>
+
                         <div class="col-xs-2">
                             <br>
                             <br>
                             <button type="submit" class="btn btn-sucess pull-right" required=""> Adicionar na lista </button>
-                        </div>
-                    </form>
-
+                        </div>                                     
+                </form>
                    <div class="col-xs-12">
                         <div class="box-body">
                             <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
@@ -132,17 +153,14 @@
                         </div>
                     </div>                
                 </div>
-            </form>
         </div>
+    </body>
 
             <footer class="main-footer">
                 <?php
                 include 'footer.php';
                 ?>
             </footer>
-
-            <!-- Stats tab content -->
-        </form>
     </div><!-- /.tab-pane -->
 </div>
 </aside><!-- /.control-sidebar -->

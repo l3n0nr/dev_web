@@ -51,18 +51,18 @@
                         </ol>
                     </section>                                                                                         
                     <div class="box-footer">
-                        <h5>
-                            Atraves dessa opcao voce iniciara o processo de uma nova solicitacao de bens no sistema.
+                        <h4>
+                            Através dessa opção voçê iniciará o processo de uma nova solicitacão de bens no sistema.
                             <br>
                             <br>
-                            Este processo consiste nas mesmas etapas executadas no processo realizado manualmente atualmente, onde procura-se otimiza-las atraves de um sistema informatizado. 
+                            Este processo consiste nas mesmas etapas executadas no processo realizado manualmente atualmente, onde procura-se otimizá-las através de um sistema informatizado. 
                             <br>
                             <br>
-                            Clique no botao verde, para iniciar o processo de solicitacao.
-                        </h5>
+                            Clique no botao verde, para iniciar o processo de solicitação. Antes de iniciar o processo recomenda-se verificar a lista de solicitações já realizadas, para evitar processos duplicados.                    
+                        </h4>
                         <div class="col-sm-6">
                             <br>
-                            <button type="submit" class="btn btn-success pull-right">Iniciar Solicitaçao</button>
+                            <button type="submit" class="btn btn-success pull-right">Iniciar Solicitação</button>
                         </div>
                     </div>
                 </div>
