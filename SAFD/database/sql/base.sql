@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS usuario(
         estado_usuario binary NOT NULL, 
         login_usuario VARCHAR(50) NOT NULL,
         senha_usuario VARCHAR(50) NOT NULL,
-        data_cadastro TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,       
+        data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,       
         
         id_funcionario int(10) NOT NULL,  
         id_funcao int(10) NOT NULL,  
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS status(
 	descricao_status VARCHAR(255) NOT NULL);			
 	
 CREATE TABLE IF NOT EXISTS tipo_despesa(
-    id_tipodespesa int(10) NOT NULL PRIMARY KEY,
+    id_tipodespesa int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nome_tipodespesa VARCHAR(255) NOT NULL);
 	
 CREATE TABLE IF NOT EXISTS unidade_gestora(
@@ -52,8 +52,22 @@ CREATE TABLE IF NOT EXISTS avaliacao_dad(
 	comentarios_avaliacaodad VARCHAR(255),
 	valorestimadodespesa_avaliacaodad int(255),
 		
-        id_status int(10) NOT NULL,
-	id_tipodespesa int(10) NOT NULL);		    	
+    id_status int(10) NOT NULL,
+	id_tipodespesa int(10) NOT NULL);	
+
+CREATE TABLE IF NOT EXISTS avaliacao_coord(
+    id_avaliacaocoord int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    resposta_avaliacaocoord VARCHAR(255),
+    observacao_avaliacaocoord VARCHAR(255),
+
+    id_status int(10) NOT NULL);	    	
+
+CREATE TABLE IF NOT EXISTS avaliacao_dg(
+    id_avaliacaodg int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    resposta_avaliacaodg VARCHAR(255),
+    observacao_avaliacaodg VARCHAR(255),
+
+    id_status int(10) NOT NULL);            
 
 CREATE TABLE IF NOT EXISTS objeto(
     id_objeto int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -69,27 +83,30 @@ CREATE TABLE IF NOT EXISTS grupo(
         nome_grupo VARCHAR(40) NOT NULL);
 	
 CREATE TABLE IF NOT EXISTS solicitacao_itens(	
-    id_solicitacao_itens int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        quantidade int(10),
+    id_solicitacaoitens int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    quantidade_objeto int(10),
 	prazoentrega_objeto VARCHAR(40), 
 	prazoexecucao_objeto VARCHAR(40),
 	
 	id_solicitacao int(10) NOT NULL,
 	id_objeto int(10) NOT NULL);		
             
-CREATE TABLE IF NOT EXISTS solicitacao(
-    id_solicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    numeroprotocolo_solicitacao VARCHAR(255),
-    data_solicitacao NULL DEFAULT CURRENT_TIMESTAMP,  
-    justificativa_solicitacao VARCHAR(255),	
+CREATE TABLE IF NOT EXISTS solicitacao(        
+    id_solicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,                               
+    numeroprotocolo_solicitacao VARCHAR(255) NOT NULL, 
+    data_solicitacao DEFAULT CURRENT_TIMESTAMP,
+    justificativa_solicitacao VARCHAR(255),
     criterio_aceitabilidade VARCHAR(255),
-    consulta_estoque VARCHAR(255),
-		
--- -- -- CHAVES ESTRANGEIRAS
-	id_usuario int(10) NOT NULL,
-	id_status int(10) NOT NULL,
-	id_avaliacaodpdi int(10) NOT NULL,
-	id_avaliacaodad int(10) NOT NULL);	
+    consulta_estoque VARCHAR(255),       
+    
+    -- -- -- CHAVES ESTRANGEIRAS
+    id_usuario int(10) NOT NULL,
+    id_status int(10) NOT NULL,
+    id_avaliacaodpdi int(10) NOT NULL,
+    id_avaliacaodad int(10) NOT NULL,
+    id_avaliacaocoord int(10) NOT NULL,
+    id_avaliacaodg int(10) NOT NULL);
+
        
     ALTER TABLE usuario
         ADD CONSTRAINT id_funcionario
@@ -129,7 +146,17 @@ CREATE TABLE IF NOT EXISTS solicitacao(
     ALTER TABLE solicitacao
         ADD CONSTRAINT id_avaliacaodad
         FOREIGN KEY (id_avaliacaodad)
-        REFERENCES avaliacao_dad(id_avaliacaodad);                         
+        REFERENCES avaliacao_dad(id_avaliacaodad);  
+
+    ALTER TABLE solicitacao
+        ADD CONSTRAINT id_avaliacaocoord
+        FOREIGN KEY (id_avaliacaocoord)
+        REFERENCES avaliacao_dad(id_avaliacaocoord);                             
+
+    ALTER TABLE solicitacao
+        ADD CONSTRAINT id_avaliacaodg
+        FOREIGN KEY (id_avaliacaodg)
+        REFERENCES avaliacao_dg(id_avaliacaodg);  
         
     ALTER TABLE avaliacao_dpdi
         ADD CONSTRAINT id_unidadegestora
@@ -140,6 +167,16 @@ CREATE TABLE IF NOT EXISTS solicitacao(
         ADD CONSTRAINT id_tipodespesa
         FOREIGN KEY (id_tipodespesa)
         REFERENCES tipo_despesa(id_tipodespesa);	
+
+    ALTER TABLE avaliacao_coord
+        ADD CONSTRAINT id_status
+        FOREIGN KEY (id_status)
+        REFERENCES status(id_status);
+
+    ALTER TABLE avaliacao_dg
+        ADD CONSTRAINT id_status
+        FOREIGN KEY (id_status)
+        REFERENCES status(id_status);
         
     ALTER TABLE objeto
         ADD CONSTRAINT id_grupo

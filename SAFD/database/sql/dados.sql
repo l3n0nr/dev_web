@@ -122,33 +122,6 @@ INSERT INTO setor(nome_setor)
     
 INSERT INTO setor(nome_setor)    
     VALUES("sistema");    
-    
--- -- ADICIONANDO FUNCIONARIOS
-INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
-    VALUES(0000, "administrador", "administrador@gmail.com", 000000);
-
-INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
-    VALUES(0001, "lenon", "lenon@gmail.com", 000001);
-
-INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
-    VALUES(0002, "ricardo", "ricardo@gmail.com", 000002);
-
-INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
-    VALUES(0003, "teste", "teste@gmail.com", 000003);
-
--- -- ADICIONANDO USUARIOS
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "admin", "admin", 1, 1, 1);
-
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "lenon", "lenon", 7, 3, 2);
-
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "ricardo", "ricardo", 9, 2, 3);
-
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(0, "teste", "teste", 1, 4, 4);  
-    
 
 -- -- ADICIONANDO STATUS_SOLICITACAO
 INSERT INTO status(descricao_status)
@@ -172,7 +145,7 @@ INSERT INTO grupo(nome_grupo)
     
 INSERT INTO grupo(nome_grupo)
     VALUES("tipo 2");
-    
+
 -- -- ADICIONANDO DADOS TABELA UNIDADE GESTORA
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
     VALUES(155245, "gabinete");
@@ -203,6 +176,34 @@ INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
     VALUES(155254, "pronatec");
+
+
+    
+-- -- ADICIONANDO FUNCIONARIOS
+INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
+    VALUES(0000, "administrador", "administrador@gmail.com", 000000);
+
+INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
+    VALUES(0001, "lenon", "lenon@gmail.com", 000001);
+
+INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
+    VALUES(0002, "ricardo", "ricardo@gmail.com", 000002);
+
+INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
+    VALUES(0003, "teste", "teste@gmail.com", 000003);
+
+-- -- ADICIONANDO USUARIOS
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "admin", "admin", 1, 1, 1);
+
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "lenon", "lenon", 7, 3, 2);
+
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "ricardo", "ricardo", 9, 2, 3);
+
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(0, "teste", "teste", 1, 4, 4);      
     
 -- -- ADICIONANDO DADOS TABELA OBJETOS
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
