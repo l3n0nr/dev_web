@@ -21,7 +21,7 @@
         <li class="header">DOCUMENTOS</li>
         <li><a href="form_bens.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Bens</span></a></li>
 
-        <li class="header">AVALIAÇÕES</li>
+        <!-- <li class="header">AVALIAÇÕES</li>
         <li><a href="form_bens_coord.php"><i class="glyphicon glyphicon-font"></i>
                 <span> Coordenador </span></a></li>
         <li><a href="form_bens_dpdi.php"><i class="glyphicon glyphicon-font"></i>
@@ -29,6 +29,6 @@
         <li><a href="form_bens_dad.php"><i class="glyphicon glyphicon-font"></i>
                 <span> DAD </span></a></li>
         <li><a href="form_bens_dg.php"><i class="glyphicon glyphicon-font"></i>
-                <span> DG </span></a></li>
+                <span> DG </span></a></li> -->
     </ul>
 </section>
