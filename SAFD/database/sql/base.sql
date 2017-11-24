@@ -93,11 +93,11 @@ CREATE TABLE IF NOT EXISTS solicitacao_itens(
             
 CREATE TABLE IF NOT EXISTS solicitacao(        
     id_solicitacao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,                               
-    numeroprotocolo_solicitacao VARCHAR(255) NOT NULL, 
-    data_solicitacao DEFAULT CURRENT_TIMESTAMP,
+    numeroprotocolo_solicitacao VARCHAR(255) NOT NULL,     
     justificativa_solicitacao VARCHAR(255),
     criterio_aceitabilidade VARCHAR(255),
     consulta_estoque VARCHAR(255),       
+    data_solicitacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     
     -- -- -- CHAVES ESTRANGEIRAS
     id_usuario int(10) NOT NULL,
@@ -151,12 +151,17 @@ CREATE TABLE IF NOT EXISTS solicitacao(
     ALTER TABLE solicitacao
         ADD CONSTRAINT id_avaliacaocoord
         FOREIGN KEY (id_avaliacaocoord)
-        REFERENCES avaliacao_dad(id_avaliacaocoord);                             
+        REFERENCES avaliacao_coord(id_avaliacaocoord);                             
 
     ALTER TABLE solicitacao
         ADD CONSTRAINT id_avaliacaodg
         FOREIGN KEY (id_avaliacaodg)
         REFERENCES avaliacao_dg(id_avaliacaodg);  
+        
+    ALTER TABLE solicitacao
+        ADD CONSTRAINT id_status
+        FOREIGN KEY (id_status)
+        REFERENCES status(id_status);
         
     ALTER TABLE avaliacao_dpdi
         ADD CONSTRAINT id_unidadegestora
