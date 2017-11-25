@@ -93,7 +93,7 @@
                                                     </thead>
                                                     <tbody>
                                                         <?php
-                                                        include 'visualiza_usuarios.php';
+                                                            include 'visualiza_usuarios.php';
                                                         ?>
                                                     </tbody>
                                                 </table>

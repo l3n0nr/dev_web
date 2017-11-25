@@ -15,8 +15,8 @@
         -->
 
         <li class="header">DEMANDAS</li>
-        <li><a href="dem_pendentes.php"><i class="fa fa-circle text-red"></i> <span>Demandas Pendentes</span></a></li>
-        <li><a href="hist_demandas.php"><i class="fa fa-circle text-green"></i> <span>Historico de Demandas</span></a></li>
+        <li><a href="p_dem_pendentes.php"><i class="fa fa-circle text-red"></i> <span>Demandas Pendentes</span></a></li>
+        <li><a href="p_hist_demandas.php"><i class="fa fa-circle text-green"></i> <span>Historico de Demandas</span></a></li>
 
         <li class="header">DOCUMENTOS</li>
         <li><a href="form_bens.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Bens</span></a></li>
