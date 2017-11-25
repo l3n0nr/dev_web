@@ -1,23 +1,23 @@
 CREATE TABLE IF NOT EXISTS funcionario(        
     id_funcionario int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
         siape_funcionario int(10) NOT NULL,
-        nome_funcionario VARCHAR(40) NOT NULL,		
-        n_portaria_funcionario VARCHAR(40) NOT NULL,
-        email_funcionario VARCHAR(40) NOT NULL);                     
+        nome_funcionario VARCHAR(255) NOT NULL,		
+        n_portaria_funcionario VARCHAR(255) NOT NULL,
+        email_funcionario VARCHAR(255) NOT NULL);                     
 
 CREATE TABLE IF NOT EXISTS funcao(    
     id_funcao int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,        
-        descricao_funcao VARCHAR(40) NOT NULL); 
+        descricao_funcao VARCHAR(255) NOT NULL); 
         
 CREATE TABLE IF NOT EXISTS setor(
     id_setor int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	nome_setor VARCHAR(40) NOT NULL);	                
+	nome_setor VARCHAR(255) NOT NULL);	                
         
 CREATE TABLE IF NOT EXISTS usuario(        
     id_usuario int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,                               
         estado_usuario binary NOT NULL, 
-        login_usuario VARCHAR(50) NOT NULL,
-        senha_usuario VARCHAR(50) NOT NULL,
+        login_usuario VARCHAR(255) NOT NULL,
+        senha_usuario VARCHAR(255) NOT NULL,
         data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,       
         
         id_funcionario int(10) NOT NULL,  
@@ -80,13 +80,13 @@ CREATE TABLE IF NOT EXISTS objeto(
 	
 CREATE TABLE IF NOT EXISTS grupo(
     id_grupo int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        nome_grupo VARCHAR(40) NOT NULL);
+        nome_grupo VARCHAR(255) NOT NULL);
 	
 CREATE TABLE IF NOT EXISTS solicitacao_itens(	
     id_solicitacaoitens int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     quantidade_objeto int(10),
-	prazoentrega_objeto VARCHAR(40), 
-	prazoexecucao_objeto VARCHAR(40),
+	prazoentrega_objeto VARCHAR(255), 
+	prazoexecucao_objeto VARCHAR(255),
 	
 	id_solicitacao int(10) NOT NULL,
 	id_objeto int(10) NOT NULL);		
