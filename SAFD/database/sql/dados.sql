@@ -209,7 +209,7 @@ INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usu
     VALUES(1, "tae", "tae", 1, 11, 4, 4);      
 
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "docente", "dpcente", 1, 18, 5, 5);      
+    VALUES(1, "docente", "docente", 1, 18, 5, 5);      
     
 -- -- ADICIONANDO DADOS TABELA OBJETOS
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
