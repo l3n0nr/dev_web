@@ -1,7 +1,7 @@
 <?php
     include 'valida_sessao.php';
 ?>
-<a href="system_outros.php" class="logo">
+<a href="system_chefe.php" class="logo">
     <!-- logo for regular state and mobile devices -->
     <span class="logo-mini">SAFD</span>
     <span class="logo-lg">SAFD</span>
