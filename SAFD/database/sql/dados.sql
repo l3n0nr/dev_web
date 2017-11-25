@@ -9,10 +9,10 @@ INSERT INTO funcao(descricao_funcao)
     VALUES("Coordenador");
 
 INSERT INTO funcao(descricao_funcao)    
-    VALUES("Chefe");
+    VALUES("TAE");
 
 INSERT INTO funcao(descricao_funcao)    
-    VALUES("Professor");
+    VALUES("Docente");
     
 -- -- ADICIONANDO SETORES
 INSERT INTO setor(nome_setor)    
@@ -196,20 +196,20 @@ INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, 
     VALUES(0004, "Camila Freitas", "camilafreitas@gmail.com", 000003);
 
 -- -- ADICIONANDO USUARIOS
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "admin", "admin", 36, 1, 1);
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "admin", "admin", 1, 36, 1, 1);
 
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "diretor", "diretor", 4, 2, 2);
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "diretor", "diretor", 1, 4, 2, 2);
 
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "coordenador", "coordenador", 26, 3, 3);
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "coordenador", "coordenador", 1, 26, 3, 3);
 
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "chefe", "chefe", 11, 4, 4);      
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "tae", "tae", 1, 11, 4, 4);      
 
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "professor", "professor", 18, 5, 5);      
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "docente", "dpcente", 1, 18, 5, 5);      
     
 -- -- ADICIONANDO DADOS TABELA OBJETOS
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)

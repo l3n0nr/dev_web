@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS usuario(
         estado_usuario binary NOT NULL, 
         login_usuario VARCHAR(255) NOT NULL,
         senha_usuario VARCHAR(255) NOT NULL,
+        verificado_usuario BINARY NOT NULL,
         data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,       
         
         id_funcionario int(10) NOT NULL,  
