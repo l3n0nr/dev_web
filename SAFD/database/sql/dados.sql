@@ -184,26 +184,32 @@ INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, 
     VALUES(0000, "administrador", "administrador@gmail.com", 000000);
 
 INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
-    VALUES(0001, "lenon", "lenon@gmail.com", 000001);
+    VALUES(0001, "Pedro Martins", "pedromartins@gmail.com", 000001);
 
 INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
-    VALUES(0002, "ricardo", "ricardo@gmail.com", 000002);
+    VALUES(0002, "Joao da Silva", "joaosilva@gmail.com", 000002);
 
 INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
-    VALUES(0003, "teste", "teste@gmail.com", 000003);
+    VALUES(0003, "Bruna Pires", "brunapires@gmail.com", 000003);
+
+INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
+    VALUES(0004, "Camila Freitas", "camilafreitas@gmail.com", 000003);
 
 -- -- ADICIONANDO USUARIOS
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
     VALUES(1, "admin", "admin", 1, 1, 1);
 
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "lenon", "lenon", 7, 3, 2);
+    VALUES(1, "diretor", "diretor", 7, 2, 2);
 
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "ricardo", "ricardo", 9, 2, 3);
+    VALUES(1, "coordenador", "coordenador", 9, 3, 3);
 
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(0, "teste", "teste", 1, 4, 4);      
+    VALUES(1, "chefe", "chefe", 1, 4, 4);      
+
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "professor", "professor", 1, 5, 5);      
     
 -- -- ADICIONANDO DADOS TABELA OBJETOS
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
