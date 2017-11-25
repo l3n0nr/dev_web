@@ -84,12 +84,12 @@ if (isset($login))
             }
             elseif ($funcao == 4)
             {
-                header("location:system_chefe.php");
+                header("location:system_tae.php");
                 // echo "chefe";
             }
             elseif ($funcao == 5)
             {
-                header("location:system_prof.php");
+                header("location:system_docente.php");
                 // echo "professor";
             }
             else
