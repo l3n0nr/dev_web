@@ -23,7 +23,7 @@
             </form>
             <li class="dropdown">
                 <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <?php echo $_SESSION["usuario"] ?>
+                    Administrador: <?php echo $_SESSION["usuario"] ?>
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="config.php">Configurações</a></li>

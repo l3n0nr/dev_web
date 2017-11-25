@@ -14,8 +14,8 @@
     <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
             <li class="dropdown">
-                <!-- <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">Visitante<span class="caret"></span></a> -->
-                <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $_SESSION["usuario"] ?>
+                <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown"> Diretor: <?php echo $_SESSION["usuario"] ?>
+                <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="../index.html">Sair</a></li>
                 </ul>
