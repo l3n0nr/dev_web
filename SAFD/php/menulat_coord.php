@@ -22,7 +22,7 @@
         <li><a href="form_bens_coord.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Bens</span></a></li> -->
 
         <li class="header">AVALIAÇÕES</li>
-        <li><a href="form_bens_coord.php"><i class="glyphicon glyphicon-font"></i>
+        <li><a href="analise_form_bens_coord.php"><i class="glyphicon glyphicon-font"></i>
                 <span> Coordenador </span></a></li>
         <!-- <li><a href="form_bens_dpdi.php"><i class="glyphicon glyphicon-font"></i>
                 <span> DPDI </span></a></li>

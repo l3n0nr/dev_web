@@ -19,7 +19,7 @@
         <li><a href="p_hist_demandas_prof.php"><i class="fa fa-circle text-green"></i> <span>Historico de Demandas</span></a></li>
 
         <li class="header">DOCUMENTOS</li>
-        <li><a href="form_bens.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Bens</span></a></li>
+        <li><a href="form_bens_prof.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Bens</span></a></li>
 
         <!-- <li class="header">AVALIAÇÕES</li>
         <li><a href="form_bens_coord.php"><i class="glyphicon glyphicon-font"></i>
