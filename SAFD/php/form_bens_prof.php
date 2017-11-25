@@ -24,7 +24,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                    include 'header_coord.php';
+                    include 'header_prof.php';
                 ?>
             </header>
 
@@ -33,7 +33,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                    include 'menulat_user.php';
+                    include 'menulat_prof.php';
                 ?>
             </aside>
 
