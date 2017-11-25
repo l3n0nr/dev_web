@@ -197,19 +197,19 @@ INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, 
 
 -- -- ADICIONANDO USUARIOS
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "admin", "admin", 1, 1, 1);
+    VALUES(1, "admin", "admin", 36, 1, 1);
 
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "diretor", "diretor", 7, 2, 2);
+    VALUES(1, "diretor", "diretor", 4, 2, 2);
 
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "coordenador", "coordenador", 9, 3, 3);
+    VALUES(1, "coordenador", "coordenador", 26, 3, 3);
 
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "chefe", "chefe", 1, 4, 4);      
+    VALUES(1, "chefe", "chefe", 11, 4, 4);      
 
 INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "professor", "professor", 1, 5, 5);      
+    VALUES(1, "professor", "professor", 18, 5, 5);      
     
 -- -- ADICIONANDO DADOS TABELA OBJETOS
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
