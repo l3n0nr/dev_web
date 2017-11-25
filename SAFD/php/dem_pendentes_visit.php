@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     </head>
     <!--<body class="hold-transition skin-green fixed sidebar-mini">-->
-    <body class="hold-transition skin-green layout-fixed sidebar-mini">
+    <body class="hold-transition skin-green sidebar-collapse sidebar-mini">
         <!-- Site wrapper -->
         <div class="wrapper">
             <header class="main-header" >
@@ -63,17 +63,27 @@
                                                 <div class="col-sm-12">
                                                     <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                                                         <thead>
-                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
                                                             Solicitante
                                                         </th>
-                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                            Material
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Setor
                                                         </th>
-                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Objeto
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
                                                             Data
-                                                            </tr>
-                                                            </thead>
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Status
+                                                        </th>
+                                                        </thead>
                                                         <tbody>
+                                                            <?php
+                                                                include 'dem_pendentes.php';
+                                                            ?>
+                                                        </tbody>
                                                     </table>
                                                 </div></div>
                                         </div><!-- /.box-body -->

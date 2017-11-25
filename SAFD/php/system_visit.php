@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     </head>
     <!--<body class="hold-transition skin-green fixed sidebar-mini">-->
-    <body class="hold-transition skin-green layout-fixed sidebar-mini">
+    <body class="hold-transition skin-green sidebar-collapse sidebar-mini">
         <!-- Site wrapper -->
         <div class="wrapper">
             <header class="main-header" >
@@ -41,10 +41,7 @@
                 <?php
                 include 'menulat_visit.php';
                 ?>
-            </aside>
-
-
-            <!-- =============================================== -->
+            </aside>            
 
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
@@ -54,25 +51,20 @@
                         <li><a href=""><i class="fa fa-dashboard"></i> Inicio</a></li>
                     </ol>
                     </br>
-                    <?php
-                    include './visualizar_dem_pendentes.php'
-                    ?>
-
+                    <h1> Tela do Visitante do Sistema </h1><hr>
+                    <h4> - Aqui você poderá acompanhar as etapas que solicitações realizadas estão. </h4>
+                    <h4> - Você pode navegar no menu à esquerda, para visualizar as solicitações. </h4>
+                    <br>
+                    <br>
+                    <h5> - Qualquer dúvida em relação ao funcionamento do sistema, favor entrar em contato com o administrador do mesmo; </h5>
+                    <h5> - Caso queira relatar algum problema, entre em contato com o desenvolver, que está no rodapé dessa página. </h5>
             </div>
-        </section>
-    </div><!-- /.content-wrapper -->
-
 
     <footer class="main-footer">
         <?php
         include 'footer.php';
         ?>
     </footer>
-
-    <!-- Stats tab content -->
-</form>
-</div><!-- /.tab-pane -->
-</div>
 </aside><!-- /.control-sidebar -->
 
 </div><!-- ./wrapper -->

@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     </head>
     <!--<body class="hold-transition skin-green fixed sidebar-mini">-->
-    <body class="hold-transition skin-green layout-fixed sidebar-mini">
+    <body class="hold-transition skin-green sidebar-collapse sidebar-mini">
         <!-- Site wrapper -->
         <div class="wrapper">
             <header class="main-header" >
@@ -53,7 +53,7 @@
                             <div class="col-xs-12">
                                 <div class="box">
                                     <div class="box-header">
-                                        <h3 class="box-title">Demandas já finalizadas</h3>
+                                        <!-- <h3 class="box-title">Demandas já finalizadas</h3> -->
                                     </div><!-- /.box-header -->
                                     <div class="box-body">
                                         <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
@@ -75,9 +75,17 @@
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                                                                     Data
+                                                                </th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                                    Status
+                                                                </th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                            <?php
+                                                                include 'hist_demandas.php';
+                                                            ?>
+                                                        </tbody>
                                                     </table>
                                                 </div></div>
                                         </div><!-- /.box-body -->
