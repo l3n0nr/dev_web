@@ -176,3 +176,5 @@ INSERT INTO `solicitacao`(`numeroprotocolo_solicitacao`, `justificativa_solicita
 
 INSERT INTO `solicitacao_itens`(`quantidade_objeto`, `prazoentrega_objeto`, `prazoexecucao_objeto`, `id_solicitacao`, `id_objeto`) 
     VALUES ("0","","", 1, 1);  
+
+UPDATE `usuario` SET `senha_usuario` = 'docente' WHERE `usuario`.`id_usuario` = 5;
