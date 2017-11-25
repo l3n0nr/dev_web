@@ -77,7 +77,7 @@
                                                         </tr>
                                                         <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                                                             Status
-                                                        </tr>
+                                                        </th>
                                                         </thead>
                                                         <tbody>
                                                             <?php

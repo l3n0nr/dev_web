@@ -65,17 +65,20 @@
                                                         <thead>
                                                             <tr role="row">
                                                                 <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="" aria-sort="descending">
-                                                                    Número requisição
-                                                                </th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                                    Material
-                                                                </th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                                                                     Solicitante
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                                    Setor
+                                                                </th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                                    Item
+                                                                </th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                                                                     Data
-                                                            </tr>
+                                                                </tr>                        
+                                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
+                                                                    Status
+                                                                </tr>       
                                                         </thead>
                                                         <tbody>
                                                             <?php

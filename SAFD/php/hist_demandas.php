@@ -10,7 +10,8 @@ $sql = "SELECT nome_funcionario, nome_objeto, nome_setor, data_solicitacao, desc
         AND usuario.id_funcionario = funcionario.id_funcionario 
         AND solicitacao_itens.id_solicitacao = solicitacao.id_solicitacao
         AND solicitacao_itens.id_objeto = objeto.id_objeto
-        AND solicitacao.id_status = status.id_status";
+        AND solicitacao.id_status = status.id_status
+        AND status.id_status >= 4";
 
 $result = mysqli_query($con, $sql);
 
