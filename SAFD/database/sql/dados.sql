@@ -216,7 +216,8 @@ INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiaforneci
 -- -- ADICIONANDO CAMPOS STATUS_SOLICITACAO
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
     VALUES("caneta", "canetas esferografica", "licitaçao", "0,50", 1);
-    
+
+-- ADICIONANDO SOLICITACAO 1
 INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)	
     VALUES("", "", 0, 1, 1);
 
@@ -234,4 +235,24 @@ INSERT INTO `solicitacao`(`numeroprotocolo_solicitacao`, `justificativa_solicita
 
 INSERT INTO `solicitacao_itens`(`quantidade_objeto`, `prazoentrega_objeto`, `prazoexecucao_objeto`, `id_solicitacao`, `id_objeto`) 
     VALUES ("0","","", 1, 1);  
+
+-- ADICIONANDO SOLICITACAO 2
+
+INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)    
+    VALUES("", "", 0, 4, 1);
+
+INSERT INTO avaliacao_dpdi(comentarios_avaliacaodpdi, planejamentoexercicio_avaliacaodpdi, id_status, id_unidadegestora)
+    VALUES("", "", 4, 1);
+
+INSERT INTO avaliacao_coord(resposta_avaliacaocoord, observacao_avaliacaocoord, id_status)          
+    VALUES("", "", 4);
+
+INSERT INTO avaliacao_dg(resposta_avaliacaodg, observacao_avaliacaodg, id_status)            
+    VALUES("", "", 4);
+    
+INSERT INTO `solicitacao`(`numeroprotocolo_solicitacao`, `justificativa_solicitacao`, `criterio_aceitabilidade`, `consulta_estoque`, `id_usuario`, `id_status`, `id_avaliacaodpdi`, `id_avaliacaodad`, `id_avaliacaocoord`, `id_avaliacaodg`) 
+    VALUES ("000","justificativa","criterio","consulta", 3, 4, 2, 2, 2, 2);
+
+INSERT INTO `solicitacao_itens`(`quantidade_objeto`, `prazoentrega_objeto`, `prazoexecucao_objeto`, `id_solicitacao`, `id_objeto`) 
+    VALUES ("0","","", 2, 2);  
 -- -- -- -- -- -- -- --     
