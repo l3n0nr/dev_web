@@ -24,7 +24,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                    include 'header_user.php';
+                    include 'header_coord.php';
                 ?>
             </header>
 

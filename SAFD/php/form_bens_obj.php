@@ -4,11 +4,30 @@
 
     # recebendo dados do formulario
     $item = $_POST['item'];
+    $estrategia = $_POST['estrategia'];
     $especificacoes = $_POST['especificacoes'];
+    $preco = $_POST['preco'];
     $quantidade = $_POST['quantidade'];
 
-    
+    # montando consulta SQL - ADICIONANDO OBJETO
+    $sql = "INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
+            VALUES('$nome_objeto', '$especificacoes', '$estrategia', '$preco', 1)";
 
+    // realizando inserção da tabela objeto
+    if(mysqli_query($con, $sql))
+    {
+        // echo "funcionou!";
+
+        // SEGUNDA INSERÇAO - ADICIONANDO AVALIACOES
+        // $sql = "INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)    
+        //         VALUES("", "", 0, 1, 1)";
+
+        // // realizando inserção na tabela - avaliacao dad 
+        // if(mysqli_query($con, $sql))
+        // {   
+        //     echo "teste";
+        // }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +106,7 @@
                         <div class="col-xs-4">
                             <br>
                             <label>Estrategia de Fornecimento</label>
-                            <input name="fornecimento" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto">
+                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto">
                         </div>                                
 
                         <div class="col-xs-2">
@@ -108,51 +127,16 @@
                             <textarea name="especificacoes" class="form-control" type="text" required="" placeholder="teste" rows="5"> </textarea>
                         </div>
 
-                        <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-12">
                             <br>
-                            <br>
-                            <button type="submit" class="btn btn-sucess pull-right" required=""> Adicionar na lista </button>
-                        </div>                                     
-                </form>
-                   <div class="col-xs-12">
-                        <div class="box-body">
-                            <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-                                <div class="row">
-                                    <div class="col-sm-6"></div>
-                                    <div class="col-sm-3"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
-                                            <thead>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Grupo
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Item
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Especificações
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Quantidade
-                                            </th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>".."</td>
-                                                    <td>".."</td>
-                                                    <td>".."</td>
-                                                    <td>".."</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                            <button type="submit" class="btn btn-success btn-block btn-flat">Adicionar na lista</button>
                         </div>
-                    </div>                
+                    </div>                    
+
+                    </form>                   
                 </div>
+            </div>
         </div>
     </body>
 

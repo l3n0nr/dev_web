@@ -73,24 +73,29 @@ if (isset($login))
             elseif ($funcao == 2)
             {
                 # redireciona pagina
-                header("location:system_user.php");
+                header("location:system_diretor.php");
                 // echo "diretor";
             }
             elseif ($funcao == 3)
             {
                 # redireciona pagina
-                header("location:system_user.php");
+                header("location:system_coord.php");
                 // echo "coordenador";
             }
             elseif ($funcao == 4)
             {
-                header("location:form_bens_coord.php");
+                header("location:system_chefe.php");
                 // echo "chefe";
+            }
+            elseif ($funcao == 5)
+            {
+                header("location:system_prof.php");
+                // echo "professor";
             }
             else
             {
-                header("location:system_outros.php");
-                // echo "outro";
+                header("location:index.html");
+                // echo "SAIU";
             }
         }
         else
