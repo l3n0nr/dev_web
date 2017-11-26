@@ -40,7 +40,7 @@
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="form_bens_obj.php" method="post">
+            <form action="form_bens_obj_docente.php" method="post">
                 <div class="content-wrapper">
                     <section class="content-header">
                         <h4>
@@ -52,10 +52,10 @@
                     </section>                                                                                         
                     <div class="box-footer">
                         <h4>
-                            Através dessa opção voçê iniciará o processo de uma nova solicitacão de bens no sistema.
+                            Através dessa opção você iniciará o processo de uma nova solicitacão de bens no sistema.
                             <br>
                             <br>
-                            Este processo consiste nas mesmas etapas executadas no processo realizado manualmente atualmente, onde procura-se otimizá-las através de um sistema informatizado. 
+                            Este processo consiste nas mesmas etapas executadas no processo realizado manualmente hoje em dia, porém através deste procura-se otimizá-las através de um sistema informatizado. 
                             <br>
                             <br>
                             Clique no botao verde, para iniciar o processo de solicitação. Antes de iniciar o processo recomenda-se verificar a lista de solicitações já realizadas, para evitar processos duplicados.                    
