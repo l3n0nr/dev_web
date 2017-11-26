@@ -106,14 +106,7 @@
                             <br>
                             <label>Especificações </label>
                             <textarea name="especificacoes" class="form-control" type="text" required="" placeholder="teste" rows="5"> </textarea>
-                        </div>
-
-                        <div class="col-xs-2">
-                            <br>
-                            <br>
-                            <button type="submit" class="btn btn-sucess pull-right" required=""> Adicionar na lista </button>
-                        </div>                                     
-                </form>
+                        </div>                                                                        
                    <div class="col-xs-12">
                         <div class="box-body">
                             <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
@@ -147,12 +140,18 @@
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <div class="col-xs-2">
+                                            <br>
+                                            <br>
+                                            <button type="submit" class="btn btn-sucess pull-right" required=""> Adicionar na lista </button>
+                                        </div>   
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>                
-                </div>
+                        </form>
+                    </div>                    
+                </div>                                
+            </div>              
         </div>
     </body>
 
