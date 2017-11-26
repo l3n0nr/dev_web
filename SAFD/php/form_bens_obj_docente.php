@@ -11,22 +11,28 @@
 
     # montando consulta SQL - ADICIONANDO OBJETO
     $sql = "INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
-            VALUES('$nome_objeto', '$especificacoes', '$estrategia', '$preco', 1)";
+            VALUES('$item', '$especificacoes', '$estrategia', '$preco', 1)";
 
-    // realizando inserção da tabela objeto
-    if(mysqli_query($con, $sql))
+    if (isset($item) AND isset($estrategia) AND isset($especificacoes) AND isset($preco) AND isset($quantidade)) 
     {
-        // echo "funcionou!";
+        // realizando inserção da tabela objeto
+        if(mysqli_query($con, $sql))
+        {
+            // echo "funcionou!";
 
-        // SEGUNDA INSERÇAO - ADICIONANDO AVALIACOES
-        // $sql = "INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)    
-        //         VALUES("", "", 0, 1, 1)";
+            // SEGUNDA INSERÇAO - ADICIONANDO AVALIACOES
+            // $sql = "INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)    
+            //         VALUES("", "", 0, 1, 1)";
 
-        // // realizando inserção na tabela - avaliacao dad 
-        // if(mysqli_query($con, $sql))
-        // {   
-        //     echo "teste";
-        // }
+            // // realizando inserção na tabela - avaliacao dad 
+            // if(mysqli_query($con, $sql))
+            // {   
+            //     echo "teste";
+            // }
+
+            # mostra mensagem e redireciona pagina
+            echo ("<script>alert('Objeto adicionado com sucesso!'); location.href='form_bens_obj_docente.php';</script>");
+        }
     }
 ?>
 
@@ -72,7 +78,7 @@
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="form_bens_obj.php" method="post">
+            <form action="form_bens_obj_docente.php" method="post">
                 <div class="content-wrapper">
                     <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
@@ -96,17 +102,17 @@
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
                         </ol>
                     </section>                                                                        
-                    <form action="form_bens.php" method="post">
+                    <form action="form_bens_obj_docente.php" method="post">
                         <div class="col-xs-5">
                             <br>
                             <label>Item </label>
-                            <input name="item" class="form-control" type="text" required="" placeholder="Item solicitado">
+                            <input name="item" class="form-control" type="text" required="" placeholder="Item a ser solicitado">
                         </div>         
 
                         <div class="col-xs-4">
                             <br>
                             <label>Estrategia de Fornecimento</label>
-                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto">
+                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao">
                         </div>                                
 
                         <div class="col-xs-2">
