@@ -1,3 +1,49 @@
+<?php
+    # incluindo arquivo de conexao
+    include 'conexao.php';
+
+    # recebendo dados do formulario
+    $observacoes = $_POST['observacoes'];
+    $justificativa = $_POST['justificativa'];
+    $especificacoes = $_POST['especificacoes'];
+    $estrategia = $_POST['estrategia'];
+    $criterio = $_POST['criterio'];
+    $declaracao = $_POST['declaracao'];
+    $veracidade = $_POST['veracidade'];
+
+    # montando consulta SQL - ADICIONANDO OBJETO
+    // $sql = "INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
+            // VALUES('$item', '$especificacoes', '$estrategia', '$preco', 1)";
+
+    if (isset($observacoes) 
+        AND isset($justificativa) 
+        AND isset($especificacoes) 
+        AND isset($estrategia) 
+        AND isset($criterio) 
+        AND isset($declaracao) 
+        AND isset($veracidade)) 
+    {
+        // realizando inserção da tabela objeto
+        if(mysqli_query($con, $sql))
+        {
+            // // echo "funcionou!";
+
+            // // // SEGUNDA INSERÇAO - ADICIONANDO AVALIACOES
+            // // $sql = "INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)    
+            // //         VALUES("", "", 0, 1, 1)";
+
+            // // // // realizando inserção na tabela - avaliacao dad 
+            // // if(mysqli_query($con, $sql))
+            // // {   
+            // //     echo "teste";
+            // // }
+
+            // # mostra mensagem e redireciona pagina
+            // echo ("<script>alert('Objeto adicionado com sucesso!'); location.href='form_bens_obj_docente.php';</script>");
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -107,14 +153,14 @@
                         <textarea name="veracidade" class="form-control" rows="3" required="" placeholder="Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros."></textarea>
                     </div>
 
-                    <div class="box-footer">
+                    <div class="box-footer">                        
                         <button type="submit" class="btn btn-success pull-right">Enviar para Avaliação</button>
                     </div>
                 </div>
             </form>
         <footer class="main-footer">
             <?php
-            include 'footer.php';
+                include 'footer.php';
             ?>
         </footer>
 
