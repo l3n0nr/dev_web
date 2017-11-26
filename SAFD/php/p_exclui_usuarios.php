@@ -93,6 +93,13 @@
                                                         ?>
                                                     </tbody>
                                                 </table>
+                                                <td>
+                                                    <div class="col-sm-6">
+                                                    <form action="p_exclui_usuarios.php">
+                                                        <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
+                                                    </form>
+                                                    </div>                             
+                                                </td>
                                             </div>
                                         </div>
                                     </div>
