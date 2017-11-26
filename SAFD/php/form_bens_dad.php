@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SAFD | Avaliac. DAD </title>
+        <title>SAFD | Form. Bens </title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.5 -->
@@ -24,7 +24,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_user.php';
+                    include 'header_coord.php';
                 ?>
             </header>
 
@@ -33,101 +33,51 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_user.php';
+                    include 'menulat_user.php';
                 ?>
             </aside>
 
-
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
-            <!--<form onsubmit="alert('Solicitação enviada para avaliação para o DAD!')">-->
-            <form>
+            <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
+            <form action="form_bens_obj.php" method="post">
                 <div class="content-wrapper">
-                    <!-- Content Header (Page header) -->
-
-                    <!--          <div class="alert alert-warning alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert"  aria-hidden="true">
-                                  ×
-                                </button>
-                                <h4>
-                                  <i class="icon fa fa-warning">
-                                  </i>
-                                  Informações importantes
-                                  </h4>
-                                  bla bla bla
-                              </div>-->
-
                     <section class="content-header">
                         <h4>
-                            REQUISIÇÃO DE COMPRA - BENS
+                            REQUISIÇÃO DE COMPRA - SOLICITAÇÃO DE BENS
                         </h4>
                         <ol class="breadcrumb">
-                            <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens>Avaliação DPDI</i> </a></li>
+                            <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
                         </ol>
-                    </section>
-
-                    <label>Classificação das despesa</label>
-
-                    <!--SIAPE-->
+                    </section>                                                                                         
                     <div class="box-footer">
-                        <div class="form-group">
-                            <label>A despesa estimada correrá por conta dos elementos de despezas</label>
-                            <select multiple="" class="form-control">
-                                <option>3.3390.30</option>
-                                <option>3.3390.36</option>
-                                <option>3.3390.39</option>
-                                <option>3.3390.41</option>
-                                <option>3.3390.52</option>
-                            </select>
+                        <h4>
+                            Através dessa opção você iniciará o processo de uma nova solicitacão de bens no sistema.
+                            <br>
+                            <br>
+                            Este processo consiste nas mesmas etapas executadas no processo realizado manualmente hoje em dia, porém através deste procura-se otimizá-las através de um sistema informatizado. 
+                            <br>
+                            <br>
+                            Clique no botao verde, para iniciar o processo de solicitação. Antes de iniciar o processo recomenda-se verificar a lista de solicitações já realizadas, para evitar processos duplicados.                    
+                        </h4>
+                        <div class="col-sm-6">
+                            <br>
+                            <button type="submit" class="btn btn-success pull-right">Iniciar Solicitação</button>
                         </div>
-                        <div class="form-group">
-                            <div class="radio">
-                                <label>
-                                    <input name="optionsRadios" id="optionsRadios1" value="option1" checked="" type="radio">
-                                    Há recurso orçamentário e financeiro para a realização da despesa proposta.
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
-                                    Não há recurso orçamentário e financeiro para a realização da despesa proposta
-                                </label>
-                            </div>                            
-                            <div class="radio">
-                                <label>
-                                    <input name="optionsRadios" id="optionsRadios3" value="option3" type="radio">
-                                    Procedimento pelo Sistema de Registro de Preços.
-                                </label>
-                            </div>
-                            <div class="col-xs-12">
-                                <br>
-                                <label>Observações da Avaliação</label>
-                                <textarea name="observacoes" class="form-control" required="" rows="2" placeholder="" ></textarea>
-                                <br>
-                            </div>
-                        </div>                        
-                    </div>                    
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">
-                            Eu <b><?php echo $_SESSION["usuario"] ?></b> autorizo o prosseguimento desta solicitação
-                        </label>
                     </div>
-                    <button type="submit" class="btn btn-warning pull-right">Enviar para a próxima etapa</button>
-                    <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>
+                </div>
             </form>
-        </div>
 
 
-        <footer class="main-footer">
-            <?php
-            include 'footer.php';
-            ?>
-        </footer>
+            <footer class="main-footer">
+                <?php
+                include 'footer.php';
+                ?>
+            </footer>
 
-        <!-- Stats tab content -->
-    </form>
-</div><!-- /.tab-pane -->
+            <!-- Stats tab content -->
+        </form>
+    </div><!-- /.tab-pane -->
 </div>
 </aside><!-- /.control-sidebar -->
 

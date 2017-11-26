@@ -3,15 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SAFD | Form. Bens </title>
+        <title>SAFD | Inicio </title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.5 -->
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
         <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bootstrap/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <!-- Ionicons -->
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="../bootstrap/css/ionicons.min.css">
         <!-- Theme style -->
         <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
         <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -24,7 +25,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                    include 'header_user.php';
+                include 'header_diretor.php';
                 ?>
             </header>
 
@@ -33,41 +34,25 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                    include 'menulat_user.php';
+                include 'menulat_diretor.php';
                 ?>
             </aside>
 
-            <!-- =============================================== -->
-            <!--FORMULARIO DE BENS-->
-            <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="form_bens_obj.php" method="post">
-                <div class="content-wrapper">
-                    <section class="content-header">
-                        <h4>
-                            REQUISIÇÃO DE COMPRA - SOLICITAÇÃO DE BENS
-                        </h4>
-                        <ol class="breadcrumb">
-                            <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
-                        </ol>
-                    </section>                                                                                         
-                    <div class="box-footer">
-                        <h4>
-                            Através dessa opção voçê iniciará o processo de uma nova solicitacão de bens no sistema.
-                            <br>
-                            <br>
-                            Este processo consiste nas mesmas etapas executadas no processo realizado manualmente atualmente, onde procura-se otimizá-las através de um sistema informatizado. 
-                            <br>
-                            <br>
-                            Clique no botao verde, para iniciar o processo de solicitação. Antes de iniciar o processo recomenda-se verificar a lista de solicitações já realizadas, para evitar processos duplicados.                    
-                        </h4>
-                        <div class="col-sm-6">
-                            <br>
-                            <button type="submit" class="btn btn-success pull-right">Iniciar Solicitação</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
 
+            <!-- =============================================== -->
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li><a href=""><i class="fa fa-dashboard"></i> Inicio</a></li>
+                    </ol>
+                    </br>
+                    <?php
+                    include './visualizar_dem_pendentes.php'
+                    ?>
+            </div><!-- /.content-wrapper -->
 
             <footer class="main-footer">
                 <?php

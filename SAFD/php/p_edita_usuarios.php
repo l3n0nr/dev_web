@@ -94,8 +94,15 @@
                                                         <?php
                                                             include 'edita_usuarios.php';
                                                         ?>
-                                                    </tbody>
+                                                    </tbody>                             
                                                 </table>
+                                                <td>
+                                                    <div class="col-sm-6">
+                                                    <form action="p_edita_usuarios.php">
+                                                        <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
+                                                    </form>
+                                                    </div>                             
+                                                </td>
                                             </div>
                                         </div>
                                     </div>

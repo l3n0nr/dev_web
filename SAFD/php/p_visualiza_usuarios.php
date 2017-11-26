@@ -71,7 +71,8 @@
                                         <div class="row">
                                             <div class="col-sm-6"></div>
                                             <div class="col-sm-3"></div>
-                                        </div><div class="row">
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm-12">
                                                 <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                                                     <thead>
@@ -92,26 +93,17 @@
                                                     </th>
                                                     </thead>
                                                     <tbody>
-                                                        <?php
-                                                            include 'visualiza_usuarios.php';
-                                                        ?>
+                                                    <?php
+                                                        include 'visualiza_usuarios.php';
+                                                    ?>  
                                                     </tbody>
-                                                </table>
+                                                </table>                                       
                                                 <td>
-                                                <!-- <div class="col-sm-4"> -->
-                                                <!-- <div class="col-sm-4">
-    >>>>>>> ff0da378a0b671f01036ca609f178ae1be197d1e
                                                     <div class="col-sm-6">
-                                                        <form action="p_visualiza_usuarios.php">
-                                                            <br>
-                                                            <br>
-                                                            <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
-                                                        </form>
-                                                    </div>
-    <<<<<<< HEAD
-                                                <!-- </div> -->
-                                                </div>
-                                                <td>
+                                                    <form action="p_visualiza_usuarios.php">
+                                                        <button type="submit" class="btn btn-sucess pull-right"> Atualizar lista </button>
+                                                    </form>
+                                                    </div>                             
                                                 </td>
                                             </div>
                                         </div>

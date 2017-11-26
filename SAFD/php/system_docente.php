@@ -11,13 +11,8 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="../bootstrap/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
         <!-- Ionicons -->
         <link rel="stylesheet" href="../bootstrap/css/ionicons.min.css">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <!-- Theme style -->
         <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
         <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -30,7 +25,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_outros.php';
+                include 'header_docente.php';
                 ?>
             </header>
 
@@ -39,7 +34,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_outros.php';
+                include 'menulat_docente.php';
                 ?>
             </aside>
 
@@ -55,23 +50,19 @@
                     </ol>
                     </br>
                     <?php
-                        include './visualizar_dem_pendentes.php'
+                    include './visualizar_dem_pendentes.php'
                     ?>
+            </div><!-- /.content-wrapper -->
 
-            </div>
-        </section>
-    </div><!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <?php
+                include 'footer.php';
+                ?>
+            </footer>
 
-
-    <footer class="main-footer">
-        <?php
-        include 'footer.php';
-        ?>
-    </footer>
-
-    <!-- Stats tab content -->
-</form>
-</div><!-- /.tab-pane -->
+            <!-- Stats tab content -->
+        </form>
+    </div><!-- /.tab-pane -->
 </div>
 </aside><!-- /.control-sidebar -->
 

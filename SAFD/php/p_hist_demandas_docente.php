@@ -19,12 +19,12 @@
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     </head>
     <!--<body class="hold-transition skin-green fixed sidebar-mini">-->
-    <body class="hold-transition skin-green sidebar-collapse sidebar-mini">
+    <body class="hold-transition skin-green layout-fixed sidebar-mini">
         <!-- Site wrapper -->
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_visit.php';
+                include 'header_docente.php';
                 ?>
             </header>
 
@@ -33,7 +33,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_visit.php';
+                include 'menulat_docente.php';
                 ?>
             </aside>
 
@@ -53,8 +53,8 @@
                             <div class="col-xs-12">
                                 <div class="box">
                                     <!-- <div class="box-header">
-                                        <h3 class="box-title">Demandas já finalizadas</h3> 
-                                    </div><!-- /.box-header --> 
+                                        <h3 class="box-title">Demandas já finalizadas</h3>
+                                    </div><!-- /.box-header -->
                                     <div class="box-body">
                                         <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                                             <div class="row"><div class="col-sm-6"></div>
@@ -71,7 +71,7 @@
                                                                     Setor
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
-                                                                    Material
+                                                                    Item
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
                                                                     Data
@@ -79,7 +79,6 @@
                                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
                                                                     Status
                                                                 </th>
-                                                            </tr>
                                                         </thead>
                                                         <tbody>
                                                             <?php

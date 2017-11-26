@@ -9,174 +9,174 @@ INSERT INTO funcao(descricao_funcao)
     VALUES("Coordenador");
 
 INSERT INTO funcao(descricao_funcao)    
-    VALUES("Chefe");
+    VALUES("TAE");
 
 INSERT INTO funcao(descricao_funcao)    
-    VALUES("Professor");
+    VALUES("Docente");
     
 -- -- ADICIONANDO SETORES
 INSERT INTO setor(nome_setor)    
-    VALUES("dg");
+    VALUES("Direção Geral");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("gabinete");
+    VALUES("Gabinete");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("assesorias");
+    VALUES("Assesorias");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("dpdi");
+    VALUES("Diretoria de Planejamento e Desenvolvimento Institucional");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_gestao_pessoas");
+    VALUES("Coordenação de Gestão de Pessoas");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_tecnologia_informacao");
+    VALUES("Coordenação de Tecnologia da Informação");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("unidade_gestao_documentos");
+    VALUES("Unidade de Gestão de Documentos");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("dad");
+    VALUES("Direção de Administração");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_almoxarifado_patrimonio");
+    VALUES("Coordenacao de Almoxarifado e Patrimonio");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor almoxarifado");
+    VALUES("Setor de Almoxarifado");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor patrimonio");
+    VALUES("Setor de Patrimonio");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_infraestrutura");
+    VALUES("Coordenacao de Infraestrutura");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor infraestrutura");
+    VALUES("Setor de Infraestrutura");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_licitacoes_contratos");
+    VALUES("Coordenacao de Licitacoes e Contratos");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor licitacoes e contratos");
+    VALUES("Setor Licitacoes e Contratos");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_orcamentos_financas");
+    VALUES("Coordenacao de Orcamentos e Financas");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor orcamento e financas");
+    VALUES("Setor Orcamento e Financas");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("de");
+    VALUES("Direção de Ensino");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor biblioteca");
+    VALUES("Setor de Biblioteca");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_acoes_inclusivas");
+    VALUES("Coordenacao de Acoes Inclusivas");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_assistencia estudantil");        
+    VALUES("Coordenacao de Assistencia Estudantil");        
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor assistencia estudantil");        
+    VALUES("Setor de Assistencia Estudantil");        
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_geral_ensino");
+    VALUES("Coordenacao Geral de Ensino");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_cursos_superiores");
+    VALUES("Coordenacao dos Cursos Superiores");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_educacao_distancia");        
+    VALUES("Coordenacao de Educacao a Distancia");        
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_eixos_tecnologicos");
+    VALUES("Coordenacao dos Eixos Tecnologicos");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_proeja");
+    VALUES("Coordenacao do Proeja");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor_assesoria_pedagogica");
+    VALUES("Setor de Assesoria Pedagogica");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao_registros_academicos");
+    VALUES("Coordenacao de Registros Academicos");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("dpep");
+    VALUES("Direcao de Pesquisa, Ensino e Produção");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao extensao");
+    VALUES("Coordenacao de Extensao");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor estagios");
+    VALUES("Setor de Estagios");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao pesquisa"); 
+    VALUES("Coordenacao de Pesquisa"); 
 
 INSERT INTO setor(nome_setor)    
-    VALUES("coordenacao producao");
+    VALUES("Coordenacao de Producao");
 
 INSERT INTO setor(nome_setor)    
-    VALUES("setor producao");    
+    VALUES("Setor de Producao");    
     
 INSERT INTO setor(nome_setor)    
-    VALUES("sistema");    
+    VALUES("Sistema");    
 
 -- -- ADICIONANDO STATUS_SOLICITACAO
 INSERT INTO status(descricao_status)
-    VALUES("pendente");
+    VALUES("Pendente");
     
 INSERT INTO status(descricao_status)
-    VALUES("analise");
+    VALUES("Analise");
     
 INSERT INTO status(descricao_status)
-    VALUES("revisão");
+    VALUES("Revisão");
     
 INSERT INTO status(descricao_status)
-    VALUES("aprovado");
+    VALUES("Aprovado");
     
 INSERT INTO status(descricao_status)
-    VALUES("reprovado");
+    VALUES("Reprovado");
 
 -- -- ADICIONANDO DADOS TABELA GRUPO
 INSERT INTO grupo(nome_grupo)
-    VALUES("tipo 1");
+    VALUES("Tipo 1");
 
 -- -- ADICIONANDO DADOS TIPO DESPESA 
 INSERT INTO tipo_despesa(nome_tipodespesa)
-    VALUES("tipo 1");
+    VALUES("Tipo 2");
     
 -- -- ADICIONANDO DADOS TABELA UNIDADE GESTORA
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155245, "gabinete");
+    VALUES(155245, "Gabinete");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155246, "administração");
+    VALUES(155246, "Administração");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155247, "desenvolvimento institucional");
+    VALUES(155247, "Desenvolvimento Institucional");
 
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155248, "ensino");
+    VALUES(155248, "Ensino");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155249, "pesquisa");
+    VALUES(155249, "Pesquisa");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155250, "extensao");
+    VALUES(155250, "Extensao");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155251, "producao");
+    VALUES(155251, "Producao");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155252, "ead");
+    VALUES(155252, "Ead");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155253, "assistencia estudantil");
+    VALUES(155253, "Assistencia Estudantil");
     
 INSERT INTO unidade_gestora(codigo_unidadegestora, nome_unidadegestora)
-    VALUES(155254, "pronatec");  
+    VALUES(155254, "Pronatec");  
 
     
 -- -- ADICIONANDO FUNCIONARIOS
@@ -184,26 +184,32 @@ INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, 
     VALUES(0000, "administrador", "administrador@gmail.com", 000000);
 
 INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
-    VALUES(0001, "lenon", "lenon@gmail.com", 000001);
+    VALUES(0001, "Pedro Martins", "pedromartins@gmail.com", 000001);
 
 INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
-    VALUES(0002, "ricardo", "ricardo@gmail.com", 000002);
+    VALUES(0002, "Joao da Silva", "joaosilva@gmail.com", 000002);
 
 INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
-    VALUES(0003, "teste", "teste@gmail.com", 000003);
+    VALUES(0003, "Bruna Pires", "brunapires@gmail.com", 000003);
+
+INSERT INTO funcionario(siape_funcionario, nome_funcionario, email_funcionario, n_portaria_funcionario)
+    VALUES(0004, "Camila Freitas", "camilafreitas@gmail.com", 000003);
 
 -- -- ADICIONANDO USUARIOS
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "admin", "admin", 1, 1, 1);
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "admin", "admin", 1, 36, 1, 1);
 
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "lenon", "lenon", 7, 3, 2);
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "diretor", "diretor", 1, 4, 2, 2);
 
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(1, "ricardo", "ricardo", 9, 2, 3);
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "coordenador", "coordenador", 1, 26, 3, 3);
 
-INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, id_setor, id_funcao, id_funcionario)
-    VALUES(0, "teste", "teste", 1, 4, 4);      
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "tae", "tae", 1, 11, 4, 4);      
+
+INSERT INTO usuario(estado_usuario, login_usuario, senha_usuario, verificado_usuario, id_setor, id_funcao, id_funcionario)
+    VALUES(1, "docente", "docente", 1, 18, 5, 5);      
     
 -- -- ADICIONANDO DADOS TABELA OBJETOS
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
@@ -213,7 +219,7 @@ INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiaforneci
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
     VALUES("cadeira", "Cadeira com acento inclinavel", "licitaçao", "100", 2);
 
--- -- ADICIONANDO CAMPOS STATUS_SOLICITACAO
+-- -- ADICIONANDO CAMPOS TABELA OBJETO
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
     VALUES("caneta", "canetas esferografica", "licitaçao", "0,50", 1);
 
@@ -231,7 +237,7 @@ INSERT INTO avaliacao_dg(resposta_avaliacaodg, observacao_avaliacaodg, id_status
     VALUES("", "", 1);
     
 INSERT INTO `solicitacao`(`numeroprotocolo_solicitacao`, `justificativa_solicitacao`, `criterio_aceitabilidade`, `consulta_estoque`, `id_usuario`, `id_status`, `id_avaliacaodpdi`, `id_avaliacaodad`, `id_avaliacaocoord`, `id_avaliacaodg`) 
-    VALUES ("000","justificativa","criterio","consulta", 1, 1, 1, 1, 1, 1);
+    VALUES ("000","justificativa","criterio","consulta", 4, 1, 1, 1, 1, 1);
 
 INSERT INTO `solicitacao_itens`(`quantidade_objeto`, `prazoentrega_objeto`, `prazoexecucao_objeto`, `id_solicitacao`, `id_objeto`) 
     VALUES ("0","","", 1, 1);  

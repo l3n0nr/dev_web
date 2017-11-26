@@ -34,8 +34,8 @@ while($res = mysqli_fetch_assoc($result))
 if(mysqli_query($con, $sql))
 {
     // SEGUNDA PARTE DA INSERÇÃO
-    $sql= "INSERT INTO usuario(id_setor, id_funcao, id_funcionario, login_usuario, senha_usuario, estado_usuario) VALUES";
-    $sql.= "($setor, $funcao, $ultimo_funcionario, '$login', '$senha', 1);";
+    $sql= "INSERT INTO usuario(id_setor, id_funcao, id_funcionario, login_usuario, senha_usuario, estado_usuario, verificado_usuario) VALUES";
+    $sql.= "($setor, $funcao, $ultimo_funcionario, '$login', '$senha', 1, 0);";
 
     // realizando inserção da tabela usuario
     if(mysqli_query($con, $sql))

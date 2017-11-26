@@ -16,14 +16,14 @@
                 <ul class="dropdown-menu" href="../pages/dem_pendentes.php">
                 </ul>
             </li>
-            <form class="navbar-form navbar-left" role="search">
+            <!-- <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                   <input class="form-control" id="navbar-search-input" placeholder="Pesquisar" type="text">
                 </div>
-            </form>
+            </form> -->
             <li class="dropdown">
                 <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <?php echo $_SESSION["usuario"] ?>
+                    Administrador: <?php echo $_SESSION["usuario"] ?>
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="config.php">Configurações</a></li>

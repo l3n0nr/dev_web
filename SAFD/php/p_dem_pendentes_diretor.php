@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SAFD | Hist. Demandas </title>
+        <title>SAFD | Dem. Pendentes </title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.5 -->
@@ -24,7 +24,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_user.php';
+                    include 'header_diretor.php';
                 ?>
             </header>
 
@@ -33,7 +33,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_user.php';
+                    include 'menulat_diretor.php';
                 ?>
             </aside>
 
@@ -45,7 +45,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <ol class="breadcrumb">
-                        <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Histórico de Demandas </a></li>
+                        <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Demandas Pendentes </a></li>
                     </ol>
                     </br>
                     <section class="content">
@@ -53,8 +53,8 @@
                             <div class="col-xs-12">
                                 <div class="box">
                                     <!-- <div class="box-header">
-                                        <h3 class="box-title">Demandas já finalizadas</h3>
-                                    </div><!-- /.box-header -->
+                                        <h3 class="box-title">Demandas Pendentes</h3>
+                                    </div><!-- /.box-header --> 
                                     <div class="box-body">
                                         <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                                             <div class="row"><div class="col-sm-6"></div>
@@ -63,26 +63,25 @@
                                                 <div class="col-sm-12">
                                                     <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                                                         <thead>
-                                                            <tr role="row">
-                                                                <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="" aria-sort="descending">
-                                                                    Solicitante
-                                                                </th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                                    Setor
-                                                                </th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                                    Item
-                                                                </th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                                    Data
-                                                                </tr>                        
-                                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                                    Status
-                                                                </tr>       
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Solicitante
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Setor
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Material
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Data
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Status
+                                                        </th>
                                                         </thead>
                                                         <tbody>
                                                             <?php
-                                                                include 'hist_demandas.php';
+                                                                include 'dem_pendentes.php';
                                                             ?>
                                                         </tbody>
                                                     </table>

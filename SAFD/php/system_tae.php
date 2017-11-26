@@ -11,7 +11,7 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="../bootstrap/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        
+
         <!-- Ionicons -->
         <link rel="stylesheet" href="../bootstrap/css/ionicons.min.css">
         <!-- Theme style -->
@@ -25,12 +25,12 @@
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     </head>
     <!--<body class="hold-transition skin-green fixed sidebar-mini">-->
-    <body class="hold-transition skin-green sidebar-collapse sidebar-mini">
+    <body class="hold-transition skin-green layout-fixed sidebar-mini">
         <!-- Site wrapper -->
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_visit.php';
+                include 'header_tae.php';
                 ?>
             </header>
 
@@ -39,9 +39,12 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_visit.php';
+                include 'menulat_tae.php';
                 ?>
-            </aside>            
+            </aside>
+
+
+            <!-- =============================================== -->
 
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
@@ -51,20 +54,25 @@
                         <li><a href=""><i class="fa fa-dashboard"></i> Inicio</a></li>
                     </ol>
                     </br>
-                    <h1> Tela do Visitante do Sistema </h1><hr>
-                    <h4> - Aqui você poderá acompanhar as etapas que solicitações realizadas estão. </h4>
-                    <h4> - Você pode navegar no menu à esquerda, para visualizar as solicitações. </h4>
-                    <br>
-                    <br>
-                    <h5> - Qualquer dúvida em relação ao funcionamento do sistema, favor entrar em contato com o administrador do mesmo; </h5>
-                    <h5> - Caso queira relatar algum problema, entre em contato com o desenvolver, que está no rodapé dessa página. </h5>
+                    <?php
+                        include './visualizar_dem_pendentes.php'
+                    ?>
+
             </div>
+        </section>
+    </div><!-- /.content-wrapper -->
+
 
     <footer class="main-footer">
         <?php
         include 'footer.php';
         ?>
     </footer>
+
+    <!-- Stats tab content -->
+</form>
+</div><!-- /.tab-pane -->
+</div>
 </aside><!-- /.control-sidebar -->
 
 </div><!-- ./wrapper -->

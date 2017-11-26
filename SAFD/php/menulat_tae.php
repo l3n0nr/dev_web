@@ -9,7 +9,9 @@
                     </div>
                 </form>-->
         <li class="header">DEMANDAS</li>
-        <li><a href="dem_pendentes_outros.php"><i class="fa fa-circle text-red"></i> <span>Demandas Pendentes</span></a></li>
-        <li><a href="hist_demandas_outros.php"><i class="fa fa-circle text-green"></i> <span>Historico de Demandas</span></a></li>
+        <li><a href="p_dem_pendentes_tae.php"><i class="fa fa-circle text-red"></i> <span>Demandas Pendentes</span></a></li>
+        <li><a href="p_hist_demandas_tae.php"><i class="fa fa-circle text-green"></i> <span>Historico de Demandas</span></a></li>
+        <li class="header">DOCUMENTOS</li>
+        <li><a href="form_bens_tae.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Bens</span></a></li>
     </ul>
 </section>
