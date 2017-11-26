@@ -24,7 +24,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                    include 'header_user.php';
+                    include 'header_docente.php';
                 ?>
             </header>
 
@@ -33,7 +33,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                    include 'menulat_user.php';
+                    include 'menulat_docente.php';
                 ?>
             </aside>
 
@@ -58,7 +58,7 @@
 
                     <section class="content-header">
                         <h4>
-                            REQUISIÇÃO DE COMPRA - SOLICITAÇÃO DE BENS
+                            Solicitacao de Bens - Parte 2 - Descricao do Pedido;
                         </h4>
                         <ol class="breadcrumb">
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
@@ -69,85 +69,7 @@
                         <br>
                         <label>Observações</label>
                         <textarea name="observacoes" class="form-control" required="" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
-                    </div>
-
-                    <form action="form_bens.php" method="post">
-                        <hr>
-                        <!-- <div class="col-xs-2">
-                            <br>
-                            <label>Grupo </label>
-                            <select class="form-control" name="grupo" required="">
-                                <option value="1"> Tipo 1 </option>
-                                <option value="2"> Tipo 2 </option>
-                            </select>
-                        </div> -->
-
-                        <div class="col-xs-2">
-                            <br>
-                            <label>Item </label>
-                            <select class="form-control" name="item" required="">
-                                <option value="1"> Canetas </option>
-                                <option value="2"> Lapis </option>
-                            </select>
-                        </div>
-
-                        <div class="col-xs-7">
-                            <br>
-                            <label>Especificações </label>
-                            <input name="especificacoes" class="form-control" type="text" required="" placeholder="autocompletar">
-                        </div>
-
-                        <div class="col-xs-1">
-                            <br>
-                            <label>Quantidade</label>
-                            <input name="quantidade" class="form-control" type="number" required="" placeholder="0">
-                        </div>
-
-                        <div class="col-xs-2">
-                            <br>
-                            <br>
-                            <button type="submit" class="btn btn-sucess pull-right" required=""> Adicionar na lista </button>
-                        </div>
-                    </form>
-
-                   <div class="col-xs-12">
-                        <div class="box-body">
-                            <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-                                <div class="row">
-                                    <div class="col-sm-6"></div>
-                                    <div class="col-sm-3"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
-                                            <thead>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Grupo
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Item
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Especificações
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Quantidade
-                                            </th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>".."</td>
-                                                    <td>".."</td>
-                                                    <td>".."</td>
-                                                    <td>".."</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                                 
 
                     <div class="col-xs-12">
                         <br>
@@ -190,33 +112,25 @@
                     </div>
                 </div>
             </form>
+        <footer class="main-footer">
+            <?php
+            include 'footer.php';
+            ?>
+        </footer>
 
+        </div>
 
-            <footer class="main-footer">
-                <?php
-                include 'footer.php';
-                ?>
-            </footer>
-
-            <!-- Stats tab content -->
-        </form>
-    </div><!-- /.tab-pane -->
-</div>
-</aside><!-- /.control-sidebar -->
-
-</div><!-- ./wrapper -->
-
-<!-- jQuery 2.1.4 -->
-<script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
-<!-- Bootstrap 3.3.5 -->
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../plugins/fastclick/fastclick.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../dist/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
-</body>
+        <!-- jQuery 2.1.4 -->
+        <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <!-- SlimScroll -->
+        <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../plugins/fastclick/fastclick.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../dist/js/app.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../dist/js/demo.js"></script>
+    </body>
 </html>
