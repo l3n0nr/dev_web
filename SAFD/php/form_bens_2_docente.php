@@ -25,42 +25,60 @@
     //     AND isset($veracidade)) 
     // {
 
-    # criando avaliacoes automaticamente
-    $sql = "INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad. valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa) 
-     		VALUES('vazio', 'vazio', 0, 1, 1);";
+    # criando avaliacoes automaticamente   
+    # avaliacao_dad
+    $sql = "INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)	
+    		VALUES('', '', 0, 1, 1)";
 
-    $sql .= "INSERT INTO avaliacao_dg(resposta_avaliacaodg, observacao_avaliacaodg, id_status)
+    if(mysqli_query($con, $sql))
+    {
+        // echo "teste 1";
+    }
+    else
+    {
+    	echo "Erro tabela avaliacao_dad";
+    }
+
+	# avaliacao_dg
+    $sql = "INSERT INTO avaliacao_dg(resposta_avaliacaodg, observacao_avaliacaodg, id_status)
             VALUES('', '', 1);";
 
-    $sql .= "INSERT INTO avaliacao_dpdi(comentarios_avaliacaodpdi, planejamentoexercicio_avaliacaodpdi, id_status, id_unidadegestora)
-    		VALUES('', '', 1, 1);";
+    if(mysqli_query($con, $sql))
+    {
+        // echo "teste 2";
+    }
+    else
+    {
+    	echo "Erro tabela avaliacao_dg";
+    }
 
-	$sql .= "INSERT INTO avaliacao_coord(resposta_avaliacaocoord, observacao_avaliacaocoord, id_status)
-			VALUES('', '', 1);";
+    # avaliacao_dpdi
+    $sql = "INSERT INTO avaliacao_dpdi(comentarios_avaliacaodpdi, planejamentoexercicio_avaliacaodpdi, id_status, id_unidadegestora)
+     		VALUES('', '', 1, 1)";
 
-    	echo $sql;
+    if(mysqli_query($con, $sql))
+    {
+        // echo "teste 3";
+    }
+    else
+    {
+    	echo "Erro tabela avaliacao_dpdi";
+    }
 
-        // realizando inserção nas tabelas
-        if(mysqli_query($con, $sql))
-        {
-        	# mostra mensagem e redireciona pagina
-            // echo ("<script>alert('Alguns dados dessa solicitacao foram adicionados automaticamente!'); location.href='form_bens_2_docente.php';</script>");
+	# avaliacao_coord
+	$sql = "INSERT INTO avaliacao_coord(resposta_avaliacaocoord, observacao_avaliacaocoord, id_status)
+	 		VALUES('', '', 1);";
 
-            echo "funcionou!";
+	if(mysqli_query($con, $sql))
+    {
+        // echo "teste 4";
+    }
+	else
+    {
+    	echo "Erro tabela avaliacao_coord";
+    }	
 
-            // // // SEGUNDA INSERÇAO - ADICIONANDO AVALIACOES
-            // // $sql = "INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)    
-            // //         VALUES("", "", 0, 1, 1)";
 
-            // // // // realizando inserção na tabela - avaliacao dad 
-            // // if(mysqli_query($con, $sql))
-            // // {   
-            // //     echo "teste";
-            // // }
-
-            // # mostra mensagem e redireciona pagina
-            // echo ("<script>alert('Objeto adicionado com sucesso!'); location.href='form_bens_obj_docente.php';</script>");
-        }
     // }
 ?>
 
