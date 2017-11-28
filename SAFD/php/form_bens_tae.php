@@ -1,3 +1,9 @@
+<?php
+    # incluindo arquivo de conexao
+    include 'form_bens_1.php';
+    
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -40,7 +46,7 @@
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="form_bens_obj_tae.php" method="post">
+            <form action="form_bens_1_tae.php" method="post">
                 <div class="content-wrapper">
                     <section class="content-header">
                         <h4>
