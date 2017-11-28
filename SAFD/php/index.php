@@ -34,7 +34,7 @@
     <body class="hold-transition login-page">        
         <div class="login-box">
             <div class="login-logo">
-                <a href="">Sistema de Acompanhamento do Fluxo de Demandas<br>(SAFD)</a>
+                <a href="../index.html">Sistema de Acompanhamento do Fluxo de Demandas<br>(SAFD)</a>
             </div><!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg">Digite o seu login e senha, para entrar no sistema.</p>
