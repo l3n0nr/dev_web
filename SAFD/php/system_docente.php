@@ -1,3 +1,8 @@
+<?php
+    # chamando arquivo
+    include 'form_bens_2.php';
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

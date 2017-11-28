@@ -1,9 +1,3 @@
-<?php
-    # incluindo arquivo de conexao
-    include 'form_bens_1.php';
-    
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
