@@ -30,7 +30,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_docente.php';
+                    include 'header_docente.php';
                 ?>
             </header>
 
@@ -39,7 +39,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_docente.php';
+                    include 'menulat_docente.php';
                 ?>
             </aside>
 
@@ -55,7 +55,7 @@
                     </ol>
                     </br>
                     <?php
-                    include './visualizar_dem_pendentes.php'
+                        include 'visualizar_dem_pendentes.php'
                     ?>
             </div><!-- /.content-wrapper -->
 

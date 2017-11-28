@@ -35,7 +35,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_tae.php';
+                    include 'header_tae.php';
                 ?>
             </header>
 
@@ -44,7 +44,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_tae.php';
+                    include 'menulat_tae.php';
                 ?>
             </aside>
 
