@@ -109,7 +109,7 @@ if (isset($login))
         	unset ($_SESSION['senha']);
 
             # mostra mensagem e redireciona pagina
-            echo ("<script>alert('Usuário ou Senha incorretos!'); location.href='index.html';</script>");
+            echo ("<script>alert('Usuário ou Senha incorretos!'); location.href='index.php';</script>");
         }
     }
 }

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html>    
     <head>
+        <script>
+            function funcao1()
+            {
+                alert('Voce pode acessar o sistema atraves das seguintes formas(login/senha). ADMINISTRADOR: admin/admin. DIRETOR: diretor/diretor . COORDENADOR: coordenador/coordenador. DOCENTE: docente/docente. TAE: tae/tae.');
+            }
+        </script>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>SAFD | Login</title>
@@ -24,7 +31,7 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="hold-transition login-page">
+    <body class="hold-transition login-page">        
         <div class="login-box">
             <div class="login-logo">
                 <a href="">Sistema de Acompanhamento do Fluxo de Demandas<br>(SAFD)</a>
@@ -48,7 +55,7 @@
                         </div><!-- /.col -->
                         <div class="col-xs-12">
                             <button
-                                type="submit" class="btn btn-success btn-block"> Entrar
+                                type="submit" class="btn btn-success btn-block"> Entrar no Sistema
                             </button>
                         </div>
                     </div>
@@ -56,50 +63,19 @@
 <!--                <a href="senha.html">Esqueci minha senha</a>
                 <br>
 -->
-
-                <!-- <div class="col-sm-12">
-                    <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
-                        <thead>
-                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                            Login/Senha
-                        </th>
-                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                            Setor
-                        </th>
-                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                            Ativado
-                        </th>
-                        </thead>
-                        <br>
-                        <label> Tabela de Usuários de Testes </label>
-                        <tbody>
-                            <tr>
-                                <td>admin/admin</td>
-                                <td>Administrador</td>
-                                <td> 1 </td>
-                            </tr>
-
-                            <tr>
-                                <td>lenon/lenon</td>
-                                <td>Coordenador</td>
-                                <td> 1 </td>
-                            </tr>
-
-                            <tr>
-                                <td>ricardo/ricardo</td>
-                                <td>Diretor</td>
-                                <td> 1 </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <td> </td>
-                </div> -->
+                <br>
+                <div class="row">
+                    <div class="col-xs-12"> 
+                        <button 
+                            onclick="funcao1()" type="submit" class="btn btn-warning btn-block"> Problemas para logar? 
+                        </button> 
+                    </div>
+                </div>
                 <br>
                 <a href="registrar.php" class="text-center">Ainda não tenho cadastro</a>
                 <br>
                 <br>
-                <a href="../index.html" class="text-center">Volta para a página anterior</a>
-
+                <a href="../index.html" class="text-center">Volta para a página anterior</a>                
             </div><!-- /.login-box-body -->
         </div><!-- /.login-box -->
 
@@ -109,14 +85,5 @@
         <script src="../bootstrap/js/bootstrap.min.js"></script>
         <!-- iCheck -->
         <script src="../plugins/iCheck/icheck.min.js"></script>
-<!--        <script>
-            $(function () {
-                $('input').iCheck({
-                    checkboxClass: 'icheckbox_square-blue',
-                    radioClass: 'iradio_square-blue',
-                    increaseArea: '20%' // optional
-                });
-            });
-        </script>-->
     </body>
 </html>
