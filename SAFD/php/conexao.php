@@ -1,5 +1,8 @@
 <?php
 
+# Informa qual o conjunto de caracteres será usado.
+header('Content-Type: text/html; charset=utf-8');
+
 # criando variaveis
 $servidor = 'localhost';
 $usuario = 'root';
