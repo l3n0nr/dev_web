@@ -86,7 +86,7 @@
                         <div class="col-xs-1">
                             <br>
                             <label>Quantidade</label>
-                            <input name="quantidade" class="form-control" type="number" required="" placeholder="0">
+                            <input name="quantidade" class="form-control" type="number" required="" placeholder="0" value="1">
                         </div>
 
                         <div class="col-xs-12">

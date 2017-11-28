@@ -22,7 +22,7 @@
 
         # montando consulta SQL - ADICIONANDO OBJETO
         $sql = "INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
-                VALUES('$nome_objeto', '$especificacoes', '$estrategia', '$preco', 1)";
+                VALUES('$item', '$especificacoes', '$estrategia', '$preco', 1)";
 
         // realizando inserção da tabela objeto
         if(mysqli_query($con, $sql))
