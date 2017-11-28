@@ -1,6 +1,9 @@
 <?php
     # incluindo arquivo de conexao
     include 'conexao.php';
+    
+    include 'form_bens_1_docente';
+    include 'form_bens_1_tae';
 
     # recebendo dados do formulario
     $item = $_POST['item'];
@@ -38,5 +41,9 @@
             //     echo "teste";
             // }
         }
-    }
+        else
+        {
+            echo ("<script>alert('ERRO!'); location.href='';</script>");
+        }
+    }    
 ?>

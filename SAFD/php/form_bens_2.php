@@ -3,6 +3,9 @@
     include 'conexao.php';
     include 'valida_sessao.php';
 
+    include 'form_bens_2_docente';
+    include 'form_bens_2_tae';
+
     # recebendo dados do formulario
     $observacoes = $_POST['observacoes'];
     $justificativa = $_POST['justificativa'];
@@ -173,12 +176,12 @@
         }
         else
         {
-            echo "Erro tabela avaliacao_coord";
+            echo ("<script>alert('ERRO!'); location.href='';</script>");
         }  
     }
     else
     {
-        // echo "teste";
+        // echo "erro!";
     }
 
 ?>
