@@ -1,7 +1,3 @@
-<?php
-    include 'form_bens_1.php';
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
