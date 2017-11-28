@@ -35,7 +35,7 @@
             // }
 
             # mostra mensagem e redireciona pagina
-            echo ("<script>alert('Objeto adicionado com sucesso!'); location.href='form_bens_obj_docente.php';</script>");
+            echo ("<script>alert('Objeto adicionado com sucesso!'); location.href='form_bens_2_docente.php';</script>");
         }
     }
 ?>
@@ -82,7 +82,7 @@
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="form_bens_obj_docente.php" method="post">
+            <form action="form_bens_1_docente.php" method="post">
                 <div class="content-wrapper">
                     <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
