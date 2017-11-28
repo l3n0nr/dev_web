@@ -80,7 +80,7 @@
                                                         SIAPE
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                        NOME
+                                                        LOGIN
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
                                                         SETOR
