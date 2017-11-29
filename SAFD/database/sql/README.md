@@ -6,7 +6,5 @@ Para criar o banco de dados utilizado pela aplicação, é necessário seguir os
 
 3 - Para adicionar os campos da tabelas, utilizar o arquivo "dados.sql".
 
-- Caso voce queira zerar a base, basta executar o arquivo "delete.sql" para remover todos os dados e tabelas.
-
 Observações
 - O arquivo "outros.sql", será utilizado para armazenar códigos sql que poderão ser utilizados posteriormente. Basicamente esse arquivo será para testes.
