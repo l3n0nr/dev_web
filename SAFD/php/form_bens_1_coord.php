@@ -1,35 +1,3 @@
-<?php
-    # incluindo arquivo de conexao
-    include 'conexao.php';
-
-    # recebendo dados do formulario
-    $item = $_POST['item'];
-    $estrategia = $_POST['estrategia'];
-    $especificacoes = $_POST['especificacoes'];
-    $preco = $_POST['preco'];
-    $quantidade = $_POST['quantidade'];
-
-    # montando consulta SQL - ADICIONANDO OBJETO
-    $sql = "INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
-            VALUES('$nome_objeto', '$especificacoes', '$estrategia', '$preco', 1)";
-
-    // realizando inserção da tabela objeto
-    if(mysqli_query($con, $sql))
-    {
-        // echo "funcionou!";
-
-        // SEGUNDA INSERÇAO - ADICIONANDO AVALIACOES
-        // $sql = "INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)    
-        //         VALUES("", "", 0, 1, 1)";
-
-        // // realizando inserção na tabela - avaliacao dad 
-        // if(mysqli_query($con, $sql))
-        // {   
-        //     echo "teste";
-        // }
-    }
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -72,7 +40,7 @@
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="form_bens_obj.php" method="post">
+            <form action="form_bens_2_coord.php" method="post">
                 <div class="content-wrapper">
                     <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
@@ -106,7 +74,7 @@
                         <div class="col-xs-4">
                             <br>
                             <label>Estrategia de Fornecimento</label>
-                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto">
+                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao">
                         </div>                                
 
                         <div class="col-xs-2">

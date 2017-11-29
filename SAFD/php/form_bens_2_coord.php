@@ -1,3 +1,8 @@
+<?php
+    # chamando arquivo
+    include 'form_bens_1.php';
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +29,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                    include 'header_user.php';
+                    include 'header_coord.php';
                 ?>
             </header>
 
@@ -33,14 +38,14 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                    include 'menulat_user.php';
+                    include 'menulat_coord.php';
                 ?>
             </aside>
 
             <!-- =============================================== -->
             <!--FORMULARIO DE BENS-->
             <!--             <form onsubmit="alert('Solicitação enviada para avaliação do seu coordenador!')" action="system.php"> -->
-            <form action="gera_documento.php" method="post">
+            <form action="system_coord.php" method="post">
                 <div class="content-wrapper">
                     <!-- MENSAGEM INICIAL -->
                     <div class="alert alert-warning alert-dismissable">
@@ -69,85 +74,7 @@
                         <br>
                         <label>Observações</label>
                         <textarea name="observacoes" class="form-control" required="" rows="2" placeholder="Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos." ></textarea>
-                    </div>
-
-                    <form action="form_bens.php" method="post">
-                        <hr>
-                        <!-- <div class="col-xs-2">
-                            <br>
-                            <label>Grupo </label>
-                            <select class="form-control" name="grupo" required="">
-                                <option value="1"> Tipo 1 </option>
-                                <option value="2"> Tipo 2 </option>
-                            </select>
-                        </div> -->
-
-                        <div class="col-xs-2">
-                            <br>
-                            <label>Item </label>
-                            <select class="form-control" name="item" required="">
-                                <option value="1"> Canetas </option>
-                                <option value="2"> Lapis </option>
-                            </select>
-                        </div>
-
-                        <div class="col-xs-7">
-                            <br>
-                            <label>Especificações </label>
-                            <input name="especificacoes" class="form-control" type="text" required="" placeholder="autocompletar">
-                        </div>
-
-                        <div class="col-xs-1">
-                            <br>
-                            <label>Quantidade</label>
-                            <input name="quantidade" class="form-control" type="number" required="" placeholder="0">
-                        </div>
-
-                        <div class="col-xs-2">
-                            <br>
-                            <br>
-                            <button type="submit" class="btn btn-sucess pull-right" required=""> Adicionar na lista </button>
-                        </div>
-                    </form>
-
-                   <div class="col-xs-12">
-                        <div class="box-body">
-                            <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-                                <div class="row">
-                                    <div class="col-sm-6"></div>
-                                    <div class="col-sm-3"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
-                                            <thead>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Grupo
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Item
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Especificações
-                                            </th>
-                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">
-                                                Quantidade
-                                            </th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>".."</td>
-                                                    <td>".."</td>
-                                                    <td>".."</td>
-                                                    <td>".."</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                
 
                     <div class="col-xs-12">
                         <br>
