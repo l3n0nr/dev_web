@@ -4,7 +4,7 @@
         <script>
             function funcao1()
             {
-                alert('Voce pode acessar o sistema atraves das seguintes formas(login/senha). ADMINISTRADOR: admin/admin. DIRETOR: diretor/diretor . COORDENADOR: coordenador/coordenador. DOCENTE: docente/docente. TAE: tae/tae.');
+                alert('Voce pode acessar o sistema atraves das seguintes formas(login/senha). ADMINISTRADOR: admin/admin. DIRETOR: diretor/diretor . COORDENADOR: coordenador/coordenador. DOCENTE: docente/docente. TAE: tae/tae; Ou realizar o seu cadastro manualmente.');
             }
         </script>
 
@@ -36,7 +36,7 @@
             <div class="login-logo">
                 <a href="../index.html">Sistema de Acompanhamento do Fluxo de Demandas<br>(SAFD)</a>
             </div><!-- /.login-logo -->
-            <div class="login-box-body">
+            <div class="login-box-body">                
                 <p class="login-box-msg">Digite o seu login e senha, para entrar no sistema.</p>
 
                 <form action="valida_usuario.php" method="post">
@@ -49,10 +49,6 @@
                         <span class=""></span>
                     </div>
                     <div class="row">
-                        <div class="col-xs-8">
-                            <div class="checkbox icheck">
-                            </div>
-                        </div><!-- /.col -->
                         <div class="col-xs-12">
                             <button
                                 type="submit" class="btn btn-success btn-block"> Entrar no Sistema
@@ -62,20 +58,22 @@
                 </form>
 <!--                <a href="senha.html">Esqueci minha senha</a>
                 <br>
--->
-                <br>
-                <div class="row">
+-->                
+                <!-- <div class="row">
                     <div class="col-xs-12"> 
                         <button 
-                            onclick="funcao1()" type="submit" class="btn btn-warning btn-block"> Problemas para logar? 
+                            onclick="funcao1()" type="submit" class="glyphicon glyphicon-question-sign">  
                         </button> 
                     </div>
-                </div>
+                </div>                 -->
                 <br>
                 <a href="registrar.php" class="text-center">Ainda não tenho cadastro</a>
                 <br>
                 <br>
-                <a href="../index.html" class="text-center">Volta para a página anterior</a>                
+                <a href="../index.html" class="text-center">Volta para a página anterior</a>
+                <br>
+                <br>
+                <a onclick="funcao1()" class="text-center">Precisa de ajuda para acessar o sistema? </a>                            
             </div><!-- /.login-box-body -->
         </div><!-- /.login-box -->
 
