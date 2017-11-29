@@ -38,7 +38,7 @@
                     ?>
                 </form>
                 <br>
-                <a href="index.php" class="text-center">Acho que já tenho cadastro, quero voltar a página de login.</a>
+                <a href="index.html" class="text-center">Acho que já tenho cadastro, quero voltar a página de login.</a>
             </div><!-- /.form-box -->
         </div><!-- /.register-box -->
 
