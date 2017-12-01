@@ -21,9 +21,9 @@
         <li class="header">DOCUMENTOS</li>
         <li><a href="form_bens_docente.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Bens</span></a></li>
 
-        <li class="header">OUTROS</li>
+        <!-- <li class="header">OUTROS</li>
         <li><a href="form_bens_1_docente.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Objetos</span></a></li>
-        <li><a href="form_bens_2_docente.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Pedido</span></a></li>
+        <li><a href="form_bens_2_docente.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Pedido</span></a></li> -->
 
         <!-- <li class="header">AVALIAÇÕES</li>
         <li><a href="form_bens_coord.php"><i class="glyphicon glyphicon-font"></i>
