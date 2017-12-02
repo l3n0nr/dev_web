@@ -1,7 +1,7 @@
 <?php
 $servidor = "localhost";
-$usuario = "usuario";
-$senha = "senha";
+$usuario = 'root';
+$senha = 'lenonr';
 $banco = "bdteste";
 
 $con = mysqli_connect($servidor, $usuario, $senha, $banco);
