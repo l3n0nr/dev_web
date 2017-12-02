@@ -30,7 +30,7 @@
                     <li class="divider"></li>
                     <li><a href="../index.html">Sair</a></li>
                 </ul>
-            </li>
+            </li>            
         </ul>
     </div>
 </nav>
