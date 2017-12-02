@@ -20,7 +20,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="form_bens_1_admin.php"><i class="glyphicon glyphicon-th"></i> <span> Adiciona Objetos</span></a></li>
-            <li><a href=""><i class="glyphicon glyphicon-eye-open"></i> <span> Visualiza Solicitações</span></a></li>            
+            <li><a href="p_dem_pendentes_admin.php"><i class="glyphicon glyphicon-eye-open"></i> <span> Demandas Pendentes </span></a></li>            
+            <li><a href="p_hist_demandas_admin.php"><i class="glyphicon glyphicon-level-up"></i> <span> Histórico de Demandas </span></a></li>     
           </ul>
 
         </li>
