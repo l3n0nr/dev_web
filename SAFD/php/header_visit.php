@@ -13,7 +13,7 @@
             <li class="dropdown">
                 <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">Visitante<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="../index.html">Sair</a></li>
+                    <li><a href="destroi_sessao.php"> Sair </a></li> 
                 </ul>
             </li>
         </ul>

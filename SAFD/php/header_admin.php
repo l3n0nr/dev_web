@@ -28,7 +28,7 @@
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="config.php">Configurações</a></li>
                     <li class="divider"></li>
-                    <li><a href="../index.html">Sair</a></li>
+                    <li><a href="destroi_sessao.php"> Sair </a></li> 
                 </ul>
             </li>            
         </ul>
