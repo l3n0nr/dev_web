@@ -17,8 +17,7 @@
     if (isset($item) 
         AND isset($estrategia) 
         AND isset($especificacoes) 
-        AND isset($preco) 
-        AND isset($quantidade)) 
+        AND isset($preco)) 
     {
 
         # montando consulta SQL - ADICIONANDO OBJETO
