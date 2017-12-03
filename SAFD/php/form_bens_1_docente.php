@@ -67,10 +67,9 @@
                     <form action="form_bens_obj_docente.php" method="post">
                         <div class="col-xs-5">
                             <br>
-                            <?php 
-                                include "lista_objetos.php" 
-                            ?>
-                        </div>                                
+                            <label>Item </label>
+                            <input name="item" class="form-control" type="text" required="" placeholder="Item solicitado">
+                        </div>                                         
 
                         <div class="col-xs-4">
                             <br>
