@@ -28,12 +28,20 @@ else
 {
 	// echo "teste";
 	
-}
 	for($i=0; $i<mysqli_num_rows($res); $i++)
 	{
-		$dados = mysqli_fetch_row($res);
-		echo $exibe['nome_objeto'] .'<br>';
-	}
+		while ($objeto = mysqli_fetch_assoc($res))
+		{
+			// echo "teste";
+			// $dados = mysqli_fetch_row($res);
+			// <option> . echo $objeto['nome_objeto'] . </option>	
+			<option>
+				echo $objeto['nome_objeto'];
+			</option>
+		}
+	}	
+}
+	
 // 		$dados = mysqli_fetch_row($res);
 // 		$id_objeto = $dados[0];
 // 		$nome_objeto = $dados[1];
@@ -53,13 +61,5 @@ else
 			// echo " <a href=\"javascript:Loja('carrinho','$idProduto');\"><img src=\"figuras/comprar.gif\" border=\"0\"></a></p>";
 		// }
 // 	}
-// }
-	
-	// <label> Item </label>
-	// <select class="form-control" required="">
-	//     <option> option 1 </option>
-	//     <option> option 2 </option>
-	//     <option> option 3 </option>
-	// </select>
-
+// }	
 ?>

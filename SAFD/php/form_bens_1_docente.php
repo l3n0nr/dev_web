@@ -66,7 +66,14 @@
                     </section>                                                                        
                     <form action="form_bens_obj_docente.php" method="post">
                         <div class="col-xs-5">
-                            <?php include "lista_objetos.php" ?>
+                            <br>
+                            <label>Objeto</label>
+                            <select class="form-control" required="">        
+                                <!-- <option> <?php include "lista_objetos.php" ?> </option> -->
+                                <?php 
+                                    include "lista_objetos.php" 
+                                ?>
+                            </select>                            
                         </div>                                         
 
                         <div class="col-xs-4">
