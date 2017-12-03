@@ -1,38 +1,24 @@
 <section class="sidebar">
-    <ul class="sidebar-menu">
-        <!-- <form action="busca.php" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input name="q" class="form-control" placeholder="Pesquise algo aqui.." type="text">
-                <span class="input-group-btn">
-                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-                </span>
-            </div>
-        </form> -->
-        <!--
-        <li class="header">FLUXO</li>
-        <li><a href="def_status.php"><i class="fa fa-circle text-blue"></i> <span>Definir Status</span></a></li>
-        <li><a href="def_observacoes.php"><i class="fa fa-circle"></i> <span>Definir Observações</span></a></li>
-        -->
+    <ul class="sidebar-menu">        
+        <li class="treeview active menu-open">
+          <a href="#">
+            <i class="glyphicon glyphicon-th"></i>
+            <span> Demandas </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="p_dem_pendentes_docente.php"><i class="fa fa-circle text-red"></i> <span>Demandas Pendentes</span></a></li>
+            <li><a href="p_hist_demandas_docente.php"><i class="fa fa-circle text-green"></i> <span>Historico de Demandas</span></a></li>
+          </ul>
+        </li>
 
-        <li class="header">DEMANDAS</li>
-        <li><a href="p_dem_pendentes_docente.php"><i class="fa fa-circle text-red"></i> <span>Demandas Pendentes</span></a></li>
-        <li><a href="p_hist_demandas_docente.php"><i class="fa fa-circle text-green"></i> <span>Historico de Demandas</span></a></li>
-
-        <li class="header">DOCUMENTOS</li>
-        <li><a href="form_bens_docente.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Bens</span></a></li>
-
-        <!-- <li class="header">OUTROS</li>
-        <li><a href="form_bens_1_docente.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Objetos</span></a></li>
-        <li><a href="form_bens_2_docente.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Pedido</span></a></li> -->
-
-        <!-- <li class="header">AVALIAÇÕES</li>
-        <li><a href="form_bens_coord.php"><i class="glyphicon glyphicon-font"></i>
-                <span> Coordenador </span></a></li>
-        <li><a href="form_bens_dpdi.php"><i class="glyphicon glyphicon-font"></i>
-                <span> DPDI </span></a></li>
-        <li><a href="form_bens_dad.php"><i class="glyphicon glyphicon-font"></i>
-                <span> DAD </span></a></li>
-        <li><a href="form_bens_dg.php"><i class="glyphicon glyphicon-font"></i>
-                <span> DG </span></a></li> -->
+        <li class="treeview active menu-open">
+          <a href="#">
+            <i class="glyphicon glyphicon-list-alt"></i>
+            <span> Documentos </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="form_bens_docente.php"><i class="glyphicon glyphicon-list-alt"></i> <span>Solicitação de Bens</span></a></li>            
+          </ul>
+        </li>
     </ul>
 </section>

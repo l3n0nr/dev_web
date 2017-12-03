@@ -23,7 +23,6 @@
             <li><a href="p_dem_pendentes_admin.php"><i class="glyphicon glyphicon-eye-open"></i> <span> Demandas Pendentes </span></a></li>            
             <li><a href="p_hist_demandas_admin.php"><i class="glyphicon glyphicon-level-up"></i> <span> Histórico de Demandas </span></a></li>     
           </ul>
-
         </li>
     </ul>
 </section>
