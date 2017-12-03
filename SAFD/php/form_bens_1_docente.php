@@ -68,11 +68,8 @@
                         <div class="col-xs-5">
                             <br>
                             <label>Objeto</label>
-                            <select class="form-control" required="">        
-                                <!-- <option> <?php include "lista_objetos.php" ?> </option> -->
-                                <?php 
-                                    include "lista_objetos.php" 
-                                ?>
+                            <select class="form-control" required=""> 
+                                <option> <?php include "lista_objetos.php" ?> </option>
                             </select>                            
                         </div>                                         
 
