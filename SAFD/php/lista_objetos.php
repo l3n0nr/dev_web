@@ -26,10 +26,14 @@ if(mysqli_num_rows($res) == 0)
 }
 else
 {
-	echo $exibe['nome_objeto'] .'<br>';
+	// echo "teste";
+	
 }
-// 	for($i=0; $i<mysqli_num_rows($res); $i++)
-// 	{
+	for($i=0; $i<mysqli_num_rows($res); $i++)
+	{
+		$dados = mysqli_fetch_row($res);
+		echo $exibe['nome_objeto'] .'<br>';
+	}
 // 		$dados = mysqli_fetch_row($res);
 // 		$id_objeto = $dados[0];
 // 		$nome_objeto = $dados[1];
