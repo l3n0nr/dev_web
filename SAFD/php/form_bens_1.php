@@ -4,7 +4,7 @@
     
     include 'form_bens_1_docente';
     include 'form_bens_1_tae';
-    include 'form_bens_1_admin';
+    include 'adiciona_objeto';
 
     # recebendo dados do formulario
     $item = $_POST['item'];
