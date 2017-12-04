@@ -65,11 +65,14 @@
                         </ol>
                     </section>                                                                        
                     <form action="form_bens_obj_docente.php" method="post">
-                        <div class="col-xs-5">
+                        <?php
+                            include "lista_objetos.php";
+                        ?>
+                        <!-- <div class="col-xs-5">
                             <br>
                             <label>Objeto</label>
                             <select class="form-control" required=""> 
-                                <option> <?php include "lista_objetos.php" ?> </option>
+                                <option> <?php  ?> </option>
                             </select>                            
                         </div>                                         
 
@@ -95,7 +98,7 @@
                             <br>
                             <label>Especificações </label>
                             <textarea name="especificacoes" class="form-control" type="text" required="" placeholder="teste" rows="5"> </textarea>
-                        </div>
+                        </div> -->
 
                     <div class="row">
                         <div class="col-xs-12">

@@ -8,7 +8,7 @@ $res = mysqli_query($con, $sql);
 
 if(mysqli_num_rows($res) == 0)
 {
-	echo "<p class=\"titulo\">Nenhum produto encontrado!</p>";
+	// echo "<p class=\"titulo\">Nenhum produto encontrado!</p>";
 }
 else
 {	
@@ -17,11 +17,30 @@ else
 		while ($objeto = mysqli_fetch_assoc($res))
 		{
 			//buscando valor
-            $objeto = "<option>" .$objeto['nome_objeto']. "</option>";
+            // $objeto = "<option>" .$objeto['nome_objeto']. "</option>";            
+
+            $objeto = "<div class="col-xs-5">
+                            <br>
+                            <label>Objeto</label>
+                            <select class="form-control" required=""> 
+                                <option>".$objeto['nome_objeto']."</option>
+                            </select>                            
+                        </div>                                         
+
+                        <div class="col-xs-4">
+                            <br>
+                            <select class="form-control" required=""> 
+                                <option>".$objeto['especificacoestecnicas_objeto']."</option>
+                            </select>                            
+                        </div>";
 
             //mostrando valor
             echo "$objeto";                         
-		}
+		}		
 	}	
 }
+
+                              
+                        
+
 ?>
