@@ -65,14 +65,11 @@
                         </ol>
                     </section>                                                                        
                     <form action="form_bens_obj_docente.php" method="post">
-                        <?php
-                            include "lista_objetos.php";
-                        ?>
-                        <!-- <div class="col-xs-5">
+                        <div class="col-xs-5">
                             <br>
                             <label>Objeto</label>
-                            <select class="form-control" required=""> 
-                                <option> <?php  ?> </option>
+                            <select class="form-control" required="" value="item"> 
+                                <option> <?php include "lista_objetos.php" ?> </option>
                             </select>                            
                         </div>                                         
 
@@ -86,7 +83,7 @@
                             <br>
                             <label>Preco Objeto</label>
                             <input name="preco" class="form-control" type="value" required="" placeholder="preco do objeto">
-                        </div>                                                                   
+                        </div>                                                           
 
                         <div class="col-xs-1">
                             <br>
@@ -98,7 +95,7 @@
                             <br>
                             <label>Especificações </label>
                             <textarea name="especificacoes" class="form-control" type="text" required="" placeholder="teste" rows="5"> </textarea>
-                        </div> -->
+                        </div> 
 
                     <div class="row">
                         <div class="col-xs-12">

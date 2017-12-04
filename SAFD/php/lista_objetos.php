@@ -17,30 +17,28 @@ else
 		while ($objeto = mysqli_fetch_assoc($res))
 		{
 			//buscando valor
-            // $objeto = "<option>" .$objeto['nome_objeto']. "</option>";            
+            $nome_objeto = 
+            	"<option>" .$objeto['nome_objeto']. "</option>";  
 
-            $objeto = "<div class="col-xs-5">
-                            <br>
-                            <label>Objeto</label>
-                            <select class="form-control" required=""> 
-                                <option>".$objeto['nome_objeto']."</option>
-                            </select>                            
-                        </div>                                         
+            // $especificacoestecnicas_objeto = 
+            // 	"<option>" .$objeto['especificacoestecnicas_objeto']. "</option>";             
 
-                        <div class="col-xs-4">
-                            <br>
-                            <select class="form-control" required=""> 
-                                <option>".$objeto['especificacoestecnicas_objeto']."</option>
-                            </select>                            
-                        </div>";
+            // $estrategiafornecimento_objeto = 
+            // 	"<option>" .$objeto['estrategiafornecimento_objeto']. "</option>";             
+
+            // $preco_objeto =
+            // 	"<option>" .$objeto['preco_objeto']. "</option>";             
 
             //mostrando valor
-            echo "$objeto";                         
+            echo "$nome_objeto";                         
+
+            // echo "$especificacoestecnicas_objeto";
+
+            // echo "$estrategiafornecimento_objeto";
+
+            // echo "$preco_objeto";
 		}		
 	}	
-}
-
-                              
-                        
+}             
 
 ?>
