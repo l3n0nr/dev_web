@@ -67,25 +67,24 @@
                     <form action="form_bens_obj_docente.php" method="post">
                         <div class="col-xs-5">
                             <br>
-                            <label>Objeto</label>
-                            <select                                 
-                                class="form-control" 
-                                required="" 
-                                value="item"> 
-                                <option> funcao_objeto() </option>
+                            <label>Selecione o Objeto</label>
+                            <select class="form-control" required="" name="item"> 
+                                <?php include "lista_objetos.php" ?>
                             </select>                            
                         </div>                                         
 
                         <div class="col-xs-4">
                             <br>
                             <label>Estrategia de Fornecimento</label>
-                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao">
+                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao" >
                         </div>                                
 
                         <div class="col-xs-2">
                             <br>
                             <label>Preco Objeto</label>
-                            <input name="preco" class="form-control" type="value" required="" placeholder="preco do objeto">
+                            <select class="form-control" required="" name="preco"> 
+                                <?php include "lista_preco.php" ?>
+                            </select>
                         </div>                                                           
 
                         <div class="col-xs-1">
@@ -97,7 +96,10 @@
                         <div class="col-xs-12">
                             <br>
                             <label>Especificações </label>
-                            <textarea name="especificacoes" class="form-control" type="text" required="" placeholder="teste" rows="5"> </textarea>
+                            <!-- <textarea name="especificacoes" class="form-control" type="text" required="" placeholder="teste" rows="5"> </textarea> -->
+                            <select class="form-control" required="" name="especificacoes"> 
+                                <?php include "lista_especificacoes.php" ?>
+                            </select>
                         </div> 
 
                     <div class="row">
