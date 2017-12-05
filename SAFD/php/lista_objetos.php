@@ -18,7 +18,7 @@ else
 		{
 			//buscando valor
             $nome_objeto = 
-            	"<option>" .$objeto['nome_objeto']. "</option>";  
+            	"<option>" .$objeto['nome_objeto']. "</option>";              
 
             // $especificacoestecnicas_objeto = 
             // 	"<option>" .$objeto['especificacoestecnicas_objeto']. "</option>";             

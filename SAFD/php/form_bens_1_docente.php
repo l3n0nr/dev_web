@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            function func()
+            {
+                alert('');
+            }
+        </script>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>SAFD | Form. Bens </title>
@@ -68,7 +75,7 @@
                         <div class="col-xs-5">
                             <br>
                             <label>Objeto</label>
-                            <select class="form-control" required="" value="item"> 
+                            <select onclick="func()" class="form-control" required="" value="item"> 
                                 <option> <?php include "lista_objetos.php" ?> </option>
                             </select>                            
                         </div>                                         
@@ -76,7 +83,7 @@
                         <div class="col-xs-4">
                             <br>
                             <label>Estrategia de Fornecimento</label>
-                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao">
+                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao" disabled="">
                         </div>                                
 
                         <div class="col-xs-2">
