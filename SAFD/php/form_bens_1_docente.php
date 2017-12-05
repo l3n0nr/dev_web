@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            function func()
-            {
-                alert('');
-            }
-        </script>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>SAFD | Form. Bens </title>
@@ -74,17 +67,12 @@
                     <form action="form_bens_obj_docente.php" method="post">
                         <div class="col-xs-5">
                             <br>
-                            <label>Objeto</label>
-<<<<<<< HEAD
-                            <select onclick="func()" class="form-control" required="" value="item"> 
-                                <option> <?php include "lista_objetos.php" ?> </option>
-=======
+                            <label>Objeto</label>                            
                             <select                                 
                                 class="form-control" 
                                 required="" 
                                 value="item"> 
                                 <option> funcao_objeto() </option>
->>>>>>> 2d424081972c910141e8c6cd2b53826248a36dda
                             </select>                            
                         </div>                                         
 
