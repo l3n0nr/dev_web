@@ -2,7 +2,9 @@
 
 include "conexao.php";
 
-$sql = "SELECT id_objeto, nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto FROM objeto";
+// $sql = "SELECT id_objeto, nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto FROM objeto";
+
+$sql = "SELECT nome_objeto FROM objeto";
 
 $res = mysqli_query($con, $sql);
 
@@ -16,15 +18,12 @@ else
 	{
 		while ($objeto = mysqli_fetch_assoc($res))
 		{
-                  funcao_objeto()
-                  {
-                        //buscando valor
-                        $nome_objeto = 
-                              "<option>" .$objeto['nome_objeto']. "</option>";        
+                  //buscando valor
+                  $nome_objeto = 
+                        "<option>" .$objeto['nome_objeto']. "</option>";        
 
-                        //mostrando valor
-                        echo "$nome_objeto";  
-                  }
+                  //mostrando valor
+                  echo "$nome_objeto";                    
 			
             // $especificacoestecnicas_objeto = 
             //       "<option>" .$objeto['especificacoestecnicas_objeto']. "</option>";  
