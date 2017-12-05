@@ -16,12 +16,25 @@ else
 	{
 		while ($objeto = mysqli_fetch_assoc($res))
 		{
+<<<<<<< HEAD
 			//buscando valor
             $nome_objeto = 
             	"<option>" .$objeto['nome_objeto']. "</option>";              
 
+=======
+                  funcao_objeto()
+                  {
+                        //buscando valor
+                        $nome_objeto = 
+                              "<option>" .$objeto['nome_objeto']. "</option>";        
+
+                        //mostrando valor
+                        echo "$nome_objeto";  
+                  }
+			
+>>>>>>> 2d424081972c910141e8c6cd2b53826248a36dda
             // $especificacoestecnicas_objeto = 
-            // 	"<option>" .$objeto['especificacoestecnicas_objeto']. "</option>";             
+            //       "<option>" .$objeto['especificacoestecnicas_objeto']. "</option>";  
 
             // $estrategiafornecimento_objeto = 
             // 	"<option>" .$objeto['estrategiafornecimento_objeto']. "</option>";             
@@ -29,14 +42,12 @@ else
             // $preco_objeto =
             // 	"<option>" .$objeto['preco_objeto']. "</option>";             
 
-            //mostrando valor
-            echo "$nome_objeto";                         
-
             // echo "$especificacoestecnicas_objeto";
 
             // echo "$estrategiafornecimento_objeto";
 
             // echo "$preco_objeto";
+
 		}		
 	}	
 }             

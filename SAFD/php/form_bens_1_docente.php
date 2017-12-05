@@ -75,8 +75,16 @@
                         <div class="col-xs-5">
                             <br>
                             <label>Objeto</label>
+<<<<<<< HEAD
                             <select onclick="func()" class="form-control" required="" value="item"> 
                                 <option> <?php include "lista_objetos.php" ?> </option>
+=======
+                            <select                                 
+                                class="form-control" 
+                                required="" 
+                                value="item"> 
+                                <option> funcao_objeto() </option>
+>>>>>>> 2d424081972c910141e8c6cd2b53826248a36dda
                             </select>                            
                         </div>                                         
 
