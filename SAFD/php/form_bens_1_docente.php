@@ -67,29 +67,16 @@
                     <form action="form_bens_obj_docente.php" method="post">
                         <div class="col-xs-5">
                             <br>
-<<<<<<< HEAD
-                            <label>Objeto</label>                            
-                            <select                                 
-                                class="form-control" 
-                                required="" 
-                                value="item"> 
-                                <option> funcao_objeto() </option>
-=======
                             <label>Selecione o Objeto</label>
                             <select class="form-control" required="" name="item"> 
                                 <?php include "lista_objetos.php" ?>
->>>>>>> 2faea28fcce2840be079fa658158455aad7e2c9c
                             </select>                            
                         </div>                                         
 
                         <div class="col-xs-4">
                             <br>
                             <label>Estrategia de Fornecimento</label>
-<<<<<<< HEAD
-                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao" disabled="">
-=======
                             <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao" >
->>>>>>> 2faea28fcce2840be079fa658158455aad7e2c9c
                         </div>                                
 
                         <div class="col-xs-2">
