@@ -76,7 +76,7 @@
                         <div class="col-xs-4">
                             <br>
                             <label>Estrategia de Fornecimento</label>
-                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao" >
+                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="licitaçao" >
                         </div>                                
 
                         <div class="col-xs-2">
