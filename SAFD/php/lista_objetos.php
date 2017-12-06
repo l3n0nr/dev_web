@@ -18,9 +18,9 @@ else
 	{
 		while ($objeto = mysqli_fetch_assoc($res))
 		{
-			//buscando valor
-                  $nome_objeto = 
-            	"<option>" .$objeto['nome_objeto']. "</option>";              
+			// //buscando valor
+   //                $nome_objeto = 
+   //          	"<option>" .$objeto['nome_objeto']. "</option>";              
 
                   //buscando valor
                   $nome_objeto = 
