@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     </head>
     <!--<body class="hold-transition skin-green fixed sidebar-mini">-->
-    <body class="hold-transition skin-green sidebar-collapse sidebar-mini">
+    <body class="hold-transition skin-green visit sidebar-mini">
         <!-- Site wrapper -->
         <div class="wrapper">
             <header class="main-header" >
