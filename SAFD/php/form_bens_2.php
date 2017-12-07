@@ -147,6 +147,8 @@
 
         $objeto = "SELECT id_objeto FROM objeto ORDER BY id_objeto DESC limit 1";
 
+        // $objeto = 
+
         // preparando variavel
         $result = mysqli_query($con, $objeto);
 
