@@ -1,7 +1,7 @@
 <div class="form-group has-feedback">
-    <input type="number" min="000001" max="999999" class="form-control" placeholder="Siape" name="siape_funcionario" required="" autofocus autocomplete="off">
+    <input type="number" min="0000001" max="9999999" class="form-control" placeholder="Siape" name="siape_funcionario" required="" autofocus autocomplete="off">
     <span class="glyphicon glyphicon-user form-control-feedback"></span>
-    <label> * Numero máximo permitido, 6 digitos numéricos. </label>
+    <label> * Número máximo permitido, 7 digitos numéricos. </label>
 </div>
 <div class="form-group has-feedback">
     <input type="text" class="form-control" placeholder="Nome Completo" name="nome_funcionario" required="" autocomplete="off">
