@@ -219,10 +219,6 @@ INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiaforneci
 INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
     VALUES("cadeira", "Cadeira com acento inclinavel", "licitaçao", "100", 2);
 
--- -- ADICIONANDO CAMPOS TABELA OBJETO
-INSERT INTO objeto(nome_objeto, especificacoestecnicas_objeto, estrategiafornecimento_objeto, preco_objeto, id_grupo)
-    VALUES("caneta", "canetas esferografica", "licitaçao", "0,50", 1);
-
 -- ADICIONANDO SOLICITACAO 1
 INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)	
     VALUES("", "", 0, 1, 1);
