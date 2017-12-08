@@ -66,13 +66,13 @@
                         <div class="col-xs-5">
                             <br>
                             <label>Item </label>
-                            <input name="item" class="form-control" type="text" required="" placeholder="Item solicitado">
+                            <input name="item" class="form-control" type="text" required="" placeholder="Digite um item, para ser adicionado ao banco">
                         </div>         
 
                         <div class="col-xs-4">
                             <br>
                             <label>Estrategia de Fornecimento</label>
-                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao">
+                            <input name="estrategia" class="form-control" type="text" required="" placeholder="Forma de aquisição do objeto" value="Licitacao">
                         </div>                                
 
                         <div class="col-xs-3">
