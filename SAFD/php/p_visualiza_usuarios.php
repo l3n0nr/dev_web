@@ -20,7 +20,7 @@
     </head>
     <!--<body class="hold-transition skin-green fixed sidebar-mini">-->
     <!-- <body class="hold-transition skin-green layout-fixed sidebar-mini"> -->
-    <body class="hold-transition skin-green sidebar-collapse sidebar-mini">
+    <body class="hold-transition skin-green fixed sidebar-mini">
         <!-- Site wrapper -->
         <div class="wrapper">
             <header class="main-header" >
