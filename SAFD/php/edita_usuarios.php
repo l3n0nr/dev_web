@@ -3,13 +3,13 @@
 //incluindo arquivo conexao
 include 'conexao.php';
 
-    $teste = 
+    // $teste = 
 
-    "<tr>
-        <td>
-            echo teste;
-        </td>
-    </tr>"
+    // "<tr>
+    //     <td>
+    //         echo teste;
+    //     </td>
+    // </tr>"
 
     echo $teste;
 ?>
