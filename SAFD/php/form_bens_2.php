@@ -3,6 +3,8 @@
     include 'conexao.php';
     include 'valida_sessao.php';
 
+    include 'form_bens_1';
+
     include 'form_bens_2_docente';
     include 'form_bens_2_tae';
 
@@ -145,24 +147,47 @@
         # ou, cria-se um campo dentro de tabela com o id_usuario para fazer uma referencia
         # ou, cadastra-se apenas o ultimo objeto listado
 
-        $objeto = "SELECT id_objeto FROM objeto ORDER BY id_objeto DESC limit 1";
+        // $objeto = '$objeto';
 
-        // $objeto = 
+        // // $objeto = 
 
-        // preparando variavel
-        $result = mysqli_query($con, $objeto);
+        // // preparando variavel
+        // $result = mysqli_query($con, $objeto);
 
-        // capturando valor objeto
-        while($res = mysqli_fetch_assoc($result))
-        {
-            $ultimo_objeto = $res['id_objeto'];
-        }
+        // // capturando valor objeto
+        // while($res = mysqli_fetch_assoc($result))
+        // {
+        //     $ultimo_objeto = $res['id_objeto'];
+        // }
 
         // echo $ultimo_objeto;     
 
+        # montando consulta SQL - ADICIONANDO OBJETO
+        $sql = "
+            SELECT id_objeto FROM objeto 
+            WHERE nome_objeto='$item';";
+
+         // INSERT INTO objeto(nome_objeto)
+                 // -- VALUES('$item') ORDER BY `objeto`.`id_objeto` limit 1";
+
+        // echo $sql;
+
+        // preparando variavel
+        $result = mysqli_query($con, $sql);
+
+        // capturando valor funcao usuario
+        while($res = mysqli_fetch_assoc($result))
+        {
+            $objeto = $res['id_objeto'];
+        }
+
+        # montando instrucao SQL - solicitacao itens
+        // $sql = "INSERT INTO solicitacao_itens(quantidade_objeto, prazoentrega_objeto, prazoexecucao_objeto, id_solicitacao, id_objeto) 
+        //         VALUES ('0','','', $ultima_solicitacao, '$ultimo_objeto');";
+
         # montando instrucao SQL - solicitacao itens
         $sql = "INSERT INTO solicitacao_itens(quantidade_objeto, prazoentrega_objeto, prazoexecucao_objeto, id_solicitacao, id_objeto) 
-                VALUES ('0','','', $ultima_solicitacao, '$ultimo_objeto');";
+                VALUES ('0','','', $ultima_solicitacao, '$objeto');";
 
         // echo $sql;
 

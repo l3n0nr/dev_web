@@ -20,56 +20,56 @@
         AND isset($preco)) 
     {
 
-        // echo $item;
-        // echo $estrategia;
-        // echo $especificacoes;
-        // echo $preco;
-        // echo $quantidade;
+        // // echo $item;
+        // // echo $estrategia;
+        // // echo $especificacoes;
+        // // echo $preco;
+        // // echo $quantidade;
 
-        # montando consulta SQL - ADICIONANDO OBJETO
-        $sql = "
-            SELECT id_objeto FROM objeto 
-            WHERE nome_objeto='$item';";
+        // # montando consulta SQL - ADICIONANDO OBJETO
+        // $sql = "
+        //     SELECT id_objeto FROM objeto 
+        //     WHERE nome_objeto='$item';";
 
-         // INSERT INTO objeto(nome_objeto)
-                 // -- VALUES('$item') ORDER BY `objeto`.`id_objeto` limit 1";
+        //  // INSERT INTO objeto(nome_objeto)
+        //          // -- VALUES('$item') ORDER BY `objeto`.`id_objeto` limit 1";
 
-        // echo $sql;
+        // // echo $sql;
 
-        // preparando variavel
-        $result = mysqli_query($con, $sql);
+        // // preparando variavel
+        // $result = mysqli_query($con, $sql);
 
-        // capturando valor funcao usuario
-        while($res = mysqli_fetch_assoc($result))
-        {
-            $objeto = $res['id_objeto'];
-        }
+        // // capturando valor funcao usuario
+        // while($res = mysqli_fetch_assoc($result))
+        // {
+        //     $objeto = $res['id_objeto'];
+        // }
 
-        // echo "teste: " . $objeto;
+        // // echo "teste: " . $objeto;
 
-        // realizando inserção da tabela objeto
-        if ($objeto)
-        {
-            // echo "funcionou!";
+        // // realizando inserção da tabela objeto
+        // if ($objeto)
+        // {
+        //     // echo "funcionou!";
 
-            echo ("<script>alert('Objeto selecionado com sucesso!'); 
-                    location.href='';</script>");
+        //     echo ("<script>alert('Objeto selecionado com sucesso!'); 
+        //             location.href='';</script>");
 
-            // echo "funcionou";
+        //     // echo "funcionou";
 
-            // SEGUNDA INSERÇAO - ADICIONANDO AVALIACOES
-            // $sql = "INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)    
-            //         VALUES("", "", 0, 1, 1)";
+        //     // SEGUNDA INSERÇAO - ADICIONANDO AVALIACOES
+        //     // $sql = "INSERT INTO avaliacao_dad(recursos_avaliacaodad, comentarios_avaliacaodad, valorestimadodespesa_avaliacaodad, id_status, id_tipodespesa)    
+        //     //         VALUES("", "", 0, 1, 1)";
 
-            // // realizando inserção na tabela - avaliacao dad 
-            // if(mysqli_query($con, $sql))
-            // {   
-            //     echo "teste";
-            // }
-        }
-        else
-        {
-            echo ("<script>alert('ERRO!'); location.href='';</script>");
-        }
+        //     // // realizando inserção na tabela - avaliacao dad 
+        //     // if(mysqli_query($con, $sql))
+        //     // {   
+        //     //     echo "teste";
+        //     // }
+        // }
+        // else
+        // {
+        //     echo ("<script>alert('ERRO!'); location.href='';</script>");
+        // }
     }    
 ?>
