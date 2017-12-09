@@ -29,12 +29,12 @@
         # montando consulta SQL - ADICIONANDO OBJETO
         $sql = "
             SELECT id_objeto FROM objeto 
-            WHERE nome_objeto='$item' ORDER BY `objeto`.`id_objeto` limit 1";
+            WHERE nome_objeto='$item';";
 
          // INSERT INTO objeto(nome_objeto)
                  // -- VALUES('$item') ORDER BY `objeto`.`id_objeto` limit 1";
 
-        // echo "SQL: " . $sql;
+        // echo $sql;
 
         // preparando variavel
         $result = mysqli_query($con, $sql);
@@ -48,11 +48,12 @@
         // echo "teste: " . $objeto;
 
         // realizando inserção da tabela objeto
-        if ($result)
+        if ($objeto)
         {
             // echo "funcionou!";
 
-            echo ("<script>alert('Objeto selecionado com sucesso!'); location.href='';</script>");
+            echo ("<script>alert('Objeto selecionado com sucesso!'); 
+                    location.href='';</script>");
 
             // echo "funcionou";
 
