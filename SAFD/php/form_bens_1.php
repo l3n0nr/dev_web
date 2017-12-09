@@ -17,7 +17,8 @@
     if (isset($item) 
         AND isset($estrategia) 
         AND isset($especificacoes) 
-        AND isset($preco)) 
+        AND isset($preco)
+        AND isset($quantidade))         
     {
 
         // echo $item;
@@ -29,7 +30,7 @@
         # montando consulta SQL - ADICIONANDO OBJETO
         $sql = "
             SELECT id_objeto FROM objeto 
-            WHERE nome_objeto='$item' ORDER BY `objeto`.`id_objeto` limit 1";
+            WHERE nome_objeto='$item' ORDER BY `objeto`.`id_objeto`";
 
          // INSERT INTO objeto(nome_objeto)
                  // -- VALUES('$item') ORDER BY `objeto`.`id_objeto` limit 1";
