@@ -58,7 +58,7 @@
 
                     <section class="content-header">
                         <h4>
-                            Solicitacao de Bens - Parte 1 - Compra de Objetos;
+                            <!-- Solicitacao de Bens - Parte 1 - Compra de Objetos; -->
                         </h4>
                         <ol class="breadcrumb">
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
@@ -71,7 +71,13 @@
                             <select class="form-control" name="item"> 
                                 <?php include "lista_objetos.php" ?>
                             </select>                            
-                        </div>                                         
+                        </div>          
+
+                        <div class="col-xs-1">
+                            <br>
+                            <label>Quantidade</label>
+                            <input name="quantidade" class="form-control" type="number" required="" placeholder="0" value="1">
+                        </div>                               
 
                         <div class="col-xs-4">
                             <br>
@@ -85,13 +91,7 @@
                             <select class="form-control" name="preco" disabled=""> 
                                 <?php include "lista_preco.php" ?>
                             </select>
-                        </div>                                                           
-
-                        <div class="col-xs-1">
-                            <br>
-                            <label>Quantidade</label>
-                            <input name="quantidade" class="form-control" type="number" required="" placeholder="0" value="1">
-                        </div>
+                        </div>                                                        
 
                         <div class="col-xs-12">
                             <br>
