@@ -82,7 +82,11 @@
                         <div class="col-xs-4">
                             <br>
                             <label>Estrategia de Fornecimento</label>
+<<<<<<< c3fe7c7f1a0e9a397d2ebc6c6f6f0bca62146ef9
                             <input name="estrategia" class="form-control" type="text" placeholder="forma de aquisição do objeto" value="licitaçao" disabled="" >
+=======
+                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao" >
+>>>>>>> arquivos corrigidos
                         </div>                                
 
                         <div class="col-xs-2">
