@@ -64,7 +64,7 @@
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
                         </ol>
                     </section>                                                                        
-                    <form action="form_bens_obj_docente.php" method="post">
+                    <form action="system_docente.php" method="post">
                         <div class="col-xs-5">
                             <br>
                             <label>Selecione o Objeto</label>
@@ -82,11 +82,7 @@
                         <div class="col-xs-4">
                             <br>
                             <label>Estrategia de Fornecimento</label>
-<<<<<<< c3fe7c7f1a0e9a397d2ebc6c6f6f0bca62146ef9
                             <input name="estrategia" class="form-control" type="text" placeholder="forma de aquisição do objeto" value="licitaçao" disabled="" >
-=======
-                            <input name="estrategia" class="form-control" type="text" required="" placeholder="forma de aquisição do objeto" value="Licitacao" >
->>>>>>> arquivos corrigidos
                         </div>                                
 
                         <div class="col-xs-2">
