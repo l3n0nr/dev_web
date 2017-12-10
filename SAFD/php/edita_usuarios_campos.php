@@ -54,7 +54,8 @@
                                     <form action="teste.php" method="post">   
                                         <div class="form-group">
                                           <label>Login</label>
-                                          <input class="form-control" id="login" placeholder="nome" type="text">
+                                          <input class="form-control" id="login" placeholder="nome" type="text" 
+                                          value='" .$linha['siape_funcionario']. "'>"
 
                                           <label>Setor</label>
                                           <input class="form-control" id="setor" placeholder="email" type="text">
