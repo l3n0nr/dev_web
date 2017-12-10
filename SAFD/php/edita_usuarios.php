@@ -1,15 +1,16 @@
 <?php
 
-//incluindo arquivo conexao
-include 'conexao.php';
+	//incluindo arquivo conexao
+	include 'conexao.php';
 
-    // $teste = 
+	$id = $_GET['id'];
 
-    // "<tr>
-    //     <td>
-    //         echo teste;
-    //     </td>
-    // </tr>"
+	$busca = mysql_query("SELECT * FROM usuarios"); 
+	$row = mysql_fetch_arrow($busca);
 
-    echo $teste;
+	$teste = "
+		<input type="text" value="<?php echo $row['campo']; ?>" name="campo" />
+		<input type="hidden" value="<?php echo $id; ?>" name="id" />";
+
+	echo $teste;
 ?>
