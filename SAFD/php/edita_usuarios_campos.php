@@ -38,24 +38,12 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <div class="dataTables_length" id="example1_length">
-                        <label>
-                            <select name="example1_length"
-                            aria-controls="example1" class="form-control input-sm">
-                                <option value="2"
-                                  selected="todos()"> Listando Todos Usuários </option>
-                                <option value="1"
-                                  selected="ativos()"> Listando apenas Usuários Ativos
-                                </option>
-                                <option value="0"> Listando apenas Usuários Desativados </option>
-                            </select>
-                        </label>
-                    </div>
                     <ol class="breadcrumb">
                         <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Alterando usuários do sistema </a></li>
                     </ol>
                 </section>
                 <section class="content">
+                    <br>
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="box">
@@ -63,45 +51,56 @@
                                   <h3 class="box-title">Alterando usuarios</h3>
                                 </div><!-- /.box-header -->
                                 <div class="box-body">
-                                    <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-                                        <div class="row">
-                                            <div class="col-sm-6"></div>
-                                            <div class="col-sm-3"></div>
-                                        </div><div class="row">
-                                             
+                                    <form action="teste.php" method="post">   
+                                        <div class="form-group">
+                                          <label>Login</label>
+                                          <input class="form-control" id="login" placeholder="nome" type="text">
+
+                                          <label>Setor</label>
+                                          <input class="form-control" id="setor" placeholder="email" type="text">
+
+                                          <label>Funcao</label>
+                                          <select id="funcao" class="form-control" name="nome_setor" required="" autocomplete="off">
+                                            
+                                            <?php                                            
+                                                include 'funcao.php';
+                                            ?>
+                                                
+                                            </select>
+
+                                        <br>
+                                        <button type="submit" class="btn btn-success pull-right">Salvar</button>
                                         </div>
-                                    </div>
-                                    </section>
-                                </div><!-- /.content-wrapper -->
-
-                                <footer class="main-footer">
-                                    <?php
-                                        include 'footer.php';
-                                    ?>
-                                </footer>
-
-                                <!-- Stats tab content -->
-                                </form>
-                            </div><!-- /.tab-pane -->
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                        </aside><!-- /.control-sidebar -->
+                    </section>
+                </div>
 
-                    </div><!-- ./wrapper -->
+        <footer class="main-footer">
+            <?php
+                include 'footer.php';
+            ?>
+        </footer>
+            </aside><!-- /.control-sidebar -->
 
-                    <!-- jQuery 2.1.4 -->
-                    <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
-                    <!-- Bootstrap 3.3.5 -->
-                    <script src="../bootstrap/js/bootstrap.min.js"></script>
-                    <!-- SlimScroll -->
-                    <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-                    <!-- FastClick -->
-                    <script src="../plugins/fastclick/fastclick.min.js"></script>
-                    <!-- AdminLTE App -->
-                    <script src="../dist/js/app.min.js"></script>
-                    <!-- AdminLTE for demo purposes -->
-                    <script src="../dist/js/demo.js"></script>
-                    </body>
-                    </html>
+        </div><!-- ./wrapper -->
+
+        <!-- jQuery 2.1.4 -->
+        <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <!-- SlimScroll -->
+        <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../plugins/fastclick/fastclick.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../dist/js/app.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../dist/js/demo.js"></script>
+    </body>
+</html>
 
 <!-- Criando funcoes javascript -->
 <script language="javascript">
