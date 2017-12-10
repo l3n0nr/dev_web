@@ -3,14 +3,29 @@
 	//incluindo arquivo conexao
 	include 'conexao.php';
 
-	$id = $_GET['id'];
+	//$sql = "SELECT id_funcionario, login_usuario, estado_usuario, nome_setor, descricao_funcao FROM usuario, setor, funcao WHERE usuario.id_setor = setor.id_setor AND usuario.id_funcao = funcao.id_funcao AND estado_usuario != 1";
+	$sql = "SELECT login_usuario, estado_usuario, nome_setor, descricao_funcao, siape_funcionario, data_cadastro
+	        FROM usuario, setor, funcao, funcionario
+	        WHERE usuario.id_setor = setor.id_setor
+	        AND usuario.id_funcao = funcao.id_funcao
+	        AND funcionario.id_funcionario = usuario.id_funcionario";
 
-	$busca = mysql_query("SELECT * FROM usuarios"); 
-	$row = mysql_fetch_arrow($busca);
+	$result = mysqli_query($con, $sql);
 
-	$teste = "
-		<input type="text" value="<?php echo $row['campo']; ?>" name="campo" />
-		<input type="hidden" value="<?php echo $id; ?>" name="id" />";
+	//criando repeticao para percorrer a tabela
+	while ($linha = mysqli_fetch_assoc($result))
+	{
+	    #criando variavel para mostra colunas/linhas
+	    $visualizar = "<tr>	    					
+	                        <td>" . $linha['siape_funcionario'] . "</td>" . "
+	                        <td>" . $linha['login_usuario'] . "</td>" . "
+	                        <td>" . $linha['nome_setor'] . "</td>" . "
+	                        <td>" . $linha['descricao_funcao'] . "</td>" . "
+	                        <td>" . $linha['data_cadastro'] . "</td>" . "
+	                        <td>" . "<button>Editar</button>". "</td>" . "
+	                    </tr>";
 
-	echo $teste;
+	    #mostrando colunas/linhas
+	    echo $visualizar;
+	}
 ?>
