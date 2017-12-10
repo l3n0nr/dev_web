@@ -91,9 +91,11 @@
                                                     </th>
                                                     </thead>
                                                     <tbody>
-                                                        <?php
-                                                            include 'edita_usuarios.php';
-                                                        ?>
+                                                        <form action='edita_usuarios_campos.php' method='post'>
+                                                            <?php
+                                                                include 'edita_usuarios.php';
+                                                            ?>
+                                                        </form>
                                                     </tbody>                             
                                                 </table>
                                                 <td>
