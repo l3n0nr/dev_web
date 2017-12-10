@@ -43,7 +43,6 @@
         AND isset($veracidade))         
     {
 
-<<<<<<< HEAD
         // // echo $item;
         // // echo $estrategia;
         // // echo $especificacoes;
@@ -95,9 +94,7 @@
         // {
         //     echo ("<script>alert('ERRO!'); location.href='';</script>");
         // }
-    }    
-?>
-=======
+
             // echo $item;
             // echo $estrategia;
             // echo $especificacoes;
@@ -307,6 +304,4 @@
             echo ("<script>alert('ERRO SOLICITACAO! '); location.href='';</script>");
         }  
     }
-
 ?>
->>>>>>> d155db68a3a8a0dbe3b7706c11a5507780d5c70a
