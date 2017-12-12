@@ -70,6 +70,7 @@
                                             </select>
 
                                         <br>
+                                        <a href="p_edita_usuarios.php"> VOLTAR </a>
                                         <button type="submit" class="btn btn-success pull-right">Salvar</button>
                                         </div>
                                     </form>
