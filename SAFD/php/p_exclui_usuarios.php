@@ -37,16 +37,7 @@
 
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
-                <section class="content-header">
-                    <div class="dataTables_length" id="example1_length">
-                        <label>
-                            <select name="example1_length" aria-controls="example1" class="form-control input-sm">
-                                <option value="2"> Listando Todos Usuários </option>
-                                <option value="1"> Listando apenas Usuários Ativos </option>
-                                <option value="0"> Listando apenas Usuários Desativados </option>
-                            </select>
-                        </label>
-                    </div>
+                <section class="content-header">                    
                     <ol class="breadcrumb">
                         <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Excluindo usuários do sistema </a></li>
                     </ol>
@@ -88,9 +79,11 @@
                                                     </th>
                                                     </thead>
                                                     <tbody>
-                                                        <?php
-                                                        include 'exclui_usuarios.php';
-                                                        ?>
+                                                        <form action='exclui_usuarios_campos.php' method='post'>
+                                                            <?php
+                                                                include 'exclui_usuarios.php';
+                                                            ?>
+                                                        </form>
                                                     </tbody>
                                                 </table>
                                                 <td>
