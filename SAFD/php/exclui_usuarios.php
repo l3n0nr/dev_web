@@ -22,7 +22,7 @@ while ($linha = mysqli_fetch_assoc($result))
                         <td>" . $linha['nome_setor'] . "</td>" . "
                         <td>" . $linha['descricao_funcao'] . "</td>" . "
                         <td>" . $linha['data_cadastro'] . "</td>" . "
-                        <td> Excluir </td>" . "
+                        <td>" . "<button>Excluir</button>". "</td>" . "
                     </tr>";
 
     #mostrando colunas/linhas
