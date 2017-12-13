@@ -90,7 +90,7 @@
                         <br>
                         <select id="nivel" class="form-control" name="funcao" disabled="">
                             <?php
-                            include 'setores.php';
+                                include 'setores.php';
                             ?>
                         </select>
                     </div>
