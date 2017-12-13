@@ -68,7 +68,6 @@
                 </div>
             </form>
 
-
             <footer class="main-footer">
                 <?php
                 include 'footer.php';
@@ -76,7 +75,6 @@
             </footer>
 
             <!-- Stats tab content -->
-        </form>
     </div><!-- /.tab-pane -->
 </div>
 </aside><!-- /.control-sidebar -->
