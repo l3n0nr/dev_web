@@ -18,15 +18,13 @@ else
 	{
 		while ($objeto = mysqli_fetch_assoc($res))
 		{
-<<<<<<< c3fe7c7f1a0e9a397d2ebc6c6f6f0bca62146ef9
+
 			// //buscando valor
    //                $nome_objeto = 
    //          	"<option>" .$objeto['nome_objeto']. "</option>";              
-=======
 			//buscando valor
                   $nome_objeto = 
             	"<option>" .$objeto['nome_objeto']. "</option>";              
->>>>>>> arquivos corrigidos
 
                   //buscando valor
                   $nome_objeto = 
