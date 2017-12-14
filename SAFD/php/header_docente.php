@@ -3,8 +3,8 @@
 ?>
 <a href="system_docente.php" class="logo">
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-mini">SAFD</span>
-    <span class="logo-lg">SAFD</span>
+    <span class="logo-mini">SAFSB</span>
+    <span class="logo-lg">SAFSB</span>
 </a>
 <!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top" role="navigation">

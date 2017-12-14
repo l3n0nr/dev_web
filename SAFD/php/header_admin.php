@@ -3,8 +3,8 @@
 ?>
 <a href="system_admin.php" class="logo">
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-mini">SAFD</span>
-    <span class="logo-lg">SAFD</span>
+    <span class="logo-mini">SAFSB</span>
+    <span class="logo-lg">SAFSB</span>
 </a>
 <nav class="navbar navbar-static-top" role="navigation">
     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
