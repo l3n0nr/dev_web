@@ -55,13 +55,19 @@
                                         <div class="form-group">
                                           <label>Login</label>
                                           <input class="form-control" id="login" placeholder="nome" type="text" 
-                                          value=" <?php echo $siape_funcionario; ?> ">
+                                          value="teste">
 
                                           <label>Setor</label>
-                                          <input class="form-control" id="setor" placeholder="email" type="text">
+                                          <select id="setor" class="form-control" name="nome_setor" required="" autocomplete="off">
+                                            
+                                            <?php                                            
+                                                include 'setores.php';
+                                            ?>
+                                                
+                                            </select>
 
                                           <label>Funcao</label>
-                                          <select id="funcao" class="form-control" name="nome_setor" required="" autocomplete="off">
+                                          <select id="funcao" class="form-control" name="nome_funcao" required="" autocomplete="off">
                                             
                                             <?php                                            
                                                 include 'funcao.php';

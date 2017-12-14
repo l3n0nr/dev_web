@@ -22,7 +22,7 @@
 	                        <td>" . $linha['nome_setor'] . "</td>" . "
 	                        <td>" . $linha['descricao_funcao'] . "</td>" . "
 	                        <td>" . $linha['data_cadastro'] . "</td>" . "
-	                        <td>" . "<button>Editar</button>". "</td>" . "
+	                        <td>" . "<button> Editar </button>". "</td>" . "
 	                    </tr>";
 
 	    #mostrando colunas/linhas
