@@ -3,7 +3,7 @@
 ?>
 <a href="system_tae.php" class="logo">
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-mini">SAFSB</span>
+    <span class="logo-mini">SAFS</span>
     <span class="logo-lg">SAFSB</span>
 </a>
 <!-- Header Navbar: style can be found in header.less -->
