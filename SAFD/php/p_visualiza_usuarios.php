@@ -45,7 +45,8 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <div class="dataTables_length" id="example1_length">
+                    <br>
+                    <!-- <div class="dataTables_length" id="example1_length">
                         <label>
                             <select name="example1_length" aria-controls="example1" class="form-control input-sm">
                                 <option value="2"> Listando Todos Usuários </option>
@@ -53,7 +54,7 @@
                                 <option value="0"> Listando apenas Usuários Desativados </option>
                             </select>
                         </label>
-                    </div>
+                    </div> -->
                     <ol class="breadcrumb">
                         <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Visualizando usuários do sistema </a></li>
                     </ol>
