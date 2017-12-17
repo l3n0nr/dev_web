@@ -1,6 +1,11 @@
 <?php
     include 'valida_sessao.php';
+
+    // evitando erro - Document Expired
+    ini_set('session.cache_limiter','public');
+    session_cache_limiter(false);
 ?>
+
 <a href="system_admin.php" class="logo">
     <!-- logo for regular state and mobile devices -->
     <span class="logo-mini">SAFS</span>
