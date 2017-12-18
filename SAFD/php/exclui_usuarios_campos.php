@@ -64,7 +64,7 @@
                                           <select id="funcao" class="form-control" name="nome_setor" disabled="">
                                             
                                             <?php                                            
-                                                include 'funcao.php';
+                                                include 'funcao_admin.php';
                                             ?>
                                                 
                                             </select>
