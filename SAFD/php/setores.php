@@ -1,4 +1,4 @@
-<option value=""> Escolha o seu setor </option>
+<option value=""> Escolha o setor </option>
 
 <!-- <option value="0"> --- </option> -->
 <option value="1"> (D.G) - Direção Geral </option>

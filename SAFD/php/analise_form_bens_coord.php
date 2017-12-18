@@ -36,8 +36,6 @@
                 include 'menulat_coord.php';
                 ?>
             </aside>
-
-            <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
@@ -84,7 +82,7 @@
                                                             <?php
                                                                 include 'dem_pendentes_campos.php';
                                                             ?>
-                                                        </form>
+                                                            </form>
                                                         </tbody>
                                                     </table>
                                                 </div></div>

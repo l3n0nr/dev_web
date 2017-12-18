@@ -1,3 +1,9 @@
+<?php
+    // evitando erro - Document Expired
+    ini_set('session.cache_limiter','public');
+    session_cache_limiter(false);
+?>
+
 <a href="system_visit.php" class="logo">
     <!-- logo for regular state and mobile devices -->
     <span class="logo-mini">SAFS</span>
