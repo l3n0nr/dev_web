@@ -70,7 +70,7 @@
                                           <select id="funcao" class="form-control" name="nome_funcao" required="" autocomplete="off">
                                             
                                             <?php                                            
-                                                include 'funcao.php';
+                                                include 'funcao_admin.php';
                                             ?>
                                                 
                                             </select>
