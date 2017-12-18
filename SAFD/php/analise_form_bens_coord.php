@@ -33,7 +33,7 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_coord.php';
+                    include 'menulat_coord.php';
                 ?>
             </aside>
             <div class="content-wrapper">

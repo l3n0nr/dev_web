@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SAFD | Avaliac. Coord. </title>
+        <title>SAFSB | Avaliac. Coord. </title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.5 -->
@@ -24,7 +24,7 @@
         <div class="wrapper">
             <header class="main-header" >
                 <?php
-                include 'header_coord.php';
+                    include 'header_coord.php';
                 ?>
             </header>
 
@@ -33,26 +33,14 @@
             <!-- Left side column. contains the sidebar -->
             <aside class="main-sidebar">
                 <?php
-                include 'menulat_coord.php';
+                    include 'menulat_coord.php';
                 ?>
             </aside>
 
 
             <!--FORMULARIO DE BENS-->
-            <form onsubmit="alert('Solicitação enviada para avaliação para o DPDI!')" action="system_user.php">            
+            <form action="system_user.php">            
                 <div class="content-wrapper">
-                    <!-- Content Header (Page header) -->
-
-                    <!--          <div class="alert alert-warning alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert"  aria-hidden="true">
-                                  ×
-                                </button>
-                                <h4>
-                                  <i class="icon fa fa-warning">
-                                  </i>
-                                  Informações importantes
-                                  </h4>-->
-
                     <section class="content-header">
                         <h4>
                             Requisição de compra numero "X" - Avaliação do usuário <?php echo $_SESSION["usuario"] ?>. 
@@ -141,13 +129,6 @@
                         <input class="form-control" type="text" disabled="">
                     </div>
 
-                    <!--             
-                                  <div id="item" class="item">
-                                      <input type="number" id="quant" name="quant" disabled=""/>
-                                  </div>
-                                  <input type="hidden" id="itemCont" value="1"/>
-                                  <input type="button" id="novoProd" value="Novo produto"/>-->
-
                     <div class="col-xs-12">
                         <label> Justificativa </label>
                         <textarea class="form-control" rows="3" disabled="true">Fundamentação bem elaborada da necessidade de compra, incluindo os motivos e os benefícios que se pretende alcançar com a aquisição.</textarea>
@@ -200,15 +181,16 @@
 
                     <!--<button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>-->
 
-                    <button type="submit"class="btn btn-success pull-right">Enviar para a próxima etapa</button>
-
-                    <!-- <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>                     -->
-            </form>  
+                    <button type="submit" class="btn btn-success pull-right">
+                        Enviar para a próxima etapa
+                    </button>
+                </form>  
+            </div>
         </div>                                      
 
         <footer class="main-footer">
             <?php
-            include 'footer.php';
+                include 'footer.php';
             ?>
         </footer>
 
