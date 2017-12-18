@@ -38,173 +38,60 @@
             </aside>
 
 
-            <!--FORMULARIO DE BENS-->
-            <form onsubmit="alert('Solicitação enviada para avaliação para o DPDI!')" action="system_user.php">            
-                <div class="content-wrapper">
-                    <!-- Content Header (Page header) -->
-
-                    <!--          <div class="alert alert-warning alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert"  aria-hidden="true">
-                                  ×
-                                </button>
-                                <h4>
-                                  <i class="icon fa fa-warning">
-                                  </i>
-                                  Informações importantes
-                                  </h4>-->
-
-                    <section class="content-header">
-                        <h4>
-                            Requisição de compra numero "X" - Avaliação do usuário <?php echo $_SESSION["usuario"] ?>. 
-                        </h4>
-                        <ol class="breadcrumb">
-                            <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
-                        </ol>
-                    </section>
-
-                    <!--PROTOCOLO-->
-                    <div class="col-xs-8">
-                        <label>Número do Protocolo: </label>
-                        <input class="form-control" data-inputmask="&quot;mask&quot;: &quot;99.999.000999/2099-99&quot;" data-mask="" type="text" disabled="">
-                    </div>
-
-                    <!--DATA-->
-                    <div class="input-group">
-                        <div class="col-xs-4">
-                            <br>
-                            <i class="fa fa-calendar"></i>
-                            <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="calendar" disabled="">
-                        </div>
-                    </div>
-
-                    <!--IFF-->
-                    <div class="col-xs-8">
-                        <br>
-                        <label>Campus/Unidade</label>
-                        <input class="form-control" placeholder="Reitoria/Campus Alegrete" disabled="" type="text">
-                    </div>
-
-                    <!--SETORES-->
-                    <div class="col-xs-4">
-                        <br>
-                        <br>
-                        <select id="nivel" class="form-control" name="funcao" disabled="">
-                            <?php
-                                include 'setores.php';
-                            ?>
-                        </select>
-                    </div>
-
-                    <!--REQUISITANTE-->
-                    <div class="col-xs-8">
-                        <br>
-                        <label>Nome do requisitante </label>
-                        <input class="form-control" type="text" disabled="">
-                    </div>
-
-                    <!--SIAPE-->
-                    <div class="col-xs-4">
-                        <br>
-                        <label>Número do SIAPE </label>
-                        <input class="form-control" type="text" disabled="">
-                    </div>
-
-                    <div class="col-xs-12">
-                        <br>
-                        <textarea class="form-control" rows="2" disabled="">Solicitamos a/ao Ordenador(a) de Despesas autorização para instauração de procedimento licitatório para futura aquisição de material/contratação dos serviços(objeto, XXXXX) para (objetivo simplificado, XXXXX) conforme abaixo descritos.</textarea>
-                    </div>
-
-                    <br>
-                    <div class="col-xs-1">
-                        <label>Grupo</label>
-                        <input class="form-control" type="number" disabled="">
-                    </div>
-                    <div class="col-xs-1">
-                        <label>Item </label>
-                        <input class="form-control" type="number" disabled="">
-                    </div>
-                    <br>
-                    <div class="col-xs-7">
-                        <label>Especificações </label>
-                        <input class="form-control" type="text" disabled="">
-                    </div>
-                    <div class="col-xs-1">
-                        <label>Quantidade</label>
-                        <input class="form-control" type="number" disabled="">
-                    </div>
-                    <div class="col-xs-1">
-                        <label>Média(R$) </label>
-                        <input class="form-control" type="text" disabled="">
-                    </div>
-                    <div class="col-xs-1">
-                        <label>Total(R$)</label>
-                        <input class="form-control" type="text" disabled="">
-                    </div>
-
-                    <!--             
-                                  <div id="item" class="item">
-                                      <input type="number" id="quant" name="quant" disabled=""/>
-                                  </div>
-                                  <input type="hidden" id="itemCont" value="1"/>
-                                  <input type="button" id="novoProd" value="Novo produto"/>-->
-
-                    <div class="col-xs-12">
-                        <label> Justificativa </label>
-                        <textarea class="form-control" rows="3" disabled="true">Fundamentação bem elaborada da necessidade de compra, incluindo os motivos e os benefícios que se pretende alcançar com a aquisição.</textarea>
-                    </div>
-
-                    <div class="col-xs-12">
-                        <label> Especificações técnicas do objeto e local de entrega/necessidade e justificativa pra agrupamento de itens </label>
-                        <textarea class="form-control" rows="5" disabled="true">Indicar todos os requisitos desejados para o bem permanente ou material ed consumo que pretende adquirir. com descrições detalhadas, precisas e convincentes, incluindo as caracteristicas especificas. Indicar o(s) local(is) de entrega dos bens. Deverá ser indicado o endereço completo, bairro, CEP, inclusive número da sala ou prédio.</textarea>
-                    </div>
-
-                    <div class="col-xs-12">
-                        <label>Estratégias de fornecimento, prazo de entrega ou prazo de execução.</label>
-                        <textarea class="form-control" rows="5" disabled="true">Indicar o prazo da execução dos serviços e/ou prazo máximo de entrega dos materiais permanente/de consumo. Os materiais deverão ser entregues nos quantitativos e nas localidades indicadas acima no prazo máximo de 30 dias após a emissão do empenho. Os materiais deverão ter prazo de validade mínima de doze meses, contados a partir da data de entrega. Caso algum produto apresente defeito de fabricação quando em uso no decorrer do prazo de validade, o fornecedor deverá efetuar a troca do mesmo em cinco dias úteis, a contar da notificação, sem ônus adicional para o Instituto Federal Farroupilha.</textarea>
-                    </div>
-
-                    <div class="col-xs-12">
-                        <label>Critérios de Aceitabilidade.</label>
-                        <textarea class="form-control" rows="8" disabled="true">Neste campo deverá ser informado de que maneira será realixado o recebimento provisório e o recebimento definitivo com o respectivo prazo. Exemplo 01: na aquisição de um eletroeletrônico o recebimento provisório poderá ser com a simples conferência física do aparelho e o recebimento definitivo, no prazo de XX dias a contar do recebimento provisório, com o teste a fim de verificar se o mesmo está funcionando corretamente. Exemplo 02: na aquisição de material ed consumo o recebimento provisório poderia ser com a conferência da quantidade solicitada e o recebimento definitivo, n no prazo de XX dias a contar do recebimento provisório, com a análise se todos os materiais estão em perfeitas condições de utilização.</textarea>
-                    </div>
-
-                    <div class="col-xs-12">
-                        <label>Declaração de consulta ao saldo/estoque - Confirmação de Solicitação.</label>
-                        <textarea class="form-control" rows="3" disabled="true">Declaro para fins de instauração licitatório, que consultei as áreas pertinentes a estoque e controle de saldo de materiais e serviços e obtive confirmação que os itens pretendidos não encontram-se disponíveis para retirada ou emissão de empenho.</textarea>
-                    </div>
-
-                    <div class="col-xs-12">
-                        <label>Da veracidade dos orçamentos</label>
-                        <textarea class="form-control" rows="3" disabled="true">Venho firmar que os orçamentos que compõe o preço médio acima estipulado, foram por mim realizados e são verdadeiros.</textarea>
-                    </div>                   
-
-                    <div class="col-xs-12">
-                        <label> Superior imediato do Requisitante </label>
-                        <textarea class="form-control" rows="3"> Coordenação/Departamento/Direção/Pró-reitoria. Estou ciente da solicitação e autorizo o prosseguimento da solicitação.</textarea>                        
-                    </div>
-
-                    <div class="col-xs-12">
-                        <br>
-                        <label>Observações da Avaliação</label>
-                        <textarea name="observacoes" class="form-control" required="" rows="2" placeholder="" ></textarea>
-                        <br>
-                    </div>
-
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">
-                            Eu <b><?php echo $_SESSION["usuario"] ?></b> autorizo o prosseguimento desta solicitação
-                        </label>
-                        <label> [DATA:<?php echo date('d/m/Y')?>]</label>
-                    </div>  
-
-                    <!--<button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>-->
-
-                    <button type="submit"class="btn btn-success pull-right">Enviar para a próxima etapa</button>
-
-                    <!-- <button type="submit" class="btn btn-danger pull-left">Interromper pedido do Solicitante</button>                     -->
-            </form>  
-        </div>                                      
+           <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li><a href=""><i class="fa fa-dashboard"></i> Inicio> Demandas Pendentes </a></li>
+                    </ol>
+                    </br>
+                    <section class="content">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <!-- <div class="box-header">
+                                        <h3 class="box-title">Demandas Pendentes</h3>
+                                    </div><!-- /.box-header --> 
+                                    <div class="box-body">
+                                        <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                                            <div class="row"><div class="col-sm-6"></div>
+                                                <div class="col-sm-3"></div>
+                                            </div><div class="row">
+                                                <div class="col-sm-12">
+                                                    <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                                                        <thead>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Solicitante
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Setor
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Material
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Data/Hora
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Status
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                                            Opção
+                                                        </th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php
+                                                                include 'dem_pendentes_coord.php';
+                                                            ?>
+                                                        </tbody>
+                                                    </table>
+                                                </div></div>
+                                        </div><!-- /.box-body -->
+                                    </div><!-- /.box -->
+                                    </section>
+                                    </section>
+                                </div><!-- /.content-wrapper -->
 
         <footer class="main-footer">
             <?php
