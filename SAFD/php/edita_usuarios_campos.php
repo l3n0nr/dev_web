@@ -1,3 +1,20 @@
+<?php
+    // include "edita_usuario.php";
+
+    include "conexao.php"
+ 
+    $sql = "SELECT * from `usuario` where id_usuario = 1";
+
+    $result = mysqli_query($con, $sql);
+     
+    while ($row = mysql_fetch_array($result))
+    { 
+        $login = $row['login_usuario'];
+    }
+
+    mysql_free_result($result);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -54,8 +71,8 @@
                                     <form action="teste.php" method="post">   
                                         <div class="form-group">
                                           <label>Login</label>
-                                          <input class="form-control" id="login" placeholder="nome" type="text" 
-                                          value="teste">
+                                          <input class="form-control" id="login" placeholder="nome" type="text" name="login" 
+                                            value="<?php echo $login_usuario;?>">
 
                                           <label>Setor</label>
                                           <select id="setor" class="form-control" name="nome_setor" required="" autocomplete="off">
