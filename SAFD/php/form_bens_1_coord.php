@@ -56,14 +56,11 @@
                         <label> - É necessário que todos os outros campos, sejam preenchidos! </label>
                     </div>
 
-                    <section class="content-header">
-                        <!-- <h4>
-                            Solicitacao de Bens - Parte 1 - Compra de Objetos;
-                        </h4> -->
+                    <!-- <section class="content-header">
                         <ol class="breadcrumb">
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
                         </ol>
-                    </section>
+                    </section> -->
 
                     <form action="system_docente.php" method="post">
                         <div class="col-xs-5">

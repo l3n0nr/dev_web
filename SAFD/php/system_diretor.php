@@ -1,6 +1,6 @@
 <?php
     # chamando arquivo
-    include 'form_bens_2.php';
+    include 'form_bens_1.php';
 ?>
 
 <!DOCTYPE html>
