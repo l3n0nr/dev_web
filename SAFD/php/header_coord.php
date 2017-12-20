@@ -49,7 +49,7 @@
     <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
             <li class="dropdown">
-                <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown"> Diretor: <?php echo $nome_funcionario ?>
+                <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown"> Coordenador: <?php echo $nome_funcionario ?>
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="destroi_sessao.php"> Sair </a></li> 
