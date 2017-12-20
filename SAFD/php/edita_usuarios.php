@@ -12,8 +12,6 @@
 
 	$result = mysqli_query($con, $sql);
 
-	$i = 0;
-
 	//criando repeticao para percorrer a tabela
 	while ($linha = mysqli_fetch_assoc($result))
 	{
