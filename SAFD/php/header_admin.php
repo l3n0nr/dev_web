@@ -4,6 +4,36 @@
     // evitando erro - Document Expired
     ini_set('session.cache_limiter','public');
     session_cache_limiter(false);
+
+    //incluindo arquivo conexao
+    include 'conexao.php';
+
+    $sessao = $_SESSION["usuario"];
+
+    // echo $sessao;
+
+    $sql="SELECT nome_funcionario 
+            FROM usuario, funcionario 
+            WHERE usuario.id_funcionario = funcionario.id_funcionario 
+            AND login_usuario = '$sessao'"; 
+
+    $result = mysqli_query($con, $sql);
+
+    if($result)
+    {
+        // echo "ok!";
+
+        while($res = mysqli_fetch_assoc($result))
+        {
+            $nome_funcionario = $res['nome_funcionario'];
+
+            // echo $nome_funcionario;
+        }        
+    }    
+    else
+    {
+        echo "erro!";
+    }
 ?>
 
 <a href="system_admin.php" class="logo">
@@ -28,7 +58,7 @@
             </form> -->
             <li class="dropdown">
                 <a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Administrador: <?php echo $_SESSION["usuario"] ?>
+                    Administrador: <?php echo $nome_funcionario ?>
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="config.php">Configurações</a></li>
