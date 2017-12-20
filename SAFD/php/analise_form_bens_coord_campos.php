@@ -43,7 +43,7 @@
                 <div class="content-wrapper">
                     <section class="content-header">
                         <h4>
-                            Requisição de compra numero "X" - Avaliação do usuário <?php echo $_SESSION["usuario"] ?>. 
+                            Solicitação de Bens - Requisição de "solicitante" - Avaliação do usuário <?php echo $nome_funcionario ?>. 
                         </h4>
                         <ol class="breadcrumb">
                             <li><a href=""><i class="fa fa-dashboard"></i> Inicio>Formulário para Solicitação de Bens </a></li>
